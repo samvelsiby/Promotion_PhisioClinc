@@ -51,7 +51,7 @@ export default function ComingSoon() {
 
         {/* Tagline */}
         <p className={styles.communityText}>
-          Your Journey to Better Health Starts Here
+        Healing Starts with Hope  and We’re Here for You.
         </p>
       </div>
 
