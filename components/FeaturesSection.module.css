@@ -1,0 +1,188 @@
+.featuresSection {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  perspective: 1000px;
+}
+
+/* Card Base Styles */
+.card {
+  background-color: #ffffff;
+  padding: 2rem 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  cursor: pointer;
+  border: 1px solid #f0f0f0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Active State - Red and Tilted */
+.cardActive {
+  background-color: #e63939;
+  color: #ffffff;
+  transform: rotateY(3deg) rotateX(2deg);
+  box-shadow: 0 10px 30px rgba(230, 57, 57, 0.25);
+}
+
+/* Middle Card - Red by Default */
+.cardMiddle {
+  background-color: #e63939;
+  color: #ffffff;
+}
+
+/* Inactive Cards - White */
+.card:not(.cardActive):not(.cardMiddle) {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Hover Effect for Inactive Cards */
+.card:not(.cardActive):not(.cardMiddle):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Styles */
+.icon {
+  width: 60px;
+  height: 60px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  transition: all 0.3s ease;
+  color: #333333;
+}
+
+.cardActive .icon,
+.cardMiddle .icon {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+  color: #ffffff;
+}
+
+/* Title Styles */
+.title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.card:not(.cardActive):not(.cardMiddle) .title {
+  color: #333333;
+}
+
+/* Description Styles */
+.description {
+  font-size: 0.87rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  transition: color 0.3s ease;
+  color: #666666;
+  flex-grow: 1;
+}
+
+.cardActive .description,
+.cardMiddle .description {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* See More Link Styles */
+.seeMore {
+  display: inline-block;
+  font-size: 0.87rem;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  align-self: flex-start;
+}
+
+.cardActive .seeMore,
+.cardMiddle .seeMore {
+  color: #ffffff;
+}
+
+.card:not(.cardActive):not(.cardMiddle) .seeMore {
+  color: #333333;
+}
+
+.seeMore:hover {
+  transform: translateX(3px);
+  opacity: 0.85;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .cardsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.8rem 1.5rem;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .title {
+    font-size: 1.05rem;
+  }
+
+  .description {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .featuresSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.8rem 1.5rem;
+  }
+
+  .cardActive {
+    transform: rotateY(0deg) rotateX(2deg);
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
+}
