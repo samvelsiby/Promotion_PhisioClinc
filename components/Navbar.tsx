@@ -15,7 +15,7 @@ export default function Navbar() {
     { name: 'What We Treat', href: '/services' },
     { name: 'Meet Our Team', href: '/team' },
     { name: 'Testimonials', href: '/testimonials' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Blog', href: '/blogs' },
   ]
 
   const services = [
