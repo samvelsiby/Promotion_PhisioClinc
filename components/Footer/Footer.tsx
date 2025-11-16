@@ -1,0 +1,120 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import { Facebook, Github, Twitter, Youtube } from 'lucide-react'
+
+const linkColumns = [
+  {
+    title: 'Patients',
+    links: [
+      { label: 'Patient Portal', href: '#' },
+      { label: 'Patient Resources', href: '#' },
+      { label: 'Online Appointments', href: '#' },
+      { label: 'Medical Team', href: '/team' },
+    ],
+  },
+  {
+    title: 'Explore',
+    links: [
+      { label: 'Plans & Pricing', href: '#' },
+      { label: 'Features', href: '#' },
+      { label: 'News & Blogs', href: '/blogs' },
+      { label: 'Careers', href: '#' },
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      { label: 'About Us', href: '/team' },
+      { label: 'Services', href: '/#services' },
+      { label: 'FAQs', href: '/#faqs' },
+      { label: 'Contact Us', href: '/#contact' },
+    ],
+  },
+]
+
+export default function Footer() {
+  return (
+    <footer className="border-t bg-white">
+      <div className="mx-auto flex max-w-7xl flex-col gap-10 px-4 py-10 sm:px-6 sm:py-12 lg:flex-row lg:items-start lg:justify-between lg:px-8">
+        {/* Logo + location + socials */}
+        <div className="max-w-sm">
+          <div className="relative h-10 w-40">
+            <Image
+              src="/logo.png"
+              alt="ProMotion Physiotherapy logo"
+              fill
+              sizes="160px"
+              className="object-contain"
+            />
+          </div>
+
+          <p className="mt-4 text-sm leading-relaxed text-gray-600">
+            ProMotion Physiotherapy
+            <br />
+            567 St. Anne&apos;s Rd, Winnipeg, MB R2M 5B2
+          </p>
+
+          <div className="mt-4 flex gap-3 text-gray-500">
+            <a
+              href="#"
+              aria-label="ProMotion on YouTube"
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 transition-colors hover:bg-[#e63939] hover:text-white"
+            >
+              <Youtube className="h-4 w-4" />
+            </a>
+            <a
+              href="#"
+              aria-label="ProMotion on Facebook"
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 transition-colors hover:bg-[#e63939] hover:text-white"
+            >
+              <Facebook className="h-4 w-4" />
+            </a>
+            <a
+              href="#"
+              aria-label="ProMotion on Twitter"
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 transition-colors hover:bg-[#e63939] hover:text-white"
+            >
+              <Twitter className="h-4 w-4" />
+            </a>
+            <a
+              href="#"
+              aria-label="ProMotion on GitHub"
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 transition-colors hover:bg-[#e63939] hover:text-white"
+            >
+              <Github className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+
+        {/* Link columns */}
+        <div className="flex flex-1 flex-wrap gap-8 text-sm text-gray-700 lg:justify-end">
+          {linkColumns.map((column) => (
+            <div key={column.title} className="min-w-[140px] space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-400">
+                {column.title}
+              </p>
+              <ul className="space-y-2">
+                {column.links.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-gray-700 transition-colors hover:text-[#e63939]"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="border-t bg-white/80">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 text-xs text-gray-400 sm:px-6 lg:px-8">
+          <p>© {new Date().getFullYear()} ProMotion Physiotherapy. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  )
+}

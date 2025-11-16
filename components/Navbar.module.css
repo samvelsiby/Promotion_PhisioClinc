@@ -75,10 +75,73 @@
   width: 100%;
 }
 
+/* Services Dropdown (Desktop) */
+.navItemWithDropdown {
+  position: relative;
+}
+
+.navLinkButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #666666;
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.navLinkButton:hover {
+  color: #e63939;
+}
+
+.navLinkCaret {
+  font-size: 0.7rem;
+}
+
+.servicesDropdown {
+  position: absolute;
+  top: 180%;
+  left: 0;
+  min-width: 260px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 1rem 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(4px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  z-index: 10;
+}
+
+.servicesDropdownOpen {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.servicesDropdownItem {
+  display: block;
+  padding: 0.55rem 1rem;
+  font-size: 0.9rem;
+  color: #555555;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.servicesDropdownItem:hover {
+  background-color: #ffe6e6;
+  color: #e63939;
+}
+
 /* Contact Button */
 .contactButton {
   display: none;
-  background-color: #595959;
+  background-color: #e63939;
   color: white;
   padding: 0.6rem 1.8rem;
   border: none;
@@ -95,7 +158,7 @@
 }
 
 .contactButton:hover {
-  background-color: #e63939;
+  background-color: #c62828;
 }
 
 /* Mobile Menu Button */
@@ -123,6 +186,19 @@
   transition: all 0.3s ease;
 }
 
+/* Animated Hamburger Open State */
+.mobileMenuButtonOpen .hamburgerLine:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.mobileMenuButtonOpen .hamburgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.mobileMenuButtonOpen .hamburgerLine:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 /* Mobile Menu */
 .mobileMenu {
   display: flex;
@@ -131,6 +207,7 @@
   padding: 1.5rem 2rem;
   background-color: #ffffff;
   border-top: 1px solid #e0e0e0;
+  animation: mobileMenuSlideDown 0.25s ease-out;
 }
 
 @media (min-width: 768px) {
@@ -152,8 +229,54 @@
   color: #e63939;
 }
 
+/* Mobile Services Dropdown */
+.mobileServicesGroup {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+.mobileServicesToggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666666;
+  cursor: pointer;
+}
+
+.mobileServicesCaret {
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.mobileServicesCaretOpen {
+  transform: rotate(180deg);
+}
+
+.mobileServicesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-bottom: 0.5rem;
+}
+
+.mobileServicesItem {
+  font-size: 0.95rem;
+  color: #777777;
+  padding: 0.35rem 0;
+}
+
+.mobileServicesItem:hover {
+  color: #e63939;
+}
+
 .mobileContactButton {
-  background-color: #595959;
+  background-color: #e63939;
   color: white;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -165,5 +288,16 @@
 }
 
 .mobileContactButton:hover {
-  background-color: #e63939;
+  background-color: #c62828;
+}
+
+@keyframes mobileMenuSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

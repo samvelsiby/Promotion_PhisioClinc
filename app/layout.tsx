@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Great_Vibes } from 'next/font/google'
 import './globals.css'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer/Footer'
+import FloatingCTA from '@/components/popout/FloatingCTA'
 
 const greatVibes = Great_Vibes({
   subsets: ['latin'],
@@ -11,6 +14,9 @@ const greatVibes = Great_Vibes({
 export const metadata: Metadata = {
   title: 'Promotion Physiotherapy - Winnipeg',
   description: 'Professional physiotherapy services in Winnipeg, Manitoba',
+  icons: {
+    icon: '/logo.png',
+  },
 }
 
 export default function RootLayout({
@@ -20,7 +26,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={greatVibes.variable}>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
+        <FloatingCTA />
+      </body>
     </html>
   )
 }
