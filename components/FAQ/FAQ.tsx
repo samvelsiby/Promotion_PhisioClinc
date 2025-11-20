@@ -12,33 +12,66 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: 'Do I need a doctor\'s referral for physiotherapy?',
+    question: 'Do I need a referral to see a physiotherapist?',
     answer:
-      'In most cases, you can book an appointment directly without a referral. However, some insurance plans may require one for coverage. If you\'re unsure, we can help you check.',
+      'No, you do not need a doctor\'s or other healthcare provider\'s referral to see a physiotherapist. Anyone can book an appointment—just give us a call! Physiotherapy can help people of all ages with a wide variety of conditions, including orthopedic and sports injuries, neurological disorders, cardiorespiratory issues, hand and workplace injuries, motor vehicle accidents, ergonomic and posture concerns, and geriatric care. Note: Some insurance plans may require a doctor\'s referral for coverage. Please check with your provider before your appointment.',
   },
   {
-    question: 'How long is each physiotherapy session?',
+    question: 'What do physiotherapists do?',
     answer:
-      'Your initial assessment usually lasts 45–60 minutes. Follow-up treatments are typically 30–45 minutes, depending on your treatment plan and goals.',
+      'Physiotherapists assess, treat, and educate individuals to help them recover from injuries, improve movement, and enhance overall well-being. Their goal is to help you live your healthiest and most active lifestyle.',
   },
   {
-    question: 'Do you direct bill to insurance providers?',
+    question: 'What should I bring to my first appointment?',
     answer:
-      'Yes, we work with most major insurance companies, as well as WCB and MVA claims, to simplify your billing and reduce out-of-pocket costs.',
+      'Please bring: (1) A referral (if you have one) from your doctor, dentist, nurse practitioner, or another healthcare provider, (2) Your claim number and date of injury if your visit is related to a workplace injury or motor vehicle accident, (3) Your insurance card (for direct billing, if applicable), (4) Comfortable clothing — shorts if we\'re assessing your lower body, or a tank top for upper body assessments.',
   },
   {
-    question: 'What should I wear to my appointment?',
+    question: 'What can I expect at my first visit?',
     answer:
-      'We recommend comfortable, loose-fitting clothing that allows you to move freely and gives your therapist access to the area being treated.',
+      'Free parking is available in front of the clinic. Please arrive 15–20 minutes early to complete a few forms (contact info, insurance details, and basic health information). Your physiotherapist will conduct a detailed assessment, discuss your condition and diagnosis, begin your treatment and provide a personalized home exercise plan. Your initial appointment lasts about 60–75 minutes, and follow-up visits are typically 45–60 minutes.',
+  },
+  {
+    question: 'How many treatments will I need?',
+    answer:
+      'The number of sessions varies depending on factors such as the type and severity of your injury, your age and overall health, and how consistently you follow your home exercise program. Your physiotherapist will create a treatment plan tailored to your needs and adjust it as you progress.',
+  },
+  {
+    question: 'Do you direct bill insurance companies?',
+    answer:
+      'Yes! Pro-Motion Physiotherapy can direct bill most insurance providers, including Manitoba Blue Cross, Great-West Life / Canada Life, Coughlin & Associates, Green Shield, Chamber of Commerce, Maximum Benefits, SSQ, ClaimSecure, Medavie Blue Cross, National Blue Cross, Johnson Group / Johnson Inc., and Interim Federal Health Program. If your provider isn\'t listed, please contact us to confirm.',
+  },
+  {
+    question: 'Can I book appointments online?',
+    answer:
+      'Yes! You can conveniently book your appointments online using our booking system. If you experience any issues booking online, please call us directly and we\'ll assist you right away.',
+  },
+  {
+    question: 'Does Manitoba Health cover physiotherapy at private clinics?',
+    answer:
+      'Unfortunately, Manitoba Health does not cover physiotherapy services provided in private clinics. However, many extended health insurance plans cover a portion of physiotherapy costs. Please check with your insurance provider for details.',
+  },
+  {
+    question: 'What are your hours of operation?',
+    answer:
+      'Pro-Motion Physiotherapy is open Monday to Friday: 8:00 AM – 7:00 PM, Saturday: 8:00 AM – 12:00 PM, and Sunday: Closed.',
+  },
+  {
+    question: 'What is your cancellation policy?',
+    answer:
+      'We understand that schedules can change. Please notify us at least 24 hours in advance if you need to reschedule or cancel. A $25 fee applies for late cancellations.',
   },
 ]
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
+  const [showAll, setShowAll] = useState(false)
 
   const toggleIndex = (index: number) => {
     setOpenIndex((current) => (current === index ? null : index))
   }
+
+  const displayedFaqs = showAll ? faqs : faqs.slice(0, 4)
 
   return (
     <section className="w-full bg-white py-16 sm:py-20 lg:py-24">
@@ -56,7 +89,7 @@ export default function FAQ() {
         </RevealOnScroll>
 
         <div className="space-y-4">
-          {faqs.map((item, index) => {
+          {displayedFaqs.map((item, index) => {
             const isOpen = openIndex === index
 
             return (
@@ -106,6 +139,31 @@ export default function FAQ() {
             )
           })}
         </div>
+
+        {/* Show More/Less Button */}
+        {!showAll && (
+          <div className="mt-8 flex justify-center">
+            <button
+              onClick={() => setShowAll(true)}
+              className="group flex items-center gap-2 rounded-full border-2 border-[#e63939] bg-white px-8 py-3 text-sm font-semibold text-[#e63939] transition-all hover:bg-[#e63939] hover:text-white sm:text-base"
+            >
+              Show More Questions
+              <ChevronDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
+            </button>
+          </div>
+        )}
+
+        {showAll && (
+          <div className="mt-8 flex justify-center">
+            <button
+              onClick={() => setShowAll(false)}
+              className="group flex items-center gap-2 rounded-full border-2 border-gray-300 bg-white px-8 py-3 text-sm font-semibold text-gray-700 transition-all hover:border-gray-400 hover:bg-gray-50 sm:text-base"
+            >
+              Show Less
+              <ChevronDown className="h-4 w-4 rotate-180 transition-transform group-hover:-translate-y-0.5" />
+            </button>
+          </div>
+        )}
       </div>
     </section>
   )

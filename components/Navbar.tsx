@@ -13,6 +13,7 @@ export default function Navbar() {
     { name: 'Insurance Providers', href: '/insurance' },
     { name: 'About Us', href: '/about' },
     { name: 'What We Treat', href: '/services' },
+    { name: 'How We Treat', href: '/how-we-treat' },
     { name: 'Meet Our Team', href: '/team' },
     { name: 'Testimonials', href: '/testimonials' },
     { name: 'Blog', href: '/blogs' },

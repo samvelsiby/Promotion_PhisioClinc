@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button'
 import RevealOnScroll from '@/components/RevealOnScroll'
 import Image from 'next/image'
+import { Phone, MapPin, Clock } from 'lucide-react'
 
 export default function Hero() {
   return (
