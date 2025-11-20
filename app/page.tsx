@@ -12,9 +12,10 @@ export default async function Home() {
   return (
     <main>
       <Hero />
+      <BentoGrid />
       <Motto />
       <Highlights />
-      <BentoGrid />
+      
       <BlogPreview posts={posts} />
       <FAQ />
     </main>
