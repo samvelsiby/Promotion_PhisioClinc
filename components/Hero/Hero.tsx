@@ -43,10 +43,13 @@ export default function Hero() {
           <RevealOnScroll delay={220}>
             <div className="flex justify-center">
               <Button
+                asChild
                 size="lg"
                 className="h-12 rounded-full bg-[#e63939] px-8 text-base font-semibold text-white transition-all hover:bg-[#c62828] sm:h-14 sm:px-10 sm:text-lg"
               >
-                Request Appointment
+                <a href="https://pmphysio.juvonno.com/portal/publicbook.php" target="_blank" rel="noopener noreferrer">
+                  Request Appointment
+                </a>
               </Button>
             </div>
           </RevealOnScroll>

@@ -1,284 +1,295 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Image from 'next/image'
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { 
+  Activity, 
+  User, 
+  Footprints, 
+  BriefcaseMedical, 
+  Bone, 
+  Dumbbell, 
+  ArrowRight,
+  CheckCircle2 
+} from 'lucide-react';
 
-interface Technique {
-  name: string
-  description: string
-  category: 'manual' | 'exercise' | 'modality'
-}
+// --- 1. The Data Structure (Organized by Body Part) ---
+const treatments = [
+  {
+    id: 'head-neck',
+    label: 'Head & Neck',
+    icon: User,
+    title: 'Headaches, Vertigo & Neck Pain',
+    description: 'Neck pain and headaches often stem from poor posture, stress, or whiplash. We specialize in treating the root cause of cervicogenic headaches and jaw (TMJ) dysfunction.',
+    conditions: [
+      'Cervicogenic Headaches',
+      'TMJ (Jaw) Dysfunction',
+      'Whiplash Associated Disorders',
+      'Vertigo & Dizziness',
+      'Concussion Management',
+      'Chronic Neck Stiffness'
+    ],
+    color: 'from-red-500 to-red-600',
+    bgColor: 'bg-red-50',
+    iconColor: 'text-red-600'
+  },
+  {
+    id: 'shoulder',
+    label: 'Shoulder & Arm',
+    icon: Activity,
+    title: 'Shoulder Mobility & Strength',
+    description: 'The shoulder is the most mobile joint in the body, making it susceptible to injury. We restore range of motion and strengthen the rotator cuff to prevent re-injury.',
+    conditions: [
+      'Rotator Cuff Tendonitis',
+      'Frozen Shoulder (Adhesive Capsulitis)',
+      'Shoulder Impingement',
+      'Tennis / Golfer\'s Elbow',
+      'Carpal Tunnel Syndrome',
+      'Dislocations & Instability'
+    ],
+    color: 'from-blue-500 to-blue-600',
+    bgColor: 'bg-blue-50',
+    iconColor: 'text-blue-600'
+  },
+  {
+    id: 'back',
+    label: 'Back & Spine',
+    icon: Bone,
+    title: 'Spinal Health & Lower Back Pain',
+    description: 'Back pain is the most common reason patients seek physiotherapy. Our evidence-based approach focuses on manual therapy, core stabilization, and posture correction.',
+    conditions: [
+      'Sciatica & Nerve Pain',
+      'Disc Herniation / Bulges',
+      'Lumbar Spinal Stenosis',
+      'Scoliosis Management',
+      'Degenerative Disc Disease',
+      'Postural Kyphosis'
+    ],
+    color: 'from-purple-500 to-purple-600',
+    bgColor: 'bg-purple-50',
+    iconColor: 'text-purple-600'
+  },
+  {
+    id: 'hip-knee',
+    label: 'Hip & Knee',
+    icon: Dumbbell,
+    title: 'Lower Limb Stability',
+    description: 'Whether it is arthritis or a sports injury, hip and knee pain can severely limit mobility. We focus on alignment, strengthening, and gait retraining.',
+    conditions: [
+      'Osteoarthritis (Hip/Knee)',
+      'ACL / MCL Ligament Injuries',
+      'Meniscus Tears',
+      'Patellofemoral Pain Syndrome',
+      'Hip Bursitis',
+      'IT Band Syndrome'
+    ],
+    color: 'from-green-500 to-green-600',
+    bgColor: 'bg-green-50',
+    iconColor: 'text-green-600'
+  },
+  {
+    id: 'foot-ankle',
+    label: 'Foot & Ankle',
+    icon: Footprints,
+    title: 'Foot Mechanics & Balance',
+    description: 'Your feet carry your entire body weight. We treat soft tissue injuries and biomechanical issues that cause pain with every step.',
+    conditions: [
+      'Plantar Fasciitis',
+      'Achilles Tendonitis',
+      'Ankle Sprains & Strains',
+      'Metatarsalgia',
+      'Heel Spurs',
+      'Post-Fracture Rehab'
+    ],
+    color: 'from-orange-500 to-orange-600',
+    bgColor: 'bg-orange-50',
+    iconColor: 'text-orange-600'
+  },
+  {
+    id: 'post-surgical',
+    label: 'Post-Surgical',
+    icon: BriefcaseMedical,
+    title: 'Pre & Post-Op Rehabilitation',
+    description: 'Surgery is just the first step. Our specialized post-op protocols ensure you regain full function and return to your daily activities faster.',
+    conditions: [
+      'Total Knee/Hip Replacements',
+      'Rotator Cuff Repairs',
+      'ACL Reconstruction',
+      'Spinal Decompression Surgery',
+      'Fracture Fixation',
+      'Arthroscopic Surgeries'
+    ],
+    color: 'from-indigo-500 to-indigo-600',
+    bgColor: 'bg-indigo-50',
+    iconColor: 'text-indigo-600'
+  }
+];
 
-export default function HowWeTreatPage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all')
-
-  const heroImages = [
-    { src: '/what-we-treat/doctor-helping-patient-rehabilitation.jpg', alt: 'Physiotherapist helping patient with rehabilitation' },
-    { src: '/what-we-treat/acupuncture-process.jpg', alt: 'Acupuncture treatment session' },
-    { src: '/what-we-treat/osteopathy-patient-getting-treatment-massage.jpg', alt: 'Manual therapy massage session' },
-    { src: '/what-we-treat/toa-heftiba-hBLf2nvp-Yc-unsplash.jpg', alt: 'Patient stretching with therapist guidance' },
-  ]
-
-  const techniques: Technique[] = [
-    {
-      name: 'Manual Therapy',
-      description: 'Hands-on techniques to mobilize joints, manipulate soft tissues, and restore optimal movement patterns. Helps reduce pain and improve function.',
-      category: 'manual'
-    },
-    {
-      name: 'Joint Mobilization',
-      description: 'Gentle, controlled movements applied to joints to improve range of motion, reduce stiffness, and alleviate pain.',
-      category: 'manual'
-    },
-    {
-      name: 'Acupuncture',
-      description: 'Traditional technique using fine needles at specific points to stimulate healing, reduce pain, and promote natural recovery.',
-      category: 'manual'
-    },
-    {
-      name: 'Dry Needling',
-      description: 'Targeted insertion of thin needles into trigger points to release muscle tension, improve blood flow, and reduce pain.',
-      category: 'manual'
-    },
-    {
-      name: 'Myofascial Release',
-      description: 'Specialized soft tissue technique that releases tension in the fascia, improving mobility and reducing chronic pain patterns.',
-      category: 'manual'
-    },
-    {
-      name: 'Specific Stretching and Strengthening',
-      description: 'Customized exercise programs designed to improve flexibility, build strength, and address your specific movement limitations.',
-      category: 'exercise'
-    },
-    {
-      name: 'K-Taping',
-      description: 'Therapeutic elastic tape applied to support muscles and joints, reduce swelling, and enhance proprioception during movement.',
-      category: 'manual'
-    },
-    {
-      name: 'Cupping',
-      description: 'Suction therapy that increases blood flow, releases muscle tension, and promotes healing in targeted areas.',
-      category: 'manual'
-    },
-    {
-      name: 'Ice/Heat Therapy',
-      description: 'Strategic application of cold or heat to reduce inflammation, manage pain, and promote tissue healing.',
-      category: 'modality'
-    },
-    {
-      name: 'Neural Glides',
-      description: 'Gentle nerve mobilization techniques to improve nerve mobility, reduce neural tension, and alleviate radiating pain.',
-      category: 'exercise'
-    },
-    {
-      name: 'Patient Education',
-      description: 'Comprehensive guidance on your condition, self-management strategies, and lifestyle modifications for long-term success.',
-      category: 'exercise'
-    },
-    {
-      name: 'Postural Analysis',
-      description: 'Detailed assessment of your posture and movement patterns to identify contributing factors and develop corrective strategies.',
-      category: 'exercise'
-    },
-    {
-      name: 'Core Stability Strengthening',
-      description: 'Targeted exercises to build deep core strength, improve spinal stability, and prevent future injuries.',
-      category: 'exercise'
-    },
-    {
-      name: 'Sports & Work Strengthening',
-      description: 'Sport or occupation-specific training to enhance performance, build resilience, and safely return to your activities.',
-      category: 'exercise'
-    },
-    {
-      name: 'Injury Prevention/Balance Training',
-      description: 'Proactive exercises and balance training to reduce injury risk, improve stability, and enhance overall movement quality.',
-      category: 'exercise'
-    },
-    {
-      name: 'Tailored Home Exercise',
-      description: 'Personalized exercise programs you can perform at home to maintain progress and accelerate your recovery between sessions.',
-      category: 'exercise'
-    },
-    {
-      name: 'IFC (Interferential Current)',
-      description: 'Electrical stimulation therapy that penetrates deep tissues to reduce pain, decrease inflammation, and promote healing.',
-      category: 'modality'
-    },
-    {
-      name: 'TENS (Transcutaneous Electrical Nerve Stimulation)',
-      description: 'Low-voltage electrical current applied through the skin to block pain signals and stimulate endorphin production.',
-      category: 'modality'
-    },
-    {
-      name: 'EMS (Electrical Muscle Stimulation)',
-      description: 'Electrical impulses to stimulate muscle contractions, strengthen weakened muscles, and improve muscle re-education.',
-      category: 'modality'
-    },
-  ]
-
-  const filteredTechniques = selectedCategory === 'all' 
-    ? techniques 
-    : techniques.filter(t => t.category === selectedCategory)
-
-  const categories = [
-    { id: 'all', label: 'All Techniques', count: techniques.length },
-    { id: 'manual', label: 'Manual Therapy', count: techniques.filter(t => t.category === 'manual').length },
-    { id: 'exercise', label: 'Exercise & Education', count: techniques.filter(t => t.category === 'exercise').length },
-    { id: 'modality', label: 'Modalities', count: techniques.filter(t => t.category === 'modality').length },
-  ]
+export default function WhatWeTreat() {
+  const [activeTab, setActiveTab] = useState(treatments[0]);
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Hero Section */}
-        <header className="mb-16 flex flex-col gap-10 lg:mb-20 lg:flex-row lg:items-center">
-          <div className="flex-1 text-center lg:text-left">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#e63939] sm:text-sm">
-              How We Treat
-            </p>
-            <h1 className="mt-3 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl lg:text-6xl">
-              Physiotherapy Techniques
-            </h1>
-            <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-gray-600 sm:text-lg lg:mx-0">
-              Our team blends evidence-based treatments with human-centered care. Each plan mixes hands-on therapy,
-              targeted exercise, and advanced modalities to reduce pain, restore mobility, and keep you moving with confidence.
-            </p>
-            <div className="mt-8 grid gap-6 text-left sm:grid-cols-2">
-              <div className="rounded-2xl border border-gray-200 bg-white/80 p-5 shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gray-400">Approach</p>
-                <p className="mt-2 text-base font-semibold text-gray-900">Hands-on + Movement + Modalities</p>
-                <p className="mt-1 text-sm text-gray-600">Tailored for pain relief, strength, and long-term prevention.</p>
-              </div>
-              <div className="rounded-2xl border border-gray-200 bg-white/80 p-5 shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gray-400">Care Team</p>
-                <p className="mt-2 text-base font-semibold text-gray-900">Certified Physiotherapists</p>
-                <p className="mt-1 text-sm text-gray-600">Guiding you through every stage of recovery.</p>
-              </div>
-            </div>
+    <section className="w-full py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <div className="inline-block mb-4">
+            <span className="text-xs font-bold text-[#e63939] uppercase tracking-[0.2em] bg-red-50 px-4 py-2 rounded-full">
+              Our Expertise
+            </span>
           </div>
-
-          {/* Media Collage */}
-          <div className="flex-1">
-            <div className="grid grid-cols-2 gap-4 sm:gap-6">
-              {heroImages.map((image, index) => (
-                <div
-                  key={image.src}
-                  className={`relative h-48 overflow-hidden rounded-3xl border border-white/60 shadow-lg ${
-                    index % 2 === 0 ? 'translate-y-4 sm:translate-y-8' : ''
-                  }`}
-                >
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    sizes="(min-width: 1024px) 400px, (min-width: 640px) 45vw, 90vw"
-                    className="object-cover"
-                    priority={index === 0}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </header>
-
-        {/* Category Filter */}
-        <div className="mb-10 flex flex-wrap justify-center gap-3">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`rounded-full px-6 py-2.5 text-sm font-medium transition-all duration-200 ${
-                selectedCategory === category.id
-                  ? 'bg-[#e63939] text-white shadow-lg shadow-red-200'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-              }`}
-            >
-              {category.label}
-              <span className="ml-2 text-xs opacity-75">({category.count})</span>
-            </button>
-          ))}
-        </div>
-
-        {/* Techniques Grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {filteredTechniques.map((technique, index) => (
-            <div
-              key={technique.name}
-              className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-              style={{
-                animationDelay: `${index * 50}ms`,
-                animation: 'fadeInUp 0.6s ease-out forwards',
-                opacity: 0
-              }}
-            >
-              {/* Content */}
-              <h3 className="mb-3 text-lg font-semibold text-gray-900 group-hover:text-[#e63939] transition-colors">
-                {technique.name}
-              </h3>
-              <p className="text-sm leading-relaxed text-gray-600">
-                {technique.description}
-              </p>
-
-              {/* Category Badge */}
-              <div className="mt-4">
-                <span className={`inline-block rounded-full px-3 py-1 text-xs font-medium ${
-                  technique.category === 'manual' 
-                    ? 'bg-blue-100 text-blue-700'
-                    : technique.category === 'exercise'
-                    ? 'bg-green-100 text-green-700'
-                    : 'bg-purple-100 text-purple-700'
-                }`}>
-                  {technique.category === 'manual' ? 'Manual Therapy' : 
-                   technique.category === 'exercise' ? 'Exercise & Education' : 'Modality'}
-                </span>
-              </div>
-
-              {/* Decorative element */}
-              <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gradient-to-br from-[#e63939]/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom CTA Section */}
-        <section className="mt-16 rounded-3xl bg-gradient-to-r from-[#e63939] to-[#c62828] p-8 text-center text-white shadow-xl sm:mt-20 sm:p-12">
-          <h2 className="text-2xl font-bold sm:text-3xl">
-            Ready to Start Your Recovery Journey?
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6">
+            WHAT WE TREAT
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/90 sm:text-base">
-            Your physiotherapist will explain which techniques are recommended for you and ensure that
-            you feel informed, comfortable, and involved in every step of your care.
+          <p className="max-w-3xl mx-auto text-gray-600 text-lg leading-relaxed">
+            We take a holistic, body-part specific approach to recovery. Explore our specialized treatments below.
           </p>
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <a
-              href="tel:+1234567890"
-              className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-[#e63939] transition-transform hover:scale-105"
-            >
-              Book an Appointment
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center rounded-full border-2 border-white px-8 py-3 text-sm font-semibold text-white transition-all hover:bg-white hover:text-[#e63939]"
-            >
-              Contact Us
-            </a>
-          </div>
-        </section>
-      </div>
+        </div>
 
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
-    </main>
-  )
+        {/* Interactive Card Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {treatments.map((item) => {
+            const isActive = activeTab.id === item.id;
+            const Icon = item.icon;
+            const isHovered = hoveredCard === item.id;
+
+            return (
+              <button
+                key={item.id}
+                onClick={() => setActiveTab(item)}
+                onMouseEnter={() => setHoveredCard(item.id)}
+                onMouseLeave={() => setHoveredCard(null)}
+                className={`group relative overflow-hidden rounded-2xl p-6 text-left transition-all duration-500 border-2 ${
+                  isActive
+                    ? `bg-gradient-to-br ${item.color} border-transparent text-white shadow-2xl scale-105`
+                    : 'bg-white border-gray-200 text-gray-900 hover:border-gray-300 hover:shadow-xl hover:scale-[1.02]'
+                }`}
+              >
+                {/* Background gradient overlay on hover */}
+                {!isActive && (
+                  <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                )}
+
+                {/* Icon */}
+                <div className={`relative z-10 mb-4 inline-flex p-3 rounded-xl ${
+                  isActive 
+                    ? 'bg-white/20 backdrop-blur-sm' 
+                    : `${item.bgColor}`
+                }`}>
+                  <Icon 
+                    size={32} 
+                    className={isActive ? 'text-white' : item.iconColor} 
+                  />
+                </div>
+
+                {/* Title */}
+                <h3 className={`relative z-10 text-xl font-bold mb-2 transition-colors ${
+                  isActive ? 'text-white' : 'text-gray-900'
+                }`}>
+                  {item.label}
+                </h3>
+
+                {/* Description */}
+                <p className={`relative z-10 text-sm leading-relaxed mb-4 transition-colors ${
+                  isActive ? 'text-white/90' : 'text-gray-600'
+                }`}>
+                  {item.description.substring(0, 80)}...
+                </p>
+
+                {/* Arrow indicator */}
+                <div className={`relative z-10 flex items-center gap-2 transition-all duration-300 ${
+                  isActive ? 'text-white' : 'text-gray-400 group-hover:text-gray-900'
+                }`}>
+                  <span className="text-sm font-semibold">
+                    {isActive ? 'Selected' : 'Learn More'}
+                  </span>
+                  <ArrowRight 
+                    size={16} 
+                    className={`transition-transform duration-300 ${
+                      isActive || isHovered ? 'translate-x-1' : ''
+                    }`}
+                  />
+          </div>
+
+                {/* Active indicator bar */}
+                {isActive && (
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/30" />
+                )}
+            </button>
+            );
+          })}
+        </div>
+
+        {/* Detailed Content Panel */}
+        <div 
+          className="relative overflow-hidden rounded-3xl bg-white border border-gray-200 shadow-xl transition-all duration-500"
+          key={activeTab.id}
+        >
+          {/* Gradient background */}
+          <div className={`absolute inset-0 bg-gradient-to-br ${activeTab.color} opacity-5`} />
+          
+          <div className="relative p-8 md:p-12 lg:p-16">
+            {/* Header with icon */}
+            <div className="flex flex-col md:flex-row md:items-center gap-6 mb-8">
+              <div className={`inline-flex p-4 rounded-2xl ${activeTab.bgColor}`}>
+                <activeTab.icon className={activeTab.iconColor} size={40} />
+              </div>
+              <div>
+                <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-2">
+                  {activeTab.title}
+              </h3>
+                <div className={`h-1.5 w-24 bg-gradient-to-r ${activeTab.color} rounded-full`} />
+              </div>
+            </div>
+
+            {/* Description */}
+            <p className="text-lg text-gray-700 leading-relaxed mb-10 max-w-3xl">
+              {activeTab.description}
+            </p>
+
+            {/* Conditions Grid */}
+            <div className="mb-10">
+              <h4 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-6">
+                Conditions We Treat
+              </h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {activeTab.conditions.map((condition, idx) => (
+                  <div 
+                    key={idx}
+                    className="group flex items-center gap-3 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-all duration-300 hover:shadow-md"
+                  >
+                    <CheckCircle2 
+                      size={20} 
+                      className={`${activeTab.iconColor} shrink-0 group-hover:scale-110 transition-transform`} 
+                    />
+                    <span className="text-gray-700 font-medium group-hover:text-gray-900">
+                      {condition}
+                </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <div className="pt-6 border-t border-gray-200">
+              <a 
+                href="https://pmphysio.juvonno.com/portal/publicbook.php" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={`group inline-flex items-center gap-3 bg-gradient-to-r ${activeTab.color} text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105`}
+              >
+                <span>Book Appointment for {activeTab.label}</span>
+                <ArrowRight 
+                  size={20} 
+                  className="group-hover:translate-x-1 transition-transform" 
+                />
+              </a>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

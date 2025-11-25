@@ -116,7 +116,14 @@ export default function Navbar() {
           </ul>
 
           {/* Contact Button */}
-          <button className={styles.contactButton}>Contact</button>
+          <a 
+            href="https://pmphysio.juvonno.com/portal/publicbook.php" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={styles.contactButton}
+          >
+            Contact
+          </a>
 
           {/* Mobile Menu Button */}
           <button
@@ -183,7 +190,14 @@ export default function Navbar() {
                 </a>
               )
             )}
-            <button className={styles.mobileContactButton}>Contact</button>
+            <a 
+              href="https://pmphysio.juvonno.com/portal/publicbook.php" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={styles.mobileContactButton}
+            >
+              Contact
+            </a>
           </div>
         )}
       </nav>

@@ -1,9 +1,10 @@
-import Hero from '@/components/Hero'
+import { HeroVariantTwo } from '@/components/Hero'
 import Motto from '@/components/Motto'
 import Highlights from '@/components/Highlights'
 import BentoGrid from '@/components/BentoGrid'
 import BlogPreview from '@/components/BlogPreview'
 import FAQ from '@/components/FAQ'
+import Preloader from '@/components/Preloader'
 import { fetchBlogPosts } from '@/lib/sanity'
 
 export default async function Home() {
@@ -11,7 +12,8 @@ export default async function Home() {
 
   return (
     <main>
-      <Hero />
+      <Preloader />
+      <HeroVariantTwo />
       <BentoGrid />
       <Motto />
       <Highlights />

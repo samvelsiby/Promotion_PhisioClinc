@@ -11,7 +11,7 @@ const linkColumns = [
     links: [
       { label: 'Patient Portal', href: '#' },
       { label: 'Patient Resources', href: '#' },
-      { label: 'Online Appointments', href: '#' },
+      { label: 'Online Appointments', href: 'https://pmphysio.juvonno.com/portal/publicbook.php' },
       { label: 'Medical Team', href: '/team' },
     ],
   },
@@ -30,7 +30,7 @@ const linkColumns = [
       { label: 'About Us', href: '/team' },
       { label: 'Services', href: '/#services' },
       { label: 'FAQs', href: '/#faqs' },
-      { label: 'Contact Us', href: '/#contact' },
+      { label: 'Contact Us', href: 'https://pmphysio.juvonno.com/portal/publicbook.php' },
     ],
   },
 ]

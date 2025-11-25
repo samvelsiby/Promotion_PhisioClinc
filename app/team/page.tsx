@@ -1,116 +1,106 @@
-import Image from 'next/image'
-import { Instagram, Linkedin } from 'lucide-react'
-import { cn } from '@/lib/utils'
+"use client";
 
-interface TeamMember {
-  name: string
-  title: string
-  bio: string
-  imageAlt: string
-}
+import React from 'react';
+import Image from 'next/image';
+import { Linkedin, Instagram } from 'lucide-react';
 
-const team: TeamMember[] = [
+// --- Data Configuration ---
+const teamMembers = [
   {
-    name: 'Ben Bastin Jose',
-    title: 'Registered Physiotherapist',
-    bio:
-      'Ben is a Registered Physiotherapist in Manitoba with years of experience delivering compassionate, evidence-based care to clients across a wide range of physical conditions. Dedicated to lifelong learning, he continuously advances his clinical knowledge through postgraduate training and certifications, with a treatment philosophy that emphasizes a holistic, client-centred approach.',
-    imageAlt: 'Portrait of Ben Bastin Jose',
+    id: 1,
+    name: "BEN BASTIN JOSE",
+    role: "Registered Physiotherapist",
+    bio: "Ben Bastin Jose is a Registered Physiotherapist in Manitoba with over four years of experience delivering compassionate, evidence-based care to clients across a wide range of physical conditions. He earned his Bachelor's Degree in Physiotherapy from Mahatma Gandhi University, India, in 2013. After relocating to Canada, Ben successfully completed the Canadian Physiotherapy Competency Examination in September 2021, earning his professional license to practise in Manitoba.",
+    imageSrc: "/team/ben.png", 
+    socials: { instagram: "#", linkedin: "#" }
   },
   {
-    name: 'Lijo Paul',
-    title: 'Registered Physiotherapist',
-    bio:
-      'Lijo is an internationally trained Registered Physiotherapist with extensive clinical experience. He is fluent in multiple languages and is committed to delivering personalized care that respects each patient\'s unique background, goals, and challenges. His practice focuses on evidence-based rehabilitation and clear communication.',
-    imageAlt: 'Portrait of Lijo Paul',
+    id: 2,
+    name: "LIJO PAUL",
+    role: "Registered Physiotherapist",
+    bio: "I am an enthusiastic, internationally trained Registered Physiotherapist with over nine years of clinical experience, licensed with the College of Physiotherapists of Manitoba. I possess excellent communication skills and am fluent in English, Hindi, Malayalam, and Tamil. I completed my Bachelor of Physiotherapy (BPT) in 2008 and Master of Physiotherapy (MPT) in Musculoskeletal and Sports Injuries in 2011.",
+    imageSrc: "/team/lijo.png",
+    socials: { instagram: "#", linkedin: "#" }
   },
   {
-    name: 'Bency Thekkineth',
-    title: 'Community Occupational Therapist',
-    bio:
-      'Bency is an experienced and compassionate Community Occupational Therapist with a strong background in community and long-term care. She helps clients restore independence through tailored interventions in mobility, positioning, adaptive equipment, and home safety, always centring care around the person and their goals.',
-    imageAlt: 'Portrait of Bency Thekkineth',
-  },
-]
+    id: 3,
+    name: "BENCY THEKKINETH",
+    role: "Community Occupational Therapist",
+    bio: "I am an experienced and compassionate community occupational therapist with over 10 years of practice in community and long-term care settings. She specializes in seating and positioning, pressure management, mobility and adaptive equipment, and home safety assessments. Bency earned her Master's in Occupational Therapy from the University of Manitoba (2013) and a Bachelor of Science in Biochemistry from the University of Toronto (2008).",
+    imageSrc: "/team/bency.png",
+    socials: { instagram: "#", linkedin: "#" }
+  }
+];
 
-export default function TeamPage() {
+// --- Main Component ---
+export default function MeetOurTeamPage() {
   return (
-    <main className="min-h-screen bg-[#f7f7f7] pb-16">
-      {/* Hero */}
-      <section className="w-full bg-[#e63939] text-white">
-        <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20 lg:px-0">
-          <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
-            Meet the Team
-          </h1>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/90 sm:text-base">
-            Our physiotherapists deliver evidence-based, one-to-one care to help you move better,
-            recover faster, and stay pain free.
-          </p>
+    <section className="w-full py-16 bg-gray-50 min-h-screen">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-extrabold text-gray-900">MEET OUR TEAM</h2>
+          <div className="mt-3 h-1.5 w-24 bg-red-600 mx-auto rounded-full"></div>
         </div>
-      </section>
 
-      {/* Team cards */}
-      <section className="mx-auto mt-10 flex max-w-5xl flex-col gap-8 px-4 sm:px-6 lg:px-0">
-        {team.map((member, index) => {
-          const imageOnLeft = index % 2 === 0
-
-          return (
-            <article
-              key={member.name}
-              className="overflow-hidden rounded-[32px] bg-white shadow-md"
-            >
-              <div
-                className={cn(
-                  'flex flex-col md:flex-row',
-                  !imageOnLeft && 'md:flex-row-reverse'
-                )}
-              >
-                {/* Photo + social strip */}
-                <div className="relative flex items-end justify-center bg-[#e63939] px-6 pb-6 pt-10 text-white md:w-[34%] md:px-8">
-                  {/* Social icons */}
-                  <div
-                    className={cn(
-                      'absolute top-6 flex flex-col gap-3',
-                      imageOnLeft ? 'left-6' : 'right-6'
-                    )}
-                  >
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10">
-                      <Instagram className="h-4 w-4" />
-                    </div>
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10">
-                      <Linkedin className="h-4 w-4" />
-                    </div>
-                  </div>
-
-                  {/* Portrait placeholder – replace /logo.png with real photo paths later */}
-                  <div className="relative h-40 w-40 overflow-hidden rounded-full border-4 border-white/80 bg-white/10 sm:h-44 sm:w-44">
-                    <Image
-                      src="/logo.png"
-                      alt={member.imageAlt}
-                      fill
-                      sizes="160px"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-
-                {/* Text content */}
-                <div className="flex-1 px-6 py-8 sm:px-8 sm:py-10">
-                  <h2 className="text-xl font-bold tracking-wide text-gray-900 sm:text-2xl">
-                    {member.name.toUpperCase()}
-                  </h2>
-                  <p className="mt-1 text-sm font-semibold uppercase tracking-[0.18em] text-[#e63939]">
-                    {member.title}
-                  </p>
-                  <p className="mt-4 max-w-none text-sm leading-relaxed text-gray-700 sm:text-[0.95rem]">
-                    {member.bio}
-                  </p>
-                </div>
-              </div>
-            </article>
-          )
-        })}
-      </section>
-    </main>
-  )
+        {/* Cards Loop */}
+        {teamMembers.map((member, index) => (
+          <TeamCard 
+            key={member.id} 
+            member={member} 
+            isReversed={index % 2 !== 0} 
+          />
+        ))}
+      </div>
+    </section>
+  );
 }
+
+// --- Sub Component (The Card) ---
+const TeamCard = ({ member, isReversed }: { member: any, isReversed: boolean }) => {
+  return (
+    <div className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden min-h-[380px] transition-all duration-300 hover:shadow-xl`}>
+      
+      {/* Left/Right Section: Image + Social Bar */}
+      <div className={`relative w-full md:w-[35%] flex ${isReversed ? 'flex-row-reverse' : 'flex-row'}`}>
+        
+        {/* Red Social Sidebar */}
+        <div className="w-16 bg-[#EE1C25] flex flex-col items-center pt-8 gap-6 shrink-0 z-10">
+          <a href={member.socials.instagram} className="text-white hover:text-white/80 transition-colors p-2">
+            <Instagram size={24} />
+          </a>
+          <a href={member.socials.linkedin} className="text-white hover:text-white/80 transition-colors p-2">
+            <Linkedin size={24} />
+          </a>
+        </div>
+
+        {/* Image Container */}
+        <div className="relative w-full h-72 md:h-full bg-gray-200">
+          <Image
+            src={member.imageSrc}
+            alt={member.name}
+            fill
+            className="object-cover object-top"
+            sizes="(max-width: 768px) 100vw, 35vw"
+          />
+        </div>
+      </div>
+
+      {/* Content Section */}
+      <div className="w-full md:w-[65%] p-8 md:p-10 flex flex-col justify-center">
+        <h3 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tight mb-2">
+          {member.name}
+        </h3>
+        <p className="text-sm font-medium uppercase tracking-widest text-gray-500 mb-6">
+          {member.role}
+        </p>
+        
+        {/* Description */}
+        <div className="text-gray-600 leading-relaxed text-sm md:text-[0.95rem] space-y-4">
+           <p>{member.bio}</p>
+        </div>
+      </div>
+    </div>
+  );
+};

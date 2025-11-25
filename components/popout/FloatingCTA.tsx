@@ -10,7 +10,7 @@ export default function FloatingCTA() {
   const [showChat, setShowChat] = useState(false)
 
   const handleRequestAppointment = () => {
-    setShowAppointmentPopup(true)
+    window.open('https://pmphysio.juvonno.com/portal/publicbook.php', '_blank', 'noopener,noreferrer')
   }
 
   const handleChat = () => {
@@ -71,68 +71,20 @@ export default function FloatingCTA() {
               Request Appointment
             </h2>
             
-            <form className="space-y-4">
-              <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-[#e63939] focus:outline-none focus:ring-1 focus:ring-[#e63939]"
-                  placeholder="John Doe"
-                />
-              </div>
+            <div className="space-y-4">
+              <p className="text-gray-600">
+                Click the button below to book your appointment directly through our online booking system.
+              </p>
               
-              <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-[#e63939] focus:outline-none focus:ring-1 focus:ring-[#e63939]"
-                  placeholder="john@example.com"
-                />
-              </div>
-              
-              <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700">
-                  Phone
-                </label>
-                <input
-                  type="tel"
-                  className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-[#e63939] focus:outline-none focus:ring-1 focus:ring-[#e63939]"
-                  placeholder="+1 (432) 098-567"
-                />
-              </div>
-              
-              <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700">
-                  Preferred Date
-                </label>
-                <input
-                  type="date"
-                  className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-[#e63939] focus:outline-none focus:ring-1 focus:ring-[#e63939]"
-                />
-              </div>
-              
-              <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700">
-                  Message (Optional)
-                </label>
-                <textarea
-                  rows={3}
-                  className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-[#e63939] focus:outline-none focus:ring-1 focus:ring-[#e63939]"
-                  placeholder="Tell us about your needs..."
-                />
-              </div>
-              
-              <button
-                type="submit"
-                className="w-full rounded-md bg-[#e63939] px-4 py-2 font-semibold text-white transition-colors hover:bg-[#c62828]"
+              <a
+                href="https://pmphysio.juvonno.com/portal/publicbook.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full rounded-md bg-[#e63939] px-4 py-3 text-center font-semibold text-white transition-colors hover:bg-[#c62828]"
               >
-                Submit Request
-              </button>
-            </form>
+                Book Appointment Online
+              </a>
+            </div>
           </div>
         </div>
       )}

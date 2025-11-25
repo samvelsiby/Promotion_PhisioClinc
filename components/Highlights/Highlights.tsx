@@ -83,11 +83,14 @@ export default function Highlights() {
                     </Button>
                   ) : (
                     <Button
+                      asChild
                       variant="ghost"
                       size="sm"
                       className="px-0 text-[13px] font-medium text-gray-400 underline-offset-4 hover:bg-transparent hover:text-gray-500 group-hover:text-white/90"
                     >
-                      See More
+                      <a href="https://pmphysio.juvonno.com/portal/publicbook.php" target="_blank" rel="noopener noreferrer">
+                        Book Appointment
+                      </a>
                     </Button>
                   )}
                 </div>

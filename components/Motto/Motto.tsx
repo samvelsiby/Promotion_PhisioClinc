@@ -103,10 +103,13 @@ export default function Motto() {
           </ul>
 
           <Button
+            asChild
             size="lg"
             className="mt-8 h-12 rounded-full bg-[#e63939] px-8 text-base font-semibold text-white transition-colors hover:bg-[#c62828] sm:h-12 sm:px-10"
           >
-            Learn more about us
+            <a href="https://pmphysio.juvonno.com/portal/publicbook.php" target="_blank" rel="noopener noreferrer">
+              Book an Appointment
+            </a>
           </Button>
         </div>
       </div>

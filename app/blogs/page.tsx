@@ -166,7 +166,9 @@ export default async function BlogsPage() {
                   again.
                 </p>
                 <Link
-                  href="/#contact"
+                  href="https://pmphysio.juvonno.com/portal/publicbook.php"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-5 inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-medium text-[#111827] shadow-sm transition-colors duration-200 hover:bg-slate-100"
                 >
                   Book now
