@@ -21,11 +21,11 @@ export default function HeroVariantTwo() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex items-center">
+      <div className="relative z-10 h-full flex flex-col justify-between px-4 sm:px-6 lg:px-12 xl:px-16 pt-4 pb-8 sm:py-12">
         <RevealOnScroll>
-          <div className="space-y-8 text-left max-w-2xl px-4 sm:px-6 lg:px-12 xl:px-16">
+          <div className="text-left max-w-2xl">
             <div className="space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-gray-400">
+              <p className="hidden sm:block text-xs font-semibold uppercase tracking-[0.35em] text-gray-400">
                 Pro Motion Physiotherapy
               </p>
               <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl lg:text-6xl">
@@ -34,30 +34,22 @@ export default function HeroVariantTwo() {
               </h1>
             </div>
 
-            <p className="max-w-xl text-base leading-relaxed text-gray-600 sm:text-lg">
+            <p className="hidden sm:block max-w-xl text-base leading-relaxed text-gray-600 sm:text-lg mt-6">
               Founded by two dedicated physiotherapists with a shared dream and vision to help and serve our community with compassionate, personalized care. We provide evidence-based treatments tailored to your unique needs.
             </p>
-
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <Button 
-                asChild
-                className="h-12 rounded-full bg-[#e63939] px-8 text-base font-semibold text-white transition hover:bg-[#c62828] sm:h-12 sm:px-9"
-              >
-                <a href="https://pmphysio.juvonno.com/portal/publicbook.php" target="_blank" rel="noopener noreferrer">
-                  Request Appointment
-                </a>
-              </Button>
-              <Button 
-                asChild
-                className="h-12 rounded-full border border-gray-900 bg-gray-900 px-8 text-base font-semibold text-white transition hover:bg-black sm:h-12 sm:px-9"
-              >
-                <a href="https://pmphysio.juvonno.com/portal/publicbook.php" target="_blank" rel="noopener noreferrer">
-                  Book a call
-                </a>
-              </Button>
-            </div>
           </div>
         </RevealOnScroll>
+
+        <div className="flex flex-col gap-4 sm:flex-row">
+          <Button 
+            asChild
+            className="h-12 rounded-full bg-[#e63939] px-8 text-base font-semibold text-white transition hover:bg-[#c62828] sm:h-12 sm:px-9"
+          >
+            <a href="https://pmphysio.juvonno.com/portal/publicbook.php" target="_blank" rel="noopener noreferrer">
+              Request Appointment
+            </a>
+          </Button>
+        </div>
       </div>
     </section>
   )

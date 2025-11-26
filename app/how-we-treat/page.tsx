@@ -148,78 +148,68 @@ export default function WhatWeTreat() {
           </p>
         </div>
 
-        {/* Interactive Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {treatments.map((item) => {
-            const isActive = activeTab.id === item.id;
-            const Icon = item.icon;
-            const isHovered = hoveredCard === item.id;
+        {/* Honeycomb Grid */}
+        <div className="honeycomb-container mb-12">
+          <div className="honeycomb-grid">
+            {treatments.map((item) => {
+              const isActive = activeTab.id === item.id;
+              const Icon = item.icon;
+              const isHovered = hoveredCard === item.id;
 
-            return (
-              <button
-                key={item.id}
-                onClick={() => setActiveTab(item)}
-                onMouseEnter={() => setHoveredCard(item.id)}
-                onMouseLeave={() => setHoveredCard(null)}
-                className={`group relative overflow-hidden rounded-2xl p-6 text-left transition-all duration-500 border-2 ${
-                  isActive
-                    ? `bg-gradient-to-br ${item.color} border-transparent text-white shadow-2xl scale-105`
-                    : 'bg-white border-gray-200 text-gray-900 hover:border-gray-300 hover:shadow-xl hover:scale-[1.02]'
-                }`}
-              >
-                {/* Background gradient overlay on hover */}
-                {!isActive && (
-                  <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-                )}
-
-                {/* Icon */}
-                <div className={`relative z-10 mb-4 inline-flex p-3 rounded-xl ${
-                  isActive 
-                    ? 'bg-white/20 backdrop-blur-sm' 
-                    : `${item.bgColor}`
-                }`}>
-                  <Icon 
-                    size={32} 
-                    className={isActive ? 'text-white' : item.iconColor} 
-                  />
-                </div>
-
-                {/* Title */}
-                <h3 className={`relative z-10 text-xl font-bold mb-2 transition-colors ${
-                  isActive ? 'text-white' : 'text-gray-900'
-                }`}>
-                  {item.label}
-                </h3>
-
-                {/* Description */}
-                <p className={`relative z-10 text-sm leading-relaxed mb-4 transition-colors ${
-                  isActive ? 'text-white/90' : 'text-gray-600'
-                }`}>
-                  {item.description.substring(0, 80)}...
-                </p>
-
-                {/* Arrow indicator */}
-                <div className={`relative z-10 flex items-center gap-2 transition-all duration-300 ${
-                  isActive ? 'text-white' : 'text-gray-400 group-hover:text-gray-900'
-                }`}>
-                  <span className="text-sm font-semibold">
-                    {isActive ? 'Selected' : 'Learn More'}
-                  </span>
-                  <ArrowRight 
-                    size={16} 
-                    className={`transition-transform duration-300 ${
-                      isActive || isHovered ? 'translate-x-1' : ''
+              return (
+                <div 
+                  key={item.id}
+                  className="honeycomb-item"
+                >
+                  <button
+                    onClick={() => setActiveTab(item)}
+                    onMouseEnter={() => setHoveredCard(item.id)}
+                    onMouseLeave={() => setHoveredCard(null)}
+                    className={`honeycomb-hexagon group ${
+                      isActive ? 'honeycomb-active' : ''
                     }`}
-                  />
-          </div>
+                  >
+                    <div className={`honeycomb-content ${
+                      isActive 
+                        ? `bg-gradient-to-br ${item.color} text-white` 
+                        : 'bg-white text-gray-900'
+                    }`}>
+                      {/* Icon */}
+                      <div className={`honeycomb-icon ${
+                        isActive 
+                          ? 'bg-white/20 backdrop-blur-sm' 
+                          : `${item.bgColor}`
+                      }`}>
+                        <Icon 
+                          size={40} 
+                          className={isActive ? 'text-white' : item.iconColor} 
+                        />
+                      </div>
 
-                {/* Active indicator bar */}
-                {isActive && (
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/30" />
-                )}
-            </button>
-            );
-          })}
+                      {/* Title */}
+                      <h3 className={`honeycomb-title ${
+                        isActive ? 'text-white' : 'text-gray-900'
+                      }`}>
+                        {item.label}
+                      </h3>
+
+                      {/* Arrow indicator */}
+                      <div className={`honeycomb-arrow ${
+                        isActive ? 'text-white' : 'text-gray-400 group-hover:text-gray-900'
+                      }`}>
+                        <ArrowRight 
+                          size={18} 
+                          className={`transition-transform duration-300 ${
+                            isActive || isHovered ? 'translate-x-1' : ''
+                          }`}
+                        />
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         {/* Detailed Content Panel */}
@@ -290,6 +280,175 @@ export default function WhatWeTreat() {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .honeycomb-container {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          padding: 3rem 0;
+        }
+
+        .honeycomb-grid {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: flex-start;
+          max-width: 900px;
+          margin: 0 auto;
+          position: relative;
+          padding: 40px 0;
+        }
+
+        .honeycomb-item {
+          position: relative;
+          width: 200px;
+          height: 230px;
+          margin: -30px 5px;
+        }
+
+        /* First row: items 1, 2, 3 */
+        .honeycomb-item:nth-child(1),
+        .honeycomb-item:nth-child(2),
+        .honeycomb-item:nth-child(3) {
+          margin-top: 0;
+        }
+
+        /* Second row: items 4, 5, 6 - offset to create honeycomb */
+        .honeycomb-item:nth-child(4),
+        .honeycomb-item:nth-child(5),
+        .honeycomb-item:nth-child(6) {
+          margin-top: 115px;
+          margin-left: 105px;
+        }
+
+        @media (max-width: 1024px) {
+          .honeycomb-grid {
+            max-width: 700px;
+            padding: 35px 0;
+          }
+          .honeycomb-item {
+            width: 170px;
+            height: 196px;
+            margin: -25px 5px;
+          }
+          .honeycomb-item:nth-child(4),
+          .honeycomb-item:nth-child(5),
+          .honeycomb-item:nth-child(6) {
+            margin-top: 98px;
+            margin-left: 90px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .honeycomb-grid {
+            max-width: 500px;
+            padding: 30px 0;
+          }
+          .honeycomb-item {
+            width: 150px;
+            height: 173px;
+            margin: -20px 3px;
+          }
+          .honeycomb-item:nth-child(4),
+          .honeycomb-item:nth-child(5),
+          .honeycomb-item:nth-child(6) {
+            margin-top: 87px;
+            margin-left: 78px;
+          }
+        }
+
+        .honeycomb-hexagon {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          padding: 0;
+        }
+
+        .honeycomb-content {
+          width: 100%;
+          height: 100%;
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 1.25rem;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          border: 3px solid transparent;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .honeycomb-hexagon:hover .honeycomb-content {
+          transform: scale(1.08) translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .honeycomb-active .honeycomb-content {
+          transform: scale(1.12) translateY(-8px);
+          box-shadow: 0 15px 35px rgba(230, 57, 57, 0.35);
+          border-color: rgba(255, 255, 255, 0.4);
+          z-index: 10;
+        }
+
+        .honeycomb-icon {
+          width: 56px;
+          height: 56px;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 0.75rem;
+          transition: all 0.3s ease;
+        }
+
+        .honeycomb-hexagon:hover .honeycomb-icon {
+          transform: scale(1.1);
+        }
+
+        .honeycomb-title {
+          font-size: 0.95rem;
+          font-weight: 700;
+          text-align: center;
+          margin-bottom: 0.25rem;
+          line-height: 1.3;
+        }
+
+        .honeycomb-arrow {
+          margin-top: 0.5rem;
+          transition: all 0.3s ease;
+        }
+
+        @media (max-width: 640px) {
+          .honeycomb-grid {
+            flex-direction: column;
+            align-items: center;
+            max-width: 100%;
+            padding: 20px 0;
+          }
+          .honeycomb-item {
+            width: 180px;
+            height: 208px;
+            margin: 20px 0 !important;
+          }
+          .honeycomb-item:nth-child(4),
+          .honeycomb-item:nth-child(5),
+          .honeycomb-item:nth-child(6) {
+            margin-left: 0 !important;
+            margin-top: 20px !important;
+          }
+          .honeycomb-title {
+            font-size: 0.9rem;
+          }
+          .honeycomb-icon {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      `}</style>
     </section>
   );
 }

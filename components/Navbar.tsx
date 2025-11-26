@@ -140,9 +140,17 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation Overlay */}
         {isMenuOpen && (
-          <div className={styles.mobileMenu}>
+          <div 
+            className={styles.mobileMenuOverlay}
+            onClick={() => setIsMenuOpen(false)}
+          />
+        )}
+
+        {/* Mobile Navigation Sidebar */}
+        <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
+          <div className={styles.mobileMenuContent}>
             {navLinks.map((link) =>
               link.name === 'What We Treat' ? (
                 <div key={link.name} className={styles.mobileServicesGroup}>
@@ -199,7 +207,7 @@ export default function Navbar() {
               Contact
             </a>
           </div>
-        )}
+        </div>
       </nav>
     </>
   )
