@@ -12,7 +12,7 @@ const greatVibes = Great_Vibes({
 })
 
 export const metadata: Metadata = {
-  title: 'Promotion Physiotherapy - Winnipeg',
+  title: 'Pro motion Physiotherapy - St anns ,Winnipeg',
   description: 'Professional physiotherapy services in Winnipeg, Manitoba',
   icons: {
     icon: '/logo.png',
