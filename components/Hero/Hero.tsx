@@ -48,7 +48,7 @@ export default function Hero() {
                 className="h-12 rounded-full bg-[#e63939] px-8 text-base font-semibold text-white transition-all hover:bg-[#c62828] sm:h-14 sm:px-10 sm:text-lg"
               >
                 <a href="https://pmphysio.juvonno.com/portal/publicbook.php" target="_blank" rel="noopener noreferrer">
-                  Request Appointment
+                Request Appointment
                 </a>
               </Button>
             </div>

@@ -60,10 +60,10 @@ export default function MeetOurTeamPage() {
 // --- Sub Component (The Card) ---
 const TeamCard = ({ member, isReversed }: { member: any, isReversed: boolean }) => {
   return (
-    <div className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden min-h-[380px] transition-all duration-300 hover:shadow-xl`}>
+    <div className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden min-h-[340px] transition-all duration-300 hover:shadow-xl`}>
       
       {/* Left/Right Section: Image + Social Bar */}
-      <div className={`relative w-full md:w-[35%] flex ${isReversed ? 'flex-row-reverse' : 'flex-row'}`}>
+      <div className={`relative w-full md:w-[30%] flex ${isReversed ? 'flex-row-reverse' : 'flex-row'}`}>
         
         {/* Red Social Sidebar */}
         <div className="w-16 bg-[#EE1C25] flex flex-col items-center pt-8 gap-6 shrink-0 z-10">
@@ -76,14 +76,16 @@ const TeamCard = ({ member, isReversed }: { member: any, isReversed: boolean }) 
         </div>
 
         {/* Image Container */}
-        <div className="relative w-full h-72 md:h-full bg-gray-200">
-          <Image
-            src={member.imageSrc}
-            alt={member.name}
-            fill
-            className="object-cover object-top"
-            sizes="(max-width: 768px) 100vw, 35vw"
-          />
+        <div className="relative w-full h-56 sm:h-64 md:h-72 bg-gray-200 flex items-center justify-center">
+          <div className="relative w-32 sm:w-40 md:w-44 h-40 sm:h-48 md:h-56">
+            <Image
+              src={member.imageSrc}
+              alt={member.name}
+              fill
+              className="object-cover object-top rounded-lg"
+              sizes="(max-width: 768px) 60vw, 20vw"
+            />
+          </div>
         </div>
       </div>
 

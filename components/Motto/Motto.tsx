@@ -9,7 +9,11 @@ const benefits = [
   'Verdant Healing Environment',
 ]
 
-export default function Motto() {
+type MottoProps = {
+  showButton?: boolean
+}
+
+export default function Motto({ showButton = true }: MottoProps) {
   return (
     <section className="w-full bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto flex max-w-7xl flex-col gap-12 px-4 sm:px-6 lg:flex-row lg:items-center lg:gap-16 lg:px-8">
@@ -63,15 +67,11 @@ export default function Motto() {
             <p className="text-xs text-gray-500">Providing personalized care</p>
           </div>
 
-          <div className="pointer-events-none absolute -bottom-24 left-10 w-[74%] max-w-md rounded-2xl bg-white px-5 py-3 shadow-xl">
-            <p className="text-sm font-semibold text-gray-900">Life-Changing Treatments</p>
-            <p className="text-xs text-gray-500">Creating a crucible for new beginnings.</p>
-          </div>
         </div>
 
         <div className="w-full max-w-xl space-y-6 lg:max-w-lg">
           <div className="h-0.5 w-16 bg-gray-300" />
-          <h2 className="text-3xl font-semibold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-10 sm:mt-2 text-3xl font-semibold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
             Redefining Healthcare,
             <span className="block">One Life at a Time</span>
           </h2>
@@ -102,15 +102,17 @@ export default function Motto() {
             ))}
           </ul>
 
-          <Button
-            asChild
-            size="lg"
-            className="mt-8 h-12 rounded-full bg-[#e63939] px-8 text-base font-semibold text-white transition-colors hover:bg-[#c62828] sm:h-12 sm:px-10"
-          >
-            <a href="https://pmphysio.juvonno.com/portal/publicbook.php" target="_blank" rel="noopener noreferrer">
-              Book an Appointment
-            </a>
-          </Button>
+          {showButton && (
+            <Button
+              asChild
+              size="lg"
+              className="mt-8 h-12 rounded-full bg-[#e63939] px-8 text-base font-semibold text-white transition-colors hover:bg-[#c62828] sm:h-12 sm:px-10"
+            >
+              <a href="/about">
+                Learn more about us
+              </a>
+            </Button>
+          )}
         </div>
       </div>
     </section>

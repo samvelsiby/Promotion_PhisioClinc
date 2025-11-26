@@ -21,29 +21,14 @@ export default function FloatingCTA() {
 
   return (
     <>
-      {/* Request Appointment Button - Top Right */}
+      {/* Request Appointment Button - Above Chat, Bright Pill Shape */}
       <div className="fixed bottom-24 right-4 z-50 sm:right-6">
         <button
           onClick={handleRequestAppointment}
-          className="group relative flex h-14 w-auto items-center justify-center transition-all duration-300 hover:scale-105 sm:h-16 lg:h-[58px]"
+          className="group flex items-center justify-center rounded-full bg-[#e63939] px-6 py-2.5 text-sm font-semibold text-white shadow-[0_10px_25px_rgba(230,57,57,0.55)] transition-all duration-300 hover:scale-110 hover:bg-[#c62828] sm:px-8 sm:py-3 sm:text-base"
           aria-label="Request Appointment"
         >
-          {/* SVG Background */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <Image
-              src="/popout/request-appointment.svg"
-              alt=""
-              width={368}
-              height={59}
-              className="h-full w-auto object-contain"
-              priority
-            />
-          </div>
-          
-          {/* Text Overlay */}
-          <span className="relative z-10 px-6 text-sm font-semibold text-white sm:text-base lg:text-lg">
-            Request Appointment
-          </span>
+          <span>Request Appointment</span>
         </button>
       </div>
 
