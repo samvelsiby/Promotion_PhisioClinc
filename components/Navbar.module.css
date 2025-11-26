@@ -149,13 +149,17 @@
   font-size: 0.95rem;
   font-weight: 500;
   transition: background-color 0.3s ease;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 @media (min-width: 1024px) {
   .contactButton {
-    display: block;
+    display: flex;
   }
 }
+
 
 .contactButton:hover {
   background-color: #c62828;
@@ -335,7 +339,10 @@
   font-weight: 500;
   margin-top: 1rem;
   text-align: center;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   transition: background-color 0.3s ease;
 }
 

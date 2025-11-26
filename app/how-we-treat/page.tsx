@@ -253,10 +253,10 @@ const ServiceModal = ({ service, onClose }: { service: typeof services[0] | null
   );
 };
 
-const organizeRows = (services: typeof services, colsPerRow: number) => {
+const organizeRows = (servicesArray: typeof services, colsPerRow: number) => {
   const rows = [];
-  for (let i = 0; i < services.length; i += colsPerRow) {
-    rows.push(services.slice(i, i + colsPerRow));
+  for (let i = 0; i < servicesArray.length; i += colsPerRow) {
+    rows.push(servicesArray.slice(i, i + colsPerRow));
   }
   return rows;
 };

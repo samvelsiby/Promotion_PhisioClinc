@@ -1,8 +1,8 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { Linkedin, Instagram } from 'lucide-react';
+import { Linkedin, Instagram, ChevronDown, ChevronUp } from 'lucide-react';
 
 // --- Data Configuration ---
 const teamMembers = [
@@ -39,9 +39,14 @@ export default function MeetOurTeamPage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-extrabold text-gray-900">MEET OUR TEAM</h2>
-          <div className="mt-3 h-1.5 w-24 bg-red-600 mx-auto rounded-full"></div>
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 uppercase tracking-tight mb-4">
+            MEET OUR TEAM
+          </h2>
+          <div className="mt-4 h-2 w-32 bg-[#e63939] mx-auto rounded-full"></div>
+          <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+            Our experienced team of healthcare professionals is dedicated to helping you achieve your best health
+          </p>
         </div>
 
         {/* Cards Loop */}
@@ -59,11 +64,17 @@ export default function MeetOurTeamPage() {
 
 // --- Sub Component (The Card) ---
 const TeamCard = ({ member, isReversed }: { member: any, isReversed: boolean }) => {
+  const [isExpanded, setIsExpanded] = useState(false)
+  // Get first line (up to first period or first 100 characters)
+  const firstLineEnd = member.bio.indexOf('.') !== -1 ? member.bio.indexOf('.') + 1 : Math.min(100, member.bio.length)
+  const firstLine = member.bio.substring(0, firstLineEnd).trim()
+  const shouldTruncate = member.bio.length > firstLine.length
+
   return (
-    <div className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden min-h-[340px] transition-all duration-300 hover:shadow-xl`}>
+    <div className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-xl`}>
       
       {/* Left/Right Section: Image + Social Bar */}
-      <div className={`relative w-full md:w-[30%] flex ${isReversed ? 'flex-row-reverse' : 'flex-row'}`}>
+      <div className={`relative w-full md:w-[35%] flex ${isReversed ? 'flex-row-reverse' : 'flex-row'}`}>
         
         {/* Red Social Sidebar */}
         <div className="w-16 bg-[#EE1C25] flex flex-col items-center pt-8 gap-6 shrink-0 z-10">
@@ -76,21 +87,21 @@ const TeamCard = ({ member, isReversed }: { member: any, isReversed: boolean }) 
         </div>
 
         {/* Image Container */}
-        <div className="relative w-full h-56 sm:h-64 md:h-72 bg-gray-200 flex items-center justify-center">
-          <div className="relative w-32 sm:w-40 md:w-44 h-40 sm:h-48 md:h-56">
+        <div className="relative flex-1 bg-gray-200 flex items-center justify-center overflow-hidden h-[350px] sm:h-[400px] md:h-[450px]">
+          <div className="relative w-full h-full max-w-full">
             <Image
               src={member.imageSrc}
               alt={member.name}
               fill
-              className="object-cover object-top rounded-lg"
-              sizes="(max-width: 768px) 60vw, 20vw"
+              className="object-contain object-center"
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 35vw"
             />
           </div>
         </div>
       </div>
 
       {/* Content Section */}
-      <div className="w-full md:w-[65%] p-8 md:p-10 flex flex-col justify-center">
+      <div className="w-full md:w-[65%] p-8 md:p-10 lg:p-12 flex flex-col justify-center">
         <h3 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tight mb-2">
           {member.name}
         </h3>
@@ -100,7 +111,33 @@ const TeamCard = ({ member, isReversed }: { member: any, isReversed: boolean }) 
         
         {/* Description */}
         <div className="text-gray-600 leading-relaxed text-sm md:text-[0.95rem] space-y-4">
-           <p>{member.bio}</p>
+          <p className="md:block">
+            {/* Show first line only on mobile, full on desktop */}
+            <span className="md:hidden">
+              {isExpanded ? member.bio : firstLine}
+            </span>
+            <span className="hidden md:inline">{member.bio}</span>
+          </p>
+          
+          {/* Read More/Less Button - Mobile Only */}
+          {shouldTruncate && (
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="md:hidden inline-flex items-center gap-1 text-[#e63939] font-semibold text-sm hover:text-[#c62828] transition-colors mt-2"
+            >
+              {isExpanded ? (
+                <>
+                  Read Less
+                  <ChevronUp size={16} />
+                </>
+              ) : (
+                <>
+                  Read More
+                  <ChevronDown size={16} />
+                </>
+              )}
+            </button>
+          )}
         </div>
       </div>
     </div>

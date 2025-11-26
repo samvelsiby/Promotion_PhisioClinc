@@ -3,55 +3,19 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+import { Phone } from 'lucide-react'
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
 
   const navLinks = [
     { name: 'Insurance Providers', href: '/insurance' },
     { name: 'About Us', href: '/about' },
-    { name: 'What We Treat', href: '/services' },
+    { name: 'What We Treat', href: '/what-we-treat' },
     { name: 'How We Treat', href: '/how-we-treat' },
     { name: 'Meet Our Team', href: '/team' },
-    { name: 'Testimonials', href: '/testimonials' },
     { name: 'Blog', href: '/blogs' },
-  ]
-
-  const services = [
-    {
-      name: 'Electrotherapeutic Modalities',
-      href: '/services/electrotherapeutic-modalities',
-    },
-    {
-      name: 'Pre/ Post Surgical Conditions',
-      href: '/services/pre-post-surgical-conditions',
-    },
-    {
-      name: 'Motor Vehicle Accident Recovery',
-      href: '/services/motor-vehicle-accident-recovery',
-    },
-    {
-      name: 'Work Reconditioning Program',
-      href: '/services/work-reconditioning-program',
-    },
-    {
-      name: 'Sports Injury Rehabilitation',
-      href: '/services/sports-injury-rehabilitation',
-    },
-    {
-      name: 'Acupuncture & Dry Needling',
-      href: '/services/acupuncture-dry-needling',
-    },
-    {
-      name: 'Chronic Pain Management',
-      href: '/services/chronic-pain-management',
-    },
-    {
-      name: 'Workplace Injury Treatment',
-      href: '/services/workplace-injury-treatment',
-    },
   ]
 
   return (
@@ -73,56 +37,22 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <ul className={styles.navList}>
-            {navLinks.map((link) =>
-              link.name === 'What We Treat' ? (
-                <li
-                  key={link.name}
-                  className={styles.navItemWithDropdown}
-                >
-                  <button
-                    type="button"
-                    className={styles.navLinkButton}
-                    onClick={() => setIsServicesOpen((prev) => !prev)}
-                    aria-expanded={isServicesOpen}
-                  >
-                    {link.name}
-                    <span className={styles.navLinkCaret}>▾</span>
-                  </button>
-                  <div
-                    className={`${styles.servicesDropdown} ${
-                      isServicesOpen ? styles.servicesDropdownOpen : ''
-                    }`}
-                  >
-                    {services.map((service) => (
-                      <a
-                        key={service.name}
-                        href={service.href}
-                        className={styles.servicesDropdownItem}
-                        onClick={() => setIsServicesOpen(false)}
-                      >
-                        {service.name}
-                      </a>
-                    ))}
-                  </div>
-                </li>
-              ) : (
-                <li key={link.name}>
-                  <a href={link.href} className={styles.navLink}>
-                    {link.name}
-                  </a>
-                </li>
-              )
-            )}
+            {navLinks.map((link) => (
+              <li key={link.name}>
+                <a href={link.href} className={styles.navLink}>
+                  {link.name}
+                </a>
+              </li>
+            ))}
           </ul>
 
-          {/* Contact Button */}
+          {/* Call Now Button */}
           <a 
-            href="https://pmphysio.juvonno.com/portal/publicbook.php" 
-            target="_blank" 
-            rel="noopener noreferrer"
+            href="tel:+12045551234" 
             className={styles.contactButton}
           >
-            Contact
+            <Phone className="h-4 w-4 mr-2" />
+            (204) 555-1234
           </a>
 
           {/* Mobile Menu Button */}
@@ -151,60 +81,22 @@ export default function Navbar() {
         {/* Mobile Navigation Sidebar */}
         <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
           <div className={styles.mobileMenuContent}>
-            {navLinks.map((link) =>
-              link.name === 'What We Treat' ? (
-                <div key={link.name} className={styles.mobileServicesGroup}>
-                  <button
-                    type="button"
-                    className={styles.mobileServicesToggle}
-                    onClick={() => setIsServicesOpen((prev) => !prev)}
-                    aria-expanded={isServicesOpen}
-                  >
-                    <span>What We Treat</span>
-                    <span
-                      className={`${styles.mobileServicesCaret} ${
-                        isServicesOpen ? styles.mobileServicesCaretOpen : ''
-                      }`}
-                    >
-                      ▾
-                    </span>
-                  </button>
-                  {isServicesOpen && (
-                    <div className={styles.mobileServicesList}>
-                      {services.map((service) => (
-                        <a
-                          key={service.name}
-                          href={service.href}
-                          className={styles.mobileServicesItem}
-                          onClick={() => {
-                            setIsMenuOpen(false)
-                            setIsServicesOpen(false)
-                          }}
-                        >
-                          {service.name}
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className={styles.mobileNavLink}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.name}
-                </a>
-              )
-            )}
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className={styles.mobileNavLink}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
             <a 
-              href="https://pmphysio.juvonno.com/portal/publicbook.php" 
-              target="_blank" 
-              rel="noopener noreferrer"
+              href="tel:+12045551234" 
               className={styles.mobileContactButton}
             >
-              Contact
+              <Phone className="h-4 w-4 mr-2" />
+              (204) 555-1234
             </a>
           </div>
         </div>

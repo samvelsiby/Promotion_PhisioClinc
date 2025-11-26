@@ -39,16 +39,25 @@ export default function Hero() {
             </div>
           </RevealOnScroll>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <RevealOnScroll delay={220}>
-            <div className="flex justify-center">
+            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button
                 asChild
                 size="lg"
                 className="h-12 rounded-full bg-[#e63939] px-8 text-base font-semibold text-white transition-all hover:bg-[#c62828] sm:h-14 sm:px-10 sm:text-lg"
               >
                 <a href="https://pmphysio.juvonno.com/portal/publicbook.php" target="_blank" rel="noopener noreferrer">
-                Request Appointment
+                  Book Now
+                </a>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                className="h-12 rounded-full bg-gray-600 px-8 text-base font-semibold text-white transition-all hover:bg-gray-700 sm:h-14 sm:px-10 sm:text-lg"
+              >
+                <a href="/about#appointment-form">
+                  Request Appointment
                 </a>
               </Button>
             </div>

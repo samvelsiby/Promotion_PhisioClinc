@@ -45,7 +45,22 @@ export default function Footer() {
 
   return (
     <footer className="border-t bg-white">
-      <div className="mx-auto flex max-w-7xl flex-col gap-10 px-4 py-10 sm:px-6 sm:py-12 lg:flex-row lg:items-start lg:justify-between lg:px-8">
+      {/* Google Maps Section */}
+      <div className="w-full border-b border-gray-200">
+        <iframe
+          src="https://www.google.com/maps?q=Unit+4,+567+St.+Anne%27s+Rd,+Winnipeg,+MB+R2M+5B2&output=embed"
+          width="100%"
+          height="400"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="w-full"
+          title="ProMotion Physiotherapy Location - Unit 4, 567 St. Anne's Rd, Winnipeg, MB R2M 5B2"
+        />
+      </div>
+
+      <div className="flex flex-col gap-10 px-4 py-10 sm:px-6 sm:py-12 lg:flex-row lg:items-start lg:justify-between lg:px-8">
         {/* Logo + location + socials */}
         <div className="max-w-sm">
           <div className="relative h-10 w-40">
@@ -61,7 +76,7 @@ export default function Footer() {
           <p className="mt-4 text-sm leading-relaxed text-gray-600">
             ProMotion Physiotherapy
             <br />
-            567 St. Anne&apos;s Rd, Winnipeg, MB R2M 5B2
+            Unit 4, 567 St. Anne&apos;s Rd, Winnipeg, MB R2M 5B2
           </p>
 
           <div className="mt-4 flex gap-3 text-gray-500">
@@ -121,7 +136,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t bg-white/80">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 text-xs text-gray-400 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between px-4 py-4 text-xs text-gray-400 sm:px-6 lg:px-8">
           <p>© {new Date().getFullYear()} ProMotion Physiotherapy. All rights reserved.</p>
         </div>
       </div>
