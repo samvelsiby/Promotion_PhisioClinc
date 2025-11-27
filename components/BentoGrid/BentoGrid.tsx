@@ -3,121 +3,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
+import { allBentoItems } from './bentoItems'
 
-interface BentoItem {
-  title: string
-  imageSrc: string
-  href: string
-  spanClass?: string
-}
-
-const items: BentoItem[] = [
-  // Spine & Back Conditions
-  {
-    title: 'Back Pain & Sciatica Relief',
-    imageSrc: '/bento/back-pain.png',
-    href: '/services/back-pain-sciatica-relief',
-  },
-  {
-    title: 'Neck Pain Relief',
-    imageSrc: '/bento/neck-pain.png',
-    href: '/services/neck-pain-relief',
-  },
-  // Shoulder & Upper-Body Joint Conditions
-  {
-    title: 'Shoulder Pain Relief',
-    imageSrc: '/bento/shoulder-pain.png',
-    href: '/services/shoulder-pain-relief',
-  },
-  {
-    title: 'Elbow, Wrist & Hand Pain Relief',
-    imageSrc: '/bento/elbow-wrist-hand.png',
-    href: '/services/elbow-wrist-hand-pain-relief',
-  },
-  // Hip, Knee & Lower-Body Joint Conditions
-  {
-    title: 'Hip & Knee Pain Relief',
-    imageSrc: '/bento/hip-knee-pain.png',
-    href: '/services/hip-knee-pain-relief',
-  },
-  {
-    title: 'Foot & Ankle Pain Relief',
-    imageSrc: '/bento/foot-ankle-pain.png',
-    href: '/services/foot-ankle-pain-relief',
-  },
-  // Chronic & Long-Term Pain Conditions
-  {
-    title: 'Chronic Pain Relief',
-    imageSrc: '/bento/chronicepain managemnet.png',
-    href: '/services/chronic-pain-relief',
-  },
-  {
-    title: 'Arthritis Pain Relief',
-    imageSrc: '/bento/arthritis-pain.png',
-    href: '/services/arthritis-pain-relief',
-  },
-  // TMJ & Head/Face Conditions
-  {
-    title: 'TMJ Dysfunction',
-    imageSrc: '/bento/tmj-dysfunction.png',
-    href: '/services/tmj-dysfunction',
-  },
-  // Surgical-Related Conditions
-  {
-    title: 'Pre-Surgical Rehabilitation',
-    imageSrc: '/bento/pre:post sueguery.png',
-    href: '/services/pre-surgical-rehabilitation',
-  },
-  {
-    title: 'Post-Surgical Rehabilitation',
-    imageSrc: '/bento/pre:post sueguery.png',
-    href: '/services/post-surgical-rehabilitation',
-  },
-  // Sports-Related Injuries
-  {
-    title: 'Sports Injuries',
-    imageSrc: '/bento/sport injury rehab.png',
-    href: '/services/sports-injuries',
-  },
-  // Work-Related Injuries
-  {
-    title: 'Work Injuries',
-    imageSrc: '/bento/Workplaceinjury.png',
-    href: '/services/work-injuries',
-  },
-  // Motor Vehicle Accident Injuries
-  {
-    title: 'Motor Vehicle Accident Injuries (MPI)',
-    imageSrc: '/bento/Motorvehicel.png',
-    href: '/services/motor-vehicle-accident-recovery',
-  },
-  // Occupational Therapy Services
-  {
-    title: 'Home Accessibility Assessments',
-    imageSrc: '/bento/work reconditioning.png',
-    href: '/services/home-accessibility-assessments',
-  },
-  {
-    title: 'Mobility & Adaptive Equipment',
-    imageSrc: '/bento/work reconditioning.png',
-    href: '/services/mobility-adaptive-equipment',
-  },
-  {
-    title: 'Wheelchair Seating & Positioning',
-    imageSrc: '/bento/work reconditioning.png',
-    href: '/services/wheelchair-seating-positioning',
-  },
-  {
-    title: 'Pressure Management',
-    imageSrc: '/bento/work reconditioning.png',
-    href: '/services/pressure-management',
-  },
-  {
-    title: 'Fall Prevention',
-    imageSrc: '/bento/work reconditioning.png',
-    href: '/services/fall-prevention',
-  },
-]
+// Show only first 9 items (3 rows) on main page
+const items = allBentoItems.slice(0, 9)
 
 export default function BentoGrid() {
   return (
@@ -164,6 +53,18 @@ export default function BentoGrid() {
             </Link>
           ))}
         </div>
+
+        {/* Read More Button */}
+        {allBentoItems.length > items.length && (
+          <div className="mt-8 flex justify-center">
+            <Link
+              href="/what-we-treat/all"
+              className="inline-flex items-center justify-center rounded-full bg-[#EC1C24] px-8 py-4 text-base font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#C41A20] hover:shadow-lg sm:px-10 sm:py-4 sm:text-lg"
+            >
+              Read More
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   )
