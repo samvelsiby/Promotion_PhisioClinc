@@ -105,21 +105,21 @@ const services = [
 ];
 
 const categoryColors: Record<ServiceCategory, { bg: string; hover: string; text: string }> = {
-  "Physiotherapy": { bg: "#C41E3A", hover: "#9B1B30", text: "#FFFFFF" },
-  "Athletic Therapy": { bg: "#2563EB", hover: "#1E40AF", text: "#FFFFFF" },
-  "Manual Techniques": { bg: "#059669", hover: "#047857", text: "#FFFFFF" },
-  "Modalities": { bg: "#DC2626", hover: "#B91C1C", text: "#FFFFFF" },
-  "Occupational Therapy": { bg: "#7C3AED", hover: "#6D28D9", text: "#FFFFFF" },
+  "Physiotherapy": { bg: "#EC1C24", hover: "#C41A20", text: "#FFFFFF" },
+  "Athletic Therapy": { bg: "#58595B", hover: "#4A4B4D", text: "#FFFFFF" },
+  "Manual Techniques": { bg: "#231F20", hover: "#1A1617", text: "#FFFFFF" },
+  "Modalities": { bg: "#EC1C24", hover: "#C41A20", text: "#FFFFFF" },
+  "Occupational Therapy": { bg: "#58595B", hover: "#4A4B4D", text: "#FFFFFF" },
 };
 
 const brandColors = {
-  primary: "#C41E3A",
-  primaryDark: "#9B1B30",
+  primary: "#EC1C24",
+  primaryDark: "#C41A20",
   white: "#FFFFFF",
   lightGrey: "#F5F5F5",
   mediumGrey: "#E0E0E0",
-  darkGrey: "#4A4A4A",
-  charcoal: "#2D2D2D",
+  darkGrey: "#58595B",
+  charcoal: "#231F20",
 };
 
 const ServiceModal = ({ service, onClose }: { service: typeof services[0] | null; onClose: () => void }) => {
@@ -356,7 +356,7 @@ export default function PhysiotherapyHoneycomb() {
         }
 
         .honeycomb-title-accent {
-          color: #C41E3A;
+          color: #EC1C24;
         }
 
         .honeycomb-subtitle {
@@ -370,7 +370,7 @@ export default function PhysiotherapyHoneycomb() {
         .honeycomb-tagline {
           font-family: 'Montserrat', 'Segoe UI', sans-serif;
           font-size: clamp(0.7rem, 1.8vw, 0.85rem);
-          color: #C41E3A;
+          color: #EC1C24;
           margin: 16px 0 0 0;
           font-weight: 600;
           text-transform: uppercase;
@@ -480,8 +480,8 @@ export default function PhysiotherapyHoneycomb() {
         }
 
         .search-bar:focus {
-          border-color: #C41E3A;
-          box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+          border-color: #EC1C24;
+          box-shadow: 0 0 0 3px rgba(236, 28, 36, 0.1);
         }
 
         .search-results-count {
@@ -607,9 +607,9 @@ export default function PhysiotherapyHoneycomb() {
             style={{
               padding: '10px 20px',
               borderRadius: '25px',
-              border: selectedCategory === "All" ? '2px solid #C41E3A' : '2px solid #E0E0E0',
-              background: selectedCategory === "All" ? '#C41E3A' : '#FFFFFF',
-              color: selectedCategory === "All" ? '#FFFFFF' : '#2D2D2D',
+              border: selectedCategory === "All" ? '2px solid #EC1C24' : '2px solid #E0E0E0',
+              background: selectedCategory === "All" ? '#EC1C24' : '#FFFFFF',
+              color: selectedCategory === "All" ? '#FFFFFF' : '#231F20',
               fontFamily: "'Montserrat', 'Segoe UI', sans-serif",
               fontSize: '14px',
               fontWeight: 600,
@@ -735,7 +735,7 @@ export default function PhysiotherapyHoneycomb() {
               style={{
                 marginTop: '16px',
                 padding: '10px 24px',
-                background: '#C41E3A',
+                background: '#EC1C24',
                 color: '#FFFFFF',
                 border: 'none',
                 borderRadius: '25px',
@@ -746,11 +746,11 @@ export default function PhysiotherapyHoneycomb() {
                 transition: 'all 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = '#9B1B30';
+                e.currentTarget.style.background = '#C41A20';
                 e.currentTarget.style.transform = 'scale(1.05)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = '#C41E3A';
+                e.currentTarget.style.background = '#EC1C24';
                 e.currentTarget.style.transform = 'scale(1)';
               }}
             >
