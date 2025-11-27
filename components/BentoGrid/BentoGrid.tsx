@@ -92,6 +92,32 @@ const items: BentoItem[] = [
     href: '/services/motor-vehicle-accident-recovery',
     spanClass: 'sm:col-span-2',
   },
+  // Occupational Therapy Services
+  {
+    title: 'Home Accessibility Assessments',
+    imageSrc: '/bento/work reconditioning.png',
+    href: '/services/home-accessibility-assessments',
+  },
+  {
+    title: 'Mobility & Adaptive Equipment',
+    imageSrc: '/bento/work reconditioning.png',
+    href: '/services/mobility-adaptive-equipment',
+  },
+  {
+    title: 'Wheelchair Seating & Positioning',
+    imageSrc: '/bento/work reconditioning.png',
+    href: '/services/wheelchair-seating-positioning',
+  },
+  {
+    title: 'Pressure Management',
+    imageSrc: '/bento/work reconditioning.png',
+    href: '/services/pressure-management',
+  },
+  {
+    title: 'Fall Prevention',
+    imageSrc: '/bento/work reconditioning.png',
+    href: '/services/fall-prevention',
+  },
 ]
 
 export default function BentoGrid() {

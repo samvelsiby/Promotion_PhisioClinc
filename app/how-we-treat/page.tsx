@@ -3,11 +3,14 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+type ServiceCategory = "Physiotherapy" | "Athletic Therapy" | "Manual Techniques" | "Modalities" | "Occupational Therapy";
+
 const services = [
   {
     id: 1,
     title: "Physiotherapy",
     icon: "🏥",
+    category: "Physiotherapy" as ServiceCategory,
     description: "Comprehensive physiotherapy services to address a wide range of musculoskeletal conditions, injuries, and movement disorders. Our registered physiotherapists provide evidence-based treatment to restore function and improve quality of life.",
     benefits: ["Pain Relief", "Improved Mobility", "Functional Recovery"]
   },
@@ -15,6 +18,7 @@ const services = [
     id: 2,
     title: "Athletic Therapy",
     icon: "⚡",
+    category: "Athletic Therapy" as ServiceCategory,
     description: "Specialized therapy for athletes and active individuals. We focus on injury prevention, performance optimization, and safe return to sport following injuries.",
     benefits: ["Injury Prevention", "Performance Enhancement", "Faster Recovery"]
   },
@@ -22,6 +26,7 @@ const services = [
     id: 3,
     title: "Ergonomic Training",
     icon: "💼",
+    category: "Occupational Therapy" as ServiceCategory,
     description: "Workplace ergonomic assessments and training to prevent work-related injuries and improve posture. We help you set up your workspace for optimal health and productivity.",
     benefits: ["Injury Prevention", "Posture Improvement", "Productivity"]
   },
@@ -29,6 +34,7 @@ const services = [
     id: 4,
     title: "Instrument-Assisted Soft Tissue Mobilization (IASTM)",
     icon: "🔧",
+    category: "Manual Techniques" as ServiceCategory,
     description: "Advanced technique using specialized tools to break down scar tissue, reduce fascial restrictions, and improve tissue mobility. Effective for chronic pain and restricted movement.",
     benefits: ["Scar Tissue Reduction", "Improved Flexibility", "Pain Relief"]
   },
@@ -36,6 +42,7 @@ const services = [
     id: 5,
     title: "Kinesio Taping",
     icon: "🎯",
+    category: "Modalities" as ServiceCategory,
     description: "Therapeutic taping technique that supports muscles and joints while allowing full range of motion. Helps reduce pain, improve circulation, and support healing.",
     benefits: ["Pain Reduction", "Improved Circulation", "Muscle Support"]
   },
@@ -43,6 +50,7 @@ const services = [
     id: 6,
     title: "Laser Therapy",
     icon: "💡",
+    category: "Modalities" as ServiceCategory,
     description: "Low-level laser therapy (LLLT) to reduce inflammation, accelerate healing, and relieve pain. Non-invasive treatment for various musculoskeletal conditions.",
     benefits: ["Faster Healing", "Pain Relief", "Reduced Inflammation"]
   },
@@ -50,6 +58,7 @@ const services = [
     id: 7,
     title: "Manual Therapy",
     icon: "🤲",
+    category: "Manual Techniques" as ServiceCategory,
     description: "Hands-on techniques including joint mobilization, soft tissue massage, and manipulation to restore movement, reduce pain, and improve function.",
     benefits: ["Joint Mobility", "Pain Management", "Improved Function"]
   },
@@ -57,6 +66,7 @@ const services = [
     id: 8,
     title: "Massage Therapy",
     icon: "✨",
+    category: "Manual Techniques" as ServiceCategory,
     description: "Therapeutic massage services provided by registered massage therapists. Targeted treatment to relieve muscle tension, reduce stress, and promote relaxation.",
     benefits: ["Muscle Relaxation", "Stress Relief", "Improved Circulation"]
   },
@@ -64,6 +74,7 @@ const services = [
     id: 9,
     title: "Myofascial Release",
     icon: "🌊",
+    category: "Manual Techniques" as ServiceCategory,
     description: "Specialized technique to release tension in the fascia (connective tissue) that surrounds muscles. Effective for chronic pain, restricted movement, and postural issues.",
     benefits: ["Pain Relief", "Improved Flexibility", "Postural Correction"]
   },
@@ -71,6 +82,7 @@ const services = [
     id: 10,
     title: "Orthotics",
     icon: "👟",
+    category: "Modalities" as ServiceCategory,
     description: "Custom orthotic devices, supports, braces, and corrective devices to improve alignment, reduce pain, and enhance function. We provide comprehensive assessment and fitting.",
     benefits: ["Improved Alignment", "Pain Reduction", "Enhanced Function"]
   },
@@ -78,6 +90,7 @@ const services = [
     id: 11,
     title: "Therapeutic Exercise",
     icon: "💪",
+    category: "Physiotherapy" as ServiceCategory,
     description: "Customized exercise programs designed to strengthen, stretch, and stabilize your body. Each program is tailored to your specific needs, goals, and condition.",
     benefits: ["Strength Building", "Flexibility", "Functional Improvement"]
   },
@@ -85,10 +98,19 @@ const services = [
     id: 12,
     title: "Ultrasound Therapy",
     icon: "🔊",
+    category: "Modalities" as ServiceCategory,
     description: "Therapeutic ultrasound and other modalities including heat/cold therapy and electrical stimulation. Used to reduce pain, inflammation, and promote healing as part of comprehensive physiotherapy treatment.",
     benefits: ["Pain Relief", "Reduced Inflammation", "Faster Healing"]
   }
 ];
+
+const categoryColors: Record<ServiceCategory, { bg: string; hover: string; text: string }> = {
+  "Physiotherapy": { bg: "#C41E3A", hover: "#9B1B30", text: "#FFFFFF" },
+  "Athletic Therapy": { bg: "#2563EB", hover: "#1E40AF", text: "#FFFFFF" },
+  "Manual Techniques": { bg: "#059669", hover: "#047857", text: "#FFFFFF" },
+  "Modalities": { bg: "#DC2626", hover: "#B91C1C", text: "#FFFFFF" },
+  "Occupational Therapy": { bg: "#7C3AED", hover: "#6D28D9", text: "#FFFFFF" },
+};
 
 const brandColors = {
   primary: "#C41E3A",
@@ -266,6 +288,7 @@ export default function PhysiotherapyHoneycomb() {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const [columns, setColumns] = useState(4);
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<ServiceCategory | "All">("All");
 
   useEffect(() => {
     const updateColumns = () => {
@@ -284,15 +307,26 @@ export default function PhysiotherapyHoneycomb() {
     return () => window.removeEventListener('resize', updateColumns);
   }, []);
 
-  const filteredServices = services.filter((service) =>
-    service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    service.benefits.some((benefit) =>
-      benefit.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  );
+  const filteredServices = services.filter((service) => {
+    const matchesSearch = 
+      service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      service.benefits.some((benefit) =>
+        benefit.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    
+    const matchesCategory = selectedCategory === "All" || service.category === selectedCategory;
+    
+    return matchesSearch && matchesCategory;
+  });
 
-  const rows = organizeRows(filteredServices, columns);
+  // Sort services by category for better organization
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    if (selectedCategory !== "All") return 0;
+    return a.category.localeCompare(b.category);
+  });
+
+  const rows = organizeRows(sortedServices, columns);
   const numRows = rows.length;
 
   const cssStyles = `
@@ -409,23 +443,8 @@ export default function PhysiotherapyHoneycomb() {
           transition: all 0.25s ease;
         }
 
-        .hex-red {
-          background: linear-gradient(145deg, #C41E3A 0%, #9B1B30 100%);
-          color: #FFFFFF;
-        }
-
-        .hex-red:hover {
-          background: linear-gradient(145deg, #A81830 0%, #7A1526 100%);
-        }
-
-        .hex-white {
-          background: linear-gradient(145deg, #FFFFFF 0%, #F0F0F0 100%);
-          color: #2D2D2D;
-          box-shadow: inset 0 0 0 2px #E0E0E0;
-        }
-
-        .hex-white:hover {
-          background: linear-gradient(145deg, #F5F5F5 0%, #E8E8E8 100%);
+        .hex-inner {
+          transition: all 0.25s ease;
         }
 
         .hex-icon {
@@ -566,11 +585,80 @@ export default function PhysiotherapyHoneycomb() {
             placeholder="Search services... (e.g. acupuncture, sports, manual therapy)"
             className="search-bar"
           />
-          {searchQuery && (
+          {(searchQuery || selectedCategory !== "All") && (
             <p className="search-results-count">
-              Found {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''}
+              Found {sortedServices.length} service{sortedServices.length !== 1 ? 's' : ''}
             </p>
           )}
+        </div>
+
+        {/* Category Filter Buttons */}
+        <div style={{
+          maxWidth: '900px',
+          margin: '0 auto 40px',
+          padding: '0 16px',
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '12px',
+          justifyContent: 'center'
+        }}>
+          <button
+            onClick={() => setSelectedCategory("All")}
+            style={{
+              padding: '10px 20px',
+              borderRadius: '25px',
+              border: selectedCategory === "All" ? '2px solid #C41E3A' : '2px solid #E0E0E0',
+              background: selectedCategory === "All" ? '#C41E3A' : '#FFFFFF',
+              color: selectedCategory === "All" ? '#FFFFFF' : '#2D2D2D',
+              fontFamily: "'Montserrat', 'Segoe UI', sans-serif",
+              fontSize: '14px',
+              fontWeight: 600,
+              cursor: 'pointer',
+              transition: 'all 0.3s ease',
+            }}
+            onMouseEnter={(e) => {
+              if (selectedCategory !== "All") {
+                e.currentTarget.style.background = '#F5F5F5';
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (selectedCategory !== "All") {
+                e.currentTarget.style.background = '#FFFFFF';
+              }
+            }}
+          >
+            All Services
+          </button>
+          {Object.keys(categoryColors).map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category as ServiceCategory)}
+              style={{
+                padding: '10px 20px',
+                borderRadius: '25px',
+                border: selectedCategory === category ? `2px solid ${categoryColors[category as ServiceCategory].bg}` : '2px solid #E0E0E0',
+                background: selectedCategory === category ? categoryColors[category as ServiceCategory].bg : '#FFFFFF',
+                color: selectedCategory === category ? '#FFFFFF' : categoryColors[category as ServiceCategory].bg,
+                fontFamily: "'Montserrat', 'Segoe UI', sans-serif",
+                fontSize: '14px',
+                fontWeight: 600,
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+              }}
+              onMouseEnter={(e) => {
+                if (selectedCategory !== category) {
+                  e.currentTarget.style.background = categoryColors[category as ServiceCategory].bg + '15';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (selectedCategory !== category) {
+                  e.currentTarget.style.background = '#FFFFFF';
+                }
+              }}
+            >
+              {category}
+            </button>
+          ))}
         </div>
 
         <div 
@@ -591,8 +679,8 @@ export default function PhysiotherapyHoneycomb() {
                 }}
               >
                 {row.map((service, cellIndex) => {
-                  const globalIndex = filteredServices.indexOf(service);
-                  const isRed = (rowIndex + cellIndex) % 2 === 0;
+                  const globalIndex = sortedServices.indexOf(service);
+                  const categoryColor = categoryColors[service.category];
                   
                   return (
                     <motion.div
@@ -610,7 +698,23 @@ export default function PhysiotherapyHoneycomb() {
                       onMouseEnter={() => setHoveredId(service.id)}
                       onMouseLeave={() => setHoveredId(null)}
                     >
-                      <div className={`hex-inner ${isRed ? 'hex-red' : 'hex-white'}`}>
+                      <div 
+                        className="hex-inner"
+                        style={{
+                          background: `linear-gradient(145deg, ${categoryColor.bg} 0%, ${categoryColor.hover} 100%)`,
+                          color: categoryColor.text,
+                          boxShadow: hoveredId === service.id 
+                            ? `0 8px 25px ${categoryColor.bg}80` 
+                            : '0 4px 15px rgba(0,0,0,0.2)',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.background = `linear-gradient(145deg, ${categoryColor.hover} 0%, ${categoryColor.bg} 100%)`;
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.background = `linear-gradient(145deg, ${categoryColor.bg} 0%, ${categoryColor.hover} 100%)`;
+                        }}
+                      >
+                        <span className="hex-icon">{service.icon}</span>
                         <span className="hex-title">{service.title}</span>
                       </div>
                     </motion.div>
@@ -621,7 +725,7 @@ export default function PhysiotherapyHoneycomb() {
           })}
         </div>
 
-        {filteredServices.length === 0 && searchQuery && (
+        {sortedServices.length === 0 && (searchQuery || selectedCategory !== "All") && (
           <div style={{ textAlign: 'center', padding: '40px 20px' }}>
             <p style={{ color: '#666666', fontSize: '16px', fontFamily: "'Open Sans', -apple-system, sans-serif" }}>
               No services found matching "{searchQuery}"
