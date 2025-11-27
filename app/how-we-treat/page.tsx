@@ -6,87 +6,87 @@ import { motion, AnimatePresence } from "framer-motion";
 const services = [
   {
     id: 1,
-    title: "Acupuncture & Dry Needling",
-    icon: "🎯",
-    description: "Traditional and modern needle therapy techniques to release muscle tension, reduce pain, and promote natural healing. Our certified practitioners target trigger points for immediate relief.",
-    benefits: ["Pain Relief", "Muscle Relaxation", "Improved Circulation"]
+    title: "Physiotherapy",
+    icon: "🏥",
+    description: "Comprehensive physiotherapy services to address a wide range of musculoskeletal conditions, injuries, and movement disorders. Our registered physiotherapists provide evidence-based treatment to restore function and improve quality of life.",
+    benefits: ["Pain Relief", "Improved Mobility", "Functional Recovery"]
   },
   {
     id: 2,
-    title: "Sports Injury Rehabilitation",
+    title: "Athletic Therapy",
     icon: "⚡",
-    description: "Specialized recovery programs for athletes at all levels. We address acute injuries and chronic conditions to get you back in the game stronger than before.",
-    benefits: ["Faster Recovery", "Injury Prevention", "Performance Enhancement"]
+    description: "Specialized therapy for athletes and active individuals. We focus on injury prevention, performance optimization, and safe return to sport following injuries.",
+    benefits: ["Injury Prevention", "Performance Enhancement", "Faster Recovery"]
   },
   {
     id: 3,
-    title: "Manual Therapy",
-    icon: "🤲",
-    description: "Hands-on techniques including joint mobilization, soft tissue massage, and manipulation to restore movement and reduce pain naturally.",
-    benefits: ["Joint Mobility", "Pain Management", "Postural Correction"]
+    title: "Ergonomic Training",
+    icon: "💼",
+    description: "Workplace ergonomic assessments and training to prevent work-related injuries and improve posture. We help you set up your workspace for optimal health and productivity.",
+    benefits: ["Injury Prevention", "Posture Improvement", "Productivity"]
   },
   {
     id: 4,
-    title: "Exercise Therapy",
-    icon: "💪",
-    description: "Customized exercise programs designed to strengthen, stretch, and stabilize your body. Each program is tailored to your specific needs and goals.",
-    benefits: ["Strength Building", "Flexibility", "Core Stability"]
+    title: "Instrument-Assisted Soft Tissue Mobilization (IASTM)",
+    icon: "🔧",
+    description: "Advanced technique using specialized tools to break down scar tissue, reduce fascial restrictions, and improve tissue mobility. Effective for chronic pain and restricted movement.",
+    benefits: ["Scar Tissue Reduction", "Improved Flexibility", "Pain Relief"]
   },
   {
     id: 5,
-    title: "Post-Surgical Rehab",
-    icon: "🏥",
-    description: "Comprehensive rehabilitation following orthopedic surgeries. We work closely with your surgical team to optimize your recovery timeline.",
-    benefits: ["Safe Recovery", "Scar Management", "Function Restoration"]
+    title: "Kinesio Taping",
+    icon: "🎯",
+    description: "Therapeutic taping technique that supports muscles and joints while allowing full range of motion. Helps reduce pain, improve circulation, and support healing.",
+    benefits: ["Pain Reduction", "Improved Circulation", "Muscle Support"]
   },
   {
     id: 6,
-    title: "Chronic Pain Management",
-    icon: "🌿",
-    description: "Multi-modal approach to managing persistent pain conditions. We combine various techniques to improve your quality of life and daily function.",
-    benefits: ["Long-term Relief", "Coping Strategies", "Quality of Life"]
+    title: "Laser Therapy",
+    icon: "💡",
+    description: "Low-level laser therapy (LLLT) to reduce inflammation, accelerate healing, and relieve pain. Non-invasive treatment for various musculoskeletal conditions.",
+    benefits: ["Faster Healing", "Pain Relief", "Reduced Inflammation"]
   },
   {
     id: 7,
-    title: "Pelvic Floor Therapy",
-    icon: "🦋",
-    description: "Specialized treatment for pelvic health concerns including incontinence, pelvic pain, and pre/postnatal care in a comfortable, private setting.",
-    benefits: ["Core Strength", "Bladder Control", "Postnatal Recovery"]
+    title: "Manual Therapy",
+    icon: "🤲",
+    description: "Hands-on techniques including joint mobilization, soft tissue massage, and manipulation to restore movement, reduce pain, and improve function.",
+    benefits: ["Joint Mobility", "Pain Management", "Improved Function"]
   },
   {
     id: 8,
-    title: "Concussion Management",
-    icon: "🧠",
-    description: "Evidence-based concussion assessment and rehabilitation. We guide you through safe return-to-activity protocols with comprehensive monitoring.",
-    benefits: ["Safe Return to Activity", "Symptom Management", "Cognitive Support"]
+    title: "Massage Therapy",
+    icon: "✨",
+    description: "Therapeutic massage services provided by registered massage therapists. Targeted treatment to relieve muscle tension, reduce stress, and promote relaxation.",
+    benefits: ["Muscle Relaxation", "Stress Relief", "Improved Circulation"]
   },
   {
     id: 9,
-    title: "Orthopedic Physio",
-    icon: "🦴",
-    description: "Treatment for musculoskeletal conditions affecting bones, joints, muscles, and connective tissues. Expert care for fractures, arthritis, and joint replacements.",
-    benefits: ["Joint Health", "Mobility Restoration", "Pain Reduction"]
+    title: "Myofascial Release",
+    icon: "🌊",
+    description: "Specialized technique to release tension in the fascia (connective tissue) that surrounds muscles. Effective for chronic pain, restricted movement, and postural issues.",
+    benefits: ["Pain Relief", "Improved Flexibility", "Postural Correction"]
   },
   {
     id: 10,
-    title: "Vestibular Rehab",
-    icon: "🌀",
-    description: "Specialized therapy for dizziness, vertigo, and balance disorders. Our targeted exercises help retrain your vestibular system for improved stability.",
-    benefits: ["Balance Improvement", "Vertigo Relief", "Fall Prevention"]
+    title: "Orthotics",
+    icon: "👟",
+    description: "Custom orthotic devices, supports, braces, and corrective devices to improve alignment, reduce pain, and enhance function. We provide comprehensive assessment and fitting.",
+    benefits: ["Improved Alignment", "Pain Reduction", "Enhanced Function"]
   },
   {
     id: 11,
-    title: "TMJ Treatment",
-    icon: "😊",
-    description: "Relief for jaw pain, clicking, and temporomandibular joint dysfunction. We address the root causes of TMJ issues for lasting improvement.",
-    benefits: ["Jaw Pain Relief", "Improved Function", "Headache Reduction"]
+    title: "Therapeutic Exercise",
+    icon: "💪",
+    description: "Customized exercise programs designed to strengthen, stretch, and stabilize your body. Each program is tailored to your specific needs, goals, and condition.",
+    benefits: ["Strength Building", "Flexibility", "Functional Improvement"]
   },
   {
     id: 12,
-    title: "Massage Therapy",
-    icon: "✨",
-    description: "Therapeutic massage services to complement your physiotherapy treatment. Our registered massage therapists provide targeted relief and relaxation.",
-    benefits: ["Stress Relief", "Muscle Recovery", "Relaxation"]
+    title: "Ultrasound Therapy",
+    icon: "🔊",
+    description: "Therapeutic ultrasound and other modalities including heat/cold therapy and electrical stimulation. Used to reduce pain, inflammation, and promote healing as part of comprehensive physiotherapy treatment.",
+    benefits: ["Pain Relief", "Reduced Inflammation", "Faster Healing"]
   }
 ];
 
