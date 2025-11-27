@@ -12,49 +12,85 @@ interface BentoItem {
 }
 
 const items: BentoItem[] = [
-  // Row 1
+  // Spine & Back Conditions
   {
-    title: 'Electrotherapeutic Modalities',
-    imageSrc: '/bento/Electrotheraputic modalities.png',
-    href: '/services/electrotherapeutic-modalities',
+    title: 'Back Pain & Sciatica Relief',
+    imageSrc: '/bento/back-pain.png',
+    href: '/services/back-pain-sciatica-relief',
   },
   {
-    title: 'Pre / Post Surgical Conditions',
+    title: 'Neck Pain Relief',
+    imageSrc: '/bento/neck-pain.png',
+    href: '/services/neck-pain-relief',
+  },
+  // Shoulder & Upper-Body Joint Conditions
+  {
+    title: 'Shoulder Pain Relief',
+    imageSrc: '/bento/shoulder-pain.png',
+    href: '/services/shoulder-pain-relief',
+  },
+  {
+    title: 'Elbow, Wrist & Hand Pain Relief',
+    imageSrc: '/bento/elbow-wrist-hand.png',
+    href: '/services/elbow-wrist-hand-pain-relief',
+  },
+  // Hip, Knee & Lower-Body Joint Conditions
+  {
+    title: 'Hip & Knee Pain Relief',
+    imageSrc: '/bento/hip-knee-pain.png',
+    href: '/services/hip-knee-pain-relief',
+  },
+  {
+    title: 'Foot & Ankle Pain Relief',
+    imageSrc: '/bento/foot-ankle-pain.png',
+    href: '/services/foot-ankle-pain-relief',
+  },
+  // Chronic & Long-Term Pain Conditions
+  {
+    title: 'Chronic Pain Relief',
+    imageSrc: '/bento/chronicepain managemnet.png',
+    href: '/services/chronic-pain-relief',
+  },
+  {
+    title: 'Arthritis Pain Relief',
+    imageSrc: '/bento/arthritis-pain.png',
+    href: '/services/arthritis-pain-relief',
+  },
+  // TMJ & Head/Face Conditions
+  {
+    title: 'TMJ Dysfunction',
+    imageSrc: '/bento/tmj-dysfunction.png',
+    href: '/services/tmj-dysfunction',
+  },
+  // Surgical-Related Conditions
+  {
+    title: 'Pre-Surgical Rehabilitation',
     imageSrc: '/bento/pre:post sueguery.png',
-    href: '/services/pre-post-surgical-conditions',
+    href: '/services/pre-surgical-rehabilitation',
   },
   {
-    title: 'Motor Vehicle Accident Recovery',
+    title: 'Post-Surgical Rehabilitation',
+    imageSrc: '/bento/pre:post sueguery.png',
+    href: '/services/post-surgical-rehabilitation',
+  },
+  // Sports-Related Injuries
+  {
+    title: 'Sports Injuries',
+    imageSrc: '/bento/sport injury rehab.png',
+    href: '/services/sports-injuries',
+  },
+  // Work-Related Injuries
+  {
+    title: 'Work Injuries',
+    imageSrc: '/bento/Workplaceinjury.png',
+    href: '/services/work-injuries',
+  },
+  // Motor Vehicle Accident Injuries
+  {
+    title: 'Motor Vehicle Accident Injuries (MPI)',
     imageSrc: '/bento/Motorvehicel.png',
     href: '/services/motor-vehicle-accident-recovery',
-  },
-  // Row 2
-  {
-    title: 'Work Reconditioning Program',
-    imageSrc: '/bento/work reconditioning.png',
-    href: '/services/work-reconditioning-program',
-  },
-  {
-    title: 'Sports Injury Rehabilitation',
-    imageSrc: '/bento/sport injury rehab.png',
-    href: '/services/sports-injury-rehabilitation',
-  },
-  {
-    title: 'Chronic Pain Management',
-    imageSrc: '/bento/chronicepain managemnet.png',
-    href: '/services/chronic-pain-management',
-  },
-  // Row 3
-  {
-    title: 'Acupuncture & Dry Needling',
-    imageSrc: '/bento/Acupunture.png',
-    href: '/services/acupuncture-dry-needling',
     spanClass: 'sm:col-span-2',
-  },
-  {
-    title: 'Workplace Injury Treatment',
-    imageSrc: '/bento/Workplaceinjury.png',
-    href: '/services/workplace-injury-treatment',
   },
 ]
 
