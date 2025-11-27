@@ -30,7 +30,7 @@ export default function AllTreatmentsPage() {
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-3 auto-rows-[190px] sm:auto-rows-[210px] lg:auto-rows-[230px]">
+          <div className="grid gap-4 sm:grid-cols-3 auto-rows-[240px] sm:auto-rows-[260px] lg:auto-rows-[280px]">
             {allBentoItems.map((item) => (
               <Link
                 key={item.title}
@@ -48,12 +48,15 @@ export default function AllTreatmentsPage() {
                   className="absolute inset-0 h-full w-full object-cover"
                 />
 
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
 
-                <div className="relative flex h-full items-end p-4 sm:p-5">
-                  <h3 className="text-sm font-semibold text-white sm:text-base lg:text-lg">
+                <div className="relative flex flex-col h-full justify-end p-4 sm:p-5">
+                  <h3 className="text-sm font-semibold text-white sm:text-base lg:text-lg mb-2">
                     {item.title}
                   </h3>
+                  <p className="text-xs sm:text-sm text-white/90 line-clamp-2 leading-tight">
+                    {item.description}
+                  </p>
                 </div>
               </Link>
             ))}
