@@ -2,14 +2,36 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { 
+  Activity, 
+  Zap, 
+  Briefcase, 
+  Wrench, 
+  Target, 
+  Lightbulb, 
+  Hand, 
+  Sparkles, 
+  Waves, 
+  Footprints, 
+  Dumbbell, 
+  Radio 
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 type ServiceCategory = "Physiotherapy" | "Athletic Therapy" | "Manual Techniques" | "Modalities" | "Occupational Therapy";
 
-const services = [
+const services: Array<{
+  id: number;
+  title: string;
+  icon: LucideIcon;
+  category: ServiceCategory;
+  description: string;
+  benefits: string[];
+}> = [
   {
     id: 1,
     title: "Physiotherapy",
-    icon: "🏥",
+    icon: Activity,
     category: "Physiotherapy" as ServiceCategory,
     description: "Comprehensive physiotherapy services to address a wide range of musculoskeletal conditions, injuries, and movement disorders. Our registered physiotherapists provide evidence-based treatment to restore function and improve quality of life.",
     benefits: ["Pain Relief", "Improved Mobility", "Functional Recovery"]
@@ -17,7 +39,7 @@ const services = [
   {
     id: 2,
     title: "Athletic Therapy",
-    icon: "⚡",
+    icon: Zap,
     category: "Athletic Therapy" as ServiceCategory,
     description: "Specialized therapy for athletes and active individuals. We focus on injury prevention, performance optimization, and safe return to sport following injuries.",
     benefits: ["Injury Prevention", "Performance Enhancement", "Faster Recovery"]
@@ -25,7 +47,7 @@ const services = [
   {
     id: 3,
     title: "Ergonomic Training",
-    icon: "💼",
+    icon: Briefcase,
     category: "Occupational Therapy" as ServiceCategory,
     description: "Workplace ergonomic assessments and training to prevent work-related injuries and improve posture. We help you set up your workspace for optimal health and productivity.",
     benefits: ["Injury Prevention", "Posture Improvement", "Productivity"]
@@ -33,7 +55,7 @@ const services = [
   {
     id: 4,
     title: "Instrument-Assisted Soft Tissue Mobilization (IASTM)",
-    icon: "🔧",
+    icon: Wrench,
     category: "Manual Techniques" as ServiceCategory,
     description: "Advanced technique using specialized tools to break down scar tissue, reduce fascial restrictions, and improve tissue mobility. Effective for chronic pain and restricted movement.",
     benefits: ["Scar Tissue Reduction", "Improved Flexibility", "Pain Relief"]
@@ -41,7 +63,7 @@ const services = [
   {
     id: 5,
     title: "Kinesio Taping",
-    icon: "🎯",
+    icon: Target,
     category: "Modalities" as ServiceCategory,
     description: "Therapeutic taping technique that supports muscles and joints while allowing full range of motion. Helps reduce pain, improve circulation, and support healing.",
     benefits: ["Pain Reduction", "Improved Circulation", "Muscle Support"]
@@ -49,7 +71,7 @@ const services = [
   {
     id: 6,
     title: "Laser Therapy",
-    icon: "💡",
+    icon: Lightbulb,
     category: "Modalities" as ServiceCategory,
     description: "Low-level laser therapy (LLLT) to reduce inflammation, accelerate healing, and relieve pain. Non-invasive treatment for various musculoskeletal conditions.",
     benefits: ["Faster Healing", "Pain Relief", "Reduced Inflammation"]
@@ -57,7 +79,7 @@ const services = [
   {
     id: 7,
     title: "Manual Therapy",
-    icon: "🤲",
+    icon: Hand,
     category: "Manual Techniques" as ServiceCategory,
     description: "Hands-on techniques including joint mobilization, soft tissue massage, and manipulation to restore movement, reduce pain, and improve function.",
     benefits: ["Joint Mobility", "Pain Management", "Improved Function"]
@@ -65,7 +87,7 @@ const services = [
   {
     id: 8,
     title: "Massage Therapy",
-    icon: "✨",
+    icon: Sparkles,
     category: "Manual Techniques" as ServiceCategory,
     description: "Therapeutic massage services provided by registered massage therapists. Targeted treatment to relieve muscle tension, reduce stress, and promote relaxation.",
     benefits: ["Muscle Relaxation", "Stress Relief", "Improved Circulation"]
@@ -73,7 +95,7 @@ const services = [
   {
     id: 9,
     title: "Myofascial Release",
-    icon: "🌊",
+    icon: Waves,
     category: "Manual Techniques" as ServiceCategory,
     description: "Specialized technique to release tension in the fascia (connective tissue) that surrounds muscles. Effective for chronic pain, restricted movement, and postural issues.",
     benefits: ["Pain Relief", "Improved Flexibility", "Postural Correction"]
@@ -81,7 +103,7 @@ const services = [
   {
     id: 10,
     title: "Orthotics",
-    icon: "👟",
+    icon: Footprints,
     category: "Modalities" as ServiceCategory,
     description: "Custom orthotic devices, supports, braces, and corrective devices to improve alignment, reduce pain, and enhance function. We provide comprehensive assessment and fitting.",
     benefits: ["Improved Alignment", "Pain Reduction", "Enhanced Function"]
@@ -89,7 +111,7 @@ const services = [
   {
     id: 11,
     title: "Therapeutic Exercise",
-    icon: "💪",
+    icon: Dumbbell,
     category: "Physiotherapy" as ServiceCategory,
     description: "Customized exercise programs designed to strengthen, stretch, and stabilize your body. Each program is tailored to your specific needs, goals, and condition.",
     benefits: ["Strength Building", "Flexibility", "Functional Improvement"]
@@ -97,7 +119,7 @@ const services = [
   {
     id: 12,
     title: "Ultrasound Therapy",
-    icon: "🔊",
+    icon: Radio,
     category: "Modalities" as ServiceCategory,
     description: "Therapeutic ultrasound and other modalities including heat/cold therapy and electrical stimulation. Used to reduce pain, inflammation, and promote healing as part of comprehensive physiotherapy treatment.",
     benefits: ["Pain Relief", "Reduced Inflammation", "Faster Healing"]
@@ -167,19 +189,20 @@ const ServiceModal = ({ service, onClose }: { service: typeof services[0] | null
             textAlign: "center",
           }}
         >
-          <motion.span
+          <motion.div
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ delay: 0.1, type: "spring", stiffness: 200 }}
             style={{ 
-              fontSize: "52px", 
-              display: "block", 
+              display: "flex", 
+              justifyContent: "center",
+              alignItems: "center",
               marginBottom: "16px",
               filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.2))"
             }}
           >
-            {service.icon}
-          </motion.span>
+            {React.createElement(service.icon, { size: 48, color: brandColors.white })}
+          </motion.div>
           <h2
             style={{
               color: brandColors.white,
@@ -448,9 +471,16 @@ export default function PhysiotherapyHoneycomb() {
         }
 
         .hex-icon {
-          font-size: clamp(1.8rem, 4vw, 2.4rem);
+          display: flex;
+          align-items: center;
+          justify-content: center;
           margin-bottom: 8px;
           filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+        }
+        
+        .hex-icon svg {
+          width: clamp(1.8rem, 4vw, 2.4rem);
+          height: clamp(1.8rem, 4vw, 2.4rem);
         }
 
         .hex-title {
@@ -498,8 +528,9 @@ export default function PhysiotherapyHoneycomb() {
             --hex-width: 140px;
             --gap: 6px;
           }
-          .hex-icon {
-            font-size: 2rem;
+          .hex-icon svg {
+            width: 2rem;
+            height: 2rem;
           }
           .hex-title {
             font-size: 0.65rem;
@@ -516,8 +547,9 @@ export default function PhysiotherapyHoneycomb() {
             --hex-width: 180px;
             --gap: 6px;
           }
-          .hex-icon {
-            font-size: 2.6rem;
+          .hex-icon svg {
+            width: 2.6rem;
+            height: 2.6rem;
           }
           .hex-title {
             font-size: 0.8rem;
@@ -535,8 +567,12 @@ export default function PhysiotherapyHoneycomb() {
           .honeycomb-grid {
             --hex-width: 220px;
           }
+          .hex-icon svg {
+            width: 3rem;
+            height: 3rem;
+          }
+          
           .hex-icon {
-            font-size: 3rem;
             margin-bottom: 12px;
           }
           .hex-title {
@@ -714,7 +750,9 @@ export default function PhysiotherapyHoneycomb() {
                           e.currentTarget.style.background = `linear-gradient(145deg, ${categoryColor.bg} 0%, ${categoryColor.hover} 100%)`;
                         }}
                       >
-                        <span className="hex-icon">{service.icon}</span>
+                        <span className="hex-icon">
+                          {React.createElement(service.icon, { size: 32 })}
+                        </span>
                         <span className="hex-title">{service.title}</span>
                       </div>
                     </motion.div>
