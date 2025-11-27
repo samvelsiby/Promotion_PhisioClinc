@@ -90,7 +90,6 @@ const items: BentoItem[] = [
     title: 'Motor Vehicle Accident Injuries (MPI)',
     imageSrc: '/bento/Motorvehicel.png',
     href: '/services/motor-vehicle-accident-recovery',
-    spanClass: 'sm:col-span-2',
   },
   // Occupational Therapy Services
   {
