@@ -4,7 +4,7 @@ import { Calendar } from 'lucide-react'
 export default function WhatWeTreatPage() {
   return (
     <main className="min-h-screen bg-white">
-      <BentoGrid />
+      <BentoGrid showAll={true} />
       
       {/* Book Now CTA Section */}
       <section className="w-full bg-gradient-to-br from-gray-50 to-white py-16 sm:py-20 lg:py-24">

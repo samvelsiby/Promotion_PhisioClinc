@@ -4,21 +4,23 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Activity, 
-  Zap, 
   Briefcase, 
   Wrench, 
   Target, 
-  Lightbulb, 
   Hand, 
-  Sparkles, 
   Waves, 
   Footprints, 
   Dumbbell, 
-  Radio 
+  Radio,
+  Circle,
+  Crosshair,
+  Dot,
+  Zap,
+  Gauge
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
-type ServiceCategory = "Physiotherapy" | "Athletic Therapy" | "Manual Techniques" | "Modalities" | "Occupational Therapy";
+type ServiceCategory = "Physiotherapy" | "Manual Techniques" | "Modalities" | "Occupational Therapy";
 
 const services: Array<{
   id: number;
@@ -38,14 +40,6 @@ const services: Array<{
   },
   {
     id: 2,
-    title: "Athletic Therapy",
-    icon: Zap,
-    category: "Athletic Therapy" as ServiceCategory,
-    description: "Specialized therapy for athletes and active individuals. We focus on injury prevention, performance optimization, and safe return to sport following injuries.",
-    benefits: ["Injury Prevention", "Performance Enhancement", "Faster Recovery"]
-  },
-  {
-    id: 3,
     title: "Ergonomic Training",
     icon: Briefcase,
     category: "Occupational Therapy" as ServiceCategory,
@@ -70,14 +64,6 @@ const services: Array<{
   },
   {
     id: 6,
-    title: "Laser Therapy",
-    icon: Lightbulb,
-    category: "Modalities" as ServiceCategory,
-    description: "Low-level laser therapy (LLLT) to reduce inflammation, accelerate healing, and relieve pain. Non-invasive treatment for various musculoskeletal conditions.",
-    benefits: ["Faster Healing", "Pain Relief", "Reduced Inflammation"]
-  },
-  {
-    id: 7,
     title: "Manual Therapy",
     icon: Hand,
     category: "Manual Techniques" as ServiceCategory,
@@ -85,15 +71,7 @@ const services: Array<{
     benefits: ["Joint Mobility", "Pain Management", "Improved Function"]
   },
   {
-    id: 8,
-    title: "Massage Therapy",
-    icon: Sparkles,
-    category: "Manual Techniques" as ServiceCategory,
-    description: "Therapeutic massage services provided by registered massage therapists. Targeted treatment to relieve muscle tension, reduce stress, and promote relaxation.",
-    benefits: ["Muscle Relaxation", "Stress Relief", "Improved Circulation"]
-  },
-  {
-    id: 9,
+    id: 7,
     title: "Myofascial Release",
     icon: Waves,
     category: "Manual Techniques" as ServiceCategory,
@@ -101,7 +79,47 @@ const services: Array<{
     benefits: ["Pain Relief", "Improved Flexibility", "Postural Correction"]
   },
   {
+    id: 8,
+    title: "Cupping",
+    icon: Circle,
+    category: "Manual Techniques" as ServiceCategory,
+    description: "Traditional therapy using suction cups to improve blood flow, reduce muscle tension, and promote healing. Effective for pain relief and muscle recovery.",
+    benefits: ["Improved Circulation", "Muscle Relaxation", "Pain Relief"]
+  },
+  {
+    id: 9,
+    title: "Dry Needling",
+    icon: Crosshair,
+    category: "Manual Techniques" as ServiceCategory,
+    description: "Technique using fine needles to target trigger points and tight muscle bands. Helps relieve pain, improve range of motion, and reduce muscle tension.",
+    benefits: ["Trigger Point Release", "Pain Relief", "Improved Mobility"]
+  },
+  {
     id: 10,
+    title: "Acupuncture",
+    icon: Dot,
+    category: "Modalities" as ServiceCategory,
+    description: "Traditional Chinese medicine technique using fine needles at specific points to balance energy flow, reduce pain, and promote healing and wellness.",
+    benefits: ["Pain Management", "Stress Reduction", "Improved Energy Flow"]
+  },
+  {
+    id: 11,
+    title: "IFC (Interferential Current Therapy)",
+    icon: Zap,
+    category: "Modalities" as ServiceCategory,
+    description: "Electrical stimulation therapy using two medium-frequency currents to penetrate deeper tissues. Effective for pain relief, muscle stimulation, and reducing inflammation.",
+    benefits: ["Deep Tissue Stimulation", "Pain Relief", "Reduced Inflammation"]
+  },
+  {
+    id: 12,
+    title: "Balance Training",
+    icon: Gauge,
+    category: "Physiotherapy" as ServiceCategory,
+    description: "Specialized exercises and training to improve balance, coordination, and proprioception. Essential for fall prevention, rehabilitation, and athletic performance.",
+    benefits: ["Fall Prevention", "Improved Coordination", "Enhanced Stability"]
+  },
+  {
+    id: 13,
     title: "Orthotics",
     icon: Footprints,
     category: "Modalities" as ServiceCategory,
@@ -109,7 +127,7 @@ const services: Array<{
     benefits: ["Improved Alignment", "Pain Reduction", "Enhanced Function"]
   },
   {
-    id: 11,
+    id: 14,
     title: "Therapeutic Exercise",
     icon: Dumbbell,
     category: "Physiotherapy" as ServiceCategory,
@@ -117,7 +135,7 @@ const services: Array<{
     benefits: ["Strength Building", "Flexibility", "Functional Improvement"]
   },
   {
-    id: 12,
+    id: 15,
     title: "Ultrasound Therapy",
     icon: Radio,
     category: "Modalities" as ServiceCategory,
@@ -128,7 +146,6 @@ const services: Array<{
 
 const categoryColors: Record<ServiceCategory, { bg: string; hover: string; text: string }> = {
   "Physiotherapy": { bg: "#EC1C24", hover: "#C41A20", text: "#FFFFFF" },
-  "Athletic Therapy": { bg: "#58595B", hover: "#4A4B4D", text: "#FFFFFF" },
   "Manual Techniques": { bg: "#231F20", hover: "#1A1617", text: "#FFFFFF" },
   "Modalities": { bg: "#EC1C24", hover: "#C41A20", text: "#FFFFFF" },
   "Occupational Therapy": { bg: "#58595B", hover: "#4A4B4D", text: "#FFFFFF" },
@@ -332,10 +349,10 @@ export default function PhysiotherapyHoneycomb() {
 
   const filteredServices = services.filter((service) => {
     const matchesSearch = 
-      service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.benefits.some((benefit) =>
-        benefit.toLowerCase().includes(searchQuery.toLowerCase())
+    service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    service.benefits.some((benefit) =>
+      benefit.toLowerCase().includes(searchQuery.toLowerCase())
       );
     
     const matchesCategory = selectedCategory === "All" || service.category === selectedCategory;

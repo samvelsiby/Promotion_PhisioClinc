@@ -43,7 +43,7 @@ export default function AboutPage() {
         form.reset()
         // Open booking portal after successful submission
         setTimeout(() => {
-          window.open('https://pmphysio.juvonno.com/portal/publicbook.php', '_blank', 'noopener,noreferrer')
+      window.open('https://pmphysio.juvonno.com/portal/publicbook.php', '_blank', 'noopener,noreferrer')
         }, 1000)
       } else {
         setSubmitStatus({ 
@@ -89,15 +89,15 @@ export default function AboutPage() {
       <section className="mt-12 w-full">
         <div className="mx-auto flex max-w-7xl flex-col gap-10 px-4 sm:px-6 lg:gap-16 lg:px-8">
           {/* 3-Step Treatment Methodology */}
-          <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
-            <h2 className="mb-4 text-2xl font-bold text-gray-900">
-              Our 3‑step treatment methodology.
-            </h2>
-            <p className="mb-4 text-sm leading-relaxed text-gray-700 sm:text-base">
-              Every plan at Pro Motion Physiotherapy follows a simple, structured process so you
-              always know where you are in your recovery journey.
-            </p>
-            <div className="grid gap-4 sm:grid-cols-3">
+            <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
+              <h2 className="mb-4 text-2xl font-bold text-gray-900">
+                Our 3‑step treatment methodology.
+              </h2>
+              <p className="mb-4 text-sm leading-relaxed text-gray-700 sm:text-base">
+                Every plan at Pro Motion Physiotherapy follows a simple, structured process so you
+                always know where you are in your recovery journey.
+              </p>
+              <div className="grid gap-4 sm:grid-cols-3">
                 {/* Step 1 */}
                 <div className="group flex h-full flex-col rounded-2xl border border-[#fecaca] bg-gray-50/90 p-4 shadow-sm shadow-[#fecaca]/40 ring-1 ring-[#fee2e2] transition-all duration-300 hover:-translate-y-1 hover:border-[#e63939] hover:shadow-lg hover:shadow-[#f87171]/70">
                   <div className="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#e63939]/10 text-xs font-semibold text-[#e63939]">
@@ -138,9 +138,9 @@ export default function AboutPage() {
                     A personalized strength and mobility plan, plus education and home exercises, to
                     keep you active and reduce the chance of symptoms returning.
                   </p>
-                </div>
               </div>
             </div>
+          </div>
 
           {/* Location, Timings, Phone, Request Form */}
           <div className="mx-auto w-full max-w-2xl space-y-8">

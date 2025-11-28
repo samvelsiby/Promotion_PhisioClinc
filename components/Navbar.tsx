@@ -10,11 +10,11 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navLinks = [
-    { name: 'Insurance Providers', href: '/insurance' },
     { name: 'About Us', href: '/about' },
     { name: 'What We Treat', href: '/what-we-treat' },
     { name: 'How We Treat', href: '/how-we-treat' },
     { name: 'Meet Our Team', href: '/team' },
+    { name: 'Insurance Providers', href: '/insurance' },
     { name: 'Blog', href: '/blogs' },
   ]
 
@@ -38,11 +38,11 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <ul className={styles.navList}>
             {navLinks.map((link) => (
-              <li key={link.name}>
-                <a href={link.href} className={styles.navLink}>
-                  {link.name}
-                </a>
-              </li>
+                <li key={link.name}>
+                  <a href={link.href} className={styles.navLink}>
+                    {link.name}
+                  </a>
+                </li>
             ))}
           </ul>
 
@@ -82,14 +82,14 @@ export default function Navbar() {
         <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
           <div className={styles.mobileMenuContent}>
             {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className={styles.mobileNavLink}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.name}
-              </a>
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className={styles.mobileNavLink}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.name}
+                </a>
             ))}
             <a 
               href="tel:+12045551234" 
