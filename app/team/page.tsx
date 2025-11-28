@@ -16,9 +16,9 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "LIJO PAUL",
+    name: "LIJO PAUL, MPT, BPT",
     role: "Registered Physiotherapist",
-    bio: "I am an enthusiastic, internationally trained Registered Physiotherapist with over nine years of clinical experience, licensed with the College of Physiotherapists of Manitoba. I possess excellent communication skills and am fluent in English, Hindi, Malayalam, and Tamil. I completed my Bachelor of Physiotherapy (BPT) in 2008 and Master of Physiotherapy (MPT) in Musculoskeletal and Sports Injuries in 2011.",
+    bio: "Lijo Paul is a dedicated Registered Physiotherapist with over 15 years of experience in clinical practice, teaching, and patient-focused rehabilitation. He completed his Bachelor's in Physiotherapy (2002–2006) from Calicut University, Kerala, India, and earned his Master's in Physiotherapy (2009–2011) in Musculoskeletal Disorders and Sports Injuries from the same university, achieving top academic distinction in both programs.\n\nA committed lifelong learner, Lijo continually enhances his clinical skills through advanced training in manual therapy, soft-tissue release, K-taping, acupuncture, cupping therapy, concussion management, and evidence-based rehabilitation. He has contributed to the advancement of physiotherapy through active participation in research studies and presentation of papers at professional forums.\n\nLijo is equally passionate about community involvement. He has volunteered with the Malayalee Association of Manitoba, St. Jude Syro-Malabar Catholic Church, and several local initiatives, supporting cultural and charitable programs. He truly enjoys working with people from diverse communities and cultural backgrounds, fostering an inclusive, welcoming environment for all his patients.\n\nHe communicates fluently in English, Malayalam, Tamil, and Hindi, helping him build strong therapeutic relationships with individuals from various linguistic and cultural groups.\n\nLijo is dedicated to delivering compassionate, individualized care that helps patients restore movement, reduce pain, and improve their overall quality of life.",
     imageSrc: "/team/lijo.png",
     socials: { instagram: "#", linkedin: "#" }
   },
@@ -111,13 +111,23 @@ const TeamCard = ({ member, isReversed }: { member: any, isReversed: boolean }) 
         
         {/* Description */}
         <div className="text-gray-600 leading-relaxed text-sm md:text-[0.95rem] space-y-4">
-          <p className="md:block">
-            {/* Show first line only on mobile, full on desktop */}
-            <span className="md:hidden">
-              {isExpanded ? member.bio : firstLine}
-            </span>
-            <span className="hidden md:inline">{member.bio}</span>
-          </p>
+          {/* Show first line only on mobile, full on desktop */}
+          <div className="md:hidden">
+            {isExpanded ? (
+              <div className="space-y-4">
+                {member.bio.split('\n\n').map((paragraph: string, idx: number) => (
+                  <p key={idx}>{paragraph.trim()}</p>
+                ))}
+              </div>
+            ) : (
+              <p>{firstLine}</p>
+            )}
+          </div>
+          <div className="hidden md:block space-y-4">
+            {member.bio.split('\n\n').map((paragraph: string, idx: number) => (
+              <p key={idx}>{paragraph.trim()}</p>
+            ))}
+          </div>
           
           {/* Read More/Less Button - Mobile Only */}
           {shouldTruncate && (
