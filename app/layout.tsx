@@ -14,7 +14,7 @@ const greatVibes = Great_Vibes({
 export const metadata: Metadata = {
   metadataBase: new URL('https://promotionphysiotherapy.com'),
   title: {
-    default: 'Pro Motion Physiotherapy | Registered Physiotherapy Clinic in Winnipeg, MB',
+    default: 'Pro Motion Physiotherapy - Winnipeg Physiotherapy Clinic',
     template: '%s | Pro Motion Physiotherapy',
   },
   description: 'Professional physiotherapy services in Winnipeg, Manitoba. Expert treatment for back pain, sports injuries, work injuries, MVA/MPI claims, and chronic pain. Book your appointment today.',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     locale: 'en_CA',
     url: 'https://promotionphysiotherapy.com',
     siteName: 'Pro Motion Physiotherapy',
-    title: 'Pro Motion Physiotherapy | Registered Physiotherapy Clinic in Winnipeg, MB',
+    title: 'Pro Motion Physiotherapy - Winnipeg Physiotherapy Clinic',
     description: 'Professional physiotherapy services in Winnipeg, Manitoba. Expert treatment for back pain, sports injuries, work injuries, MVA/MPI claims, and chronic pain.',
     images: [
       {
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pro Motion Physiotherapy | Registered Physiotherapy Clinic in Winnipeg, MB',
+    title: 'Pro Motion Physiotherapy - Winnipeg Physiotherapy Clinic',
     description: 'Professional physiotherapy services in Winnipeg, Manitoba. Expert treatment for back pain, sports injuries, work injuries, MVA/MPI claims, and chronic pain.',
     images: ['/logo.png'],
   },
