@@ -120,10 +120,7 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
             <Link
               key={item.title}
               href={item.href}
-              className={cn(
-                'group relative overflow-hidden rounded-[28px] bg-gray-200 shadow-md transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl',
-                item.spanClass
-              )}
+              className="group relative overflow-hidden rounded-[28px] bg-gray-200 shadow-md transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl"
             >
               <Image
                 src={item.imageSrc}
@@ -136,12 +133,9 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
 
               <div className="relative flex flex-col h-full justify-end p-4 sm:p-5">
-                <h3 className="text-sm font-semibold text-white sm:text-base lg:text-lg mb-2">
+                <h3 className="text-sm font-semibold text-white sm:text-base lg:text-lg">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-white/90 line-clamp-2 leading-tight">
-                  {item.description}
-                </p>
               </div>
             </Link>
           ))}
