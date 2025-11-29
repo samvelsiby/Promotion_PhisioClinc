@@ -2,7 +2,6 @@ import { HeroVariantTwo } from '@/components/Hero'
 import Motto from '@/components/Motto'
 import Highlights from '@/components/Highlights'
 import BentoGrid from '@/components/BentoGrid'
-import Insurance from '@/components/Insurance'
 import BlogPreview from '@/components/BlogPreview'
 import FAQ from '@/components/FAQ'
 import Preloader from '@/components/Preloader'
@@ -18,7 +17,6 @@ export default async function Home() {
       <BentoGrid />
       <Motto />
       <Highlights />
-      <Insurance />
       <BlogPreview posts={posts} />
       <FAQ />
     </main>

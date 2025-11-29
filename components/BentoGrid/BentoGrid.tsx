@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
-import { allBentoItems, type BodyPartCategory } from './bentoItems'
+import { allBentoItems, getPopularBentoItems, type BodyPartCategory } from './bentoItems'
 import { Search } from 'lucide-react'
 
 interface BentoGridProps {
@@ -28,7 +28,8 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
   const [selectedCategory, setSelectedCategory] = useState<BodyPartCategory | 'All'>('All')
 
   // Determine which items to display
-  const itemsToDisplay = showAll ? allBentoItems : allBentoItems.slice(0, 9)
+  // On homepage: show popular services first, on full page: show all in head-to-toe order
+  const itemsToDisplay = showAll ? allBentoItems : getPopularBentoItems().slice(0, 9)
 
   // Filter items based on search query and category
   const filteredItems = itemsToDisplay.filter((item) => {
@@ -141,14 +142,14 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
           ))}
         </div>
 
-        {/* Read More Button - Only show on homepage (when showAll is false) */}
+        {/* View All Services Button - Only show on homepage (when showAll is false) */}
         {!showAll && allBentoItems.length > 9 && (
           <div className="mt-8 flex justify-center">
             <Link
               href="/what-we-treat"
               className="inline-flex items-center justify-center rounded-full bg-[#EC1C24] px-8 py-4 text-base font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#C41A20] hover:shadow-lg sm:px-10 sm:py-4 sm:text-lg"
             >
-              Read More
+              View All Services
             </Link>
           </div>
         )}

@@ -17,6 +17,19 @@ export interface BentoItem {
   category: BodyPartCategory
 }
 
+// Most popular/relevant services for homepage (first 9)
+const popularServices = [
+  'Back Pain & Sciatica Relief',
+  'Sports Injuries',
+  'Work Injuries, WCB & Work Related Injury',
+  'Motor Vehicle Accident Injuries (MPI)',
+  'Neck Pain Relief',
+  'Shoulder Pain Relief',
+  'Hip & Knee Pain Relief',
+  'Chronic Pain Relief',
+  'Pre & Post-Surgical Rehabilitation',
+]
+
 // All items - organized from head to toe
 export const allBentoItems: BentoItem[] = [
   // Head to Toe - Anatomical Order
@@ -149,4 +162,16 @@ export const allBentoItems: BentoItem[] = [
     category: 'Occupational Therapy',
   },
 ]
+
+// Get items ordered by popularity for homepage
+export const getPopularBentoItems = (): BentoItem[] => {
+  const popular = popularServices
+    .map(title => allBentoItems.find(item => item.title === title))
+    .filter((item): item is BentoItem => item !== undefined)
+  
+  // Add remaining items that aren't in popular list
+  const remaining = allBentoItems.filter(item => !popularServices.includes(item.title))
+  
+  return [...popular, ...remaining]
+}
 

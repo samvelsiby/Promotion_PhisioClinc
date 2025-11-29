@@ -48,11 +48,11 @@ export default function Navbar() {
 
           {/* Call Now Button */}
           <a 
-            href="tel:+12045551234" 
+            href="tel:+12045760033" 
             className={styles.contactButton}
           >
             <Phone className="h-4 w-4 mr-2" />
-            (204) 555-1234
+            (204) 576-0033
           </a>
 
           {/* Mobile Menu Button */}
@@ -92,11 +92,11 @@ export default function Navbar() {
                 </a>
             ))}
             <a 
-              href="tel:+12045551234" 
+              href="tel:+12045760033" 
               className={styles.mobileContactButton}
             >
               <Phone className="h-4 w-4 mr-2" />
-              (204) 555-1234
+              (204) 576-0033
             </a>
           </div>
         </div>

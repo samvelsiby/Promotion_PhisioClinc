@@ -3,14 +3,13 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import { MessageCircle, X, Calendar } from 'lucide-react'
+import { X, Calendar } from 'lucide-react'
 
 export default function FloatingCTA() {
   const pathname = usePathname()
   const [isVisible, setIsVisible] = useState(true)
   const [showAfterScroll, setShowAfterScroll] = useState(false)
   const [showAppointmentPopup, setShowAppointmentPopup] = useState(false)
-  const [showChat, setShowChat] = useState(false)
 
   useEffect(() => {
     // On home page, show CTA only after scrolling past hero section
@@ -51,9 +50,6 @@ export default function FloatingCTA() {
     }
   }
 
-  const handleChat = () => {
-    setShowChat(!showChat)
-  }
 
   // Hide if manually closed or if on home page and haven't scrolled past hero
   if (!isVisible || (pathname === '/' && !showAfterScroll)) return null
@@ -102,15 +98,6 @@ export default function FloatingCTA() {
               <span>Request Appointment</span>
             </button>
           </div>
-
-          {/* Chat Widget Button - Bottom Right Corner */}
-          <button
-            onClick={handleChat}
-            className="flex h-14 w-14 items-center justify-center rounded-full bg-[#e63939] shadow-lg transition-all duration-300 hover:scale-110 hover:bg-[#c62828] sm:h-16 sm:w-16"
-            aria-label="Open Chat"
-          >
-            <MessageCircle className="h-6 w-6 text-white sm:h-7 sm:w-7" />
-          </button>
         </div>
       </div>
 
@@ -142,42 +129,6 @@ export default function FloatingCTA() {
               >
                 Book Appointment Online
               </a>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Chat Widget */}
-      {showChat && (
-        <div className="fixed bottom-40 right-4 z-[100] w-80 rounded-lg bg-white shadow-2xl sm:right-6 sm:w-96 sm:bottom-44 lg:bottom-6 lg:right-24">
-          <div className="flex items-center justify-between rounded-t-lg bg-[#e63939] p-4">
-            <h3 className="font-semibold text-white">Chat with us</h3>
-            <button
-              onClick={() => setShowChat(false)}
-              className="text-white hover:text-gray-200"
-            >
-              <X className="h-5 w-5" />
-            </button>
-          </div>
-          
-          <div className="h-96 overflow-y-auto p-4">
-            <div className="mb-4 rounded-lg bg-gray-100 p-3">
-              <p className="text-sm text-gray-800">
-                Hi! How can we help you today?
-              </p>
-            </div>
-          </div>
-          
-          <div className="border-t p-4">
-            <div className="flex gap-2">
-              <input
-                type="text"
-                placeholder="Type your message..."
-                className="flex-1 rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-[#e63939] focus:outline-none focus:ring-1 focus:ring-[#e63939]"
-              />
-              <button className="rounded-md bg-[#e63939] px-4 py-2 text-sm font-semibold text-white hover:bg-[#c62828]">
-                Send
-              </button>
             </div>
           </div>
         </div>

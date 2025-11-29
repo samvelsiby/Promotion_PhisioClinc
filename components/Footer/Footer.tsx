@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Facebook, Github, Twitter, Youtube } from 'lucide-react'
+import { Facebook, Youtube } from 'lucide-react'
 
 const linkColumns = [
   {
@@ -18,10 +18,7 @@ const linkColumns = [
   {
     title: 'Explore',
     links: [
-      { label: 'Plans & Pricing', href: '#' },
-      { label: 'Features', href: '#' },
       { label: 'News & Blogs', href: '/blogs' },
-      { label: 'Careers', href: '#' },
     ],
   },
   {
@@ -94,20 +91,6 @@ export default function Footer() {
             >
               <Facebook className="h-4 w-4" />
             </a>
-            <a
-              href="#"
-              aria-label="ProMotion on Twitter"
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 transition-colors hover:bg-[#e63939] hover:text-white"
-            >
-              <Twitter className="h-4 w-4" />
-            </a>
-            <a
-              href="#"
-              aria-label="ProMotion on GitHub"
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 transition-colors hover:bg-[#e63939] hover:text-white"
-            >
-              <Github className="h-4 w-4" />
-            </a>
           </div>
         </div>
 
@@ -135,11 +118,6 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t bg-white/80">
-        <div className="flex items-center justify-between px-4 py-4 text-xs text-gray-400 sm:px-6 lg:px-8">
-          <p>© {new Date().getFullYear()} ProMotion Physiotherapy. All rights reserved.</p>
-        </div>
-      </div>
     </footer>
   )
 }
