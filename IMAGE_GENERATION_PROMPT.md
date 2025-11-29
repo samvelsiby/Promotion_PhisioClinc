@@ -1,6 +1,6 @@
 # Image Generation Prompt for Team Photos
 
-## Image Specifications for ProMotion Physiotherapy Website
+## Image Specifications for Pro Motion Physiotherapy Website
 
 Use this prompt when generating or creating team member photos to ensure they fit properly in the website cards.
 

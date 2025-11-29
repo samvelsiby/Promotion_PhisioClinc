@@ -28,7 +28,7 @@ Preferred Day/Time: ${preferredTime || 'Not specified'}
 Message: ${message || 'No message provided'}
 
 ---
-This email was sent from the ProMotion Physiotherapy website contact form.
+This email was sent from the Pro Motion Physiotherapy website contact form.
     `.trim()
 
     // For now, we'll use a simple approach

@@ -1,4 +1,4 @@
-# Promotion Physiotherapy
+# Pro Motion Physiotherapy
 
 A professional website for a physiotherapy clinic in Winnipeg, Manitoba.
 

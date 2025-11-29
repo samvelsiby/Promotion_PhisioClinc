@@ -46,7 +46,7 @@ export default function Preloader() {
         <div className="mb-8 animate-scale-in">
           <Image
             src="/navbar/Navbar.svg"
-            alt="Promotion Physiotherapy Logo"
+            alt="Pro Motion Physiotherapy Logo"
             width={250}
             height={80}
             priority

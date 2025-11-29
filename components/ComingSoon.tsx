@@ -15,7 +15,7 @@ export default function ComingSoon() {
         <div className={styles.logoContainer}>
           <img
             src="/logo.jpeg"
-            alt="Promotion Physiotherapy Logo"
+            alt="Pro Motion Physiotherapy Logo"
             className={styles.logo}
           />
         </div>

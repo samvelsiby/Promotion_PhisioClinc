@@ -89,7 +89,7 @@ export default function FloatingCTA() {
               <div className="relative h-4 w-4 sm:h-5 sm:w-5">
                 <Image
                   src="/logo.png"
-                  alt="ProMotion Physiotherapy"
+                  alt="Pro Motion Physiotherapy"
                   fill
                   className="object-contain"
                   sizes="20px"

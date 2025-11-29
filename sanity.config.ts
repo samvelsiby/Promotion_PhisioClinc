@@ -15,7 +15,7 @@ if (!dataset) {
 
 export default defineConfig({
   name: 'default',
-  title: 'Promotion Physiotherapy Studio',
+  title: 'Pro Motion Physiotherapy Studio',
   projectId,
   dataset,
   basePath: '/studio',
