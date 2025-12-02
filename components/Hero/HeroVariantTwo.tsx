@@ -43,7 +43,7 @@ export default function HeroVariantTwo() {
         <div className="flex flex-col gap-4 sm:flex-row">
           <Button 
             asChild
-            className="h-12 rounded-full bg-[#e63939] px-8 text-base font-semibold text-white transition hover:bg-[#c62828] sm:h-12 sm:px-9"
+            className="h-10 rounded-full bg-[#e63939] px-6 text-sm font-semibold text-white transition hover:bg-[#c62828] sm:h-12 sm:px-9 sm:text-base"
           >
             <a href="https://pmphysio.juvonno.com/portal/publicbook.php" target="_blank" rel="noopener noreferrer">
               Book Now
@@ -51,7 +51,7 @@ export default function HeroVariantTwo() {
           </Button>
           <Button 
             asChild
-            className="h-12 rounded-full bg-gray-600 px-8 text-base font-semibold text-white transition hover:bg-gray-700 sm:h-12 sm:px-9"
+            className="h-10 rounded-full bg-gray-600 px-6 text-sm font-semibold text-white transition hover:bg-gray-700 sm:h-12 sm:px-9 sm:text-base"
           >
             <a href="/about#appointment-form">
               Request Appointment
