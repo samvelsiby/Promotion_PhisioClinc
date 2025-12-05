@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { Resend } from 'resend'
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: NextRequest) {
   try {
@@ -13,8 +16,8 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Email configuration - Update with your clinic email
-    const clinicEmail = process.env.CLINIC_EMAIL || 'info@promotionphysio.com'
+    // Email configuration
+    const clinicEmail = 'info@promotionphysiotherapy.ca'
     
     // Create email content
     const emailSubject = `New Appointment Request from ${name}`
@@ -31,42 +34,21 @@ Message: ${message || 'No message provided'}
 This email was sent from the Pro Motion Physiotherapy website contact form.
     `.trim()
 
-    // For now, we'll use a simple approach
-    // You can integrate with services like:
-    // - Resend (recommended for Next.js)
-    // - SendGrid
-    // - Nodemailer with SMTP
-    // - Formspree
-    // - EmailJS
-
-    // Example with fetch to an email service API
-    // Replace this with your preferred email service
-    const emailServiceUrl = process.env.EMAIL_SERVICE_URL
+    // Send email using Resend
+    // Note: Update 'from' address after verifying your domain in Resend
+    const fromEmail = process.env.RESEND_FROM_EMAIL || 'Pro Motion Physiotherapy <onboarding@resend.dev>'
     
-    if (emailServiceUrl) {
-      // If you have an email service configured
-      const response = await fetch(emailServiceUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          to: clinicEmail,
-          subject: emailSubject,
-          text: emailBody,
-          from: email,
-        }),
-      })
+    const { data, error } = await resend.emails.send({
+      from: fromEmail,
+      to: [clinicEmail],
+      replyTo: email,
+      subject: emailSubject,
+      text: emailBody,
+    })
 
-      if (!response.ok) {
-        throw new Error('Failed to send email')
-      }
-    } else {
-      // Log to console for development
-      // In production, configure an email service
-      console.log('=== NEW APPOINTMENT REQUEST ===')
-      console.log(emailBody)
-      console.log('===============================')
+    if (error) {
+      console.error('Resend error:', error)
+      throw new Error('Failed to send email')
     }
 
     return NextResponse.json(
