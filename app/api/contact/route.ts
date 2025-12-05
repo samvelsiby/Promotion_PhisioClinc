@@ -16,8 +16,22 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    const trimmedEmail = typeof email === 'string' ? email.trim() : ''
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+    if (!emailRegex.test(trimmedEmail)) {
+      return NextResponse.json(
+        { error: 'Please provide a valid email address.' },
+        { status: 400 }
+      )
+    }
+
+    const trimmedName = typeof name === 'string' ? name.trim() : ''
+    const replyTo = trimmedName ? `${trimmedName} <${trimmedEmail}>` : trimmedEmail
+
     // Email configuration
-    const clinicEmail = 'info@promotionphysiotherapy.ca'
+    const clinicEmail = process.env.RESEND_CLINIC_EMAIL || 'info@promotionphysiotherapy.ca'
+    const toEmails = [clinicEmail]
     
     // Create email content
     const emailSubject = `New Appointment Request from ${name}`
@@ -40,8 +54,8 @@ This email was sent from the Pro Motion Physiotherapy website contact form.
     
     const { data, error } = await resend.emails.send({
       from: fromEmail,
-      to: [clinicEmail],
-      replyTo: email,
+      to: toEmails,
+      replyTo,
       subject: emailSubject,
       text: emailBody,
     })
