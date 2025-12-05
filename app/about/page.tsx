@@ -41,10 +41,6 @@ export default function AboutPage() {
           message: result.message || 'Your appointment request has been submitted successfully!' 
         })
         form.reset()
-        // Open booking portal after successful submission
-        setTimeout(() => {
-      window.open('https://pmphysio.juvonno.com/portal/publicbook.php', '_blank', 'noopener,noreferrer')
-        }, 1000)
       } else {
         setSubmitStatus({ 
           type: 'error', 
