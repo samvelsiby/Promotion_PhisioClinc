@@ -21,7 +21,7 @@ export default function HeroVariantTwo() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-between px-4 sm:px-6 lg:px-12 xl:px-16 pt-4 pb-8 sm:py-12">
+      <div className="relative z-10 h-full flex flex-col justify-between lg:justify-start px-4 sm:px-6 lg:px-12 xl:px-16 pt-4 pb-8 sm:py-12">
         <RevealOnScroll>
           <div className="text-left max-w-2xl">
             <div className="space-y-4">
@@ -40,24 +40,27 @@ export default function HeroVariantTwo() {
           </div>
         </RevealOnScroll>
 
-        <div className="flex flex-col gap-4 sm:flex-row">
-          <Button 
-            asChild
-            className="h-10 rounded-full bg-[#e63939] px-6 text-sm font-semibold text-white transition hover:bg-[#c62828] sm:h-12 sm:px-9 sm:text-base"
-          >
-            <a href="https://pmphysio.juvonno.com/portal/publicbook.php" target="_blank" rel="noopener noreferrer">
-              Book Now
-            </a>
-          </Button>
-          <Button 
-            asChild
-            className="h-10 rounded-full bg-gray-600 px-6 text-sm font-semibold text-white transition hover:bg-gray-700 sm:h-12 sm:px-9 sm:text-base"
-          >
-            <a href="/about#appointment-form">
-              Request Appointment
-            </a>
-          </Button>
-        </div>
+        {/* Buttons - Right below text on desktop, at bottom on mobile */}
+        <RevealOnScroll delay={220}>
+          <div className="flex flex-col gap-4 sm:flex-row mt-6 lg:mt-8">
+            <Button 
+              asChild
+              className="h-10 rounded-full bg-[#e63939] px-6 text-sm font-semibold text-white transition hover:bg-[#c62828] sm:h-12 sm:px-9 sm:text-base"
+            >
+              <a href="https://pmphysio.juvonno.com/portal/publicbook.php" target="_blank" rel="noopener noreferrer">
+                Book Now
+              </a>
+            </Button>
+            <Button 
+              asChild
+              className="h-10 rounded-full bg-gray-600 px-6 text-sm font-semibold text-white transition hover:bg-gray-700 sm:h-12 sm:px-9 sm:text-base"
+            >
+              <a href="/about#appointment-form">
+                Schedule with Us
+              </a>
+            </Button>
+          </div>
+        </RevealOnScroll>
       </div>
     </section>
   )
