@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     'chronic pain management Winnipeg',
     'post-surgical rehabilitation Winnipeg',
     'St. Anne\'s Road physiotherapy',
+    'St. Anne\'s Road Winnipeg physiotherapy',
     'registered physiotherapist Manitoba',
   ],
   authors: [{ name: 'Pro Motion Physiotherapy' }],
