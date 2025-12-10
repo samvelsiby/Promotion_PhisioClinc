@@ -92,12 +92,26 @@ export default function Footer() {
               latitude: 49.8951,
               longitude: -97.1384,
             },
-            openingHoursSpecification: {
-              '@type': 'OpeningHoursSpecification',
-              dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-              opens: '08:00',
-              closes: '18:00',
-            },
+            openingHoursSpecification: [
+              {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                opens: '09:00',
+                closes: '20:00',
+              },
+              {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: 'Saturday',
+                opens: '09:00',
+                closes: '16:00',
+              },
+              {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: 'Sunday',
+                opens: '10:00',
+                closes: '16:00',
+              },
+            ],
             sameAs: [
               'https://www.facebook.com/promotionphysiotherapy',
               'https://www.youtube.com/@promotionphysiotherapy',
@@ -143,14 +157,14 @@ export default function Footer() {
         <div className="max-w-sm">
           <div className="relative h-10 w-40">
             <Link href="/" aria-label="Pro Motion Physiotherapy Home">
-              <Image
-                src="/logo.png"
+            <Image
+              src="/logo.png"
                 alt="Pro Motion Physiotherapy - Registered Physiotherapy Clinic in Winnipeg, Manitoba"
-                fill
-                sizes="160px"
-                className="object-contain"
+              fill
+              sizes="160px"
+              className="object-contain"
                 priority
-              />
+            />
             </Link>
           </div>
 
@@ -161,13 +175,13 @@ export default function Footer() {
                 <MapPin className="h-4 w-4 mt-0.5 text-gray-500 flex-shrink-0" aria-hidden="true" />
                 <span>
                   {businessAddress.street}
-                  <br />
+            <br />
                   {businessAddress.city}, {businessAddress.province} {businessAddress.postalCode}
                 </span>
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-gray-500 flex-shrink-0" aria-hidden="true" />
-                <a 
+            <a
                   href="tel:+12045760033" 
                   className="hover:text-[#e63939] transition-colors"
                   aria-label="Call Pro Motion Physiotherapy at (204) 576-0033"
@@ -198,19 +212,19 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow Pro Motion Physiotherapy on Facebook"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 transition-colors hover:bg-[#e63939] hover:text-white"
-              >
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 transition-colors hover:bg-[#e63939] hover:text-white"
+            >
                 <Facebook className="h-4 w-4" aria-hidden="true" />
-              </a>
-              <a
+            </a>
+            <a
                 href="https://www.youtube.com/@promotionphysiotherapy"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Subscribe to Pro Motion Physiotherapy on YouTube"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 transition-colors hover:bg-[#e63939] hover:text-white"
-              >
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 transition-colors hover:bg-[#e63939] hover:text-white"
+            >
                 <Youtube className="h-4 w-4" aria-hidden="true" />
-              </a>
+            </a>
             </div>
           </div>
         </div>

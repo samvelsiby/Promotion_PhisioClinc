@@ -159,9 +159,9 @@ export default function AboutPage() {
                   <Clock className="mt-1 h-5 w-5 text-[#e63939]" />
                   <div>
                     <p className="font-semibold text-gray-900">Clinic hours</p>
-                    <p>Monday – Friday: 8:00 AM – 6:00 PM</p>
-                    <p>Saturday: 9:00 AM – 1:00 PM</p>
-                    <p>Sunday & holidays: Closed</p>
+                    <p>Monday – Friday: 9:00 AM – 8:00 PM</p>
+                    <p>Saturday: 9:00 AM – 4:00 PM</p>
+                    <p>Sunday: 10:00 AM – 4:00 PM</p>
                   </div>
                 </div>
 

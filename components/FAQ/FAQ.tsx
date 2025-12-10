@@ -14,7 +14,7 @@ const faqs: FAQItem[] = [
   {
     question: 'Do I need a referral to see a physiotherapist?',
     answer:
-      'No, you do not need a doctor\'s or other healthcare provider\'s referral to see a physiotherapist. Anyone can book an appointment—just give us a call! Physiotherapy can help people of all ages with a wide variety of conditions, including orthopedic and sports injuries, neurological disorders, cardiorespiratory issues, hand and workplace injuries, motor vehicle accidents, ergonomic and posture concerns, and geriatric care. Note: Some insurance plans may require a doctor\'s referral for coverage. Please check with your provider before your appointment.',
+      'No, you do not need a doctor\'s or other healthcare provider\'s referral to see a physiotherapist. Anyone can book an appointment,sjust give us a call! Physiotherapy can help people of all ages with a wide variety of conditions, including orthopedic and sports injuries, neurological disorders, cardiorespiratory issues, hand and workplace injuries, motor vehicle accidents, ergonomic and posture concerns, and geriatric care. Note: Some insurance plans may require a doctor\'s referral for coverage. Please check with your provider before your appointment.',
   },
   {
     question: 'What do physiotherapists do?',
@@ -54,7 +54,7 @@ const faqs: FAQItem[] = [
   {
     question: 'What are your hours of operation?',
     answer:
-      'Pro-Motion Physiotherapy is open Monday to Friday: 8:00 AM – 7:00 PM, Saturday: 8:00 AM – 12:00 PM, and Sunday: Closed.',
+      'Pro-Motion Physiotherapy is open Monday to Friday: 9:00 AM – 8:00 PM, Saturday: 9:00 AM – 4:00 PM, and Sunday: 10:00 AM – 4:00 PM.',
   },
   {
     question: 'What is your cancellation policy?',
