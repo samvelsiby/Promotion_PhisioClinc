@@ -10,10 +10,10 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Pro Motion Physiotherapy - Winnipeg Physiotherapy Clinic',
-  description: 'Professional physiotherapy services in Winnipeg, Manitoba. Expert treatment for back pain, sports injuries, work injuries, MVA/MPI claims, and chronic pain. Book your appointment today.',
+  description: 'Physiotherapy services in Winnipeg, Manitoba. Treatment for back pain, sports injuries, work injuries, MVA/MPI claims, and chronic pain. Book your appointment today.',
   openGraph: {
     title: 'Pro Motion Physiotherapy - Winnipeg Physiotherapy Clinic',
-    description: 'Professional physiotherapy services in Winnipeg, Manitoba. Expert treatment for back pain, sports injuries, work injuries, MVA/MPI claims, and chronic pain.',
+    description: 'Physiotherapy services in Winnipeg, Manitoba. Treatment for back pain, sports injuries, work injuries, MVA/MPI claims, and chronic pain.',
   },
 }
 
