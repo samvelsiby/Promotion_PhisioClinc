@@ -110,6 +110,19 @@ export default function RootLayout({
     <html lang="en" className={greatVibes.variable}>
       <body>
         <Navbar />
+        {/* WebSite Schema for Sitelinks */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Pro Motion Physiotherapy',
+              url: 'https://promotionphysiotherapy.com',
+              alternateName: ['Pro Motion', 'Pro Motion Physio'],
+            }),
+          }}
+        />
         {children}
         <Footer />
         <FloatingCTA />
