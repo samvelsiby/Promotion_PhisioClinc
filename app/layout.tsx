@@ -74,10 +74,12 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  icons: {
-    icon: '/logo.png',
-    apple: '/logo.png',
-  },
+  // Next.js automatically detects these special files in app/:
+  // - favicon.ico (ICO favicon)
+  // - icon.svg (SVG favicon)
+  // - icon.png (PNG favicon)
+  // - apple-icon.png (Apple touch icon)
+  manifest: '/manifest.json',
   alternates: {
     canonical: 'https://promotionphysiotherapy.com',
   },
