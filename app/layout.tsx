@@ -79,6 +79,16 @@ export const metadata: Metadata = {
   // - icon.svg (SVG favicon)
   // - icon.png (PNG favicon)
   // - apple-icon.png (Apple touch icon)
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/icon.png', type: 'image/png' },
+    ],
+    shortcut: ['/favicon.ico'],
+    apple: [
+      { url: '/apple-icon.png' },
+    ],
+  },
   manifest: '/manifest.json',
   alternates: {
     canonical: 'https://promotionphysiotherapy.com',
