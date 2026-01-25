@@ -1,6 +1,7 @@
 "use client"
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import RevealOnScroll from '@/components/RevealOnScroll'
 
@@ -19,34 +20,51 @@ interface BlogPreviewProps {
 export default function BlogPreview({ posts }: BlogPreviewProps) {
   return (
     <section className="w-full bg-white py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Header with Background Image */}
         <RevealOnScroll>
-          <div className="mb-8 flex flex-col items-start justify-between gap-4 sm:mb-10 sm:flex-row sm:items-end">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#e63939] sm:text-sm">
+          <div className="relative mb-16 overflow-hidden rounded-2xl sm:mb-20">
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+              <Image
+                src="/Hero/hero3.jpg"
+                alt="Blog banner"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+            </div>
+
+            {/* Content */}
+            <div className="relative z-10 px-6 py-16 text-center sm:px-12 sm:py-20 lg:py-24">
+              <span className="mb-4 inline-block rounded-full bg-white/20 backdrop-blur-sm px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
                 Promotion Blogs
-              </p>
-              <h2 className="mt-3 text-2xl font-semibold text-gray-900 sm:text-3xl lg:text-4xl">
+              </span>
+              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                 Insights to Support Your Recovery
               </h2>
-              <p className="mt-3 max-w-xl text-sm text-gray-600 sm:text-base">
-                Stay informed with practical tips and expert guidance on injury prevention,
+              <p className="mx-auto mt-6 max-w-xl text-lg text-white/90 leading-relaxed">
+                Stay informed with practical tips and professional guidance on injury prevention,
                 rehabilitation, and healthy movement.
               </p>
             </div>
-
-            <div className="hidden sm:block">
-              <Button
-                asChild
-                size="sm"
-                className="rounded-full bg-[#e63939] px-6 text-xs font-semibold text-white hover:bg-[#c62828]"
-              >
-                <Link href="/blogs">View all blogs</Link>
-              </Button>
-            </div>
           </div>
         </RevealOnScroll>
+
+      <div className="mx-auto max-w-5xl">
+
+        <div className="mb-8 flex justify-end">
+          <div className="hidden sm:block">
+            <Button
+              asChild
+              size="sm"
+              className="rounded-full bg-[#e63939] px-6 text-xs font-semibold text-white hover:bg-[#c62828]"
+            >
+              <Link href="/blogs">View all blogs</Link>
+            </Button>
+          </div>
+        </div>
 
         {/* Blog list */}
         <ul className="divide-y divide-gray-200 border-t border-gray-200">
@@ -93,6 +111,7 @@ export default function BlogPreview({ posts }: BlogPreviewProps) {
             <Link href="/blogs">View all blogs</Link>
           </Button>
         </div>
+      </div>
       </div>
     </section>
   )

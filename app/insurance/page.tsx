@@ -1,20 +1,24 @@
+import Image from 'next/image'
+import { Marquee } from '@/components/ui/marquee'
+
 interface Provider {
   name: string
+  logo?: string
   website?: string
 }
 
 const providers: Provider[] = [
-  { name: 'Manitoba Blue Cross', website: 'https://www.mb.bluecross.ca/' },
-  { name: 'Great-West Life / Canada Life', website: 'https://www.canadalife.com/' },
-  { name: 'Coughlin & Associates', website: 'https://www.coughlin.ca/' },
+  { name: 'Manitoba Blue Cross', logo: '/insurancecompaiens/mbc-logo-en.svg', website: 'https://www.mb.bluecross.ca/' },
+  { name: 'Great-West Life / Canada Life', logo: '/insurancecompaiens/canada-life-e-tm.323032332d30382d33303a31303a3134.svg', website: 'https://www.canadalife.com/' },
+  { name: 'Coughlin & Associates', logo: '/insurancecompaiens/couglin.png', website: 'https://www.coughlin.ca/' },
   { name: 'Green Shield', website: 'https://www.greenshield.ca/' },
-  { name: 'Chamber of Commerce', website: 'https://www.chamberplan.ca/' },
+  { name: 'Chamber of Commerce', logo: '/insurancecompaiens/15461-Chamber-Horizontal-RGB-1.png', website: 'https://www.chamberplan.ca/' },
   { name: 'Maximum Benefits', website: 'https://www.maximumbenefits.ca/' },
-  { name: 'SSQ', website: 'https://www.ssq.ca/' },
-  { name: 'ClaimSecure', website: 'https://www.claimsecure.com/' },
-  { name: 'Medavie Blue Cross', website: 'https://www.medaviebc.ca/' },
+  { name: 'SSQ', logo: '/insurancecompaiens/regroupement-en.png', website: 'https://www.ssq.ca/' },
+  { name: 'ClaimSecure', logo: '/insurancecompaiens/New-CS-logo-with-Slogan-EN.png', website: 'https://www.claimsecure.com/' },
+  { name: 'Medavie Blue Cross', logo: '/insurancecompaiens/bluecross.svg', website: 'https://www.medaviebc.ca/' },
   { name: 'National Blue Cross' },
-  { name: 'Johnson Group / Johnson Inc.', website: 'https://www.johnson.ca/' },
+  { name: 'Johnson Group / Johnson Inc.', logo: '/insurancecompaiens/JG_short-white-59.png', website: 'https://www.johnson.ca/' },
   { name: 'Interim Federal Health Program' },
 ]
 
@@ -47,28 +51,47 @@ export default function InsurancePage() {
             </p>
           </div>
 
-          <ul className="grid gap-3 text-sm text-gray-800 sm:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {providers.map((provider) => (
-              <li
+              <div
                 key={provider.name}
-                className="flex items-center justify-between rounded-full border border-gray-200 bg-white px-4 py-2.5 shadow-sm transition-colors duration-200 hover:border-[#e63939]/40"
+                className="flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-200 hover:shadow-md"
               >
-                <span className="truncate pr-2 text-[0.95rem] font-medium text-gray-900">
-                  {provider.name}
-                </span>
-                {provider.website && (
-                  <a
-                    href={provider.website}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="ml-2 whitespace-nowrap text-[11px] font-semibold uppercase tracking-wide text-[#e63939] underline-offset-4 hover:underline"
-                  >
-                    Website
-                  </a>
+                {provider.logo ? (
+                  <div className="flex h-16 w-24 flex-shrink-0 items-center justify-center">
+                    <Image
+                      src={provider.logo}
+                      alt={provider.name}
+                      width={96}
+                      height={64}
+                      className="h-auto w-auto max-h-16 max-w-[96px] object-contain"
+                    />
+                  </div>
+                ) : (
+                  <div className="flex h-16 w-24 flex-shrink-0 items-center justify-center rounded-lg bg-gray-100">
+                    <span className="text-2xl font-bold text-gray-400">
+                      {provider.name.charAt(0)}
+                    </span>
+                  </div>
                 )}
-              </li>
+                <div className="flex-1">
+                  <h3 className="text-sm font-semibold text-gray-900 mb-1">
+                    {provider.name}
+                  </h3>
+                  {provider.website && (
+                    <a
+                      href={provider.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-[#e63939] hover:underline font-medium"
+                    >
+                      Visit Website →
+                    </a>
+                  )}
+                </div>
+              </div>
             ))}
-          </ul>
+          </div>
 
           <p className="mt-6 text-xs text-gray-500 sm:text-sm">
             If your provider isn&apos;t listed here, please contact us. We&apos;re happy to help you confirm your

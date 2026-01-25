@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
     // Email configuration
     const clinicEmail = process.env.RESEND_CLINIC_EMAIL || 'info@promotionphysiotherapy.ca'
     const toEmails = [clinicEmail]
-    
+
     // Create email content
     const emailSubject = `New Appointment Request from ${name}`
     const emailBody = `
@@ -51,7 +51,7 @@ This email was sent from the Pro Motion Physiotherapy website contact form.
     // Send email using Resend
     // Note: Update 'from' address after verifying your domain in Resend
     const fromEmail = process.env.RESEND_FROM_EMAIL || 'Pro Motion Physiotherapy <onboarding@resend.dev>'
-    
+
     const { data, error } = await resend.emails.send({
       from: fromEmail,
       to: toEmails,
@@ -66,17 +66,17 @@ This email was sent from the Pro Motion Physiotherapy website contact form.
     }
 
     return NextResponse.json(
-      { 
-        success: true, 
-        message: 'Your appointment request has been submitted successfully. We will contact you soon.' 
+      {
+        success: true,
+        message: 'Your appointment request has been submitted successfully. We will contact you soon.'
       },
       { status: 200 }
     )
   } catch (error) {
     console.error('Error processing form submission:', error)
     return NextResponse.json(
-      { 
-        error: 'Failed to submit your request. Please try again or call us directly.' 
+      {
+        error: 'Failed to submit your request. Please try again or call us directly.'
       },
       { status: 500 }
     )

@@ -3,6 +3,6 @@ Allow: /
 Disallow: /studio/
 Disallow: /api/
 
-Sitemap: https://promotionphysiotherapy.com/sitemap.xml
+Sitemap: https://promotionphysiotherapy.ca/sitemap.xml
 
 

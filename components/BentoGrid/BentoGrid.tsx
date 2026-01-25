@@ -36,23 +36,26 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
     const matchesSearch =
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.description.toLowerCase().includes(searchQuery.toLowerCase())
-    
+
     const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory
-    
+
     return matchesSearch && matchesCategory
   })
 
   return (
     <section
       id="what-we-treat"
-      className="w-full bg-white py-16 sm:py-20 lg:py-24"
+      className="w-full relative py-16 sm:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-8 max-w-2xl sm:mb-10">
-          <h2 className="text-2xl font-semibold text-gray-900 sm:text-3xl lg:text-4xl">
+        <div className="mx-auto mb-16 max-w-2xl text-center sm:mb-20">
+          <span className="mb-4 inline-block rounded-full bg-red-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#e63939]">
+            Our Services
+          </span>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
             What We Treat
           </h2>
-          <p className="mt-3 text-sm text-gray-600 sm:text-base">
+          <p className="mx-auto mt-6 max-w-xl text-lg text-gray-600 leading-relaxed">
             A comprehensive range of evidence-based treatments tailored to your
             specific condition and goals.
           </p>
@@ -67,7 +70,7 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search treatment conditions..."
-              className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-full focus:border-[#EC1C24] focus:outline-none focus:ring-2 focus:ring-[#EC1C24]/20 transition-all"
+              className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-full focus:border-[#e63939] focus:outline-none focus:ring-2 focus:ring-[#e63939]/20 transition-all font-medium text-gray-700"
             />
           </div>
         </div>
@@ -79,7 +82,7 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value as BodyPartCategory | 'All')}
-              className="w-full px-4 py-3 border-2 border-gray-200 rounded-full focus:border-[#EC1C24] focus:outline-none focus:ring-2 focus:ring-[#EC1C24]/20 transition-all bg-white text-gray-900 font-medium"
+              className="w-full px-4 py-3 border-2 border-gray-200 rounded-full focus:border-[#e63939] focus:outline-none focus:ring-2 focus:ring-[#e63939]/20 transition-all bg-white text-gray-900 font-medium"
             >
               {categories.map((category) => (
                 <option key={category.value} value={category.value}>
@@ -98,8 +101,8 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
                 className={cn(
                   'px-4 py-2 rounded-full text-xs font-semibold transition-all duration-200 whitespace-nowrap',
                   selectedCategory === category.value
-                    ? 'bg-[#EC1C24] text-white shadow-sm'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-[#e63939] text-white shadow-md ring-2 ring-[#e63939] ring-offset-2'
+                    : 'bg-white text-gray-600 border border-gray-200 hover:bg-gray-50 hover:text-gray-900'
                 )}
               >
                 {category.label}
@@ -116,27 +119,50 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
           </p>
         )}
 
-        <div className="grid gap-4 sm:grid-cols-3 auto-rows-[240px] sm:auto-rows-[260px] lg:auto-rows-[280px]">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {filteredItems.map((item) => (
             <Link
               key={item.title}
               href={item.href}
-              className="group relative overflow-hidden rounded-[28px] bg-gray-200 shadow-md transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl"
+              className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all duration-300 ease-out hover:shadow-lg"
             >
-              <Image
-                src={item.imageSrc}
-                alt={item.title}
-                fill
-                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 100vw"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
+              {/* Image Container */}
+              <div className="relative h-56 w-full overflow-hidden">
+                <Image
+                  src={item.imageSrc}
+                  alt={item.title}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                
+                {/* Arrow Button */}
+                <div className="absolute top-3 right-3 flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-sm transition-all duration-300 group-hover:bg-gray-800 group-hover:text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
 
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
-
-              <div className="relative flex flex-col h-full justify-end p-4 sm:p-5">
-                <h3 className="text-sm font-semibold text-white sm:text-base lg:text-lg">
+              {/* Content Container */}
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 leading-snug">
                   {item.title}
                 </h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {item.description}
+                </p>
               </div>
             </Link>
           ))}
@@ -147,7 +173,7 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
           <div className="mt-8 flex justify-center">
             <Link
               href="/what-we-treat"
-              className="inline-flex items-center justify-center rounded-full bg-[#EC1C24] px-8 py-4 text-base font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#C41A20] hover:shadow-lg sm:px-10 sm:py-4 sm:text-lg"
+              className="inline-flex items-center justify-center rounded-full bg-[#e63939] px-8 py-4 text-base font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[#c62828] hover:shadow-xl sm:px-10 sm:py-4 sm:text-lg"
             >
               View All Services
             </Link>

@@ -23,7 +23,7 @@ const serviceRoutes = [
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://promotionphysiotherapy.com'
+  const baseUrl = 'https://promotionphysiotherapy.ca'
   
   const serviceSitemapEntries = serviceRoutes.map((route) => ({
     url: `${baseUrl}${route}`,

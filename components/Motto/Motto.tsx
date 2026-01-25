@@ -15,7 +15,7 @@ type MottoProps = {
 
 export default function Motto({ showButton = true }: MottoProps) {
   return (
-    <section className="w-full bg-white py-16 sm:py-20 lg:py-24">
+    <section className="w-full relative py-16 sm:py-20 lg:py-24">
       <div className="mx-auto flex max-w-7xl flex-col gap-12 px-4 sm:px-6 lg:flex-row lg:items-center lg:gap-16 lg:px-8">
         <div className="relative mx-auto w-full max-w-xl lg:mx-0">
           <div className="relative overflow-hidden rounded-[32px] bg-white shadow-xl">
@@ -71,14 +71,14 @@ export default function Motto({ showButton = true }: MottoProps) {
 
         <div className="w-full max-w-xl space-y-6 lg:max-w-lg">
           <div className="h-0.5 w-16 bg-gray-300" />
-          <h2 className="mt-10 sm:mt-2 text-3xl font-semibold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
             Redefining Healthcare,
             <span className="block">One Life at a Time</span>
           </h2>
 
           <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
-            Our dedicated team of professionals combines expertise, compassion,
-            and cutting-edge technology to deliver personalized care that makes
+            Our dedicated team of professionals combines experience, compassion,
+            and evidence-based techniques to deliver personalized care that makes
             a lasting impact.
           </p>
 

@@ -1,19 +1,27 @@
 /* Top Bar */
 .topBar {
-  background-color: #333333;
-  height: 4px;
+  background-color: transparent;
+  height: 0;
   width: 100%;
 }
 
 /* Navbar Container */
 .navbar {
-  background-color: #f8f8f8;
-  width: 100%;
+  background-color: #ffffff;
+  width: calc(100% - 4rem);
+  max-width: 1400px;
+  margin: 1rem auto;
   padding: 1rem 2rem;
   position: sticky;
-  top: 0;
+  top: 1rem;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.navbar:hover {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
 }
 
 .navContainer {
@@ -49,11 +57,12 @@
 }
 
 .navLink {
-  color: #666666;
+  color: #333333;
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.2s ease;
   position: relative;
+  letter-spacing: 0.01em;
 }
 
 .navLink:hover {
@@ -94,12 +103,13 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  color: #666666;
+  color: #333333;
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   transition: color 0.2s ease;
   text-decoration: none;
+  letter-spacing: 0.01em;
 }
 
 .navLinkButton:hover {
@@ -121,7 +131,6 @@
   left: 0;
   min-width: 280px;
   background-color: #ffffff;
-  border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   padding: 0.75rem 0;
   opacity: 0;
@@ -151,38 +160,98 @@
   color: #e63939;
 }
 
-/* Contact Button */
+/* Contact Button (Green style from image) */
 .contactButton {
   display: none;
-  background-color: #e63939;
+  position: relative;
+  background: none;
+  /* Background handled by pseudo-element */
   color: white;
   padding: 0.6rem 1.8rem;
   border: none;
-  border-radius: 30px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
   align-items: center;
   flex-direction: row;
   gap: 0.5rem;
+  text-decoration: none;
+  margin-left: 0.5rem;
+  z-index: 1;
+  /* Ensure text is above pseudo */
+}
+
+/* Review Button (Blue style from image) */
+.reviewButton {
+  display: none;
+  position: relative;
+  background: none;
+  /* Background handled by pseudo-element */
+  color: #333333;
+  padding: 0.6rem 1.8rem;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-right: 0.5rem;
+  z-index: 1;
+  /* Ensure text is above pseudo */
+}
+
+/* Background skew shape for both */
+.contactButton::before,
+.reviewButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: skewX(-20deg);
+  z-index: -1;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.contactButton::before {
+  background-color: #e63939;
+  /* Brand Red */
+}
+
+.reviewButton::before {
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  /* White background for Google logo visibility */
 }
 
 @media (min-width: 1024px) {
-  .contactButton {
+
+  .contactButton,
+  .reviewButton {
     display: flex;
   }
 }
 
-
-.contactButton:hover {
+.contactButton:hover::before {
   background-color: #c62828;
+  transform: skewX(-20deg) scale(1.05);
+}
+
+.reviewButton:hover::before {
+  background-color: #f8f8f8;
+  border-color: #cccccc;
+  transform: skewX(-20deg) scale(1.05);
 }
 
 /* Mobile Menu Button */
 .mobileMenuButton {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   background: none;
   border: none;
   cursor: pointer;
@@ -196,16 +265,15 @@
 }
 
 .hamburgerLine {
-  width: 25px;
-  height: 3px;
+  width: 32px;
+  height: 2px;
   background-color: #333;
-  border-radius: 2px;
   transition: all 0.3s ease;
 }
 
 /* Animated Hamburger Open State */
 .mobileMenuButtonOpen .hamburgerLine:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(7px) rotate(45deg);
 }
 
 .mobileMenuButtonOpen .hamburgerLine:nth-child(2) {
@@ -213,7 +281,7 @@
 }
 
 .mobileMenuButtonOpen .hamburgerLine:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* Mobile Menu Overlay */
@@ -240,10 +308,8 @@
   top: 0;
   left: 0;
   height: 100vh;
-  width: 280px;
-  max-width: 85vw;
+  width: 100vw;
   background-color: #ffffff;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transform: translateX(-100%);
   transition: transform 0.3s ease-out;
@@ -260,12 +326,67 @@
   }
 }
 
+.mobileMenuLogo {
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.mobileMenuClose {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileMenuCloseIcon {
+  width: 28px;
+  height: 28px;
+  position: relative;
+}
+
+.mobileMenuCloseIcon::before,
+.mobileMenuCloseIcon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.mobileMenuCloseIcon::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.mobileMenuCloseIcon::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.mobileMenuClose:hover .mobileMenuCloseIcon::before,
+.mobileMenuClose:hover .mobileMenuCloseIcon::after {
+  background-color: #e63939;
+}
+
 .mobileMenuContent {
   display: flex;
   flex-direction: column;
   gap: 0;
-  padding: 2rem 1.5rem;
-  padding-top: 4rem;
+  padding: 0 1.5rem 2rem;
+  align-items: center;
 }
 
 .mobileNavLink {
@@ -276,6 +397,9 @@
   border-bottom: 1px solid #f0f0f0;
   transition: color 0.2s ease, background-color 0.2s ease;
   display: block;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
 }
 
 .mobileNavLink:hover {
@@ -288,13 +412,15 @@
 .mobileServicesGroup {
   border-bottom: 1px solid #f0f0f0;
   padding-bottom: 0.5rem;
+  width: 100%;
+  max-width: 400px;
 }
 
 .mobileServicesToggle {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background: none;
   border: none;
   padding: 1rem 0;
@@ -303,6 +429,7 @@
   color: #666666;
   cursor: pointer;
   transition: color 0.2s ease, background-color 0.2s ease;
+  position: relative;
 }
 
 .mobileServicesToggle:hover {
@@ -314,6 +441,8 @@
 .mobileServicesCaret {
   font-size: 0.8rem;
   transition: transform 0.2s ease;
+  position: absolute;
+  right: 0;
 }
 
 .mobileServicesCaretOpen {
@@ -342,31 +471,60 @@
   padding-left: 1.5rem;
 }
 
-.mobileContactButton {
-  background-color: #e63939;
-  color: white;
+.mobileActionButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.mobileContactButton,
+.mobileReviewButton {
   padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: 500;
-  margin-top: 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  transition: background-color 0.3s ease;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.mobileContactButton {
+  background-color: #e63939;
+  color: white;
+  border: 1px solid #e63939;
 }
 
 .mobileContactButton:hover {
   background-color: #c62828;
+  border-color: #c62828;
+}
+
+.mobileReviewButton {
+  background-color: #ffffff;
+  color: #333333;
+  border: 2px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.mobileReviewButton:hover {
+  background-color: #f8f8f8;
+  border-color: #cccccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }

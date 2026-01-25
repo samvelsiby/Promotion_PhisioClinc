@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
-import { Great_Vibes } from 'next/font/google'
+import { Great_Vibes, Outfit } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer/Footer'
 import FloatingCTA from '@/components/popout/FloatingCTA'
+import PerspectiveGrid from '@/components/Background/PerspectiveGrid'
 
 const greatVibes = Great_Vibes({
   subsets: ['latin'],
@@ -11,27 +12,37 @@ const greatVibes = Great_Vibes({
   variable: '--font-great-vibes',
 })
 
+const outfit = Outfit({
+  subsets: ['latin'],
+  variable: '--font-outfit',
+})
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://promotionphysiotherapy.com'),
+  metadataBase: new URL('https://promotionphysiotherapy.ca'),
   title: {
-    default: 'Pro Motion Physiotherapy - Winnipeg Physiotherapy Clinic',
+    default: 'Pro Motion Physiotherapy | St. Vital Winnipeg Physiotherapist | St. Anne\'s Road',
     template: '%s | Pro Motion Physiotherapy',
   },
-  description: 'Professional physiotherapy services in Winnipeg, Manitoba. Expert treatment for back pain, sports injuries, work injuries, MVA/MPI claims, and chronic pain. Book your appointment today.',
+  description: 'Registered physiotherapy clinic on St. Anne\'s Road in St. Vital, Winnipeg. Serving St. Boniface, Windsor Park, Fort Richmond & University of Manitoba area. Professional treatment for back pain, sports injuries, MVA/MPI, WCB claims. Direct billing. Book today!',
   keywords: [
     'physiotherapy Winnipeg',
-    'physiotherapist Winnipeg',
-    'physical therapy Winnipeg',
-    'back pain treatment Winnipeg',
-    'sports injury rehabilitation Winnipeg',
-    'work injury treatment Winnipeg',
-    'MPI claims Winnipeg',
-    'WCB physiotherapy Winnipeg',
-    'chronic pain management Winnipeg',
-    'post-surgical rehabilitation Winnipeg',
+    'physiotherapist St. Vital',
     'St. Anne\'s Road physiotherapy',
-    'St. Anne\'s Road Winnipeg physiotherapy',
-    'registered physiotherapist Manitoba',
+    'St. Boniface physiotherapist',
+    'Windsor Park physiotherapy',
+    'Fort Richmond physio',
+    'University of Manitoba physiotherapy',
+    'Southdale physiotherapist',
+    'Winnipeg back pain treatment',
+    'sports injury clinic Winnipeg',
+    'MVA physiotherapy Manitoba',
+    'MPI claims physiotherapy',
+    'WCB physiotherapy Winnipeg',
+    'direct billing physiotherapy',
+    'registered physiotherapist Winnipeg',
+    'chronic pain treatment Winnipeg',
+    'post-surgical rehabilitation',
+    'work injury physiotherapy',
   ],
   authors: [{ name: 'Pro Motion Physiotherapy' }],
   creator: 'Pro Motion Physiotherapy',
@@ -44,23 +55,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_CA',
-    url: 'https://promotionphysiotherapy.com',
+    url: 'https://promotionphysiotherapy.ca',
     siteName: 'Pro Motion Physiotherapy',
-    title: 'Pro Motion Physiotherapy - Winnipeg Physiotherapy Clinic',
-    description: 'Professional physiotherapy services in Winnipeg, Manitoba. Expert treatment for back pain, sports injuries, work injuries, MVA/MPI claims, and chronic pain.',
+    title: 'Pro Motion Physiotherapy | St. Vital Winnipeg Physiotherapist',
+    description: 'Registered physiotherapy on St. Anne\'s Road, Winnipeg. Serving St. Vital, St. Boniface, Windsor Park. Professional care for injuries, pain relief & rehabilitation. Direct billing available.',
     images: [
       {
         url: '/logo.png',
         width: 1200,
         height: 630,
-        alt: 'Pro Motion Physiotherapy Logo',
+        alt: 'Pro Motion Physiotherapy - St. Vital Winnipeg Physiotherapist',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pro Motion Physiotherapy - Winnipeg Physiotherapy Clinic',
-    description: 'Professional physiotherapy services in Winnipeg, Manitoba. Expert treatment for back pain, sports injuries, work injuries, MVA/MPI claims, and chronic pain.',
+    title: 'Pro Motion Physiotherapy | St. Vital Winnipeg',
+    description: 'Professional physiotherapy on St. Anne\'s Road. Serving St. Vital, St. Boniface, Windsor Park & surrounding Winnipeg areas. Direct billing available.',
     images: ['/logo.png'],
   },
   robots: {
@@ -74,11 +85,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  // Next.js automatically detects these special files in app/:
-  // - favicon.ico (ICO favicon)
-  // - icon.svg (SVG favicon)
-  // - icon.png (PNG favicon)
-  // - apple-icon.png (Apple touch icon)
   icons: {
     icon: [
       { url: '/icon.svg', type: 'image/svg+xml' },
@@ -91,14 +97,9 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.json',
   alternates: {
-    canonical: 'https://promotionphysiotherapy.com',
+    canonical: 'https://promotionphysiotherapy.ca',
   },
-  verification: {
-    // Add your verification codes here when available
-    // google: 'your-google-verification-code',
-    // yandex: 'your-yandex-verification-code',
-    // yahoo: 'your-yahoo-verification-code',
-  },
+  verification: {},
 }
 
 export default function RootLayout({
@@ -107,24 +108,27 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={greatVibes.variable}>
+    <html lang="en" className={`${greatVibes.variable} ${outfit.variable} font-sans`}>
       <body>
-        <Navbar />
-        {/* WebSite Schema for Sitelinks */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'WebSite',
-              name: 'Pro Motion Physiotherapy',
-              url: 'https://promotionphysiotherapy.com',
-              alternateName: ['Pro Motion', 'Pro Motion Physio'],
-            }),
-          }}
-        />
-        {children}
-        <Footer />
+        <PerspectiveGrid />
+        <div className="relative z-10">
+          <Navbar />
+          {/* WebSite Schema for Sitelinks */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'WebSite',
+                name: 'Pro Motion Physiotherapy',
+                url: 'https://promotionphysiotherapy.com',
+                alternateName: ['Pro Motion', 'Pro Motion Physio'],
+              }),
+            }}
+          />
+          {children}
+          <Footer />
+        </div>
         <FloatingCTA />
       </body>
     </html>

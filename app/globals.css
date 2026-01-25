@@ -73,3 +73,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .pattern-grid-lg {
+    background-image: radial-gradient(rgb(0 0 0 / 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}

@@ -64,7 +64,7 @@ const faqs: FAQItem[] = [
 ]
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0)
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
   const [showAll, setShowAll] = useState(false)
 
   const toggleIndex = (index: number) => {
@@ -74,16 +74,15 @@ export default function FAQ() {
   const displayedFaqs = showAll ? faqs : faqs.slice(0, 4)
 
   return (
-    <section className="w-full bg-white py-16 sm:py-20 lg:py-24">
+    <section className="w-full relative py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <RevealOnScroll>
-          <div className="mb-10 max-w-2xl sm:mb-12">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#e63939] sm:text-sm">
+          <div className="mx-auto mb-16 max-w-2xl text-center sm:mb-20">
+            <span className="mb-4 inline-block rounded-full bg-red-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#e63939]">
               FAQs
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold leading-tight text-gray-900 sm:text-4xl lg:text-[2.75rem]">
-              Frequently Asked
-              <span className="block">Questions</span>
+            </span>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+              Frequently Asked Questions
             </h2>
           </div>
         </RevealOnScroll>

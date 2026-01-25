@@ -1,27 +1,26 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import Image from 'next/image'
+import { ArrowRight } from 'lucide-react'
 import RevealOnScroll from '@/components/RevealOnScroll'
+import { Marquee } from '@/components/ui/marquee'
 
 interface Provider {
   name: string
+  logo: string
   website?: string
 }
 
 const providers: Provider[] = [
-  { name: 'Manitoba Blue Cross', website: 'https://www.mb.bluecross.ca/' },
-  { name: 'Great-West Life / Canada Life', website: 'https://www.canadalife.com/' },
-  { name: 'Coughlin & Associates', website: 'https://www.coughlin.ca/' },
-  { name: 'Green Shield', website: 'https://www.greenshield.ca/' },
-  { name: 'Chamber of Commerce', website: 'https://www.chamberplan.ca/' },
-  { name: 'Maximum Benefits', website: 'https://www.maximumbenefits.ca/' },
-  { name: 'SSQ', website: 'https://www.ssq.ca/' },
-  { name: 'ClaimSecure', website: 'https://www.claimsecure.com/' },
-  { name: 'Medavie Blue Cross', website: 'https://www.medaviebc.ca/' },
-  { name: 'National Blue Cross' },
-  { name: 'Johnson Group / Johnson Inc.', website: 'https://www.johnson.ca/' },
-  { name: 'Interim Federal Health Program' },
+  { name: 'Manitoba Blue Cross', logo: '/insurancecompaiens/mbc-logo-en.svg', website: 'https://www.mb.bluecross.ca/' },
+  { name: 'Canada Life', logo: '/insurancecompaiens/canada-life-e-tm.323032332d30382d33303a31303a3134.svg', website: 'https://www.canadalife.com/' },
+  { name: 'Coughlin & Associates', logo: '/insurancecompaiens/couglin.png', website: 'https://www.coughlin.ca/' },
+  { name: 'Blue Cross', logo: '/insurancecompaiens/bluecross.svg' },
+  { name: 'Chamber of Commerce', logo: '/insurancecompaiens/15461-Chamber-Horizontal-RGB-1.png', website: 'https://www.chamberplan.ca/' },
+  { name: 'ClaimSecure', logo: '/insurancecompaiens/New-CS-logo-with-Slogan-EN.png', website: 'https://www.claimsecure.com/' },
+  { name: 'Johnson Group', logo: '/insurancecompaiens/JG_short-white-59.png', website: 'https://www.johnson.ca/' },
+  { name: 'SSQ', logo: '/insurancecompaiens/regroupement-en.png', website: 'https://www.ssq.ca/' },
 ]
 
 export default function Insurance() {
@@ -29,14 +28,14 @@ export default function Insurance() {
     <section className="w-full bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <RevealOnScroll>
-          <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-14">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#e63939] sm:text-sm">
+          <div className="mx-auto mb-16 max-w-2xl text-center sm:mb-20">
+            <span className="mb-4 inline-block rounded-full bg-red-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#e63939]">
               Insurance Coverage
-            </p>
-            <h2 className="mt-3 text-2xl font-semibold text-gray-900 sm:text-3xl lg:text-4xl">
+            </span>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
               Insurance Providers We Direct Bill
             </h2>
-            <p className="mt-4 text-sm text-gray-600 sm:text-base">
+            <p className="mx-auto mt-6 max-w-xl text-lg text-gray-600 leading-relaxed">
               To make your care as convenient as possible, we work with a wide range of insurance
               providers for direct billing whenever available.
             </p>
@@ -54,18 +53,23 @@ export default function Insurance() {
               </p>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 mb-8">
-              {providers.slice(0, 9).map((provider) => (
-                <div
-                  key={provider.name}
-                  className="flex items-center gap-3 rounded-lg border border-gray-200 bg-white px-4 py-3 shadow-sm transition-all duration-200 hover:border-[#e63939]/40 hover:shadow-md"
-                >
-                  <CheckCircle2 className="h-5 w-5 text-[#e63939] flex-shrink-0" />
-                  <span className="text-sm font-medium text-gray-900 flex-1">
-                    {provider.name}
-                  </span>
-                </div>
-              ))}
+            <div className="py-8">
+              <Marquee pauseOnHover speed={40} gradient gradientColor="white" gradientWidth={100}>
+                {providers.map((provider) => (
+                  <div
+                    key={provider.name}
+                    className="mx-8 flex h-16 w-32 items-center justify-center"
+                  >
+                    <Image
+                      src={provider.logo}
+                      alt={provider.name}
+                      width={128}
+                      height={64}
+                      className="h-auto w-auto max-h-16 max-w-[128px] object-contain grayscale opacity-70 transition-all hover:grayscale-0 hover:opacity-100"
+                    />
+                  </div>
+                ))}
+              </Marquee>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-gray-200">

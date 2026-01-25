@@ -3,31 +3,33 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Facebook, Youtube, Phone, Mail, MapPin } from 'lucide-react'
+import { Facebook, Phone, Mail, MapPin, Instagram, Clock } from 'lucide-react'
 
 const linkColumns = [
   {
     title: 'Patients',
     links: [
-      { label: 'Patient Portal', href: '#' },
-      { label: 'Patient Resources', href: '#' },
-      { label: 'Online Appointments', href: 'https://pmphysio.juvonno.com/portal/publicbook.php' },
-      { label: 'Medical Team', href: '/team' },
+      { label: 'Book Appointment', href: 'https://pmphysio.juvonno.com/portal/publicbook.php' },
+      { label: 'Insurance Providers', href: '/insurance' },
+      { label: 'Request Appointment', href: '/about#appointment-form' },
+      { label: 'Meet Our Team', href: '/team' },
     ],
   },
   {
     title: 'Explore',
     links: [
       { label: 'News & Blogs', href: '/blogs' },
+      { label: 'About Us', href: '/about' },
+      { label: 'What We Treat', href: '/what-we-treat' },
     ],
   },
   {
     title: 'Company',
     links: [
-      { label: 'About Us', href: '/team' },
-      { label: 'Services', href: '/#services' },
+      { label: 'Our Team', href: '/team' },
+      { label: 'Services', href: '/#what-we-treat' },
       { label: 'FAQs', href: '/#faqs' },
-      { label: 'Contact Us', href: 'https://pmphysio.juvonno.com/portal/publicbook.php' },
+      { label: 'Contact Us', href: '/about#appointment-form' },
     ],
   },
 ]
@@ -113,8 +115,8 @@ export default function Footer() {
               },
             ],
             sameAs: [
-              'https://www.facebook.com/promotionphysiotherapy',
-              'https://www.youtube.com/@promotionphysiotherapy',
+              'https://www.facebook.com/profile.php?id=61584659892176',
+              'https://www.instagram.com/pro.motion.physiotherapy',
             ],
             areaServed: {
               '@type': 'City',
@@ -157,14 +159,14 @@ export default function Footer() {
         <div className="max-w-sm">
           <div className="relative h-10 w-40">
             <Link href="/" aria-label="Pro Motion Physiotherapy Home">
-            <Image
-              src="/logo.png"
+              <Image
+                src="/logo.png"
                 alt="Pro Motion Physiotherapy - Registered Physiotherapy Clinic in Winnipeg, Manitoba"
-              fill
-              sizes="160px"
-              className="object-contain"
+                fill
+                sizes="160px"
+                className="object-contain"
                 priority
-            />
+              />
             </Link>
           </div>
 
@@ -175,14 +177,14 @@ export default function Footer() {
                 <MapPin className="h-4 w-4 mt-0.5 text-gray-500 flex-shrink-0" aria-hidden="true" />
                 <span>
                   {businessAddress.street}
-            <br />
+                  <br />
                   {businessAddress.city}, {businessAddress.province} {businessAddress.postalCode}
                 </span>
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-gray-500 flex-shrink-0" aria-hidden="true" />
-            <a
-                  href="tel:+12045760033" 
+                <a
+                  href="tel:+12045760033"
                   className="hover:text-[#e63939] transition-colors"
                   aria-label="Call Pro Motion Physiotherapy at (204) 576-0033"
                 >
@@ -191,14 +193,21 @@ export default function Footer() {
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-gray-500 flex-shrink-0" aria-hidden="true" />
-                <a 
-                  href="mailto:info@promotionphysiotherapy.com" 
+                <a
+                  href="mailto:info@promotionphysiotherapy.ca"
                   className="hover:text-[#e63939] transition-colors"
                   aria-label="Email Pro Motion Physiotherapy"
                 >
-                  info@promotionphysiotherapy.com
+                  info@promotionphysiotherapy.ca
                 </a>
               </p>
+              <div className="flex items-start gap-2 pt-2">
+                <Clock className="h-4 w-4 mt-0.5 text-gray-500 flex-shrink-0" aria-hidden="true" />
+                <div className="text-sm text-gray-600">
+                  <p><span className="font-medium text-gray-900">Mon - Fri:</span> 9:00 AM - 8:00 PM</p>
+                  <p><span className="font-medium text-gray-900">Sat - Sun:</span> 9:00 AM - 4:00 PM</p>
+                </div>
+              </div>
             </div>
           </address>
 
@@ -208,23 +217,23 @@ export default function Footer() {
             </p>
             <div className="flex gap-3 text-gray-500">
               <a
-                href="https://www.facebook.com/promotionphysiotherapy"
+                href="https://www.facebook.com/profile.php?id=61584659892176"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow Pro Motion Physiotherapy on Facebook"
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 transition-colors hover:bg-[#e63939] hover:text-white"
-            >
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 transition-colors hover:bg-[#e63939] hover:text-white"
+              >
                 <Facebook className="h-4 w-4" aria-hidden="true" />
-            </a>
-            <a
-                href="https://www.youtube.com/@promotionphysiotherapy"
+              </a>
+              <a
+                href="https://www.instagram.com/pro.motion.physiotherapy"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Subscribe to Pro Motion Physiotherapy on YouTube"
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 transition-colors hover:bg-[#e63939] hover:text-white"
-            >
-                <Youtube className="h-4 w-4" aria-hidden="true" />
-            </a>
+                aria-label="Follow Pro Motion Physiotherapy on Instagram"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 transition-colors hover:bg-[#e63939] hover:text-white"
+              >
+                <Instagram className="h-4 w-4" aria-hidden="true" />
+              </a>
             </div>
           </div>
         </div>
