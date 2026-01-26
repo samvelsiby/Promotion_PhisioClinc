@@ -15,13 +15,13 @@
   position: sticky;
   top: 1rem;
   z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
   border-radius: 16px;
   transition: all 0.3s ease;
 }
 
 .navbar:hover {
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.18);
 }
 
 .navContainer {
@@ -50,7 +50,7 @@
   align-items: center;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .navList {
     display: flex;
   }
@@ -228,7 +228,7 @@
   /* White background for Google logo visibility */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
 
   .contactButton,
   .reviewButton {
@@ -258,7 +258,7 @@
   padding: 0.5rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .mobileMenuButton {
     display: none;
   }
@@ -296,7 +296,7 @@
   animation: fadeIn 0.3s ease-out;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .mobileMenuOverlay {
     display: none;
   }
@@ -320,7 +320,7 @@
   transform: translateX(0);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .mobileMenu {
     display: none;
   }

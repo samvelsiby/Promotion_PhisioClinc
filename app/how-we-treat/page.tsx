@@ -19,6 +19,7 @@ import {
   Gauge
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { allBentoItems } from "@/components/BentoGrid/bentoItems";
 
 type ServiceCategory = "Physiotherapy" | "Manual Techniques" | "Modalities" | "Occupational Therapy";
 
@@ -347,7 +348,8 @@ export default function PhysiotherapyHoneycomb() {
     return () => window.removeEventListener('resize', updateColumns);
   }, []);
 
-  const filteredServices = services.filter((service) => {
+  // First filter the local services
+  const filteredLocalServices = services.filter((service) => {
     const matchesSearch = 
     service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -359,6 +361,19 @@ export default function PhysiotherapyHoneycomb() {
     
     return matchesSearch && matchesCategory;
   });
+
+  // Also search through all bento items (treatment conditions)
+  const filteredBentoItems = allBentoItems.filter((item) => {
+    const matchesSearch = 
+      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.category.toLowerCase().includes(searchQuery.toLowerCase());
+    
+    return matchesSearch;
+  });
+
+  // Combine both results - prioritize local services
+  const filteredServices = filteredLocalServices;
 
   // Sort services by category for better organization
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -639,9 +654,26 @@ export default function PhysiotherapyHoneycomb() {
             className="search-bar"
           />
           {(searchQuery || selectedCategory !== "All") && (
-            <p className="search-results-count">
-              Found {sortedServices.length} service{sortedServices.length !== 1 ? 's' : ''}
-            </p>
+            <div className="search-results-count">
+              <p>
+                Found {sortedServices.length} service{sortedServices.length !== 1 ? 's' : ''}
+              </p>
+              {searchQuery && filteredBentoItems.length > 0 && (
+                <p style={{ marginTop: '8px', fontSize: '13px' }}>
+                  Also found {filteredBentoItems.length} treatment condition{filteredBentoItems.length !== 1 ? 's' : ''} matching your search.{' '}
+                  <a 
+                    href="/what-we-treat/all" 
+                    style={{ 
+                      color: '#EC1C24', 
+                      textDecoration: 'underline',
+                      fontWeight: 600 
+                    }}
+                  >
+                    View all treatments
+                  </a>
+                </p>
+              )}
+            </div>
           )}
         </div>
 

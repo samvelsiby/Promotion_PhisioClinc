@@ -111,6 +111,8 @@ export default function RootLayout({
     <html lang="en" className={`${greatVibes.variable} ${outfit.variable} font-sans`}>
       <body>
         <PerspectiveGrid />
+        {/* White background for navbar area */}
+        <div className="fixed top-0 left-0 right-0 h-32 bg-white z-0"></div>
         <div className="relative z-10">
           <Navbar />
           {/* WebSite Schema for Sitelinks */}
@@ -121,8 +123,22 @@ export default function RootLayout({
                 '@context': 'https://schema.org',
                 '@type': 'WebSite',
                 name: 'Pro Motion Physiotherapy',
-                url: 'https://promotionphysiotherapy.com',
+                url: 'https://promotionphysiotherapy.ca',
                 alternateName: ['Pro Motion', 'Pro Motion Physio'],
+                potentialAction: [
+                  {
+                    '@type': 'ReserveAction',
+                    target: {
+                      '@type': 'EntryPoint',
+                      urlTemplate: 'https://pmphysio.juvonno.com/portal/publicbook.php',
+                      actionPlatform: [
+                        'http://schema.org/DesktopWebPlatform',
+                        'http://schema.org/MobileWebPlatform'
+                      ]
+                    },
+                    name: 'Book Now'
+                  }
+                ]
               }),
             }}
           />

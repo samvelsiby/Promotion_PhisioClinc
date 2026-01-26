@@ -25,7 +25,7 @@ export default function InsuranceMarquee() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 text-center">
           <p className="text-xs font-bold uppercase tracking-wider text-gray-700 sm:text-sm">
-            Trusted by Major Insurance Providers
+            We Bill Directly With These Insurance Providers
           </p>
         </div>
 

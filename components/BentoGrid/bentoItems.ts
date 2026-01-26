@@ -17,7 +17,7 @@ export interface BentoItem {
   category: BodyPartCategory
 }
 
-// Most popular/relevant services for homepage (first 9)
+// Most popular/relevant services for homepage (first 8)
 const popularServices = [
   'Back Pain & Sciatica Relief',
   'Sports Injuries',
@@ -27,7 +27,6 @@ const popularServices = [
   'Shoulder Pain Relief',
   'Hip & Knee Pain Relief',
   'Chronic Pain Relief',
-  'Pre & Post-Surgical Rehabilitation',
 ]
 
 // All items - organized from head to toe

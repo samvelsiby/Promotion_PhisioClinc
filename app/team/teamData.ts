@@ -48,15 +48,6 @@ export const teamMembers: TeamMember[] = [
     imageSrc: "/team/Manveer .jpeg",
     socials: { instagram: "#", linkedin: "#" }
   },
-  {
-    id: 5,
-    name: "HELLO",
-    slug: "hello",
-    role: "Registered Physiotherapist",
-    bio: "Hello is a Registered Physiotherapist in Canada, committed to helping individuals restore movement, reduce pain, and improve overall physical function. She provides evidence-based physiotherapy care tailored to each patient's unique needs, focusing on safe, effective, and long-term recovery.\n\nHer approach combines clinical expertise with compassionate care, ensuring patients feel supported throughout their rehabilitation journey. She believes in empowering individuals through education, active treatment strategies, and personalized exercise programs to help them achieve optimal health and mobility.",
-    imageSrc: "/team/HELLO.jpeg",
-    socials: { instagram: "#", linkedin: "#" }
-  }
-]
+  ]
 
 

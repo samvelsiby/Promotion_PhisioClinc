@@ -6,9 +6,10 @@ import { useState } from 'react'
 import { cn } from '@/lib/utils'
 import { allBentoItems, getPopularBentoItems, type BodyPartCategory } from './bentoItems'
 import { Search } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 interface BentoGridProps {
-  showAll?: boolean // If true, shows all items. If false, shows first 9 with Read More button
+  showAll?: boolean // If true, shows all items. If false, shows first 8 with Read More button
 }
 
 const categories: Array<{ label: string; value: BodyPartCategory | 'All' }> = [
@@ -27,12 +28,12 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<BodyPartCategory | 'All'>('All')
 
-  // Determine which items to display
-  // On homepage: show popular services first, on full page: show all in head-to-toe order
-  const itemsToDisplay = showAll ? allBentoItems : getPopularBentoItems().slice(0, 9)
+  // Determine which items to search through
+  // Always search through all items, but limit display to 8 when no search/filter is active
+  const itemsToSearch = showAll ? allBentoItems : allBentoItems
 
   // Filter items based on search query and category
-  const filteredItems = itemsToDisplay.filter((item) => {
+  const filteredItems = itemsToSearch.filter((item) => {
     const matchesSearch =
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.description.toLowerCase().includes(searchQuery.toLowerCase())
@@ -42,10 +43,17 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
     return matchesSearch && matchesCategory
   })
 
+  // On homepage: always limit to 8 items to avoid overcrowding
+  // If no search/filter is active, show the 8 popular items
+  // If search/filter is active, show first 8 matching results
+  const itemsToDisplay = !showAll 
+    ? (searchQuery || selectedCategory !== 'All' ? filteredItems.slice(0, 8) : getPopularBentoItems().slice(0, 8))
+    : filteredItems
+
   return (
     <section
       id="what-we-treat"
-      className="w-full relative py-16 sm:py-20 lg:py-24"
+      className="w-full relative pt-16 pb-8 sm:pt-20 sm:pb-12 lg:pt-24 lg:pb-16"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-16 max-w-2xl text-center sm:mb-20">
@@ -120,12 +128,22 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
         )}
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {filteredItems.map((item) => (
-            <Link
+          {itemsToDisplay.map((item, index) => (
+            <motion.div
               key={item.title}
-              href={item.href}
-              className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all duration-300 ease-out hover:shadow-lg"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "0px" }}
+              transition={{ 
+                duration: 0.4, 
+                delay: index * 0.05,
+                ease: "easeOut"
+              }}
             >
+              <Link
+                href={item.href}
+                className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all duration-300 ease-out hover:shadow-lg block h-full"
+              >
               {/* Image Container */}
               <div className="relative h-56 w-full overflow-hidden">
                 <Image
@@ -164,12 +182,13 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
                   {item.description}
                 </p>
               </div>
-            </Link>
+              </Link>
+            </motion.div>
           ))}
         </div>
 
         {/* View All Services Button - Only show on homepage (when showAll is false) */}
-        {!showAll && allBentoItems.length > 9 && (
+        {!showAll && allBentoItems.length > 8 && (
           <div className="mt-8 flex justify-center">
             <Link
               href="/what-we-treat"
