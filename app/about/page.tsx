@@ -5,6 +5,7 @@ import { ArrowRight, Phone, MapPin, Clock, Calendar, Activity, Heart, Shield } f
 import { FormEvent, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
+import { COMPANY_CONTACT } from '@/lib/constants'
 
 export default function AboutPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -50,7 +51,7 @@ export default function AboutPage() {
       console.error('Form submission error:', error)
       setSubmitStatus({
         type: 'error',
-        message: 'An error occurred. Please call us directly at (204) 576-0033 to book your appointment.'
+        message: `An error occurred. Please call us directly at ${COMPANY_CONTACT.PHONE_DISPLAY} to book your appointment.`
       })
     } finally {
       setIsSubmitting(false)
@@ -244,8 +245,8 @@ export default function AboutPage() {
                   <div>
                     <p className="font-bold text-gray-900">Contact</p>
                     <p className="text-gray-600 mt-1">
-                      <a href="tel:+12045760033" className="hover:text-[#e63939] transition-colors">
-                        (204) 576-0033
+                      <a href={`tel:${COMPANY_CONTACT.PHONE}`} className="hover:text-[#e63939] transition-colors">
+                        {COMPANY_CONTACT.PHONE_DISPLAY}
                       </a>
                     </p>
                   </div>

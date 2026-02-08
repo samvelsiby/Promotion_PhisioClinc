@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Facebook, Phone, Mail, MapPin, Instagram, Clock } from 'lucide-react'
+import { COMPANY_CONTACT } from '@/lib/constants'
 
 const linkColumns = [
   {
@@ -79,7 +80,7 @@ export default function Footer() {
             image: 'https://promotionphysiotherapy.com/logo.png',
             '@id': 'https://promotionphysiotherapy.com',
             url: 'https://promotionphysiotherapy.com',
-            telephone: '+12045760033',
+            telephone: COMPANY_CONTACT.PHONE,
             priceRange: '$$',
             address: {
               '@type': 'PostalAddress',
@@ -184,11 +185,11 @@ export default function Footer() {
               <p className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-gray-500 flex-shrink-0" aria-hidden="true" />
                 <a
-                  href="tel:+12045760033"
+                  href={`tel:${COMPANY_CONTACT.PHONE}`}
                   className="hover:text-[#e63939] transition-colors"
-                  aria-label="Call Pro Motion Physiotherapy at (204) 576-0033"
+                  aria-label={`Call Pro Motion Physiotherapy at ${COMPANY_CONTACT.PHONE_DISPLAY}`}
                 >
-                  (204) 576-0033
+                  {COMPANY_CONTACT.PHONE_DISPLAY}
                 </a>
               </p>
               <p className="flex items-center gap-2">
