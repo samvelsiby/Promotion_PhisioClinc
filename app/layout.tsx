@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Great_Vibes, Outfit } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
@@ -110,6 +111,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${greatVibes.variable} ${outfit.variable} font-sans`}>
       <body>
+        <Script
+          src="https://datafa.st/js/script.js"
+          data-website-id="dfid_QoyPW2C1pzniPcSl3pYpc"
+          data-domain="www.promotionphysiotherapy.ca"
+          strategy="afterInteractive"
+        />
         <PerspectiveGrid />
         {/* White background for navbar area */}
         <div className="fixed top-0 left-0 right-0 h-32 bg-white z-0"></div>
