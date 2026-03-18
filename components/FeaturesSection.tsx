@@ -122,9 +122,9 @@ export default function FeaturesSection() {
               </div>
               <h3 className={styles.title}>{feature.title}</h3>
               <p className={styles.description}>{feature.description}</p>
-              <span className={styles.seeMore}>
-                Visit our website to book an appointment
-              </span>
+              <a href="https://pmphysio.juvonno.com/portal/publicbook.php" target="_blank" rel="noopener noreferrer" className={styles.seeMore}>
+                Book Appointment
+              </a>
             </div>
           ))}
         </div>

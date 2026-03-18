@@ -53,10 +53,15 @@ export default function HeroVariantTwo() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.22 }}
           >
-            <span className="relative inline-flex items-center justify-center h-12 px-8 text-base font-bold text-white uppercase transition-all hover:scale-105 sm:h-14 sm:px-10 sm:text-lg z-10">
+            <a
+              href="https://pmphysio.juvonno.com/portal/publicbook.php"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative inline-flex items-center justify-center h-12 px-8 text-base font-bold text-white uppercase transition-all hover:scale-105 sm:h-14 sm:px-10 sm:text-lg z-10"
+            >
               <span className="absolute inset-0 bg-[#e63939] transform -skew-x-12 transition-all hover:bg-[#c62828]" style={{ boxShadow: '2px 3px 6px rgba(0, 0, 0, 0.15)' }}></span>
-              <span className="relative z-10">Visit our website to book</span>
-            </span>
+              <span className="relative z-10">Book Now</span>
+            </a>
             <a
               href="/about#appointment-form"
               className="relative inline-flex items-center justify-center h-12 px-8 text-base font-bold text-gray-900 uppercase transition-all hover:scale-105 sm:h-14 sm:px-10 sm:text-lg z-10"

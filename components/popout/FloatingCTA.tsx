@@ -37,8 +37,10 @@ export default function FloatingCTA() {
   }, [pathname])
 
   const handleScheduleAppointment = () => {
-    // Display message instead of opening link
-    setShowAppointmentPopup(true)
+    // Open juvonno booking portal
+    if (typeof window !== 'undefined') {
+      window.open('https://pmphysio.juvonno.com/portal/publicbook.php', '_blank', 'noopener,noreferrer')
+    }
   }
 
   const handleRequestAppointment = () => {
@@ -75,7 +77,7 @@ export default function FloatingCTA() {
               aria-label="Schedule Appointment"
             >
               <Calendar className="h-4 w-4 sm:h-5 sm:w-5" />
-              <span>Visit our website to book</span>
+              <span>Schedule Appointment</span>
             </button>
             
             {/* Request Appointment Button with Logo */}
@@ -116,15 +118,17 @@ export default function FloatingCTA() {
             
             <div className="space-y-4">
               <p className="text-gray-600">
-                Please visit our website to book your appointment through our online booking system.
+                Click the button below to book your appointment directly through our online booking system.
               </p>
               
-              <button
-                onClick={() => setShowAppointmentPopup(false)}
+              <a
+                href="https://pmphysio.juvonno.com/portal/publicbook.php"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block w-full rounded-md bg-[#e63939] px-4 py-3 text-center font-semibold text-white transition-colors hover:bg-[#c62828]"
               >
-                Close
-              </button>
+                Book Appointment Online
+              </a>
             </div>
           </div>
         </div>
