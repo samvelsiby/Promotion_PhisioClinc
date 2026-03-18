@@ -116,14 +116,12 @@ export default function HeroVariantTwo() {
                   <span className="text-white/90 text-sm">Weekend physiotherapy services</span>
                 </div>
 
-                {/* Last-minute booking CTA */}
+                {/* Last-minute booking information */}
                 <div className="pt-2 mt-2 border-t border-white/20">
-                  <span className="inline-flex items-center gap-2 px-4 py-2.5 bg-white text-[#e63939] rounded-lg font-semibold text-sm">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    Go to Last Minute Physio website
-                  </span>
+                  <div className="px-4 py-2.5 bg-white text-[#e63939] rounded-lg text-sm">
+                    <p className="font-semibold mb-1">Last-Minute Appointments Available</p>
+                    <p className="text-xs text-gray-600">For urgent bookings, visit lastminutephysio.com</p>
+                  </div>
                 </div>
               </div>
             </div>
