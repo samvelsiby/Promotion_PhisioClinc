@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Facebook, Phone, Mail, MapPin, Instagram, Clock } from 'lucide-react'
+import { Facebook, Phone, Mail, MapPin, Instagram, Clock, Printer } from 'lucide-react'
 import { COMPANY_CONTACT } from '@/lib/constants'
 
 const linkColumns = [
@@ -191,6 +191,12 @@ export default function Footer() {
                 >
                   {COMPANY_CONTACT.PHONE_DISPLAY}
                 </a>
+              </p>
+              <p className="flex items-center gap-2">
+                <Printer className="h-4 w-4 text-gray-500 flex-shrink-0" aria-hidden="true" />
+                <span>
+                  {COMPANY_CONTACT.FAX}
+                </span>
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-gray-500 flex-shrink-0" aria-hidden="true" />

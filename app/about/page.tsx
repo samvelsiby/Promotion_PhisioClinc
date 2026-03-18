@@ -1,7 +1,7 @@
 'use client';
 
 import Motto from '@/components/Motto/Motto'
-import { ArrowRight, Phone, MapPin, Clock, Calendar, Activity, Heart, Shield } from 'lucide-react'
+import { ArrowRight, Phone, MapPin, Clock, Calendar, Activity, Heart, Shield, Printer } from 'lucide-react'
 import { FormEvent, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
@@ -248,6 +248,18 @@ export default function AboutPage() {
                       <a href={`tel:${COMPANY_CONTACT.PHONE}`} className="hover:text-[#e63939] transition-colors">
                         {COMPANY_CONTACT.PHONE_DISPLAY}
                       </a>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/95 backdrop-blur-sm shadow-lg border border-white/50">
+                  <div className="bg-[#e63939]/10 p-3 rounded-xl">
+                    <Printer className="h-6 w-6 text-[#e63939]" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-gray-900">Fax</p>
+                    <p className="text-gray-600 mt-1">
+                      {COMPANY_CONTACT.FAX}
                     </p>
                   </div>
                 </div>
