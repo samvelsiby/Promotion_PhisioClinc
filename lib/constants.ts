@@ -10,6 +10,9 @@ export const COMPANY_CONTACT = {
     // Formatted phone number for display
     PHONE_DISPLAY: '(204) 560-2999',
 
+    // Fax number
+    FAX: '204-594-4987',
+
     // Email address
     EMAIL: 'info@promotionphysiotherapy.com',
 
