@@ -98,15 +98,10 @@ export default function Highlights() {
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     ) : (
-                      <a
-                        href="https://pmphysio.juvonno.com/portal/publicbook.php"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-sm font-bold text-gray-900 transition-colors duration-300 hover:text-[#e63939] group-hover:text-white group-hover:hover:text-white/80"
-                      >
-                        Book Appointment
+                      <span className="inline-flex items-center text-sm font-bold text-gray-900 transition-colors duration-300 hover:text-[#e63939] group-hover:text-white group-hover:hover:text-white/80">
+                        Visit our website to book
                         <ArrowRight className="ml-2 h-4 w-4" />
-                      </a>
+                      </span>
                     )}
                   </div>
                 </div>

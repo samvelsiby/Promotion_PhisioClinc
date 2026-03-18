@@ -152,15 +152,10 @@ export default function ServicePage({ params }: ServicePageProps) {
                   Book an appointment with our experienced team and take the first step toward recovery.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
-                    href="https://pmphysio.juvonno.com/portal/publicbook.php"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-[#EC1C24] px-8 py-4 text-base font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#C41A20] hover:shadow-lg"
-                  >
+                  <span className="inline-flex items-center justify-center gap-2 rounded-full bg-[#EC1C24] px-8 py-4 text-base font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#C41A20] hover:shadow-lg">
                     <Calendar className="h-5 w-5" />
-                    Book Now
-                  </Link>
+                    Visit our website to book
+                  </span>
                   <Link
                     href="/about#appointment-form"
                     className="inline-flex items-center justify-center rounded-full border-2 border-gray-300 bg-white px-8 py-4 text-base font-semibold text-gray-900 transition-all duration-300 hover:border-[#EC1C24] hover:bg-gray-50"

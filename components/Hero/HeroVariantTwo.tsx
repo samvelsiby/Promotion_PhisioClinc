@@ -53,15 +53,10 @@ export default function HeroVariantTwo() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.22 }}
           >
-            <a
-              href="https://pmphysio.juvonno.com/portal/publicbook.php"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative inline-flex items-center justify-center h-12 px-8 text-base font-bold text-white uppercase transition-all hover:scale-105 sm:h-14 sm:px-10 sm:text-lg z-10"
-            >
+            <span className="relative inline-flex items-center justify-center h-12 px-8 text-base font-bold text-white uppercase transition-all hover:scale-105 sm:h-14 sm:px-10 sm:text-lg z-10">
               <span className="absolute inset-0 bg-[#e63939] transform -skew-x-12 transition-all hover:bg-[#c62828]" style={{ boxShadow: '2px 3px 6px rgba(0, 0, 0, 0.15)' }}></span>
-              <span className="relative z-10">Book Now</span>
-            </a>
+              <span className="relative z-10">Visit our website to book</span>
+            </span>
             <a
               href="/about#appointment-form"
               className="relative inline-flex items-center justify-center h-12 px-8 text-base font-bold text-gray-900 uppercase transition-all hover:scale-105 sm:h-14 sm:px-10 sm:text-lg z-10"
@@ -118,19 +113,12 @@ export default function HeroVariantTwo() {
 
                 {/* Last-minute booking CTA */}
                 <div className="pt-2 mt-2 border-t border-white/20">
-                  <a
-                    href="https://share.google/gEmTKDrTwC4xx6S4C"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="inline-flex items-center gap-2 px-4 py-2.5 bg-white text-[#e63939] rounded-lg font-semibold text-sm transition-all hover:bg-gray-100 hover:shadow-lg hover:scale-105"
-                  >
+                  <span className="inline-flex items-center gap-2 px-4 py-2.5 bg-white text-[#e63939] rounded-lg font-semibold text-sm">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
-                    Book Last-Minute Appointment
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
+                    Go to Last Minute Physio website
+                  </span>
                 </div>
               </div>
             </div>
