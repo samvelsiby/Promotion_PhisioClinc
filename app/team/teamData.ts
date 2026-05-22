@@ -32,11 +32,11 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: 3,
-    name: "BENCY THEKKINETH",
-    slug: "bency-thekkineth",
-    role: "Community Occupational Therapist",
-    bio: "Bency Thekkineth is an experienced and compassionate community occupational therapist with over 10 years of practice in community and long-term care settings. She specializes in seating and positioning, pressure management, mobility and adaptive equipment, and home safety assessments. Bency earned her Master's in Occupational Therapy from the University of Manitoba (2013) and a Bachelor of Science in Biochemistry from the University of Toronto (2008).",
-    imageSrc: "/team/bency.png",
+    name: "HIMANI UPADHYAY",
+    slug: "himani-upadhyay",
+    role: "Physiotherapy Assistant (PTA)",
+    bio: "",
+    imageSrc: "/team/himani.jpg",
     socials: { instagram: "#", linkedin: "#" }
   },
   {

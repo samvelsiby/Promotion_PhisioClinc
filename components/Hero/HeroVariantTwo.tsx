@@ -77,11 +77,8 @@ export default function HeroVariantTwo() {
       <div className="mx-auto max-w-7xl px-4 pt-12 pb-12 sm:px-6 sm:pt-16 lg:px-8 lg:pt-20 lg:pb-16">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {/* Dedicated Professionals Card */}
-          <motion.a
-            href="https://share.google/gEmTKDrTwC4xx6S4C"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative overflow-hidden bg-[#e63939]/90 backdrop-blur-md p-5 transition-all hover:scale-105 cursor-pointer min-h-[240px] flex flex-col justify-between"
+          <motion.div
+            className="group relative overflow-hidden bg-[#e63939]/90 backdrop-blur-md p-5 transition-all hover:scale-105 min-h-[240px] flex flex-col justify-between"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "0px" }}
@@ -125,7 +122,7 @@ export default function HeroVariantTwo() {
                 </div>
               </div>
             </div>
-          </motion.a>
+          </motion.div>
 
           {/* Treatment Image Card */}
           <motion.div

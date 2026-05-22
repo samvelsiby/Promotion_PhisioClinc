@@ -11,20 +11,20 @@ import { fetchBlogPosts } from '@/lib/sanity'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Pro Motion Physiotherapy | Physiotherapist St. Vital, Winnipeg MB | St. Anne\'s Road',
-  description: 'Registered physiotherapy clinic on St. Anne\'s Road in St. Vital, Winnipeg. Serving St. Boniface, Windsor Park & Fort Richmond. Professional treatment for back pain, sports injuries, MVA/MPI, WCB claims. Direct billing available. Book today!',
-  keywords: 'physiotherapy Winnipeg, physiotherapist St. Vital, St. Anne\'s Road physiotherapy, St. Boniface physio, Windsor Park physiotherapy, Fort Richmond physiotherapist, Winnipeg back pain treatment, sports injury clinic Winnipeg, MVA physiotherapy Manitoba, MPI claims Winnipeg, WCB physiotherapy, direct billing physiotherapy Winnipeg',
+  title: 'Pro Motion Physiotherapy | Physiotherapist St. Anne\'s Road, Pembina & South Winnipeg',
+  description: 'Registered physiotherapy clinic in South Winnipeg located on St. Anne\'s Road. Serving St. Vital, Pembina Highway, South Main, and all of Winnipeg. Professional treatment for back pain, sports injuries, MVA/MPI. Direct billing available.',
+  keywords: 'physiotherapy Winnipeg, physiotherapist South Winnipeg, Winnipeg South physiotherapy, physiotherapist St. Vital, St. Anne\'s Road physiotherapy, Pembina Highway physiotherapist, Pembina physiotherapy Winnipeg, South Main Winnipeg physio, Winnipeg back pain treatment, sports injury clinic Winnipeg, MVA physiotherapy Manitoba, MPI claims Winnipeg, WCB physiotherapy, direct billing physiotherapy Winnipeg',
   openGraph: {
-    title: 'Pro Motion Physiotherapy | St. Vital Winnipeg Physiotherapist',
-    description: 'Registered physiotherapy clinic on St. Anne\'s Road, Winnipeg. Serving St. Vital, St. Boniface, Windsor Park. Professional care for injuries, pain relief & rehabilitation.',
+    title: 'Pro Motion Physiotherapy | St. Anne\'s Road & South Winnipeg Physiotherapy',
+    description: 'Registered physiotherapy clinic on St. Anne\'s Road in South Winnipeg. Serving St. Vital, Pembina, South Main and all of Winnipeg with professional care for injuries, pain relief & rehabilitation.',
     locale: 'en_CA',
     type: 'website',
     siteName: 'Pro Motion Physiotherapy',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pro Motion Physiotherapy | St. Vital Winnipeg',
-    description: 'Professional physiotherapy on St. Anne\'s Road. Serving Winnipeg\'s St. Vital, St. Boniface & surrounding areas.',
+    title: 'Pro Motion Physiotherapy | South Winnipeg & St. Anne\'s Road',
+    description: 'Professional physiotherapy on St. Anne\'s Road in South Winnipeg. Serving St. Vital, Pembina, and the greater Winnipeg area with comprehensive care.',
   },
   alternates: {
     canonical: 'https://promotionphysiotherapy.ca',
