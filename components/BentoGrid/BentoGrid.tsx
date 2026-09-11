@@ -25,6 +25,7 @@ const categories: Array<{ label: string; value: BodyPartCategory | 'All' }> = [
 ]
 
 export default function BentoGrid({ showAll = false }: BentoGridProps) {
+  const Heading = showAll ? 'h1' : 'h2'
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<BodyPartCategory | 'All'>('All')
 
@@ -60,9 +61,9 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
           <span className="mb-4 inline-block rounded-full bg-red-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#e63939]">
             Our Services
           </span>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+          <Heading className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
             What We Treat
-          </h2>
+          </Heading>
           <p className="mx-auto mt-6 max-w-xl text-lg text-gray-600 leading-relaxed">
             A comprehensive range of evidence-based treatments tailored to your
             specific condition and goals.

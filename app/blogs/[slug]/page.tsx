@@ -3,6 +3,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { PortableText } from '@portabletext/react'
 import { fetchBlogPostBySlug, fetchBlogSlugs, fetchBlogPosts } from '@/lib/sanity'
+import { pageMetadata } from '@/lib/metadata'
+import JsonLd from '@/components/JsonLd'
+import { getArticleSchema, getBreadcrumbSchema } from '@/lib/schema'
 
 export const revalidate = 60
 
@@ -25,6 +28,13 @@ export async function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }))
 }
 
+export async function generateMetadata({ params }: BlogPostPageProps) {
+  const post = await fetchBlogPostBySlug(params.slug)
+  if (!post) notFound()
+  const metadata = pageMetadata(`${post.title} | Pro Motion Physiotherapy`, post.excerpt || `Read ${post.title} from Pro Motion Physiotherapy in Winnipeg.`, `/blogs/${post.slug}`, post.mainImageUrl)
+  return { ...metadata, openGraph: { ...metadata.openGraph, type: 'article' as const, publishedTime: post.publishedAt || undefined } }
+}
+
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const [post, allPosts] = await Promise.all([
     fetchBlogPostBySlug(params.slug),
@@ -39,6 +49,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white py-16 sm:py-20 lg:py-24">
+      <JsonLd data={getArticleSchema({ title: post.title, description: post.excerpt || post.title, path: `/blogs/${post.slug}`, datePublished: post.publishedAt || undefined })} />
+      <JsonLd data={getBreadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Blogs', path: '/blogs' }, { name: post.title, path: `/blogs/${post.slug}` }])} />
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <nav
           aria-label="Breadcrumb"
@@ -87,7 +99,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
             <article className="prose prose-sm max-w-none text-gray-800 sm:prose-base">
               {Array.isArray(post.body) && post.body.length > 0 ? (
-                <PortableText value={post.body} />
+                <PortableText value={post.body} components={{ block: { h1: ({ children }) => <h2 className="!text-[2.1428571em] !font-extrabold !leading-[1.2] !mt-0 !mb-[0.8em] sm:!text-[2.25em] sm:!leading-[1.1111111] sm:!mb-[0.888889em]">{children}</h2> } }} />
               ) : (
                 <p>No content available for this post yet.</p>
               )}

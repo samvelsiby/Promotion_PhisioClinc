@@ -21,9 +21,9 @@ export default function AllTreatmentsPage() {
           </Link>
 
           <div className="mb-8 max-w-2xl sm:mb-10">
-            <h2 className="text-2xl font-semibold text-gray-900 sm:text-3xl lg:text-4xl">
+            <h1 className="text-2xl font-semibold text-gray-900 sm:text-3xl lg:text-4xl">
               All Treatment Conditions
-            </h2>
+            </h1>
             <p className="mt-3 text-sm text-gray-600 sm:text-base">
               A comprehensive range of evidence-based treatments tailored to your
               specific condition and goals.
@@ -66,4 +66,3 @@ export default function AllTreatmentsPage() {
     </main>
   )
 }
-

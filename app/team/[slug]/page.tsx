@@ -3,6 +3,17 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { teamMembers } from '../teamData'
 import { Linkedin, Instagram, ArrowLeft } from 'lucide-react'
+import { pageMetadata } from '@/lib/metadata'
+import { SITE_URL } from '@/lib/constants'
+import JsonLd from '@/components/JsonLd'
+import { getBreadcrumbSchema } from '@/lib/schema'
+
+export function generateMetadata({ params }: TeamMemberPageProps) {
+  const member = teamMembers.find((m) => m.slug === params.slug)
+  if (!member) notFound()
+  const name = member.name.toLowerCase().replace(/\b\w/g, (letter) => letter.toUpperCase())
+  return pageMetadata(`${name} | Pro Motion Physiotherapy, Winnipeg`, `Meet ${name}, ${member.role}, at Pro Motion Physiotherapy in St. Vital, Winnipeg. Learn about their background and approach to care.`, `/team/${member.slug}`, member.imageSrc)
+}
 
 export function generateStaticParams() {
   return teamMembers.map((member) => ({
@@ -25,6 +36,8 @@ export default function TeamMemberPage({ params }: TeamMemberPageProps) {
 
   return (
     <main className="min-h-screen bg-gray-50">
+      <JsonLd data={{ '@context': 'https://schema.org', '@type': 'Person', '@id': `${SITE_URL}/team/${member.slug}#person`, name: member.name, jobTitle: member.role, image: `${SITE_URL}${member.imageSrc}`, url: `${SITE_URL}/team/${member.slug}`, worksFor: { '@id': `${SITE_URL}/#clinic` } }} />
+      <JsonLd data={getBreadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Our Team', path: '/team' }, { name: member.name, path: `/team/${member.slug}` }])} />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         {/* Back Button */}
         <Link
@@ -95,5 +108,4 @@ export default function TeamMemberPage({ params }: TeamMemberPageProps) {
     </main>
   )
 }
-
 

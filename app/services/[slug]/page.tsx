@@ -4,6 +4,10 @@ import { notFound } from 'next/navigation'
 import { getServiceBySlug, getAllServiceSlugs, serviceDetails } from '../serviceData'
 import { allBentoItems } from '@/components/BentoGrid/bentoItems'
 import { Calendar, ArrowLeft } from 'lucide-react'
+import { pageMetadata } from '@/lib/metadata'
+import { getServiceSeoTitle } from '@/lib/serviceSeo'
+import JsonLd from '@/components/JsonLd'
+import { getServiceSchema, getBreadcrumbSchema } from '@/lib/schema'
 
 interface ServicePageProps {
   params: { slug: string }
@@ -11,6 +15,12 @@ interface ServicePageProps {
 
 export function generateStaticParams() {
   return getAllServiceSlugs().map((slug) => ({ slug }))
+}
+
+export function generateMetadata({ params }: ServicePageProps) {
+  const service = getServiceBySlug(params.slug)
+  if (!service) notFound()
+  return pageMetadata(getServiceSeoTitle(service.title), service.description, `/services/${params.slug}`, service.imageSrc)
 }
 
 export default function ServicePage({ params }: ServicePageProps) {
@@ -34,6 +44,8 @@ export default function ServicePage({ params }: ServicePageProps) {
 
   return (
     <main className="min-h-screen bg-gray-50 py-12 sm:py-16 lg:py-20">
+      <JsonLd data={getServiceSchema({ name: service.title, description: service.description, path: `/services/${params.slug}` })} />
+      <JsonLd data={getBreadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'What We Treat', path: '/what-we-treat' }, { name: service.title, path: `/services/${params.slug}` }])} />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <nav className="mb-6 text-sm text-gray-600">
@@ -257,4 +269,3 @@ export default function ServicePage({ params }: ServicePageProps) {
     </main>
   )
 }
-

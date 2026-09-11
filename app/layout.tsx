@@ -5,6 +5,9 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer/Footer'
 import FloatingCTA from '@/components/popout/FloatingCTA'
+import { SITE_URL } from '@/lib/constants'
+import JsonLd from '@/components/JsonLd'
+import { getLocalBusinessSchema, getWebsiteSchema } from '@/lib/schema'
 import PerspectiveGrid from '@/components/Background/PerspectiveGrid'
 
 const greatVibes = Great_Vibes({
@@ -19,62 +22,46 @@ const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://promotionphysiotherapy.ca'),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Pro Motion Physiotherapy | St. Anne\'s Road & South Winnipeg Physiotherapist',
-    template: '%s | Pro Motion Physiotherapy',
+    default:
+      "Physiotherapy in St. Vital, Winnipeg | Pro Motion Physiotherapy",
+    template: "%s | Pro Motion Physiotherapy",
   },
-  description: 'Registered physiotherapy clinic in South Winnipeg (St. Vital). Professional treatment for back pain, sports injuries, MVA/MPI, WCB claims. Direct billing available. Professional physiotherapy clinic serving all of Winnipeg. Book today!',
-  keywords: [
-    'physiotherapy Winnipeg',
-    'physiotherapist South Winnipeg',
-    'Winnipeg South physiotherapy',
-    'physiotherapist St. Vital',
-    'St. Anne\'s Road physiotherapy clinic',
-    'Pembina Highway physiotherapist',
-    'Pembina physiotherapy Winnipeg',
-    'South Main Winnipeg physio',
-    'Winnipeg back pain treatment',
-    'sports injury clinic Winnipeg',
-    'MVA physiotherapy Manitoba',
-    'MPI claims physiotherapy Winnipeg',
-    'WCB physiotherapy Winnipeg',
-    'direct billing physiotherapy',
-    'registered physiotherapist Winnipeg',
-    'chronic pain treatment Winnipeg',
-    'post-surgical rehabilitation Winnipeg',
-    'work injury physiotherapy Manitoba',
-    'Winnipeg physiotherapy clinic'
-  ],
-  authors: [{ name: 'Pro Motion Physiotherapy' }],
-  creator: 'Pro Motion Physiotherapy',
-  publisher: 'Pro Motion Physiotherapy',
+  description:
+    "Physiotherapy in St. Vital, Winnipeg for pain and injury recovery. Visit our St. Anne’s Road clinic. Direct billing, MPI and WCB support. Book online.",
+  authors: [{ name: "Pro Motion Physiotherapy" }],
+  creator: "Pro Motion Physiotherapy",
+  publisher: "Pro Motion Physiotherapy",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    type: 'website',
-    locale: 'en_CA',
-    url: 'https://promotionphysiotherapy.ca',
-    siteName: 'Pro Motion Physiotherapy',
-    title: 'Pro Motion Physiotherapy | South Winnipeg & St. Anne\'s Road Physiotherapy Region',
-    description: 'Registered physiotherapy in South Winnipeg located on St. Anne\'s Road. Professional care serving St. Vital, Pembina, South Main, and all Winnipeg residents. Direct billing available.',
+    type: "website",
+    locale: "en_CA",
+    url: SITE_URL,
+    siteName: "Pro Motion Physiotherapy",
+    title:
+      "Physiotherapy in St. Vital, Winnipeg | Pro Motion",
+    description:
+      "Personalized care for pain and injury recovery at our St. Anne’s Road clinic. Direct billing available. Book online.",
     images: [
       {
-        url: '/logo.png',
-        width: 1200,
-        height: 630,
-        alt: 'Pro Motion Physiotherapy - Winnipeg Physiotherapist',
+        url: "/Hero/hero-desktop.jpg",
+        width: 1920,
+        height: 1097,
+        alt: "Hands-on physiotherapy treatment",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Pro Motion Physiotherapy | South Winnipeg',
-    description: 'Professional physiotherapy on St. Anne\'s Road in South Winnipeg. Serving St. Vital, Pembina, South Main area with comprehensive care and direct billing.',
-    images: ['/logo.png'],
+    card: "summary_large_image",
+    title: "Pro Motion Physiotherapy | South Winnipeg",
+    description:
+      "Personalized care for pain and injury recovery at our St. Anne’s Road clinic. Direct billing available. Book online.",
+    images: ["/Hero/hero-desktop.jpg"],
   },
   robots: {
     index: true,
@@ -82,27 +69,25 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   icons: {
     icon: [
-      { url: '/icon.svg', type: 'image/svg+xml' },
-      { url: '/icon.png', type: 'image/png' },
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", type: "image/png" },
     ],
-    shortcut: ['/favicon.ico'],
-    apple: [
-      { url: '/apple-icon.png' },
-    ],
+    shortcut: ["/favicon.ico"],
+    apple: [{ url: "/apple-icon.png" }],
   },
-  manifest: '/manifest.json',
+  manifest: "/manifest.json",
   alternates: {
-    canonical: 'https://promotionphysiotherapy.ca',
+    canonical: SITE_URL,
   },
   verification: {},
-}
+};
 
 export default function RootLayout({
   children,
@@ -123,33 +108,8 @@ export default function RootLayout({
         <div className="fixed top-0 left-0 right-0 h-32 bg-white z-0"></div>
         <div className="relative z-10">
           <Navbar />
-          {/* WebSite Schema for Sitelinks */}
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'WebSite',
-                name: 'Pro Motion Physiotherapy',
-                url: 'https://promotionphysiotherapy.ca',
-                alternateName: ['Pro Motion', 'Pro Motion Physio'],
-                potentialAction: [
-                  {
-                    '@type': 'ReserveAction',
-                    target: {
-                      '@type': 'EntryPoint',
-                      urlTemplate: 'https://pmphysio.juvonno.com/portal/publicbook.php',
-                      actionPlatform: [
-                        'http://schema.org/DesktopWebPlatform',
-                        'http://schema.org/MobileWebPlatform'
-                      ]
-                    },
-                    name: 'Book Now'
-                  }
-                ]
-              }),
-            }}
-          />
+          <JsonLd data={getLocalBusinessSchema()} />
+          <JsonLd data={getWebsiteSchema()} />
           {children}
           <Footer />
         </div>

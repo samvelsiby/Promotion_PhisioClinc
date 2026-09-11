@@ -13,9 +13,9 @@ export default function MeetOurTeamPage() {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 uppercase tracking-tight mb-4">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 uppercase tracking-tight mb-4">
             MEET OUR TEAM
-          </h2>
+          </h1>
           <div className="mt-4 h-2 w-32 bg-[#e63939] mx-auto rounded-full"></div>
           <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             Our experienced team of healthcare professionals is dedicated to helping you achieve your best health
