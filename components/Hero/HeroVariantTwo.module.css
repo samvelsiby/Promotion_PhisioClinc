@@ -12,15 +12,14 @@
 .portrait + .portrait { margin-left: -10px; }
 .storyRow { display: grid; grid-template-columns: minmax(0, 520px) minmax(0, 1fr); gap: 3rem; align-items: center; }
 .figure { min-width: 0; margin: 0; }
-.photo { position: relative; aspect-ratio: 1; overflow: hidden; border-radius: 1rem; background: #f3f4f6; }
-.crop { position: absolute; inset: 0 0 0 -52%; }
-.image { object-fit: contain; object-position: center; }
+.photo { position: relative; overflow: hidden; border-radius: 1rem; background: #f3f4f6; }
+.image { display: block; width: 100%; height: auto; }
 .caption { display: flex; align-items: center; gap: .5rem; margin-top: .8rem; color: #4b5563; font-size: .8125rem; line-height: 1.5; }
 .caption svg { flex-shrink: 0; color: #c8101e; }
 .story { max-width: 34rem; padding: .25rem 0 0; }
-.lastMinute { display: block; margin-top: 1rem; padding: 1rem 1.2rem; border: 1px solid #e5e7eb; border-radius: 1rem; background: #f8fafb; color: #4b5563; font-size: .875rem; line-height: 1.6; }
-.lastMinute strong { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-bottom: .25rem; color: #111827; font-size: 1rem; }
-.lastMinute:hover { border-color: #c8101e; }
+.lastMinute { margin-top: .9rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; color: #4b5563; font-size: .875rem; line-height: 1.7; }
+.lastMinute a { display: inline-flex; align-items: center; gap: .25rem; min-height: 32px; color: #111827; font-weight: 500; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: #9ca3af; }
+.lastMinute a:hover { color: #c8101e; }
 .brandMark { display: flex; gap: 5px; height: 28px; margin-bottom: 1.15rem; overflow: hidden; }
 .brandMark span { display: block; width: 14px; height: 30px; background: #c8101e; transform: skew(-32deg); transform-origin: bottom; }
 .description { margin: 0; font-size: 1.0625rem; line-height: 1.7; color: #4b5563; }

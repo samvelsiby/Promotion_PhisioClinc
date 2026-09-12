@@ -25,9 +25,7 @@ export default function HeroVariantTwo() {
         <div className={styles.storyRow}>
           <figure className={styles.figure}>
             <div className={styles.photo}>
-              <div className={styles.crop}>
-                <Image src="/hero2/Hero page (1).png" alt="Physiotherapist assessing a patient's shoulder movement during treatment" fill priority sizes="(min-width: 1280px) 1100px, (min-width: 1024px) 90vw, 152vw" quality={80} className={styles.image} />
-              </div>
+              <Image src="/Hero/hero2.jpg" alt="Physiotherapist assessing a patient's shoulder movement during treatment" width={6720} height={4480} priority sizes="(min-width: 1024px) 520px, (min-width: 640px) 50vw, 100vw" quality={80} className={styles.image} />
             </div>
             <figcaption className={styles.caption}><MapPin size={16} aria-hidden="true" />{COMPANY_CONTACT.ADDRESS.street}, Winnipeg</figcaption>
           </figure>
@@ -37,10 +35,10 @@ export default function HeroVariantTwo() {
             <p className={styles.description}>Founded by two dedicated physiotherapists with a shared dream and vision to help and serve our community with compassionate, personalized care. We provide evidence-based treatments tailored to your unique needs.</p>
             <a href={COMPANY_CONTACT.BOOKING_URL} target="_blank" rel="noopener noreferrer" className={styles.book}>Book an appointment <ArrowUpRight size={22} aria-hidden="true" /></a>
             <a href={`tel:${COMPANY_CONTACT.PHONE}`} className={styles.call}><Phone size={16} aria-hidden="true" />{COMPANY_CONTACT.PHONE_DISPLAY}</a>
-            <a href="https://www.lastminutephysio.com/" target="_blank" rel="noopener noreferrer" className={styles.lastMinute}>
-              <strong>Need a last-minute appointment? <ArrowUpRight size={20} aria-hidden="true" /></strong>
-              Check Last Minute Physio for short-notice openings. We’re open seven days a week, including weekends.
-            </a>
+            <p className={styles.lastMinute}>
+              Looking for an earlier appointment?{' '}
+              <a href="https://www.lastminutephysio.com/" target="_blank" rel="noopener noreferrer">Check Last Minute Physio <ArrowUpRight size={15} aria-hidden="true" /></a>
+            </p>
           </div>
         </div>
         <div className={styles.details}>
