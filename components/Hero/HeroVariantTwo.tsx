@@ -37,6 +37,10 @@ export default function HeroVariantTwo() {
             <p className={styles.description}>Founded by two dedicated physiotherapists with a shared dream and vision to help and serve our community with compassionate, personalized care. We provide evidence-based treatments tailored to your unique needs.</p>
             <a href={COMPANY_CONTACT.BOOKING_URL} target="_blank" rel="noopener noreferrer" className={styles.book}>Book an appointment <ArrowUpRight size={22} aria-hidden="true" /></a>
             <a href={`tel:${COMPANY_CONTACT.PHONE}`} className={styles.call}><Phone size={16} aria-hidden="true" />{COMPANY_CONTACT.PHONE_DISPLAY}</a>
+            <a href="https://www.lastminutephysio.com/" target="_blank" rel="noopener noreferrer" className={styles.lastMinute}>
+              <strong>Need a last-minute appointment? <ArrowUpRight size={20} aria-hidden="true" /></strong>
+              Check Last Minute Physio for short-notice openings. We’re open seven days a week, including weekends.
+            </a>
           </div>
         </div>
         <div className={styles.details}>

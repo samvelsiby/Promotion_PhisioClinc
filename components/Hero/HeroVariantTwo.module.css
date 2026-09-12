@@ -10,14 +10,17 @@
 .portraits { display: flex; padding-right: .25rem; }
 .portrait { width: 44px; height: 56px; object-fit: cover; border: 2px solid white; border-radius: .75rem; background: #f3f4f6; }
 .portrait + .portrait { margin-left: -10px; }
-.storyRow { display: grid; grid-template-columns: 1.6fr 1fr; gap: 2.5rem; align-items: start; }
+.storyRow { display: grid; grid-template-columns: minmax(0, 520px) minmax(0, 1fr); gap: 3rem; align-items: center; }
 .figure { min-width: 0; margin: 0; }
-.photo { position: relative; height: 340px; overflow: hidden; border-radius: 1rem; background: #f3f4f6; }
+.photo { position: relative; aspect-ratio: 1; overflow: hidden; border-radius: 1rem; background: #f3f4f6; }
 .crop { position: absolute; inset: 0 0 0 -52%; }
-.image { object-fit: cover; object-position: center 42%; }
+.image { object-fit: contain; object-position: center; }
 .caption { display: flex; align-items: center; gap: .5rem; margin-top: .8rem; color: #4b5563; font-size: .8125rem; line-height: 1.5; }
 .caption svg { flex-shrink: 0; color: #c8101e; }
-.story { padding: .25rem 0 0; }
+.story { max-width: 34rem; padding: .25rem 0 0; }
+.lastMinute { display: block; margin-top: 1rem; padding: 1rem 1.2rem; border: 1px solid #e5e7eb; border-radius: 1rem; background: #f8fafb; color: #4b5563; font-size: .875rem; line-height: 1.6; }
+.lastMinute strong { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-bottom: .25rem; color: #111827; font-size: 1rem; }
+.lastMinute:hover { border-color: #c8101e; }
 .brandMark { display: flex; gap: 5px; height: 28px; margin-bottom: 1.15rem; overflow: hidden; }
 .brandMark span { display: block; width: 14px; height: 30px; background: #c8101e; transform: skew(-32deg); transform-origin: bottom; }
 .description { margin: 0; font-size: 1.0625rem; line-height: 1.7; color: #4b5563; }
@@ -33,7 +36,6 @@
  .headline { font-size: clamp(3rem, 7vw, 4.5rem); }
  .teamLink { display: none; }
  .storyRow { grid-template-columns: 1.1fr 1fr; gap: 1.5rem; }
- .photo { height: 360px; }
  .description { font-size: 1rem; line-height: 1.65; }
 }
 @media (max-width: 639px) {
@@ -47,6 +49,5 @@
  .description { font-size: .9375rem; }
  .book { margin-top: 1.2rem; }
  .figure { width: 100%; }
- .photo { height: auto; aspect-ratio: 5 / 4; }
  .details { gap: .35rem .8rem; padding-bottom: 1.2rem; font-size: .8125rem; }
 }
