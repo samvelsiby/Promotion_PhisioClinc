@@ -1,0 +1,52 @@
+.hero { overflow: hidden; background: #fff; }
+.inner { max-width: 80rem; margin: 0 auto; padding: 3rem 2rem 0; }
+.headingRow { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: 2rem; }
+.heading { margin: 0; color: #111827; }
+.location { display: block; margin-bottom: 1.2rem; font-size: .875rem; font-weight: 500; letter-spacing: .015em; line-height: 1.5; color: #4b5563; }
+.headline { display: block; font-size: clamp(3rem, 5.5vw, 5rem); font-weight: 650; letter-spacing: -.045em; line-height: 1.02; }
+.teamLink { display: flex; align-items: center; gap: .8rem; padding-bottom: .35rem; color: #4b5563; font-size: .875rem; line-height: 1.5; text-decoration: none; flex-shrink: 0; }
+.teamLink strong { color: #111827; font-weight: 600; }
+.teamLink:hover strong { color: #c8101e; }
+.portraits { display: flex; padding-right: .25rem; }
+.portrait { width: 44px; height: 56px; object-fit: cover; border: 2px solid white; border-radius: .75rem; background: #f3f4f6; }
+.portrait + .portrait { margin-left: -10px; }
+.storyRow { display: grid; grid-template-columns: 1.6fr 1fr; gap: 2.5rem; align-items: start; }
+.figure { min-width: 0; margin: 0; }
+.photo { position: relative; height: 340px; overflow: hidden; border-radius: 1rem; background: #f3f4f6; }
+.crop { position: absolute; inset: 0 0 0 -52%; }
+.image { object-fit: cover; object-position: center 42%; }
+.caption { display: flex; align-items: center; gap: .5rem; margin-top: .8rem; color: #4b5563; font-size: .8125rem; line-height: 1.5; }
+.caption svg { flex-shrink: 0; color: #c8101e; }
+.story { padding: .25rem 0 0; }
+.brandMark { display: flex; gap: 5px; height: 28px; margin-bottom: 1.15rem; overflow: hidden; }
+.brandMark span { display: block; width: 14px; height: 30px; background: #c8101e; transform: skew(-32deg); transform-origin: bottom; }
+.description { margin: 0; font-size: 1.0625rem; line-height: 1.7; color: #4b5563; }
+.book { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1.4rem; min-height: 56px; padding: .9rem 1.2rem; border-radius: .75rem; background: #c8101e; color: #fff; font-size: 1rem; font-weight: 600; transition: background-color .2s; }
+.book:hover { background: #a50d19; }
+.call { display: inline-flex; align-items: center; gap: .6rem; min-height: 44px; margin-top: .3rem; font-size: .9375rem; font-weight: 600; color: #111827; }
+.call:hover { color: #c8101e; }
+.details { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1.5rem; margin-top: 1.5rem; border-top: 1px solid #e5e7eb; padding: 1rem 0 1.4rem; color: #4b5563; font-size: .875rem; }
+.details > * { display: inline-flex; align-items: center; gap: .6rem; min-height: 36px; }
+.details a:hover { color: #c8101e; text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 1023px) {
+ .inner { padding: 2rem 1.5rem 0; }
+ .headline { font-size: clamp(3rem, 7vw, 4.5rem); }
+ .teamLink { display: none; }
+ .storyRow { grid-template-columns: 1.1fr 1fr; gap: 1.5rem; }
+ .photo { height: 360px; }
+ .description { font-size: 1rem; line-height: 1.65; }
+}
+@media (max-width: 639px) {
+ .inner { padding: 1.75rem 1rem 0; }
+ .headingRow { margin-bottom: 1.5rem; }
+ .headline { font-size: clamp(2.2rem, 8.5vw, 3.4rem); line-height: 1.06; }
+ .location { font-size: .8125rem; margin-bottom: 1rem; }
+ .storyRow { display: flex; flex-direction: column; gap: 1.5rem; }
+ .story { order: -1; }
+ .brandMark { display: none; }
+ .description { font-size: .9375rem; }
+ .book { margin-top: 1.2rem; }
+ .figure { width: 100%; }
+ .photo { height: auto; aspect-ratio: 5 / 4; }
+ .details { gap: .35rem .8rem; padding-bottom: 1.2rem; font-size: .8125rem; }
+}
