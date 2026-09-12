@@ -1,3 +1,4 @@
+import { clinicArticles } from './clinicArticles'
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET
 const apiVersion = '2023-10-01'
@@ -19,6 +20,9 @@ export interface BlogPost {
   excerpt?: string
   tag?: string
   readTime?: string
+  sections?: { heading: string; paragraphs: string[] }[]
+  sources?: { title: string; url: string }[]
+  relatedLinks?: { label: string; href: string }[]
   body?: any[]
   publishedAt?: string
   mainImageUrl?: string
@@ -60,15 +64,22 @@ export async function fetchBlogPosts(limit?: number): Promise<BlogPost[]> {
     "mainImageAlt": mainImage.alt
   }`
 
+  let remote: BlogPost[] = []
   try {
-    return await sanityFetch<BlogPost[]>(query)
+    remote = await sanityFetch<BlogPost[]>(query)
   } catch (error) {
     console.error('Error loading blog posts from Sanity', error)
-    return []
   }
+  // Local editorial articles own their slugs consistently in lists and detail pages.
+  const merged = new Map(remote.map(post => [post.slug, post]))
+  clinicArticles.forEach(post => merged.set(post.slug, post))
+  const posts = Array.from(merged.values()).sort((a, b) => (b.publishedAt || '').localeCompare(a.publishedAt || '') || a.slug.localeCompare(b.slug))
+  return typeof limit === 'number' ? posts.slice(0, limit) : posts
 }
 
 export async function fetchBlogPostBySlug(slug: string): Promise<BlogPost | null> {
+  const local = clinicArticles.find(post => post.slug === slug)
+  if (local) return local
   const query = `*[_type == "post" && slug.current == ${JSON.stringify(slug)}][0]{
     _id,
     title,
@@ -94,10 +105,11 @@ export async function fetchBlogPostBySlug(slug: string): Promise<BlogPost | null
 export async function fetchBlogSlugs(): Promise<{ slug: string }[]> {
   const query = `*[_type == "post" && defined(slug.current)]{ "slug": slug.current }`
 
+  let remote: { slug: string }[] = []
   try {
-    return await sanityFetch<{ slug: string }[]>(query)
+    remote = await sanityFetch<{ slug: string }[]>(query)
   } catch (error) {
     console.error('Error loading blog slugs from Sanity', error)
-    return []
   }
+  return Array.from(new Set([...remote.map(post => post.slug), ...clinicArticles.map(post => post.slug)])).map(slug => ({ slug }))
 }

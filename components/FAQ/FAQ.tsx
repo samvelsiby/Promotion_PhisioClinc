@@ -18,7 +18,7 @@ export default function FAQ() {
   const displayedFaqs = showAll ? faqs : faqs.slice(0, 4)
 
   return (
-    <section className="w-full relative py-16 sm:py-20 lg:py-24">
+    <section id="faq" className="scroll-mt-28 w-full relative py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <RevealOnScroll>
           <div className="home-heading mx-auto mb-16 max-w-2xl text-center sm:mb-20">

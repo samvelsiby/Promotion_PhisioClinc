@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Image from 'next/image'
 import { Marquee } from '@/components/ui/marquee'
 
@@ -40,6 +41,13 @@ export default function InsurancePage() {
           </p>
         </header>
 
+        <section className="prose max-w-none mb-10">
+          <h2>Check your coverage before your appointment</h2>
+          <p>Direct billing does not guarantee full payment. Confirm your physiotherapy allowance, any per-visit limit, referral requirements and remaining benefits with your insurer. Ask reception about current fees and payment if a claim cannot be processed.</p>
+          <p>Bring your benefit information and, for MPI or WCB, your claim number if available. <Link href="/first-visit">Prepare for your first visit</Link> or read our <Link href="/blogs/direct-billing-physiotherapy-winnipeg">direct billing guide</Link>.</p>
+          <h2>Public funding and post-operative rehabilitation</h2>
+          <p>Routine private-clinic visits are generally paid privately or through benefits. Manitoba publishes an <a href="https://www.gov.mb.ca/health/dsrecovery/docs/post-op-surgery-faq.pdf" target="_blank" rel="noopener noreferrer">eligible elective hip and knee replacement physiotherapy program</a>. Confirm current eligibility and clinic participation before arranging care.</p>
+        </section>
         {/* Providers list */}
         <section className="rounded-3xl bg-gray-50/80 p-6 shadow-sm sm:p-8 lg:p-9">
           <div className="mb-4 flex flex-col gap-2 sm:mb-6">

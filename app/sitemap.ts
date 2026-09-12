@@ -7,7 +7,7 @@ import { teamMembers } from '@/app/team/teamData'
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await fetchBlogSlugs()
   const paths = [
-    '', '/about', '/what-we-treat', '/what-we-treat/all', '/how-we-treat', '/team', '/insurance', '/blogs',
+    '', '/first-visit', '/about', '/what-we-treat', '/what-we-treat/all', '/how-we-treat', '/team', '/insurance', '/blogs',
     ...getAllServiceSlugs().map((slug) => `/services/${slug}`),
     ...teamMembers.map((member) => `/team/${member.slug}`),
     ...posts.map((post) => `/blogs/${post.slug}`),

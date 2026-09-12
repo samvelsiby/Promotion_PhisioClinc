@@ -7,7 +7,7 @@ export const faqs: FAQItem[] = [
   {
     question: 'Do I need a referral to see a physiotherapist?',
     answer:
-      'No, you do not need a doctor\'s or other healthcare provider\'s referral to see a physiotherapist. Anyone can book an appointment,sjust give us a call! Physiotherapy can help people of all ages with a wide variety of conditions, including orthopedic and sports injuries, neurological disorders, cardiorespiratory issues, hand and workplace injuries, motor vehicle accidents, ergonomic and posture concerns, and geriatric care. Note: Some insurance plans may require a doctor\'s referral for coverage. Please check with your provider before your appointment.',
+      'No, you do not need a doctor\'s or other healthcare provider\'s referral to see a physiotherapist. Anyone can book an appointment, just give us a call! Physiotherapy can help people of all ages with a wide variety of conditions, including orthopedic and sports injuries, neurological disorders, cardiorespiratory issues, hand and workplace injuries, motor vehicle accidents, ergonomic and posture concerns, and geriatric care. Note: Some insurance plans may require a doctor\'s referral for coverage. Please check with your provider before your appointment.',
   },
   {
     question: 'What do physiotherapists do?',
@@ -42,7 +42,7 @@ export const faqs: FAQItem[] = [
   {
     question: 'Does Manitoba Health cover physiotherapy at private clinics?',
     answer:
-      'Unfortunately, Manitoba Health does not cover physiotherapy services provided in private clinics. However, many extended health insurance plans cover a portion of physiotherapy costs. Please check with your insurance provider for details.',
+      'Routine private-clinic physiotherapy is generally paid through extended health benefits or directly by the patient. Manitoba publishes a program for eligible elective hip and knee replacement rehabilitation; confirm current eligibility and clinic participation before booking. Other public programs may have their own eligibility requirements.',
   },
   {
     question: 'What are your hours of operation?',

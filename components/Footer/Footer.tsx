@@ -19,6 +19,7 @@ const serviceLinks = [
 ]
 
 const patientLinks = [
+  { label: 'Your first visit', href: '/first-visit' },
   { label: 'About the clinic', href: '/about' },
   { label: 'Meet our team', href: '/team' },
   { label: 'How we treat', href: '/how-we-treat' },

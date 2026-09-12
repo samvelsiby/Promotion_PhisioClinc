@@ -1,3 +1,5 @@
+import { clinicArticles } from '@/lib/clinicArticles'
+import { COMPANY_CONTACT, NAP_LINE } from '@/lib/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -29,6 +31,8 @@ export default function ServicePage({ params }: ServicePageProps) {
   if (!service) {
     notFound()
   }
+
+  const patientGuides = clinicArticles.filter(article => article.relatedLinks.some(link => link.href === `/services/${params.slug}`))
 
   // Get related services from the same category
   const relatedServices = allBentoItems
@@ -84,6 +88,13 @@ export default function ServicePage({ params }: ServicePageProps) {
               />
             </div>
 
+            {patientGuides.length > 0 && <section className="rounded-2xl bg-white p-6 sm:p-8">
+              <h2 className="text-2xl font-bold text-gray-900">Arrange care in St. Vital</h2>
+              <p className="mt-4 leading-relaxed text-gray-600">Visit Pro Motion at {NAP_LINE}. Call {COMPANY_CONTACT.PHONE_DISPLAY} to discuss appointment arrangements, or check available appointments online. Tell reception if your visit involves an insurer, MPI, WCB or surgery.</p>
+              <p className="mt-4"><Link href="/first-visit" className="font-semibold text-[#c8101e] underline">Prepare for your first visit</Link></p>
+              <h3 className="mt-6 text-lg font-semibold">Related patient guides</h3>
+              <ul className="mt-3 space-y-3">{patientGuides.map(article => <li key={article.slug}><Link href={`/blogs/${article.slug}`} className="text-[#c8101e] underline underline-offset-4">{article.title}</Link></li>)}</ul>
+            </section>}
             {/* Overview */}
             {service.overview && (
               <section>

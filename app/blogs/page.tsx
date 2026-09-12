@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { fetchBlogPosts } from '@/lib/sanity'
-import { ArrowUpRight, Search, Clock, Calendar, Tag } from 'lucide-react'
+import { ArrowUpRight, Clock, Calendar, Tag } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export const revalidate = 60
@@ -10,14 +10,17 @@ function formatDate(dateString?: string) {
   if (!dateString) return ''
   const date = new Date(dateString)
   return date.toLocaleDateString('en-US', {
+    timeZone: 'UTC',
     day: '2-digit',
     month: 'long',
     year: 'numeric',
   })
 }
 
-export default async function BlogsPage() {
-  const posts = await fetchBlogPosts()
+export default async function BlogsPage({ searchParams }: { searchParams: { q?: string } }) {
+  const allPosts = await fetchBlogPosts()
+  const query = typeof searchParams.q === 'string' ? searchParams.q.trim().slice(0, 150) : ''
+  const posts = allPosts.filter(post => `${post.title} ${post.excerpt || ''} ${post.tag || ''}`.toLowerCase().includes(query.toLowerCase()))
   const [featured, ...restPosts] = posts
 
   return (
@@ -45,10 +48,10 @@ export default async function BlogsPage() {
               </span>
             </div>
             <h1 className="text-4xl font-light leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl text-balance">
-              Insights for a <br /><span className="font-bold text-white">Healthier Life.</span>
+              Physiotherapy guides <br /><span className="font-bold text-white">for Winnipeg.</span>
             </h1>
             <p className="mt-6 text-lg text-white/90 max-w-xl leading-relaxed">
-              Expert advice, recovery stories, and wellness tips from our dedicated team of physiotherapists.
+              Practical information about appointments, insurance, MPI, WCB and choosing care in St. Vital.
             </p>
           </div>
         </div>
@@ -56,9 +59,15 @@ export default async function BlogsPage() {
 
       <section className="relative z-10 -mt-12 pb-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <form action="/blogs" method="get" role="search" className="mb-8 flex flex-wrap gap-3 rounded-2xl border border-gray-200 bg-white p-5">
+            <label htmlFor="blog-query" className="w-full font-semibold text-gray-900">Find a patient guide</label>
+            <input id="blog-query" name="q" type="search" defaultValue={query} maxLength={150} placeholder="Try MPI, WCB or insurance" className="min-w-0 flex-1 rounded-lg border border-gray-300 px-4 py-3 text-gray-900" />
+            <button type="submit" className="rounded-lg bg-[#c8101e] px-5 py-3 font-semibold text-white">Search</button>
+            {query && <Link href="/blogs" className="w-full py-2 underline">Clear search</Link>}
+          </form>
           {posts.length === 0 ? (
             <div className="rounded-3xl bg-white border border-gray-100 p-12 text-center shadow-xl shadow-gray-200/50">
-              <p className="text-gray-500 text-lg">No blog posts have been published yet. Check back soon.</p>
+              <p className="text-gray-500 text-lg">No articles match this search. Try “insurance,” “MPI,” or “first,” or clear your search.</p>
             </div>
           ) : (
             <div className="grid lg:grid-cols-[1fr_360px] gap-10 items-start">
@@ -138,23 +147,10 @@ export default async function BlogsPage() {
 
               {/* Sidebar */}
               <aside className="space-y-8 lg:sticky lg:top-28">
-                {/* Search Widget - Visual only for now */}
-                <div className="rounded-3xl bg-white p-6 shadow-lg shadow-gray-200/40 border border-gray-100">
-                  <div className="relative">
-                    <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
-                    <input
-                      type="text"
-                      placeholder="Search articles..."
-                      className="w-full bg-gray-50 border border-gray-200 rounded-xl py-3 pl-12 pr-4 text-sm outline-none focus:border-[#e63939] focus:ring-2 focus:ring-[#e63939]/10 transition-all"
-                      disabled
-                    />
-                  </div>
-                </div>
-
                 {/* Top Posts */}
                 {posts.length > 1 && (
                   <div className="rounded-3xl bg-white p-8 shadow-lg shadow-gray-200/40 border border-gray-100">
-                    <h3 className="text-lg font-bold text-gray-900 mb-6">Popular Reads</h3>
+                    <h3 className="text-lg font-bold text-gray-900 mb-6">More patient guides</h3>
                     <div className="space-y-6">
                       {posts.slice(0, 4).map((post, i) => (
                         <Link key={post._id} href={`/blogs/${post.slug}`} className="group flex gap-4 items-start">
