@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { clinicArticles } from '@/lib/clinicArticles'
 import { fetchBlogPosts } from '@/lib/sanity'
 import { ArrowUpRight, Clock, Calendar, Tag } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -18,7 +19,9 @@ function formatDate(dateString?: string) {
 }
 
 export default async function BlogsPage({ searchParams }: { searchParams: { q?: string } }) {
-  const allPosts = await fetchBlogPosts()
+  const fetchedPosts = await fetchBlogPosts()
+  const guideSlugs = new Set(clinicArticles.map(post => post.slug))
+  const allPosts = [...fetchedPosts.filter(post => !guideSlugs.has(post.slug)), ...fetchedPosts.filter(post => guideSlugs.has(post.slug))]
   const query = typeof searchParams.q === 'string' ? searchParams.q.trim().slice(0, 150) : ''
   const posts = allPosts.filter(post => `${post.title} ${post.excerpt || ''} ${post.tag || ''}`.toLowerCase().includes(query.toLowerCase()))
   const [featured, ...restPosts] = posts
@@ -48,10 +51,10 @@ export default async function BlogsPage({ searchParams }: { searchParams: { q?: 
               </span>
             </div>
             <h1 className="text-4xl font-light leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl text-balance">
-              Physiotherapy guides <br /><span className="font-bold text-white">for Winnipeg.</span>
+              Physiotherapy articles <br /><span className="font-bold text-white">for Winnipeg.</span>
             </h1>
             <p className="mt-6 text-lg text-white/90 max-w-xl leading-relaxed">
-              Practical information about appointments, insurance, MPI, WCB and choosing care in St. Vital.
+              Advice on movement, injuries and recovery, alongside practical patient guides for appointments and insurance.
             </p>
           </div>
         </div>
@@ -60,8 +63,8 @@ export default async function BlogsPage({ searchParams }: { searchParams: { q?: 
       <section className="relative z-10 -mt-12 pb-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <form action="/blogs" method="get" role="search" className="mb-8 flex flex-wrap gap-3 rounded-2xl border border-gray-200 bg-white p-5">
-            <label htmlFor="blog-query" className="w-full font-semibold text-gray-900">Find a patient guide</label>
-            <input id="blog-query" name="q" type="search" defaultValue={query} maxLength={150} placeholder="Try MPI, WCB or insurance" className="min-w-0 flex-1 rounded-lg border border-gray-300 px-4 py-3 text-gray-900" />
+            <label htmlFor="blog-query" className="w-full font-semibold text-gray-900">Search articles and patient guides</label>
+            <input id="blog-query" name="q" type="search" defaultValue={query} maxLength={150} placeholder="Try back pain, exercise or insurance" className="min-w-0 flex-1 rounded-lg border border-gray-300 px-4 py-3 text-gray-900" />
             <button type="submit" className="rounded-lg bg-[#c8101e] px-5 py-3 font-semibold text-white">Search</button>
             {query && <Link href="/blogs" className="w-full py-2 underline">Clear search</Link>}
           </form>
@@ -78,6 +81,7 @@ export default async function BlogsPage({ searchParams }: { searchParams: { q?: 
                 {featured && (
                   <Link href={`/blogs/${featured.slug}`} className="group block relative">
                     <article className="relative overflow-hidden rounded-[2rem] bg-white border border-gray-100 shadow-xl shadow-gray-200/50 transition-all duration-300 hover:shadow-2xl hover:shadow-gray-200/60 hover:-translate-y-1">
+                      {featured.mainImageUrl && <Image src={featured.mainImageUrl} alt={featured.mainImageAlt || featured.title} width={960} height={540} sizes="(min-width: 1024px) 65vw, 100vw" className="w-full aspect-video object-cover" />}
                       <div className="p-8 sm:p-10">
                         {featured.tag && (
                           <div className="mb-4 inline-flex items-center gap-2 text-[#e63939] text-xs font-bold uppercase tracking-widest">
@@ -118,6 +122,7 @@ export default async function BlogsPage({ searchParams }: { searchParams: { q?: 
                     {restPosts.map((post) => (
                       <Link key={post._id} href={`/blogs/${post.slug}`} className="group h-full">
                         <article className="h-full flex flex-col rounded-[1.5rem] bg-white p-6 border border-gray-100 shadow-lg shadow-gray-200/40 transition-all duration-300 hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1">
+                          {post.mainImageUrl && <Image src={post.mainImageUrl} alt={post.mainImageAlt || post.title} width={640} height={360} sizes="(min-width: 768px) 40vw, 100vw" className="mb-5 w-full aspect-video rounded-xl object-cover" />}
                           {post.tag && (
                             <p className="text-[#e63939] text-[10px] font-bold uppercase tracking-widest mb-3">
                               {post.tag}
@@ -150,7 +155,7 @@ export default async function BlogsPage({ searchParams }: { searchParams: { q?: 
                 {/* Top Posts */}
                 {posts.length > 1 && (
                   <div className="rounded-3xl bg-white p-8 shadow-lg shadow-gray-200/40 border border-gray-100">
-                    <h3 className="text-lg font-bold text-gray-900 mb-6">More patient guides</h3>
+                    <h3 className="text-lg font-bold text-gray-900 mb-6">More articles</h3>
                     <div className="space-y-6">
                       {posts.slice(0, 4).map((post, i) => (
                         <Link key={post._id} href={`/blogs/${post.slug}`} className="group flex gap-4 items-start">
