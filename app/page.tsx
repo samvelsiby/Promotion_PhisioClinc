@@ -19,12 +19,12 @@ export const metadata: Metadata = {
     absolute: "Physiotherapy in St. Vital, Winnipeg | Pro Motion Physiotherapy",
   },
   description:
-    "Physiotherapy in St. Vital, Winnipeg for pain and injury recovery. Visit our St. Anne’s Road clinic. Direct billing, MPI and WCB support. Book online.",
+    "Physiotherapy in Meadowood, St. Vital, Winnipeg. Visit Pro Motion on St. Anne’s Road for an assessment. Direct billing available. Book online.",
   openGraph: {
     title:
       "Physiotherapy in St. Vital, Winnipeg | Pro Motion",
     description:
-      "Personalized physiotherapy on St. Anne’s Road for pain and injury recovery. Direct billing available. Book your visit online.",
+      "Personalized physiotherapy in Meadowood, St. Vital, on St. Anne’s Road. Direct billing available. Book your visit online.",
     url: SITE_URL,
     images: [{ url: "/Hero/hero-desktop.jpg", width: 1920, height: 1097, alt: "Hands-on physiotherapy treatment" }],
     locale: "en_CA",

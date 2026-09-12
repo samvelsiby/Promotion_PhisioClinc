@@ -79,7 +79,7 @@ export default function Footer() {
           </nav>
 
           <div className="order-2 col-span-2 min-w-0 sm:col-span-1 lg:order-4">
-            <h3 className="mb-4 text-base font-semibold">Visit our St. Vital clinic</h3>
+            <h3 className="mb-4 text-base font-semibold">Visit us in Meadowood, St. Vital</h3>
             <address className="text-sm leading-relaxed text-gray-600 not-italic">
               <span className="font-medium text-gray-900">{COMPANY_CONTACT.NAME}</span><br />
               {COMPANY_CONTACT.ADDRESS.street}<br />

@@ -4,7 +4,7 @@ import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/JsonLd'
 import { getBreadcrumbSchema } from '@/lib/schema'
 
-export const metadata = pageMetadata('Your First Physiotherapy Visit in Winnipeg | Pro Motion', 'Prepare for your first physiotherapy appointment in St. Vital: what to bring, insurance questions, location and online booking at Pro Motion.', '/first-visit')
+export const metadata = pageMetadata('Your First Physiotherapy Visit in Winnipeg | Pro Motion', 'Prepare for your first physiotherapy appointment in Meadowood, St. Vital: what to bring, insurance questions, location and online booking at Pro Motion.', '/first-visit')
 
 export default function FirstVisitPage() {
   return <main className="min-h-screen bg-white py-24 sm:py-28">
@@ -37,8 +37,9 @@ export default function FirstVisitPage() {
         <h2>Payment and insurance</h2>
         <p>Direct billing is available with many plans, subject to the insurer’s terms. You may need to pay a balance or pay directly if a claim cannot be processed. Confirm fees and payment arrangements before treatment.</p>
         <p><Link href="/insurance">View insurance information</Link>, or read the guides for <Link href="/blogs/mpi-physiotherapy-claims-winnipeg">MPI appointments</Link> and <Link href="/blogs/wcb-physiotherapy-winnipeg">WCB appointments</Link>.</p>
-        <h2>Find the clinic</h2>
-        <p>{NAP_LINE}. Free parking is available in front of the clinic. Call ahead if you need details about entry or accessibility.</p>
+        <h2>Find our Meadowood clinic in St. Vital</h2>
+        <p>{NAP_LINE}, in the Meadowood neighbourhood of St. Vital. Free parking is available in front of the clinic. Call ahead if you need details about entry or accessibility.</p>
+        <p>We welcome patients from nearby Royalwood, Lavalee, Worthington and Niakwa Place, as well as across Winnipeg. Use the map to plan your route from home or work. Call reception if you need help finding the clinic entrance.</p>
         <p><a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(NAP_LINE)}`} target="_blank" rel="noopener noreferrer">View the clinic on Google Maps</a></p>
         <ul><li>{COMPANY_CONTACT.HOURS.weekday}</li><li>{COMPANY_CONTACT.HOURS.saturday}</li><li>{COMPANY_CONTACT.HOURS.sunday}</li></ul>
         <h2>Meet your provider</h2>

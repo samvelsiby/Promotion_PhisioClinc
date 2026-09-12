@@ -209,7 +209,7 @@ export default function AboutPage() {
               <div>
                 <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">Visit Our Clinic</h2>
                 <p className="mt-6 text-base text-white/90 sm:text-lg">
-                  Conveniently located in St. Anne's Road. We're here to help you get back to your best self.
+                  Find us on St. Anne’s Road in Meadowood, St. Vital. We welcome patients from nearby Royalwood, Lavalee, Worthington and Niakwa Place.
                 </p>
               </div>
 
