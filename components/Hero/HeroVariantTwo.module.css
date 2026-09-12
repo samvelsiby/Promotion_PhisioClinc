@@ -38,15 +38,29 @@
  .description { font-size: 1rem; line-height: 1.65; }
 }
 @media (max-width: 639px) {
+ .hero { position: relative; isolation: isolate; }
+ .hero::before { content: ''; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: linear-gradient(155deg, #ffe8eb 0%, #fff3f4 38%, #ffffff 78%); }
  .inner { padding: 1.75rem 1rem 0; }
- .headingRow { margin-bottom: 1.5rem; }
- .headline { font-size: clamp(2.2rem, 8.5vw, 3.4rem); line-height: 1.06; }
- .location { font-size: .8125rem; margin-bottom: 1rem; }
- .storyRow { display: flex; flex-direction: column; gap: 1.5rem; }
- .story { order: -1; }
+ .headingRow { margin-bottom: 1.4rem; }
+ .heading { position: relative; padding-bottom: 1.1rem; }
+ .heading::after { content: ''; position: absolute; bottom: 0; left: 0; width: 64px; height: 4px; border-radius: 2px; background: #c8101e; transform-origin: left; }
+ .headline { font-size: clamp(2.2rem, 8.5vw, 3.4rem); line-height: 1.06; color: #a20f1b; }
+ .location { font-size: .8125rem; margin-bottom: 1rem; color: #65484c; }
+ .storyRow { display: flex; flex-direction: column; gap: 1.2rem; align-items: stretch; }
+ .story { display: flex; flex-direction: column; max-width: none; padding: 0; }
  .brandMark { display: none; }
- .description { font-size: .9375rem; }
- .book { margin-top: 1.2rem; }
+ .description { font-size: .9375rem; margin-top: .75rem; }
+ .book { order: -2; margin-top: 0; box-shadow: 0 5px 14px rgb(162 15 27 / 12%); }
+ .call { order: -1; align-self: center; justify-content: center; }
  .figure { width: 100%; }
- .details { gap: .35rem .8rem; padding-bottom: 1.2rem; font-size: .8125rem; }
+ .photo { border: 5px solid #fff; box-shadow: 0 8px 28px rgb(98 34 43 / 10%); }
+ .caption { font-size: .75rem; margin-top: .7rem; }
+ .lastMinute { border-color: #ecdadd; }
+ .details { gap: .35rem .8rem; padding-bottom: 1.2rem; font-size: .8125rem; border-color: #ecdadd; }
 }
+@media (max-width: 639px) and (prefers-reduced-motion: no-preference) {
+ .photo { animation: photoSettle 650ms cubic-bezier(.2,.7,.2,1) both; }
+ .heading::after { animation: brandLine 550ms cubic-bezier(.2,.7,.2,1) both; }
+}
+@keyframes photoSettle { from { opacity: .8; transform: translateY(8px) scale(.985); } to { opacity: 1; transform: none; } }
+@keyframes brandLine { from { transform: scaleX(.15); } to { transform: scaleX(1); } }
