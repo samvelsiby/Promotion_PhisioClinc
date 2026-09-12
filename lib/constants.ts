@@ -3,7 +3,7 @@
  * Use these values on every page, schema block, and citation listing.
  */
 
-export const SITE_URL = 'https://promotionphysiotherapy.ca'
+export const SITE_URL = 'https://www.promotionphysiotherapy.ca'
 
 export const COMPANY_CONTACT = {
   NAME: 'Pro Motion Physiotherapy',

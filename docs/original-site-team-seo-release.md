@@ -11,7 +11,7 @@ Based on main f9a6148. The user's release scope is the original website with one
 
 ## SEO scope
 
-- Consistent canonical non-www production origin, with a permanent www redirect that preserves paths and query strings.
+- Canonical production origin is https://www.promotionphysiotherapy.ca, matching Vercel's existing host-level redirect from the bare domain. Do not introduce an opposing www-to-bare redirect in middleware or vercel.json; it would create a loop. The live host routing was checked during release verification.
 - Unique titles and descriptions, per-page Open Graph URLs and social sharing images, including a fallback for CMS articles without images.
 - MedicalClinic, WebSite, FAQPage, Service, Person, Article, and breadcrumb structured data. FAQ content is shared with the original visible FAQ component. No invented ratings or reviews in structured data.
 - Removed the footer's duplicate, invalid Physiotherapy business schema and incorrect .com references. Its visible JSX and styling are unchanged; the root layout supplies the corrected clinic schema.
