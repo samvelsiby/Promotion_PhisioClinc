@@ -30,17 +30,15 @@ export default function MeetOurTeamPage() {
               href={`/team/${member.slug}`}
               className="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer"
             >
-              {/* Image Container - Grey Background */}
-              <div className="relative w-full bg-gray-200 flex items-center justify-center overflow-hidden h-[400px] sm:h-[450px]">
-                <div className="relative w-full h-full">
+              {/* Match the generated portraits' 3:4 proportions at every viewport. */}
+              <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-100">
                   <Image
                     src={member.imageSrc}
                     alt={member.name}
                     fill
                     className="object-contain object-center"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) calc((100vw - 80px) / 2), (max-width: 1279px) calc((100vw - 128px) / 3), 384px"
                   />
-                </div>
               </div>
 
               {/* Name and Role Overlay */}
