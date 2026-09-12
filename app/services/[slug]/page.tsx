@@ -3,9 +3,9 @@ import { COMPANY_CONTACT, NAP_LINE } from '@/lib/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { getServiceBySlug, getAllServiceSlugs, serviceDetails } from '../serviceData'
+import { getServiceBySlug, getAllServiceSlugs } from '../serviceData'
 import { allBentoItems } from '@/components/BentoGrid/bentoItems'
-import { Calendar, ArrowLeft } from 'lucide-react'
+import { Calendar } from 'lucide-react'
 import { pageMetadata } from '@/lib/metadata'
 import { getServiceSeoTitle } from '@/lib/serviceSeo'
 import JsonLd from '@/components/JsonLd'
@@ -138,7 +138,7 @@ export default function ServicePage({ params }: ServicePageProps) {
             {/* Benefits */}
             {service.benefits.length > 0 && (
               <section>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Benefits</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Care Goals</h2>
                 <ul className="space-y-3">
                   {service.benefits.map((item, index) => (
                     <li key={index} className="flex gap-3">

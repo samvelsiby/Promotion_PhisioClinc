@@ -191,7 +191,8 @@ function getCustomContent(title: string, description: string): Partial<ServiceDe
       ]
     },
     'Back Pain & Sciatica Relief': {
-      overview: 'Lower back pain and sciatica are among the most common reasons people seek physiotherapy. Our comprehensive approach addresses both the symptoms and underlying causes to help you regain mobility and reduce pain.',
+      description: "Back pain and sciatica physiotherapy in St. Vital, Winnipeg. Book an assessment at Pro Motion on St. Anne’s Road and discuss a plan for your daily activities.",
+      overview: "At Pro Motion in St. Vital, your back-pain assessment starts with a discussion of your symptoms, daily activities and goals. Your physiotherapist assesses how you move and explains the findings before discussing a care plan. Bring any relevant reports and tell us what makes sitting, walking, work or sleep difficult. The treatment plan and follow-up schedule depend on your assessment.",
       whatWeTreat: [
         'Acute and chronic lower back pain',
         'Sciatica and nerve pain',
@@ -211,7 +212,7 @@ function getCustomContent(title: string, description: string): Partial<ServiceDe
         'Functional movement retraining'
       ],
       benefits: [
-        'Significant pain reduction',
+        'A plan tailored to your symptoms and activity goals',
         'Improved mobility and flexibility',
         'Better posture and body mechanics',
         'Reduced risk of future episodes',
@@ -363,7 +364,8 @@ function getCustomContent(title: string, description: string): Partial<ServiceDe
       ]
     },
     'Sports Injuries': {
-      overview: 'Athletes and active individuals need specialized care to return to peak performance safely. We provide sport-specific rehabilitation that addresses the unique demands of your activity.',
+      description: "Sports injury physiotherapy in St. Vital, Winnipeg. Discuss your sport, injury and return-to-activity goals with the team at Pro Motion. Book an assessment.",
+      overview: "Whether you play recreationally or train regularly, tell your physiotherapist about your sport, training schedule and the activities you want to return to. At our St. Vital clinic, an assessment helps shape a rehabilitation plan around your current abilities and goals. Progress and return-to-sport decisions are individual; an appointment does not guarantee a particular recovery date.",
       whatWeTreat: [
         'Sprains and strains',
         'Tendon injuries (tendinitis, tendinopathy)',
@@ -382,9 +384,9 @@ function getCustomContent(title: string, description: string): Partial<ServiceDe
         'Return to play protocols'
       ],
       benefits: [
-        'Faster, safer return to sport',
+        'An individualized plan for return to sport',
         'Reduced risk of re-injury',
-        'Improved performance',
+        'Exercises matched to your sport and current abilities',
         'Better movement patterns',
         'Enhanced athletic longevity'
       ],
@@ -431,7 +433,8 @@ function getCustomContent(title: string, description: string): Partial<ServiceDe
       ]
     },
     'Motor Vehicle Accident Injuries (MPI)': {
-      overview: 'Motor vehicle accidents can cause complex injuries requiring specialized care. We provide comprehensive treatment while helping you navigate MPI claims with proper documentation.',
+      description: "Physiotherapy after a car accident in St. Vital, Winnipeg. Contact Pro Motion about an assessment, MPI claim details and appointment arrangements.",
+      overview: "If you are booking after a motor vehicle collision, tell reception and bring any available claim details, medical reports and insurer correspondence. Your physiotherapist will discuss your symptoms and daily activities as part of the assessment. Ask reception about billing arrangements before your visit. Booking an appointment does not confirm MPI coverage or approval of a claim.",
       whatWeTreat: [
         'Whiplash and neck injuries',
         'Back pain from collisions',
@@ -453,7 +456,7 @@ function getCustomContent(title: string, description: string): Partial<ServiceDe
         'Comprehensive injury recovery',
         'Proper MPI claim documentation',
         'Reduced pain and improved function',
-        'Faster return to daily activities',
+        'Support with a gradual return to daily activities',
         'Better understanding of recovery process'
       ],
       whenToSeekHelp: [
