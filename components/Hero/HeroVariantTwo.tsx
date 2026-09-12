@@ -19,7 +19,7 @@ export default function HeroVariantTwo() {
               Physiotherapy in Winnipeg, built around you.
             </h1>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-gray-600 sm:mt-6 sm:text-lg">
-              Get back to the everyday things that matter. Our physiotherapists help you manage pain, recover from injury, and move with confidence—with a treatment plan tailored to you.
+              Founded by two dedicated physiotherapists with a shared dream and vision to help and serve our community with compassionate, personalized care. We provide evidence-based treatments tailored to your unique needs.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
