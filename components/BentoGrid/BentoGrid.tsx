@@ -57,7 +57,7 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
       className="w-full relative pt-16 pb-8 sm:pt-20 sm:pb-12 lg:pt-24 lg:pb-16"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto mb-16 max-w-2xl text-center sm:mb-20">
+        <div className="home-heading mx-auto mb-16 max-w-2xl text-center sm:mb-20">
           <span className="mb-4 inline-block rounded-full bg-red-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#e63939]">
             Our Services
           </span>
@@ -76,6 +76,7 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
             <input
               type="text"
+              aria-label="Search treatment conditions"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search treatment conditions..."
@@ -89,6 +90,7 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
           {/* Mobile Dropdown */}
           <div className="sm:hidden">
             <select
+              aria-label="Filter treatments by category"
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value as BodyPartCategory | 'All')}
               className="w-full px-4 py-3 border-2 border-gray-200 rounded-full focus:border-[#e63939] focus:outline-none focus:ring-2 focus:ring-[#e63939]/20 transition-all bg-white text-gray-900 font-medium"
@@ -143,7 +145,7 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
             >
               <Link
                 href={item.href}
-                className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all duration-300 ease-out hover:shadow-lg block h-full"
+                className="home-card group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all duration-300 ease-out hover:shadow-lg block h-full"
               >
               {/* Image Container */}
               <div className="relative h-56 w-full overflow-hidden">

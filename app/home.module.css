@@ -1,0 +1,15 @@
+.homepage { background: #fff; --home-accent: #c8101e; }
+.homepage > section { padding-top: 4rem; padding-bottom: 4rem; background: #fff; }
+.homepage > section:nth-of-type(even) { background: #f8fafb; }
+.homepage > section:first-of-type { padding: 0; background: #fff; }
+.homepage > section > div { max-width: 80rem; }
+.homepage :global(.home-card) { border: 1px solid #e5e7eb; border-radius: 1rem; background: #fff; box-shadow: 0 2px 8px rgb(17 24 39 / 3%); }
+.homepage :global(.home-heading) { max-width: none; margin: 0 0 2rem; text-align: left; }
+.homepage :global(.home-heading) p { margin-left: 0; }
+.homepage h2 { font-size: clamp(1.875rem, 3.2vw, 2.5rem); line-height: 1.15; letter-spacing: -0.025em; }
+.homepage a:focus-visible, .homepage button:focus-visible, .homepage select:focus-visible { outline: 2px solid var(--home-accent); outline-offset: 4px; }
+.homepage a:global(.rounded-full), .homepage button:global(.rounded-full), .homepage select, .homepage input { border-radius: .75rem; }
+@media (min-width: 768px) { .homepage > section { padding-top: 5rem; padding-bottom: 5rem; } }
+@media (prefers-reduced-motion: reduce) { .homepage *, .homepage *::before, .homepage *::after { animation: none !important; transition: none !important; } }
+.homepage [class~="bg-[#e63939]"] { background-color: var(--home-accent); }
+.homepage [class~="text-[#e63939]"] { color: var(--home-accent); }

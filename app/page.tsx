@@ -1,18 +1,17 @@
 import { HeroVariantTwo } from '@/components/Hero'
-import Motto from '@/components/Motto'
 import Highlights from '@/components/Highlights'
 import InsuranceMarquee from '@/components/InsuranceMarquee'
 import Testimonials from '@/components/Testimonials'
 import BentoGrid from '@/components/BentoGrid'
 import BlogPreview from '@/components/BlogPreview'
 import FAQ from '@/components/FAQ'
-import Preloader from '@/components/Preloader'
 import { fetchBlogPosts } from '@/lib/sanity'
 import type { Metadata } from 'next'
 import { SITE_URL } from '@/lib/constants'
 import JsonLd from '@/components/JsonLd'
 import { getFaqSchema } from '@/lib/schema'
 import PhysiotherapistIntro from '@/components/PhysiotherapistIntro'
+import styles from './home.module.css'
 
 export const metadata: Metadata = {
   title: {
@@ -47,16 +46,14 @@ export default async function Home() {
   const posts = await fetchBlogPosts(4)
 
   return (
-    <main>
+    <main className={styles.homepage}>
       <JsonLd data={getFaqSchema()} />
-      <Preloader />
       <HeroVariantTwo />
       <BentoGrid />
-      <Highlights />
-      <InsuranceMarquee />
-      <Motto />
       <PhysiotherapistIntro />
       <Testimonials />
+      <InsuranceMarquee />
+      <Highlights />
       <BlogPreview posts={posts} />
       <FAQ />
     </main>

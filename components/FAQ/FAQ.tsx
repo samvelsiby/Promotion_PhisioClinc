@@ -21,7 +21,7 @@ export default function FAQ() {
     <section className="w-full relative py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <RevealOnScroll>
-          <div className="mx-auto mb-16 max-w-2xl text-center sm:mb-20">
+          <div className="home-heading mx-auto mb-16 max-w-2xl text-center sm:mb-20">
             <span className="mb-4 inline-block rounded-full bg-red-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#e63939]">
               FAQs
             </span>
@@ -39,7 +39,7 @@ export default function FAQ() {
               <RevealOnScroll key={item.question} delay={120 + index * 120}>
                 <div
                   className={cn(
-                    'overflow-hidden border border-gray-200 bg-white transition-all duration-300 ease-out shadow-sm',
+                    'home-card overflow-hidden border border-gray-200 bg-white transition-all duration-300 ease-out shadow-sm',
                     isOpen
                       ? 'rounded-[32px] shadow-md'
                       : 'rounded-full hover:shadow-md'
@@ -47,6 +47,8 @@ export default function FAQ() {
                 >
                   <button
                     type="button"
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-answer-${index}`}
                     onClick={() => toggleIndex(index)}
                     className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left sm:px-8 sm:py-5"
                   >
@@ -66,6 +68,8 @@ export default function FAQ() {
                   </button>
 
                   <div
+                    id={`faq-answer-${index}`}
+                    aria-hidden={!isOpen}
                     className={cn(
                       'grid px-6 pr-16 text-sm text-gray-600 transition-all duration-300 ease-out sm:px-8 sm:text-[0.95rem]',
                       isOpen

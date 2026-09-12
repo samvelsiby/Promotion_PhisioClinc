@@ -19,7 +19,7 @@ export default function PhysiotherapistIntro() {
         </div>
         <div className="grid gap-5 lg:grid-cols-2 lg:gap-8">
           {physiotherapists.map((member) => (
-            <Link key={member.id} href={`/team/${member.slug}`} className="group flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition-shadow hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c8101e] sm:gap-6 sm:p-6">
+            <Link key={member.id} href={`/team/${member.slug}`} className="home-card group flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition-shadow hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c8101e] sm:gap-6 sm:p-6">
               <div className="relative aspect-[3/4] w-24 shrink-0 overflow-hidden rounded-xl bg-gray-100 sm:w-36">
                 <Image src={member.imageSrc} alt={member.name.toLowerCase().replace(/\b\w/g, (letter) => letter.toUpperCase())} fill sizes="(max-width: 639px) 96px, 144px" className="object-contain" />
               </div>

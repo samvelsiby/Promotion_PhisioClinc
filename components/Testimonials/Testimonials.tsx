@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import { Star, ArrowUpRight } from "lucide-react";
+import { COMPANY_CONTACT } from "@/lib/constants";
 
 const testimonials = [
   {
@@ -45,7 +46,7 @@ export default function Testimonials() {
   return (
     <section className="w-full bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 text-center">
+        <div className="home-heading mb-12 text-center">
           <p className="text-xs font-bold uppercase tracking-wider text-[#e63939] sm:text-sm mb-4">
             Patient Reviews
           </p>
@@ -57,12 +58,16 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <InfiniteMovingCards
-          items={testimonials}
-          direction="right"
-          speed="slow"
-          pauseOnHover={true}
-        />
+        <div className="grid gap-5 lg:grid-cols-3">
+          {testimonials.slice(0, 3).map(item => (
+            <figure key={item.name} className="home-card flex flex-col p-6 sm:p-8">
+              <div className="mb-4 flex gap-1 text-[#a96600]" aria-label={`${item.rating} out of 5 stars`}>{Array.from({length:item.rating},(_,i)=><Star key={i} className="h-4 w-4 fill-current" aria-hidden="true" />)}</div>
+              <blockquote className="flex-1 text-base leading-relaxed text-gray-700">“{item.quote}”</blockquote>
+              <figcaption className="mt-6 border-t border-gray-100 pt-4"><span className="block font-semibold text-gray-900">{item.name}</span><span className="text-sm text-gray-500">{item.title}</span></figcaption>
+            </figure>
+          ))}
+        </div>
+        <a href={COMPANY_CONTACT.REVIEWS_URL} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex min-h-12 items-center gap-2 font-semibold text-[#c8101e] underline underline-offset-4">Read more patient reviews on Google <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></a>
       </div>
     </section>
   );
