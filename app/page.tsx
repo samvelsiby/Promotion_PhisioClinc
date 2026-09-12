@@ -12,6 +12,7 @@ import JsonLd from '@/components/JsonLd'
 import { getFaqSchema } from '@/lib/schema'
 import PhysiotherapistIntro from '@/components/PhysiotherapistIntro'
 import styles from './home.module.css'
+import Preloader from '@/components/Preloader'
 
 export const metadata: Metadata = {
   title: {
@@ -47,6 +48,7 @@ export default async function Home() {
 
   return (
     <main className={styles.homepage}>
+      <Preloader />
       <JsonLd data={getFaqSchema()} />
       <HeroVariantTwo />
       <BentoGrid />

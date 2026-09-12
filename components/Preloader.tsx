@@ -2,120 +2,48 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import styles from './Preloader.module.css'
 
+/** A brief brand introduction, independent of page/image loading. */
 export default function Preloader() {
-  const [isLoading, setIsLoading] = useState(true)
-  const [fadeOut, setFadeOut] = useState(false)
+  const [visible, setVisible] = useState(true)
 
   useEffect(() => {
-    // Check if page is already loaded
-    if (document.readyState === 'complete') {
-      const timer = setTimeout(() => {
-        setFadeOut(true)
-        setTimeout(() => {
-          setIsLoading(false)
-        }, 500)
-      }, 1500)
-      return () => clearTimeout(timer)
+    const dismiss = () => setVisible(false)
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)')
+    if (motion.matches) {
+      dismiss()
+      return
     }
 
-    // Wait for page load
-    const handleLoad = () => {
-      setTimeout(() => {
-        setFadeOut(true)
-        setTimeout(() => {
-          setIsLoading(false)
-        }, 500)
-      }, 1500)
+    // CSS also dismisses the intro if hydration is delayed or unavailable.
+    const timer = window.setTimeout(dismiss, 1000)
+    window.addEventListener('pointerdown', dismiss, { once: true, passive: true })
+    window.addEventListener('keydown', dismiss, { once: true })
+    motion.addEventListener('change', dismiss)
+    return () => {
+      window.clearTimeout(timer)
+      window.removeEventListener('pointerdown', dismiss)
+      window.removeEventListener('keydown', dismiss)
+      motion.removeEventListener('change', dismiss)
     }
-
-    window.addEventListener('load', handleLoad)
-    return () => window.removeEventListener('load', handleLoad)
   }, [])
 
-  if (!isLoading) return null
+  if (!visible) return null
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex items-center justify-center bg-white transition-opacity duration-500 ${
-        fadeOut ? 'opacity-0 pointer-events-none' : 'opacity-100'
-      }`}
+      className={styles.intro}
+      aria-hidden="true"
+      onAnimationEnd={(event) => {
+        if (event.target === event.currentTarget) setVisible(false)
+      }}
     >
-      <div className="flex flex-col items-center justify-center">
-        {/* Navbar SVG with scale animation */}
-        <div className="mb-8 animate-scale-in">
-          <Image
-            src="/navbar/Navbar.svg"
-            alt="Pro Motion Physiotherapy Logo"
-            width={250}
-            height={80}
-            priority
-            className="object-contain"
-          />
-        </div>
-
-        {/* Motto with delay */}
-        <p className="mb-8 animate-fade-in-delay text-xs font-medium text-gray-600 sm:text-sm">
-          Driven by Care. Powered by Motion.
-        </p>
-
-        {/* Loading Progress Bar */}
-        <div className="relative w-48 sm:w-64">
-          <div className="h-1 overflow-hidden rounded-full bg-gray-200">
-            <div className="h-full w-full animate-loading bg-gradient-to-r from-transparent via-[#e63939] to-transparent"></div>
-          </div>
-        </div>
+      <div className={styles.brand}>
+        <Image src="/navbar/Navbar.svg" alt="" width={250} height={80} className={styles.logo} />
+        <p className={styles.motto}>Driven by Care. Powered by Motion.</p>
+        <span className={styles.track}><span className={styles.stroke} /></span>
       </div>
-
-      <style jsx>{`
-        @keyframes scale-in {
-          0% {
-            transform: scale(0.8);
-            opacity: 0;
-          }
-          100% {
-            transform: scale(1);
-            opacity: 1;
-          }
-        }
-
-        @keyframes fade-in {
-          0% {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes loading {
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(100%);
-          }
-        }
-
-        .animate-scale-in {
-          animation: scale-in 0.6s ease-out;
-        }
-
-        .animate-fade-in {
-          animation: fade-in 0.8s ease-out 0.3s both;
-        }
-
-        .animate-fade-in-delay {
-          animation: fade-in 0.8s ease-out 0.4s both;
-        }
-
-        .animate-loading {
-          animation: loading 1.5s ease-in-out infinite;
-        }
-      `}</style>
     </div>
   )
 }
-
