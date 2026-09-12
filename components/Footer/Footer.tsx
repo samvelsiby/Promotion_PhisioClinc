@@ -225,6 +225,19 @@ export default function Footer() {
           ))}
         </div>
       </div>
+      <div className="mx-auto max-w-7xl px-4 pb-6 sm:px-6 lg:px-8">
+        <p className="border-t border-gray-200 pt-5 text-center text-sm text-gray-600">
+          Built by{' '}
+          <a
+            href="https://www.rtstics.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-6 items-center font-medium underline decoration-gray-300 underline-offset-4 transition-colors hover:text-[#c8101e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4"
+          >
+            RTSTICS
+          </a>
+        </p>
+      </div>
     </footer>
   )
 }
