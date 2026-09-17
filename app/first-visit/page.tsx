@@ -34,10 +34,16 @@ export default function FirstVisitPage() {
         <p>Your physiotherapist will discuss your concerns, health information and goals, then assess the relevant movement and function. Ask questions about the findings, proposed options and next steps. Your plan depends on the assessment; there is no single visit count that suits everyone.</p>
         <p>Our appointment information advises arriving 15–20 minutes early for forms. Initial appointments are generally 60–75 minutes; confirm the duration of your booked appointment with reception.</p>
         <p>Use our <Link href="/blogs/questions-first-physiotherapy-assessment">seven questions for your first assessment</Link> to prepare for that conversation.</p>
-        <h2>Payment and insurance</h2>
+        <h2 id="cost-and-coverage">How much does physiotherapy cost?</h2>
+        <p>Contact reception for the current initial assessment and follow-up fees before booking. Ask what each appointment includes and how long it is scheduled for. Your total cost depends on the care agreed after assessment; there is no fixed visit count for every patient.</p>
+        <p>To estimate your out-of-pocket cost, check your insurer’s per-visit reimbursement, remaining annual allowance and any deductible. Ask whether a referral is needed and whether the plan allows direct billing. You are responsible for confirming your own benefits; reception can explain the clinic’s billing arrangements.</p>
+        <h2>Is physiotherapy covered by Manitoba Health?</h2>
+        <p>A Manitoba Health card does not automatically pay for routine physiotherapy at a private clinic. Hospital-based therapy and specific public programs have separate eligibility and access rules. Ask the relevant program about eligibility and confirm clinic participation before booking care you expect it to fund.</p>
+        <p>See <a href="https://www.gov.mb.ca/fs/imd/print,service-adults.html">Manitoba’s information about therapy services</a>. Extended health benefits, MPI and WCB follow their own approval rules.</p>
+        <h2>Payment and direct billing</h2>
         <p>Direct billing is available with many plans, subject to the insurer’s terms. You may need to pay a balance or pay directly if a claim cannot be processed. Confirm fees and payment arrangements before treatment.</p>
         <p><Link href="/insurance">View insurance information</Link>, or read the guides for <Link href="/blogs/mpi-physiotherapy-claims-winnipeg">MPI appointments</Link> and <Link href="/blogs/wcb-physiotherapy-winnipeg">WCB appointments</Link>.</p>
-        <h2>Find our Meadowood clinic in St. Vital</h2>
+        <h2 id="location">Find our Meadowood clinic in St. Vital</h2>
         <p>{NAP_LINE}, in the Meadowood neighbourhood of St. Vital. Free parking is available in front of the clinic. Call ahead if you need details about entry or accessibility.</p>
         <p>We welcome patients from nearby Royalwood, Lavalee, Worthington and Niakwa Place, as well as across Winnipeg. Use the map to plan your route from home or work. Call reception if you need help finding the clinic entrance.</p>
         <p><a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(NAP_LINE)}`} target="_blank" rel="noopener noreferrer">View the clinic on Google Maps</a></p>

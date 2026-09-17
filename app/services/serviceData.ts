@@ -51,7 +51,7 @@ export const serviceDetails: ServiceDetail[] = allBentoItems.map((item) => {
 function getCustomContent(title: string, description: string): Partial<ServiceDetail> {
   const contentMap: Record<string, Partial<ServiceDetail>> = {
     'TMJ Dysfunction': {
-      overview: 'Temporomandibular joint (TMJ) dysfunction affects the jaw joint and surrounding muscles, causing pain, clicking, and limited jaw movement. Our specialized approach addresses the root causes of TMJ disorders through comprehensive assessment and targeted treatment.',
+      overview: 'Temporomandibular joint (TMJ) dysfunction affects the jaw joint and surrounding muscles, causing pain, clicking, and limited jaw movement. An assessment can help determine whether physiotherapy is appropriate for your jaw symptoms and whether dental or medical assessment is also needed.',
       whatWeTreat: [
         'Jaw pain and stiffness',
         'Clicking or popping sounds in the jaw',

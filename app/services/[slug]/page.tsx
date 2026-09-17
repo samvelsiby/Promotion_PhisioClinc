@@ -1,3 +1,4 @@
+import { servicePatientInfo } from '@/lib/servicePatientInfo'
 import { clinicArticles } from '@/lib/clinicArticles'
 import { COMPANY_CONTACT, NAP_LINE } from '@/lib/constants'
 import Image from 'next/image'
@@ -32,6 +33,7 @@ export default function ServicePage({ params }: ServicePageProps) {
     notFound()
   }
 
+  const patientInfo = servicePatientInfo[params.slug]
   const patientGuides = clinicArticles.filter(article => article.relatedLinks.some(link => link.href === `/services/${params.slug}`))
 
   // Get related services from the same category
@@ -164,6 +166,19 @@ export default function ServicePage({ params }: ServicePageProps) {
                 </ul>
               </section>
             )}
+
+            {patientInfo && <>
+              {patientInfo.sections.map(section => <section key={section.heading}>
+                <h2 className="mb-4 text-2xl font-bold text-gray-900">{section.heading}</h2>
+                <p className="leading-relaxed text-gray-700">{section.text}</p>
+              </section>)}
+              <section>
+                <h2 className="mb-4 text-2xl font-bold text-gray-900">Your physiotherapy team in Meadowood, St. Vital</h2>
+                <p className="leading-relaxed text-gray-700">Our team includes <Link className="underline" href="/team/ben-bastin-jose">Ben Bastin Jose, Registered Physiotherapist, BPT</Link>, and <Link className="underline" href="/team/lijo-paul">Lijo Paul, Registered Physiotherapist, MPT, BPT</Link>. Read their profiles and ask reception to confirm the appropriate provider for your concerns and preferred appointment time.</p>
+                <p className="mt-4 text-gray-700">Visit us at {NAP_LINE}. <Link className="underline" href="/first-visit#location">Plan your visit</Link>, review <Link className="underline" href="/first-visit#cost-and-coverage">cost and coverage questions</Link>, or <a className="underline" href={COMPANY_CONTACT.BOOKING_URL}>book an assessment online</a>.</p>
+                <p className="mt-4 text-sm text-gray-600">Further information: <a className="underline" href={patientInfo.source.url}>{patientInfo.source.label}</a>.</p>
+              </section>
+            </>}
 
             {/* CTA Section */}
             <section className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">

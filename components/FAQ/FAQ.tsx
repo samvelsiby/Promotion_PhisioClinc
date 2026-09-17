@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -87,6 +88,7 @@ export default function FAQ() {
           })}
         </div>
 
+        <p className="mt-8 text-center text-gray-600">Planning your visit? Read about <Link className="underline" href="/first-visit#cost-and-coverage">fees and coverage</Link>, <Link className="underline" href="/blogs/physiotherapy-referral-winnipeg">referral requirements</Link> and <Link className="underline" href="/first-visit#location">our Meadowood location in St. Vital</Link>.</p>
         {/* Show More/Less Button */}
         {!showAll && (
           <div className="mt-8 flex justify-center">
