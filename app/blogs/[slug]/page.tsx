@@ -46,6 +46,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound()
   }
 
+  const serviceLinks: Record<string, { href: string; label: string }> = {
+    'understanding-acl-injuries-recovery-timelines-and-the-path-to-ret1urn-to-play': { href: '/services/sports-injuries', label: 'Sports injury physiotherapy in Winnipeg' },
+    'whiplash-after-a-car-accident-mpi-why-your-recovery-deserves-more-than-a-referral': { href: '/services/motor-vehicle-accident-recovery', label: 'Physiotherapy after a motor vehicle collision' },
+    'recovering-after-a-motor-vehicle-accident': { href: '/services/motor-vehicle-accident-recovery', label: 'MPI and motor vehicle accident rehabilitation' },
+  }
+  const serviceLink = serviceLinks[params.slug]
   const topPosts = (allPosts || []).filter((p) => p.slug !== params.slug).slice(0, 4)
 
   return (
@@ -125,6 +131,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               ) : (
                 <p>No content available for this post yet.</p>
               )}
+              {serviceLink && <section aria-labelledby="related-clinic-care">
+                <h2 id="related-clinic-care">Discuss your recovery with a physiotherapist</h2>
+                <p>This article provides general information. Your assessment, goals and any recommendations from your healthcare team determine your individual care plan.</p>
+                <p>Explore <Link href={serviceLink.href}>{serviceLink.label}</Link> at Pro Motion in Meadowood, St. Vital, or <Link href="/first-visit">prepare for your first appointment</Link>.</p>
+              </section>}
             </article>
           </section>
 
