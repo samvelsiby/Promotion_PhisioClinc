@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 import Script from 'next/script'
 import { Great_Vibes, Outfit } from 'next/font/google'
 import './globals.css'
@@ -97,6 +98,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${greatVibes.variable} ${outfit.variable} font-sans`}>
       <body>
+        <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-ML36VHX4VF"} />
         <Script
           src="https://datafa.st/js/script.js"
           data-website-id="dfid_QoyPW2C1pzniPcSl3pYpc"

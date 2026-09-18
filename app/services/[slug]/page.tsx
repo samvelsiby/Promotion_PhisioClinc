@@ -8,7 +8,7 @@ import { getServiceBySlug, getAllServiceSlugs } from '../serviceData'
 import { allBentoItems } from '@/components/BentoGrid/bentoItems'
 import { Calendar } from 'lucide-react'
 import { pageMetadata } from '@/lib/metadata'
-import { getServiceSeoTitle } from '@/lib/serviceSeo'
+import { getServiceSeoTitle, getServiceSeoDescription, getServiceH1 } from '@/lib/serviceSeo'
 import JsonLd from '@/components/JsonLd'
 import { getServiceSchema, getBreadcrumbSchema } from '@/lib/schema'
 
@@ -23,7 +23,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: ServicePageProps) {
   const service = getServiceBySlug(params.slug)
   if (!service) notFound()
-  return pageMetadata(getServiceSeoTitle(service.title), service.description, `/services/${params.slug}`, service.imageSrc)
+  return pageMetadata(getServiceSeoTitle(service.title), getServiceSeoDescription(params.slug, service.description), `/services/${params.slug}`, service.imageSrc)
 }
 
 export default function ServicePage({ params }: ServicePageProps) {
@@ -71,7 +71,7 @@ export default function ServicePage({ params }: ServicePageProps) {
                 {service.category}
               </p>
               <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl mb-4">
-                {service.title}
+                {getServiceH1(service.title)}
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed">
                 {service.description}

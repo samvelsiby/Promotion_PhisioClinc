@@ -6,6 +6,79 @@ export interface ClinicArticle extends BlogPost {
 }
 // Organizational editorial content; no clinician authorship or medical review is asserted.
 export const clinicArticles: ClinicArticle[] = [
+{
+  "_id": "clinic-back-pain-sciatica-assessment-winnipeg",
+  "slug": "back-pain-sciatica-assessment-winnipeg",
+  "title": "Back pain or sciatica? Preparing for a physiotherapy assessment in Winnipeg",
+  "excerpt": "What to tell your physiotherapist about back and leg symptoms, what to bring, and which questions to ask about your care and costs.",
+  "tag": "Back pain",
+  "publishedAt": "2026-09-18",
+  "readTime": "4 min read",
+  "sections": [
+    {
+      "heading": "Back pain and sciatica are different descriptions",
+      "paragraphs": [
+        "Sciatica involves irritation or compression of the sciatic nerve. Symptoms often extend through the buttock and down one leg, sometimes reaching the foot, and may include tingling or numbness. Pain limited to your back is not the same pattern. These descriptions cannot identify the cause of your own symptoms; an assessment is needed.",
+        "When arranging an appointment, describe what you feel instead of choosing a diagnosis from a search result. For example, “my lower back hurts after sitting” and “I have pain travelling into my right leg” give reception and your clinician different information."
+      ]
+    },
+    {
+      "heading": "Know when a routine appointment is not the next step",
+      "paragraphs": [
+        "Seek emergency medical care if back or leg symptoms occur with new bladder or bowel control problems, difficulty urinating, numbness around the genitals or bottom, or severe or worsening weakness or numbness in both legs. Do not wait for a physiotherapy booking. This is not an exhaustive checklist; seek medical advice if you are concerned about new or worsening symptoms."
+      ]
+    },
+    {
+      "heading": "Make a short note before you arrive",
+      "paragraphs": [
+        "Write down when the symptoms started, where you feel them and what has changed since they began. Include previous episodes, any injury or surgery, and medical advice you have already received. Bring relevant reports or instructions you already have; ask reception if you are unsure what documents are needed.",
+        "Choose two or three everyday examples you want to discuss. Perhaps standing to prepare a meal is difficult, driving is uncomfortable or you have stopped an activity you enjoy. Note roughly how long you can do the task and what makes it harder. You do not need technical language or a perfect symptom diary."
+      ]
+    },
+    {
+      "heading": "Questions that make the assessment useful",
+      "paragraphs": [
+        "Ask what the assessment suggests and whether another type of medical assessment is needed. Ask which options are appropriate for you, what each involves and how your preferences can be included. You can ask for any explanation to be repeated in plain language.",
+        "Before leaving, clarify the agreed next step: what to do between visits, how to raise a question, and how progress will be checked. If an exercise is recommended, ask how to do it and what changes should prompt you to contact the clinician. A general article cannot choose an exercise programme for your individual circumstances.",
+        "A practical goal gives follow-up visits a purpose. Instead of asking only how many sessions you need, ask what you are working towards and when the plan will be reviewed. Your assessment and response guide those decisions; this article does not promise a treatment count or recovery date."
+      ]
+    },
+    {
+      "heading": "Confirm fees and insurance before the visit",
+      "paragraphs": [
+        "Ask reception for the current assessment fee and follow-up fee. Check your benefit plan for referral requirements, annual limits and per-visit reimbursement. Direct billing is a way to submit an eligible claim, not a guarantee that your insurer pays the whole fee.",
+        "If your symptoms followed a workplace injury or motor vehicle collision, mention this when booking and have any WCB or MPI claim details available. Confirm the payment arrangements before attending, particularly if approval is still pending."
+      ]
+    },
+    {
+      "heading": "Book a back-pain assessment in St. Vital",
+      "paragraphs": [
+        "Pro Motion Physiotherapy is at Unit 4, 567 St. Anne’s Road, in the Meadowood neighbourhood of St. Vital, Winnipeg. Our back pain and sciatica service page explains the care available, and our first-visit guide covers appointment preparation.",
+        "Call (204) 560-2999 if you need help selecting an appointment or want to ask about fees or access. You can also use the clinic’s online booking portal to view available appointments. Tell reception about any assistance or communication arrangements you need before your visit."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "NHS: sciatica symptoms and when to seek urgent help",
+      "url": "https://www.nhs.uk/conditions/sciatica/"
+    }
+  ],
+  "relatedLinks": [
+    {
+      "label": "Back pain and sciatica physiotherapy in Winnipeg",
+      "href": "/services/back-pain-sciatica-relief"
+    },
+    {
+      "label": "Prepare for your first appointment",
+      "href": "/first-visit"
+    },
+    {
+      "label": "Insurance and direct billing",
+      "href": "/insurance"
+    }
+  ]
+},
   {
     "_id": "clinic-physiotherapy-referral-winnipeg",
     "slug": "physiotherapy-referral-winnipeg",
