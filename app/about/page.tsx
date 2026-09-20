@@ -1,5 +1,6 @@
 'use client';
 
+import { recordClinicEvent } from '@/lib/analyticsEvents'
 import Motto from '@/components/Motto/Motto'
 import { ArrowRight, Phone, MapPin, Clock, Calendar, Activity, Heart, Shield, Printer } from 'lucide-react'
 import { FormEvent, useState } from 'react'
@@ -41,6 +42,8 @@ export default function AboutPage() {
       }
 
       const result = await response.json()
+      if (result.success !== true) throw new Error('The enquiry was not accepted')
+      recordClinicEvent('generate_lead')
 
       setSubmitStatus({
         type: 'success',

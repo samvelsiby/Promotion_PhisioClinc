@@ -1,6 +1,6 @@
 export function getConditionName(title: string): string {
   const map: Record<string, string> = {
-    'TMJ Dysfunction': 'TMJ Dysfunction',
+    'TMJ Dysfunction': 'TMJ & Jaw Pain',
     'Neck Pain Relief': 'Neck Pain',
     'Shoulder Pain Relief': 'Shoulder Pain',
     'Elbow, Wrist & Hand Pain Relief': 'Elbow, Wrist & Hand Pain',
@@ -34,6 +34,7 @@ export function getServiceH1(title: string): string {
 /** Page-specific summaries describe the appointment rather than promising results. */
 export function getServiceSeoDescription(slug: string, fallback: string): string {
   const descriptions: Record<string, string> = {
+    'tmj-dysfunction': 'TMJ and jaw pain physiotherapy in St. Vital, Winnipeg. Discuss chewing discomfort, jaw movement and assessment options at Pro Motion. Book an appointment.',
     'back-pain-sciatica-relief': 'Back pain and sciatica physiotherapy in St. Vital, Winnipeg. Discuss symptoms, movement and a care plan at Pro Motion on St. Anne’s Road. Book an assessment.',
     'motor-vehicle-accident-recovery': 'Physiotherapy after a motor vehicle accident in Winnipeg. Arrange an assessment at Pro Motion in St. Vital and ask about MPI claim and billing requirements.',
     'work-injuries': 'Work-injury physiotherapy in St. Vital, Winnipeg. Discuss your job demands, rehabilitation goals and WCB billing arrangements with Pro Motion. Book an assessment.',

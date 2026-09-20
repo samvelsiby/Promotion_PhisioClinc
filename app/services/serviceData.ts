@@ -51,6 +51,7 @@ export const serviceDetails: ServiceDetail[] = allBentoItems.map((item) => {
 function getCustomContent(title: string, description: string): Partial<ServiceDetail> {
   const contentMap: Record<string, Partial<ServiceDetail>> = {
     'TMJ Dysfunction': {
+      description: 'TMJ and jaw pain physiotherapy in St. Vital, Winnipeg. Discuss jaw discomfort, chewing and movement at an assessment, including whether dental or medical care is also needed.',
       overview: 'Temporomandibular joint (TMJ) dysfunction affects the jaw joint and surrounding muscles, causing pain, clicking, and limited jaw movement. An assessment can help determine whether physiotherapy is appropriate for your jaw symptoms and whether dental or medical assessment is also needed.',
       whatWeTreat: [
         'Jaw pain and stiffness',
@@ -399,7 +400,8 @@ function getCustomContent(title: string, description: string): Partial<ServiceDe
       ]
     },
     'Work Injuries, WCB & Work Related Injury': {
-      overview: 'Work-related injuries require specialized care and documentation. We provide comprehensive treatment while navigating WCB claims and ensuring your safe return to work.',
+      description: 'WCB and work-injury physiotherapy in St. Vital, Winnipeg. Bring your claim details and discuss your job demands, rehabilitation goals and billing arrangements.',
+      overview: 'At Pro Motion on St. Anne’s Road, your work-injury assessment considers the activities your job involves and what is difficult now. Bring any existing work restrictions, medical recommendations and WCB claim details. Your physiotherapist can discuss rehabilitation and progress with you; WCB determines claim eligibility and treatment authorization.',
       whatWeTreat: [
         'Workplace strains and sprains',
         'Repetitive strain injuries',
@@ -418,7 +420,7 @@ function getCustomContent(title: string, description: string): Partial<ServiceDe
         'Injury prevention education'
       ],
       benefits: [
-        'Faster recovery and return to work',
+        'Rehabilitation goals linked to your work tasks',
         'Proper WCB claim documentation',
         'Reduced risk of re-injury',
         'Improved workplace ergonomics',
