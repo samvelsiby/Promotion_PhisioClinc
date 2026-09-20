@@ -1,4 +1,3 @@
-import { clinicArticles } from './clinicArticles'
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET
 const apiVersion = '2023-10-01'
@@ -12,6 +11,8 @@ if (!dataset) {
 }
 
 const SANITY_DATASET_URL = `https://${projectId}.api.sanity.io/v${apiVersion}/data/query/${dataset}`
+// Query only published documents; drafts must never appear on the public site.
+const publishedPosts = '_type == "post" && defined(slug.current) && !(_id in path("drafts.**")) && !(_id in path("versions.**"))'
 
 export interface BlogPost {
   _id: string
@@ -20,8 +21,6 @@ export interface BlogPost {
   excerpt?: string
   tag?: string
   readTime?: string
-  sections?: { heading: string; paragraphs: string[] }[]
-  sources?: { title: string; url: string }[]
   relatedLinks?: { label: string; href: string }[]
   body?: any[]
   publishedAt?: string
@@ -52,7 +51,7 @@ async function sanityFetch<T>(query: string): Promise<T> {
 
 export async function fetchBlogPosts(limit?: number): Promise<BlogPost[]> {
   const range = typeof limit === 'number' ? `[0...${limit}]` : ''
-  const query = `*[_type == "post"] | order(publishedAt desc)${range}{
+  const query = `*[${publishedPosts}] | order(publishedAt desc, slug.current asc)${range}{
     _id,
     title,
     "slug": slug.current,
@@ -60,27 +59,17 @@ export async function fetchBlogPosts(limit?: number): Promise<BlogPost[]> {
     tag,
     readTime,
     publishedAt,
+    relatedLinks[]{label, href},
     "mainImageUrl": mainImage.asset->url,
     "mainImageAlt": mainImage.alt
   }`
 
-  let remote: BlogPost[] = []
-  try {
-    remote = await sanityFetch<BlogPost[]>(query)
-  } catch (error) {
-    console.error('Error loading blog posts from Sanity', error)
-  }
-  // Local editorial articles own their slugs consistently in lists and detail pages.
-  const merged = new Map(remote.map(post => [post.slug, post]))
-  clinicArticles.forEach(post => merged.set(post.slug, post))
-  const posts = Array.from(merged.values()).sort((a, b) => (b.publishedAt || '').localeCompare(a.publishedAt || '') || a.slug.localeCompare(b.slug))
-  return typeof limit === 'number' ? posts.slice(0, limit) : posts
+  // Let ISR retain the last successful page if Sanity is temporarily unavailable.
+  return sanityFetch<BlogPost[]>(query)
 }
 
 export async function fetchBlogPostBySlug(slug: string): Promise<BlogPost | null> {
-  const local = clinicArticles.find(post => post.slug === slug)
-  if (local) return local
-  const query = `*[_type == "post" && slug.current == ${JSON.stringify(slug)}][0]{
+  const query = `*[${publishedPosts} && slug.current == ${JSON.stringify(slug)}][0]{
     _id,
     title,
     "slug": slug.current,
@@ -89,27 +78,15 @@ export async function fetchBlogPostBySlug(slug: string): Promise<BlogPost | null
     readTime,
     body,
     publishedAt,
+    relatedLinks[]{label, href},
     "mainImageUrl": mainImage.asset->url,
     "mainImageAlt": mainImage.alt
   }`
 
-  try {
-    const post = await sanityFetch<BlogPost | null>(query)
-    return post
-  } catch (error) {
-    console.error('Error loading blog post from Sanity', error)
-    return null
-  }
+  return sanityFetch<BlogPost | null>(query)
 }
 
 export async function fetchBlogSlugs(): Promise<{ slug: string }[]> {
-  const query = `*[_type == "post" && defined(slug.current)]{ "slug": slug.current }`
-
-  let remote: { slug: string }[] = []
-  try {
-    remote = await sanityFetch<{ slug: string }[]>(query)
-  } catch (error) {
-    console.error('Error loading blog slugs from Sanity', error)
-  }
-  return Array.from(new Set([...remote.map(post => post.slug), ...clinicArticles.map(post => post.slug)])).map(slug => ({ slug }))
+  const query = `*[${publishedPosts}]{ "slug": slug.current }`
+  return sanityFetch<{ slug: string }[]>(query)
 }

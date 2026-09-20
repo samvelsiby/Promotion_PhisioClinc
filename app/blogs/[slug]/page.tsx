@@ -105,32 +105,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             )}
 
             <article className="prose prose-sm max-w-none text-gray-800 sm:prose-base">
-              {post.sections ? (
-                <>
-                  <p>By Pro Motion Physiotherapy · Patient information</p>
-                  <nav aria-label="Article contents">
-                    <h2>In this guide</h2>
-                    <ul>{post.sections.map((section, index) => <li key={section.heading}><a href={`#section-${index + 1}`}>{section.heading}</a></li>)}</ul>
-                  </nav>
-                  {post.sections.map((section, index) => <section key={section.heading} id={`section-${index + 1}`} className="scroll-mt-28">
-                    <h2>{section.heading}</h2>
-                    {section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
-                  </section>)}
-                  <section aria-labelledby="article-sources">
-                    <h2 id="article-sources">Sources and further information</h2>
-                    <ul>{post.sources?.map(source => <li key={source.url}><a href={source.url} rel="noopener noreferrer" target="_blank">{source.title}</a></li>)}</ul>
-                    <p>General appointment information, not an individual assessment or a guarantee of insurance coverage. Confirm current arrangements with the clinic and your insurer.</p>
-                  </section>
-                  <section aria-labelledby="article-next-steps">
-                    <h2 id="article-next-steps">Plan your next step</h2>
-                    <ul>{post.relatedLinks?.map(link => <li key={link.href}><Link href={link.href}>{link.label}</Link></li>)}</ul>
-                  </section>
-                </>
-              ) : Array.isArray(post.body) && post.body.length > 0 ? (
+              {Array.isArray(post.body) && post.body.length > 0 ? (
                 <PortableText value={post.body} components={{ block: { h1: ({ children }) => <h2 className="!text-[2.1428571em] !font-extrabold !leading-[1.2] !mt-0 !mb-[0.8em] sm:!text-[2.25em] sm:!leading-[1.1111111] sm:!mb-[0.888889em]">{children}</h2> } }} />
               ) : (
                 <p>No content available for this post yet.</p>
               )}
+              {!!post.relatedLinks?.length && <section aria-labelledby="article-next-steps">
+                <h2 id="article-next-steps">Plan your next step</h2>
+                <ul>{post.relatedLinks.map(link => <li key={link.href}><Link href={link.href}>{link.label}</Link></li>)}</ul>
+              </section>}
               {serviceLink && <section aria-labelledby="related-clinic-care">
                 <h2 id="related-clinic-care">Discuss your recovery with a physiotherapist</h2>
                 <p>This article provides general information. Your assessment, goals and any recommendations from your healthcare team determine your individual care plan.</p>

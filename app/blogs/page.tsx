@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { clinicArticles } from '@/lib/clinicArticles'
 import { fetchBlogPosts } from '@/lib/sanity'
 import { ArrowUpRight, Clock, Calendar, Tag } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -19,9 +18,7 @@ function formatDate(dateString?: string) {
 }
 
 export default async function BlogsPage({ searchParams }: { searchParams: { q?: string } }) {
-  const fetchedPosts = await fetchBlogPosts()
-  const guideSlugs = new Set(clinicArticles.map(post => post.slug))
-  const allPosts = [...fetchedPosts.filter(post => !guideSlugs.has(post.slug)), ...fetchedPosts.filter(post => guideSlugs.has(post.slug))]
+  const allPosts = await fetchBlogPosts()
   const query = typeof searchParams.q === 'string' ? searchParams.q.trim().slice(0, 150) : ''
   const posts = allPosts.filter(post => `${post.title} ${post.excerpt || ''} ${post.tag || ''}`.toLowerCase().includes(query.toLowerCase()))
   const [featured, ...restPosts] = posts

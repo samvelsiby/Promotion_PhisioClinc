@@ -1,5 +1,5 @@
 import { servicePatientInfo } from '@/lib/servicePatientInfo'
-import { clinicArticles } from '@/lib/clinicArticles'
+import { fetchBlogPosts } from '@/lib/sanity'
 import { COMPANY_CONTACT, NAP_LINE } from '@/lib/constants'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -26,7 +26,9 @@ export function generateMetadata({ params }: ServicePageProps) {
   return pageMetadata(getServiceSeoTitle(service.title), getServiceSeoDescription(params.slug, service.description), `/services/${params.slug}`, service.imageSrc)
 }
 
-export default function ServicePage({ params }: ServicePageProps) {
+export const revalidate = 60
+
+export default async function ServicePage({ params }: ServicePageProps) {
   const service = getServiceBySlug(params.slug)
 
   if (!service) {
@@ -34,7 +36,8 @@ export default function ServicePage({ params }: ServicePageProps) {
   }
 
   const patientInfo = servicePatientInfo[params.slug]
-  const patientGuides = clinicArticles.filter(article => article.relatedLinks.some(link => link.href === `/services/${params.slug}`))
+  const posts = await fetchBlogPosts()
+  const patientGuides = posts.filter(article => article.relatedLinks?.some(link => link.href === `/services/${params.slug}`))
 
   // Get related services from the same category
   const relatedServices = allBentoItems

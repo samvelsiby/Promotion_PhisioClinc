@@ -71,7 +71,21 @@ export default defineType({
       type: 'datetime',
       initialValue: () => new Date().toISOString(),
     }),
+    defineField({
+      name: 'relatedLinks',
+      title: 'Related services and next steps',
+      type: 'array',
+      description: 'Links shown below the article. Service links also connect this guide to its service page.',
+      of: [{
+        type: 'object',
+        fields: [
+          {name: 'label', title: 'Link label', type: 'string', validation: (rule) => rule.required()},
+          {name: 'href', title: 'Link URL', type: 'url', validation: (rule) => rule.required().uri({allowRelative: true, scheme: ['https', 'http', 'mailto', 'tel']})},
+        ],
+      }],
+    }),
   ],
+  orderings: [{title: 'Newest published first', name: 'publishedAtDesc', by: [{field: 'publishedAt', direction: 'desc'}]}],
   preview: {
     select: {
       title: 'title',
