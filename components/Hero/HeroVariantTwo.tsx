@@ -13,6 +13,7 @@ export default function HeroVariantTwo() {
             <span className={styles.location}>Physiotherapy in St. Vital, Winnipeg</span>
             <span className={styles.headline}>Driven by care.<br />Powered by motion.</span>
           </h1>
+          <p className={styles.mobileIntro}>Hands-on care for pain and injury.<br />A recovery plan built around you.</p>
           <a href="#physiotherapists" className={styles.teamLink}>
             <span className={styles.portraits} aria-hidden="true">
               <Image src="/team/ben-studio.png" alt="" width={48} height={64} className={styles.portrait} />
@@ -34,9 +35,11 @@ export default function HeroVariantTwo() {
           <div className={styles.story}>
             <div className={styles.brandMark} aria-hidden="true"><span /><span /><span /></div>
             <p className={styles.description}>Founded by two dedicated physiotherapists with a shared dream and vision to help and serve our community with compassionate, personalized care. We provide evidence-based treatments tailored to your unique needs.</p>
-            <p className={`${styles.description} mt-4 [&_a]:underline [&_a]:underline-offset-4`}>Visit our Meadowood clinic on St. Anne’s Road for <Link href="/services/back-pain-sciatica-relief">back pain and sciatica care</Link>, <Link href="/services/motor-vehicle-accident-recovery">rehabilitation after a collision</Link> or <Link href="/services/work-injuries">work-injury physiotherapy</Link>. Check <Link href="/first-visit">first-visit information</Link> before booking.</p>
-            <a href={COMPANY_CONTACT.BOOKING_URL} target="_blank" rel="noopener noreferrer" className={styles.book}>Book an appointment <ArrowUpRight size={22} aria-hidden="true" /></a>
-            <a href={`tel:${COMPANY_CONTACT.PHONE}`} className={styles.call}><Phone size={16} aria-hidden="true" />{COMPANY_CONTACT.PHONE_DISPLAY}</a>
+            <p className={`${styles.description} ${styles.serviceDescription} mt-4 [&_a]:underline [&_a]:underline-offset-4`}>Visit our Meadowood clinic on St. Anne’s Road for <Link href="/services/back-pain-sciatica-relief">back pain and sciatica care</Link>, <Link href="/services/motor-vehicle-accident-recovery">rehabilitation after a collision</Link> or <Link href="/services/work-injuries">work-injury physiotherapy</Link>. Check <Link href="/first-visit">first-visit information</Link> before booking.</p>
+            <div className={styles.actions}>
+              <a href={COMPANY_CONTACT.BOOKING_URL} target="_blank" rel="noopener noreferrer" className={styles.book}>Book an appointment <ArrowUpRight size={22} aria-hidden="true" /></a>
+              <a href={`tel:${COMPANY_CONTACT.PHONE}`} className={styles.call}><Phone size={16} aria-hidden="true" />{COMPANY_CONTACT.PHONE_DISPLAY}</a>
+            </div>
             <p className={styles.lastMinute}>
               Looking for an earlier appointment?{' '}
               <a href="https://www.lastminutephysio.com/" target="_blank" rel="noopener noreferrer">Check Last Minute Physio <ArrowUpRight size={15} aria-hidden="true" /></a>
