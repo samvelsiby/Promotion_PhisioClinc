@@ -19,17 +19,17 @@ At 390px the hero is about 1,045px tall. A pink gradient, short decorative under
 
 ## Design plan
 
-Palette: clinic red #c8101e; darker red #a50d19 for interaction; white #ffffff; ink #111827; text #4b5563; divider #e5e7eb. Keep existing Outfit typography and slogan. No additional fonts or generated photographs.
+Palette, revised after user feedback: seafoam #eff8f7; deep blue-green #123f4a; headline teal #147d73; action teal #146b63; supporting text #45636b; white #ffffff. Keep existing Outfit typography and slogan. No additional fonts or generated photographs. This palette applies only below 640px; the site's logo and desktop identity remain unchanged.
 
-Mobile composition: a single red opening panel with white brand headline, concise patient-facing introduction, and a white booking action. An edge-to-edge, uncropped treatment photograph anchors the panel. The address and two practical visit facts lead into the founding story and existing service links on white. No floating trust cards, decorative gradients, pill badges, review counters, or looping motion.
+Mobile composition: a single seafoam opening panel with a two-tone blue-green and teal headline, concise patient-facing introduction, and a dark teal booking action. An edge-to-edge, uncropped treatment photograph anchors the panel. The address and two practical visit facts lead into the founding story and existing service links on white. No floating trust cards, decorative gradients, pill badges, review counters, or looping motion.
 
 ```
 existing navigation
 ┌──────────────────────────┐
-│ local physiotherapy H1   │  clinic red, left aligned
+│ local physiotherapy H1   │  seafoam, left aligned
 │ existing brand slogan   │
 │ short care introduction │
-│ [Book an appointment]   │  white, 56px target
+│ [Book an appointment]   │  dark teal, 56px target
 │ phone                   │
 ├──────────────────────────┤
 │ existing treatment image│  full 3:2 frame, no crop
@@ -57,3 +57,7 @@ Check 320, 375, 390, 430 and 639px; 640, 768 and 1280px as unchanged desktop/tab
 - Mobile menu opens and closes correctly. One H1 remains; the canonical URL, Juvonno destination, phone number, Last Minute Physio destination and service links remain intact.
 - Existing preloader and reduced-motion handling are unchanged. No dependencies, fonts or image assets were added.
 - `npm run build` passed compilation, lint/type validation and generation of all 64 static pages. Local webpack cache writes warned about low disk space, but the production build completed successfully. `git diff --check` passed.
+
+## Colour refinement
+
+The follow-up replaces the mobile red surface and accents without altering layout, font family, text size or content. Both headline lines now carry colour, while the photo and call-to-action retain their positions. Text contrast on seafoam is 10.59:1 for the main heading, 4.62:1 for the teal line, and 5.98:1 for supporting copy. White button text on dark teal is 6.34:1. Focus outlines use teal on light backgrounds and white inside the button. Visual checks at 320 and 390px passed; desktop geometry and colours at 1280px still match the original baseline.

@@ -11,7 +11,7 @@ export default function HeroVariantTwo() {
         <div className={styles.headingRow}>
           <h1 id="hero-heading" className={styles.heading}>
             <span className={styles.location}>Physiotherapy in St. Vital, Winnipeg</span>
-            <span className={styles.headline}>Driven by care.<br />Powered by motion.</span>
+            <span className={styles.headline}>Driven by care.<br /><span className={styles.motionLine}>Powered by motion.</span></span>
           </h1>
           <p className={styles.mobileIntro}>Hands-on care for pain and injury.<br />A recovery plan built around you.</p>
           <a href="#physiotherapists" className={styles.teamLink}>
