@@ -7,6 +7,378 @@ export interface ClinicArticle extends BlogPost {
 // Organizational editorial content; no clinician authorship or medical review is asserted.
 export const clinicArticles: ClinicArticle[] = [
 {
+  "_id": "clinic-jaw-pain-clicking-physiotherapy-winnipeg",
+  "slug": "jaw-pain-clicking-physiotherapy-winnipeg",
+  "title": "Jaw pain and clicking: preparing for physiotherapy in Winnipeg",
+  "excerpt": "Jaw pain or painful clicking? Learn what to discuss at a TMJ assessment, how dental care fits in, and how to prepare for a visit in St. Vital.",
+  "tag": "Jaw pain",
+  "publishedAt": "2026-09-20",
+  "readTime": "3 min read",
+  "mainImageUrl": "/images/blog/jaw-patient-guide.webp",
+  "mainImageAlt": "Editorial illustration of a woman resting her fingertips near her jaw",
+  "sections": [
+    {
+      "heading": "Does a clicking jaw always need treatment?",
+      "paragraphs": [
+        "No. The US National Institute of Dental and Craniofacial Research explains that jaw sounds without pain are common and generally do not need treatment. Pain, difficulty opening your mouth or locking deserves a different conversation. A noise alone does not tell you which care is appropriate.",
+        "TMJ names the temporomandibular joint; TMD describes disorders affecting the joint or chewing muscles. People often search for “TMJ pain” when they mean symptoms around the jaw. You do not need to know the medical term before asking for help."
+      ]
+    },
+    {
+      "heading": "Physiotherapist, dentist or doctor?",
+      "paragraphs": [
+        "Jaw and facial pain can have causes other than TMD. A dentist or doctor may need to assess those possibilities. Physiotherapy can be part of care for jaw movement and function, but it does not replace dental assessment or treatment.",
+        "When arranging a visit, explain whether you have already seen a dentist or doctor and bring any recommendations. Ask which professional should assess your concern first if you are unsure. Do not assume every headache, toothache or ear symptom comes from the jaw."
+      ]
+    },
+    {
+      "heading": "Bring examples from your day",
+      "paragraphs": [
+        "Think about what you want to do more comfortably: eating a meal, speaking during a meeting or yawning. Write down when the problem started, which side is affected, and whether symptoms are constant or come and go. Mention locking, changes in your bite and any injury.",
+        "A short note is enough. For example: “Chewing becomes uncomfortable halfway through dinner, and the right side sometimes clicks painfully.” This is more useful than trying to select a diagnosis from a list online. Include treatments or devices you already use so the conversation starts with the full picture."
+      ]
+    },
+    {
+      "heading": "Questions to ask before agreeing to a plan",
+      "paragraphs": [
+        "Ask what the assessment suggests, whether dental or medical input is needed, and which options fit your circumstances. Ask what each option aims to change and when you should review progress.",
+        "If you receive home advice, ask for a demonstration and written instructions. Clarify what should prompt you to stop an activity or contact your clinician. Do not force your jaw through a painful range to recreate a symptom for an appointment. This article cannot choose a jaw exercise programme for you."
+      ]
+    },
+    {
+      "heading": "Set a useful follow-up goal",
+      "paragraphs": [
+        "Choose a specific activity to discuss at the next visit, such as finishing a meal more comfortably. Ask how you and your clinician will judge whether the plan is helping. A quieter joint is not the only possible goal, particularly when a sound itself is painless."
+      ]
+    },
+    {
+      "heading": "Arrange an assessment in St. Vital, Winnipeg",
+      "paragraphs": [
+        "Pro Motion Physiotherapy is at Unit 4, 567 St. Anne’s Road, in Meadowood, St. Vital. Our tmj and jaw pain physiotherapy page explains the service available. When booking, describe the problem you want assessed and mention any recent injury, surgery or advice from another healthcare professional.",
+        "Use our online booking portal or call (204) 560-2999 for help selecting an appointment. The first-visit guide below explains how to prepare. Ask reception about any assistance you need before arriving."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "NIDCR: Temporomandibular disorders",
+      "url": "https://www.nidcr.nih.gov/health-info/tmd"
+    }
+  ],
+  "relatedLinks": [
+    {
+      "label": "TMJ and jaw pain physiotherapy",
+      "href": "/services/tmj-dysfunction"
+    },
+    {
+      "label": "Prepare for your first physiotherapy appointment",
+      "href": "/first-visit"
+    },
+    {
+      "label": "Book an appointment",
+      "href": "https://pmphysio.juvonno.com/portal/publicbook.php"
+    }
+  ]
+},
+{
+  "_id": "clinic-shoulder-pain-reaching-overhead-winnipeg",
+  "slug": "shoulder-pain-reaching-overhead-winnipeg",
+  "title": "Shoulder pain when reaching overhead: a Winnipeg assessment guide",
+  "excerpt": "Shoulder pain with lifting or reaching? Prepare useful notes, learn when to seek urgent help, and plan questions for a physiotherapy assessment in Winnipeg.",
+  "tag": "Shoulder pain",
+  "publishedAt": "2026-09-20",
+  "readTime": "3 min read",
+  "mainImageUrl": "/images/blog/shoulder-patient-guide.webp",
+  "mainImageAlt": "Editorial illustration of a man reaching for a small object on a shelf",
+  "sections": [
+    {
+      "heading": "A painful reach is a symptom, not a diagnosis",
+      "paragraphs": [
+        "Reaching into a cupboard, putting on a coat and lifting equipment are different tasks. Shoulder pain during one of them does not, by itself, identify a rotator-cuff injury or another condition. An assessment helps determine what care or further investigation may be appropriate.",
+        "Start with the task that matters most to you. “I cannot comfortably put a plate on the upper shelf” tells your clinician about a practical limitation without requiring you to label the cause."
+      ]
+    },
+    {
+      "heading": "When to seek urgent medical help",
+      "paragraphs": [
+        "Get urgent medical advice for sudden severe shoulder pain, inability to move your arm, marked swelling or a change in shape, persistent numbness, or fever with feeling unwell. Pain following an accident or fall also needs prompt medical advice. Do not delay urgent care while waiting for a routine physiotherapy appointment."
+      ]
+    },
+    {
+      "heading": "Prepare a short reaching and lifting history",
+      "paragraphs": [
+        "Note when the problem started and whether it followed a particular event or developed gradually. Describe the direction of reach, what you are carrying and whether the task has become more difficult. Tell the clinician about symptoms at rest or at night as well.",
+        "If work is affected, bring a simple description of your actual duties: shelf height, repeated movements, loads and available breaks. For recreation, describe the activity rather than only saying “I exercise.” You do not need to repeatedly test a painful movement to gather this information."
+      ]
+    },
+    {
+      "heading": "What should you ask at the assessment?",
+      "paragraphs": [
+        "Ask what the findings mean and whether you need another medical assessment or imaging. Do not assume a scan is either necessary or unnecessary before discussing your history and examination.",
+        "Ask which everyday movements you can continue, which may need adjusting, and how to make those adjustments. If exercises are suggested, request clear instructions about technique, frequency and what response should prompt advice. The NHS advises against inventing strenuous exercises or using heavy gym equipment to treat shoulder pain yourself."
+      ]
+    },
+    {
+      "heading": "Turn a general goal into a useful one",
+      "paragraphs": [
+        "“Get my shoulder better” is understandable, but a concrete task makes the discussion clearer. Consider “reach the kitchen shelf comfortably” or “manage the lifting required at work.” Ask how progress toward that goal will be checked.",
+        "Bring previous reports, surgical instructions or advice you already have. Tell the clinician about strategies you have tried and whether they helped. Recovery and the number of appointments vary; a general article cannot predict either for you."
+      ]
+    },
+    {
+      "heading": "Arrange an assessment in St. Vital, Winnipeg",
+      "paragraphs": [
+        "Pro Motion Physiotherapy is at Unit 4, 567 St. Anne’s Road, in Meadowood, St. Vital. Our shoulder pain physiotherapy page explains the service available. When booking, describe the problem you want assessed and mention any recent injury, surgery or advice from another healthcare professional.",
+        "Use our online booking portal or call (204) 560-2999 for help selecting an appointment. The first-visit guide below explains how to prepare. Ask reception about any assistance you need before arriving."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "NHS: Shoulder pain",
+      "url": "https://www.nhs.uk/symptoms/shoulder-pain/"
+    }
+  ],
+  "relatedLinks": [
+    {
+      "label": "Shoulder pain physiotherapy",
+      "href": "/services/shoulder-pain-relief"
+    },
+    {
+      "label": "Prepare for your first physiotherapy appointment",
+      "href": "/first-visit"
+    },
+    {
+      "label": "Book an appointment",
+      "href": "https://pmphysio.juvonno.com/portal/publicbook.php"
+    }
+  ]
+},
+{
+  "_id": "clinic-heel-pain-first-steps-winnipeg",
+  "slug": "heel-pain-first-steps-winnipeg",
+  "title": "Heel pain on your first steps: preparing for care in Winnipeg",
+  "excerpt": "Morning heel pain or suspected plantar fasciitis? Learn what to record, which questions to ask and how to prepare for a foot assessment in St. Vital.",
+  "tag": "Foot and ankle",
+  "publishedAt": "2026-09-20",
+  "readTime": "3 min read",
+  "mainImageUrl": "/images/blog/heel-patient-guide.webp",
+  "mainImageAlt": "Editorial illustration of feet beside walking shoes at the edge of a bed",
+  "sections": [
+    {
+      "heading": "Is first-step heel pain always plantar fasciitis?",
+      "paragraphs": [
+        "Pain under the heel or arch that is worse with the first steps after sleep or rest can occur with plantar fasciitis. That pattern is a clue, not a diagnosis. Describe the location and timing of your pain instead of assuming its cause.",
+        "For an appointment, distinguish pain underneath the heel from pain at the back or elsewhere in the foot. If you find it difficult to explain, you can point to the area during your assessment."
+      ]
+    },
+    {
+      "heading": "Record the pattern, not just a pain score",
+      "paragraphs": [
+        "Make a brief note of how your foot feels when getting up, during ordinary walking and later in the day. Include how long you can comfortably stand and whether one or both feet are affected.",
+        "List recent changes that may be relevant to the conversation: a different job routine, longer walks, a new sport or different shoes. These details are useful context, but they do not establish what caused the problem. Avoid doing extra walking simply to test your symptoms."
+      ]
+    },
+    {
+      "heading": "What should you bring?",
+      "paragraphs": [
+        "Bring the shoes you use most often, or clear information about them, and mention any inserts or supports you already use. If you have several types of footwear for work and recreation, explain when you wear each.",
+        "Write down what you have already tried and what happened. If a doctor has assessed your foot, bring any advice or reports you have. Mention other health conditions that could affect foot care, including diabetes, and any change in sensation."
+      ]
+    },
+    {
+      "heading": "When to seek medical advice",
+      "paragraphs": [
+        "The NHS recommends medical review if heel symptoms are severe, worsening, recurring or preventing normal activities, or if there is tingling or loss of feeling. Foot pain in someone with diabetes also warrants medical advice. Seek assessment if symptoms are not improving rather than repeatedly changing self-treatment."
+      ]
+    },
+    {
+      "heading": "Questions about walking, footwear and rehabilitation",
+      "paragraphs": [
+        "Ask what the assessment suggests, whether further medical input is needed, and what a sensible activity plan looks like for your situation. Be specific about unavoidable standing at work, caring responsibilities or walking to transport.",
+        "Before buying new shoes, inserts or exercise equipment, ask what purpose they would serve and whether they are appropriate for you. If an exercise is recommended, ask for a demonstration and instructions on how to respond if symptoms change. There is no single exercise prescription in this guide.",
+        "Agree on a practical goal, such as a necessary daily walk, and ask when to review it. This keeps follow-up focused on your needs rather than a promised recovery date."
+      ]
+    },
+    {
+      "heading": "Arrange an assessment in St. Vital, Winnipeg",
+      "paragraphs": [
+        "Pro Motion Physiotherapy is at Unit 4, 567 St. Anne’s Road, in Meadowood, St. Vital. Our foot and ankle physiotherapy page explains the service available. When booking, describe the problem you want assessed and mention any recent injury, surgery or advice from another healthcare professional.",
+        "Use our online booking portal or call (204) 560-2999 for help selecting an appointment. The first-visit guide below explains how to prepare. Ask reception about any assistance you need before arriving."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "NHS: Plantar fasciitis",
+      "url": "https://www.nhs.uk/conditions/plantar-fasciitis/"
+    }
+  ],
+  "relatedLinks": [
+    {
+      "label": "Foot and ankle physiotherapy",
+      "href": "/services/foot-ankle-pain-relief"
+    },
+    {
+      "label": "Prepare for your first physiotherapy appointment",
+      "href": "/first-visit"
+    },
+    {
+      "label": "Book an appointment",
+      "href": "https://pmphysio.juvonno.com/portal/publicbook.php"
+    }
+  ]
+},
+{
+  "_id": "clinic-knee-pain-stairs-winnipeg",
+  "slug": "knee-pain-stairs-winnipeg",
+  "title": "Knee pain on stairs: questions for a Winnipeg physiotherapy assessment",
+  "excerpt": "Knee pain going upstairs or downstairs? Learn what to tell your physiotherapist, which symptoms need urgent advice, and how to prepare for assessment.",
+  "tag": "Knee pain",
+  "publishedAt": "2026-09-20",
+  "readTime": "3 min read",
+  "mainImageUrl": "/images/blog/knee-patient-guide.webp",
+  "mainImageAlt": "Editorial illustration of a woman using a handrail on a low step",
+  "sections": [
+    {
+      "heading": "Describe the stair problem precisely",
+      "paragraphs": [
+        "Going up, going down and stepping onto a high curb are not the same task. Tell your clinician which is difficult, where you feel discomfort and whether you have started using the handrail differently. You do not need to demonstrate a painful task repeatedly before attending.",
+        "Stair pain alone cannot tell you whether the cause is arthritis, a tendon problem or an injury. Knee pain has several possible causes. This guide helps you prepare for assessment; it is not a way to diagnose the problem yourself."
+      ]
+    },
+    {
+      "heading": "Some knee symptoms need urgent advice",
+      "paragraphs": [
+        "Seek urgent medical advice for a very painful knee, inability to move it or bear weight, substantial swelling or a change in shape. Locking, giving way or painful clicking also warrants urgent advice. A hot or red knee with fever needs prompt medical attention. Do not wait for a routine booking in these situations."
+      ]
+    },
+    {
+      "heading": "Build a short history before the visit",
+      "paragraphs": [
+        "Note when symptoms began and whether there was a fall, twist or other injury. Mention swelling and changes in movement, including difficulty straightening the knee. Explain whether the problem occurs only on stairs or also with walking, standing up or other activities.",
+        "Describe your environment: the number of flights at home, whether there is a handrail and how often stairs are unavoidable. For work, explain the duties affected. These details help you ask for advice that fits your day, rather than a plan you cannot realistically follow."
+      ]
+    },
+    {
+      "heading": "Ask about assessment and the next step",
+      "paragraphs": [
+        "Ask what the examination suggests and whether you need medical review, imaging or another referral. If you have existing reports or instructions after surgery, bring them; do not replace those instructions with general internet advice.",
+        "Discuss what to do while your symptoms are being assessed. Ask how to manage necessary tasks and what changes should lead you to seek further help. If you receive exercises, clarify their purpose and how to perform them, rather than copying a routine intended for somebody with a different knee problem."
+      ]
+    },
+    {
+      "heading": "Track the activity you want to regain",
+      "paragraphs": [
+        "An everyday goal might be managing the stairs to your apartment or getting out of a chair more comfortably. Ask how progress will be reviewed and which signs would mean the plan needs changing.",
+        "This article focuses on everyday knee symptoms. If you already have a diagnosed ACL injury or have had reconstruction, use the specific guidance from your care team; return-to-sport decisions need an individual plan. A general knee-pain article cannot clear you for sport."
+      ]
+    },
+    {
+      "heading": "Arrange an assessment in St. Vital, Winnipeg",
+      "paragraphs": [
+        "Pro Motion Physiotherapy is at Unit 4, 567 St. Anne’s Road, in Meadowood, St. Vital. Our hip and knee physiotherapy page explains the service available. When booking, describe the problem you want assessed and mention any recent injury, surgery or advice from another healthcare professional.",
+        "Use our online booking portal or call (204) 560-2999 for help selecting an appointment. The first-visit guide below explains how to prepare. Ask reception about any assistance you need before arriving."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "NHS: Knee pain",
+      "url": "https://www.nhs.uk/symptoms/knee-pain/"
+    }
+  ],
+  "relatedLinks": [
+    {
+      "label": "Hip and knee physiotherapy",
+      "href": "/services/hip-knee-pain-relief"
+    },
+    {
+      "label": "Prepare for your first physiotherapy appointment",
+      "href": "/first-visit"
+    },
+    {
+      "label": "Book an appointment",
+      "href": "https://pmphysio.juvonno.com/portal/publicbook.php"
+    }
+  ]
+},
+{
+  "_id": "clinic-ankle-sprain-return-activity-winnipeg",
+  "slug": "ankle-sprain-return-activity-winnipeg",
+  "title": "After an ankle sprain: returning to activity in Winnipeg",
+  "excerpt": "Preparing to walk, work or play sport after an ankle sprain? Learn which questions to ask about assessment, activity progression and follow-up in Winnipeg.",
+  "tag": "Sports injuries",
+  "publishedAt": "2026-09-20",
+  "readTime": "3 min read",
+  "mainImageUrl": "/images/blog/ankle-patient-guide.webp",
+  "mainImageAlt": "Editorial illustration of walking shoes and lower legs on an outdoor path",
+  "sections": [
+    {
+      "heading": "First, make sure the injury has been assessed appropriately",
+      "paragraphs": [
+        "A twisted ankle is not automatically a straightforward sprain. Get urgent medical advice if pain or swelling is severe or worsening, or you cannot bear weight or walk more than a few steps. A visibly misshapen injury, numbness, or a cold or discoloured foot requires emergency assessment.",
+        "If you have already received medical advice, follow it and bring it to your physiotherapy appointment. Tell reception when the injury occurred and whether you have had imaging or been given restrictions."
+      ]
+    },
+    {
+      "heading": "Explain what returning to activity means for you",
+      "paragraphs": [
+        "Walking around the house, standing through a shift and playing a sport place different demands on your day. Make a short list of the activities you need to return to, with the most important first.",
+        "For work, describe standing time, stairs, footwear and any lifting or uneven surfaces. For sport, name the activity and the movements involved. A clinician can discuss your situation more usefully with these details than with a request to be “back to normal” by a particular date."
+      ]
+    },
+    {
+      "heading": "Bring your injury and recovery history",
+      "paragraphs": [
+        "Write down how the injury happened, what you could do immediately afterwards and what has changed since then. Mention previous ankle injuries and any sense of instability. Bring any support or brace you were advised to use and explain the instructions you received.",
+        "Keep a simple note of current limits during necessary activities. If something has become more painful or swollen, report that rather than pushing through a task to complete a self-test. Your appointment does not require you to prove you can run or jump."
+      ]
+    },
+    {
+      "heading": "Questions about your next activity step",
+      "paragraphs": [
+        "Ask what needs to improve before progressing and how that will be assessed. Discuss walking and work separately from running or sport. Ask for clear advice on what to do if symptoms increase during an activity or afterwards.",
+        "If rehabilitation exercises are recommended, request instructions you can refer to at home. Ask how they fit into your schedule and when the plan should be reviewed. This article does not provide a universal exercise sequence or a test that clears you for competition."
+      ]
+    },
+    {
+      "heading": "Why a fixed recovery date is not a useful promise",
+      "paragraphs": [
+        "Sprain severity and recovery vary; more severe injuries can take much longer to settle. Physiotherapy may help when recovery is taking longer than expected. A date in a general article cannot establish your readiness for a demanding activity.",
+        "Instead, ask for a plan with review points. Clarify who to contact if you are not progressing or if the injury worsens. The aim is to make your next decision with information about your own ankle and the activity you want to do."
+      ]
+    },
+    {
+      "heading": "Arrange an assessment in St. Vital, Winnipeg",
+      "paragraphs": [
+        "Pro Motion Physiotherapy is at Unit 4, 567 St. Anne’s Road, in Meadowood, St. Vital. Our sports injury physiotherapy page explains the service available. When booking, describe the problem you want assessed and mention any recent injury, surgery or advice from another healthcare professional.",
+        "Use our online booking portal or call (204) 560-2999 for help selecting an appointment. The first-visit guide below explains how to prepare. Ask reception about any assistance you need before arriving."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "NHS: Sprains and strains",
+      "url": "https://www.nhs.uk/conditions/sprains-and-strains/"
+    }
+  ],
+  "relatedLinks": [
+    {
+      "label": "Sports injury physiotherapy",
+      "href": "/services/sports-injuries"
+    },
+    {
+      "label": "Prepare for your first physiotherapy appointment",
+      "href": "/first-visit"
+    },
+    {
+      "label": "Book an appointment",
+      "href": "https://pmphysio.juvonno.com/portal/publicbook.php"
+    }
+  ]
+},
+{
   "_id": "clinic-back-pain-sciatica-assessment-winnipeg",
   "slug": "back-pain-sciatica-assessment-winnipeg",
   "title": "Back pain or sciatica? Preparing for a physiotherapy assessment in Winnipeg",

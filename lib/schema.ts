@@ -159,6 +159,7 @@ export function getArticleSchema(args: {
   description: string
   path: string
   datePublished?: string
+  image?: string
 }) {
   return {
     '@context': 'https://schema.org',
@@ -166,6 +167,7 @@ export function getArticleSchema(args: {
     headline: args.title,
     description: args.description,
     datePublished: args.datePublished,
+    ...(args.image ? { image: new URL(args.image, SITE_URL).href } : {}),
     author: {
       '@type': 'Organization',
       name: COMPANY_CONTACT.NAME,

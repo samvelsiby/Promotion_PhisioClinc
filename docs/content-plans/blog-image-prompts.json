@@ -1,0 +1,30 @@
+{
+  "generator": "Built-in image generation",
+  "images": [
+    {
+      "name": "jaw",
+      "prompt": "Create one landscape 1536x1024 editorial illustration for a professional physiotherapy patient education blog. Sophisticated hand-painted gouache and fine pencil texture, contemporary magazine editorial art, clean white and very pale cool gray ground, restrained charcoal and muted coral accents consistent with Pro Motion clinic. No text, logos, typography, watermarks, diagnostic diagrams, glowing pain marks or medical equipment. Clearly an illustration, not a photograph or actual patient. Natural proportions. Central subject entirely inside middle 65 percent of image with ample negative space on all edges so responsive crops preserve it. Close portrait of an adult woman in charcoal top, three-quarter profile, gently resting fingertips near her cheek and jaw, calm thoughtful expression, soft coral abstract arc behind her.",
+      "path": "/Users/samvelsiby/.codex/generated_images/01a091c7-b295-7d40-bb95-7e0247a8e38f/exec-53a87a3f-cf0e-4680-a7b5-469f40f41fa7.png"
+    },
+    {
+      "name": "shoulder",
+      "prompt": "Create one landscape 1536x1024 editorial illustration for a professional physiotherapy patient education blog. Sophisticated hand-painted gouache and fine pencil texture, contemporary magazine editorial art, clean white and very pale cool gray ground, restrained charcoal and muted coral accents consistent with Pro Motion clinic. No text, logos, typography, watermarks, diagnostic diagrams, glowing pain marks or medical equipment. Clearly an illustration, not a photograph or actual patient. Natural proportions. Central subject entirely inside middle 65 percent of image with ample negative space on all edges so responsive crops preserve it. Adult man in charcoal shirt shown from waist up reaching one arm toward a simple low overhead shelf, relaxed realistic pose, small coral ceramic object on shelf. Side view. Arm and hand completely visible.",
+      "path": "/Users/samvelsiby/.codex/generated_images/01a091c7-b295-7d40-bb95-7e0247a8e38f/exec-50878f4f-2e8e-480a-b8ec-b32796f0a19e.png"
+    },
+    {
+      "name": "heel",
+      "prompt": "Create one landscape 1536x1024 editorial illustration for a professional physiotherapy patient education blog. Sophisticated hand-painted gouache and fine pencil texture, contemporary magazine editorial art, clean white and very pale cool gray ground, restrained charcoal and muted coral accents consistent with Pro Motion clinic. No text, logos, typography, watermarks, diagnostic diagrams, glowing pain marks or medical equipment. Clearly an illustration, not a photograph or actual patient. Natural proportions. Central subject entirely inside middle 65 percent of image with ample negative space on all edges so responsive crops preserve it. Seated adult in charcoal trousers putting their bare feet down beside coral-accent walking shoes, close view of lower legs and feet, grounded everyday morning moment, no injury markings.",
+      "path": "/Users/samvelsiby/.codex/generated_images/01a091c7-b295-7d40-bb95-7e0247a8e38f/exec-dc5bcf38-10b0-4103-ac4d-c01210605e1f.png"
+    },
+    {
+      "name": "knee",
+      "prompt": "Create one landscape 1536x1024 editorial illustration for a professional physiotherapy patient education blog. Sophisticated hand-painted gouache and fine pencil texture, contemporary magazine editorial art, clean white and very pale cool gray ground, restrained charcoal and muted coral accents consistent with Pro Motion clinic. No text, logos, typography, watermarks, diagnostic diagrams, glowing pain marks or medical equipment. Clearly an illustration, not a photograph or actual patient. Natural proportions. Central subject entirely inside middle 65 percent of image with ample negative space on all edges so responsive crops preserve it. Adult woman in charcoal trousers calmly using a handrail while ascending a single broad low step, three quarter side view, both feet visible, minimal light gray architectural setting, coral top.",
+      "path": "/Users/samvelsiby/.codex/generated_images/01a091c7-b295-7d40-bb95-7e0247a8e38f/exec-73091bdf-d8fd-443c-86b0-26f8c9bd9993.png"
+    },
+    {
+      "name": "ankle",
+      "prompt": "Create one landscape 1536x1024 editorial illustration for a professional physiotherapy patient education blog. Sophisticated hand-painted gouache and fine pencil texture, contemporary magazine editorial art, clean white and very pale cool gray ground, restrained charcoal and muted coral accents consistent with Pro Motion clinic. No text, logos, typography, watermarks, diagnostic diagrams, glowing pain marks or medical equipment. Clearly an illustration, not a photograph or actual patient. Natural proportions. Central subject entirely inside middle 65 percent of image with ample negative space on all edges so responsive crops preserve it. Close view of adult lower legs in charcoal athletic trousers and white sneakers with small coral accents, standing at the start of a quiet light gray walking path, one shoe slightly forward, natural poised stance. No braces or bandages.",
+      "path": "/Users/samvelsiby/.codex/generated_images/01a091c7-b295-7d40-bb95-7e0247a8e38f/exec-fa9b0525-210b-44f6-995f-22f972fe6444.png"
+    }
+  ]
+}

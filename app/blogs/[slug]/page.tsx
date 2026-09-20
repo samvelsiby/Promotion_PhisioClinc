@@ -56,7 +56,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white py-16 sm:py-20 lg:py-24">
-      <JsonLd data={getArticleSchema({ title: post.title, description: post.excerpt || post.title, path: `/blogs/${post.slug}`, datePublished: post.publishedAt || undefined })} />
+      <JsonLd data={getArticleSchema({ title: post.title, description: post.excerpt || post.title, path: `/blogs/${post.slug}`, datePublished: post.publishedAt || undefined, image: post.mainImageUrl })} />
       <JsonLd data={getBreadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Blogs', path: '/blogs' }, { name: post.title, path: `/blogs/${post.slug}` }])} />
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <nav
