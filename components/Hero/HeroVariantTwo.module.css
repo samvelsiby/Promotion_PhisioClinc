@@ -59,8 +59,8 @@
  .hero .inner a:focus-visible { outline: 2px solid #146b63; outline-offset: 4px; }
  .hero .actions .book:focus-visible { outline-offset: -5px; outline-color: #fff; }
  .figure { order: 2; width: 100%; }
- .photo { border: 0; border-radius: 0; box-shadow: none; background: #e5e7eb; }
- .image { width: 100%; height: auto; aspect-ratio: 3 / 2; }
+ .photo { margin: 0 1.25rem; padding: 4px; border: 1px solid #d5dcdf; border-radius: .75rem; box-shadow: none; background: #fff; }
+ .image { width: 100%; height: auto; aspect-ratio: 3 / 2; border-radius: .5rem; }
  .caption { margin: 0; padding: 1rem 1.25rem .5rem; color: #45636b; font-size: .8125rem; }
  .details { order: 3; display: grid; grid-template-columns: 1fr 1fr; gap: 0 .75rem; margin: 0 1.25rem; padding: 0 0 .75rem; border-top: 0; border-bottom: 1px solid #d5e6e3; color: #123f4a; font-size: .8125rem; }
  .details > * { gap: .4rem; min-height: 44px; }

@@ -21,7 +21,7 @@ At 390px the hero is about 1,045px tall. A pink gradient, short decorative under
 
 Palette, revised after user feedback: plain white #ffffff background; deep blue-green #123f4a main heading; clinic red #c8101e for the second headline line and booking button; supporting teal #146b63 and text #45636b. Keep existing Outfit typography and slogan. No additional fonts or generated photographs. This palette applies only below 640px; the site's logo and desktop identity remain unchanged.
 
-Mobile composition: a plain white opening panel with a two-tone blue-green and red headline, concise patient-facing introduction, and a red booking action. An edge-to-edge, uncropped treatment photograph anchors the panel. The address and two practical visit facts lead into the founding story and existing service links on white. No floating trust cards, decorative gradients, pill badges, review counters, or looping motion.
+Mobile composition: a plain white opening panel with a two-tone blue-green and red headline, concise patient-facing introduction, and a red booking action. An uncropped treatment photograph anchors the panel, inset to match the text and booking button. The address and two practical visit facts lead into the founding story and existing service links on white. No floating trust cards, decorative gradients, pill badges, review counters, or looping motion.
 
 ```
 existing navigation
@@ -61,3 +61,7 @@ Check 320, 375, 390, 430 and 639px; 640, 768 and 1280px as unchanged desktop/tab
 ## Colour refinement
 
 The first colour follow-up used seafoam and teal. The latest user-requested refinement removes the tinted background entirely and restores clinic red to “Powered by motion” and the booking button, including a darker red hover state. Layout, font family, text size, photo and content remain unchanged. Focus outlines use teal on white backgrounds and white inside the button. All palette overrides remain inside the phone breakpoint.
+
+## Image frame
+
+Following the user's request for an image border, the mobile photograph has a 1px light-grey outline, 4px white inset and 12px outer corners. It aligns with the booking button's 20px side margins. The image retains its full 3:2 ratio with 8px inner corners, without a fixed-height crop or added shadow. Desktop and tablet image styles remain unchanged.
