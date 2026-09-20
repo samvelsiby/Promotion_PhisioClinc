@@ -65,3 +65,7 @@ The first colour follow-up used seafoam and teal. The latest user-requested refi
 ## Image frame
 
 Following the user's request for an image border, the mobile photograph has a 1px light-grey outline, 4px white inset and 12px outer corners. It aligns with the booking button's 20px side margins. The image retains its full 3:2 ratio with 8px inner corners, without a fixed-height crop or added shadow. Desktop and tablet image styles remain unchanged.
+
+## Mobile treatment cards
+
+The homepage treatment cards are compact below 640px: four featured treatments are shown before the existing “View All Services” route, while all eight remain visible from the tablet breakpoint upward. Searching or selecting a category reveals every matching homepage result, so the controls remain useful on phones. The four additional default links remain in the rendered homepage markup for discovery, and the dedicated treatment page remains unchanged. Mobile card images are 160px tall, card padding drops from 24px to 16px, descriptions use a two-line visual clamp, and the grid gap drops from 24px to 16px. Card titles, descriptions and destinations remain unchanged.

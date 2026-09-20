@@ -130,10 +130,11 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
           </p>
         )}
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className={cn('grid sm:grid-cols-2 lg:grid-cols-4', showAll ? 'gap-6' : 'gap-4 sm:gap-6')}>
           {itemsToDisplay.map((item, index) => (
             <motion.div
               key={item.title}
+              className={cn(!showAll && !searchQuery && selectedCategory === 'All' && index >= 4 && 'hidden sm:block')}
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "0px" }}
@@ -148,7 +149,7 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
                 className="home-card group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all duration-300 ease-out hover:shadow-lg block h-full"
               >
               {/* Image Container */}
-              <div className="relative h-56 w-full overflow-hidden">
+              <div className={cn('relative w-full overflow-hidden', showAll ? 'h-56' : 'h-40 sm:h-56')}>
                 <Image
                   src={item.imageSrc}
                   alt={item.title}
@@ -177,11 +178,11 @@ export default function BentoGrid({ showAll = false }: BentoGridProps) {
               </div>
 
               {/* Content Container */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 leading-snug">
+              <div className={cn(showAll ? 'p-6' : 'p-4 sm:p-6')}>
+                <h3 className={cn('font-bold text-gray-900 leading-snug', showAll ? 'mb-3 text-xl' : 'mb-2 text-lg sm:mb-3 sm:text-xl')}>
                   {item.title}
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className={cn('text-sm text-gray-600 leading-relaxed', !showAll && 'line-clamp-2 sm:line-clamp-none')}>
                   {item.description}
                 </p>
               </div>
