@@ -43,17 +43,17 @@
  /* Flatten only the mobile layout so the existing booking links appear early.
     Desktop keeps its original grid, content and element dimensions. */
  .inner { display: flex; flex-direction: column; padding: 0; }
- .headingRow { display: block; order: 0; margin: 0; padding: 1.5rem 1.25rem 1.2rem; background: #eff8f7; }
+ .headingRow { display: block; order: 0; margin: 0; padding: 1.5rem 1.25rem 1.2rem; background: #fff; }
  .heading { color: #123f4a; }
  .headline { font-size: clamp(1.875rem, 8.5vw, 3.4rem); font-weight: 600; letter-spacing: -.04em; line-height: 1.08; }
- .motionLine { color: #147d73; }
+ .motionLine { color: #c8101e; }
  .location { margin-bottom: 1.2rem; color: #146b63; font-size: .8125rem; font-weight: 400; letter-spacing: 0; }
  .mobileIntro { display: block; margin: 1rem 0 0; color: #45636b; font-size: 1rem; line-height: 1.5; }
  .storyRow, .story { display: contents; }
  .brandMark { display: none; }
- .actions { display: flex; flex-direction: column; order: 1; gap: .25rem; padding: 0 1.25rem .75rem; background: #eff8f7; }
- .book { margin: 0; min-height: 56px; border-radius: .5rem; background: #146b63; color: #fff; box-shadow: none; }
- .book:hover { background: #123f4a; color: #fff; }
+ .actions { display: flex; flex-direction: column; order: 1; gap: .25rem; padding: 0 1.25rem .75rem; background: #fff; }
+ .book { margin: 0; min-height: 56px; border-radius: .5rem; background: #c8101e; color: #fff; box-shadow: none; }
+ .book:hover { background: #a50d19; color: #fff; }
  .call { align-self: center; justify-content: center; margin: 0; min-height: 44px; color: #146b63; font-size: .875rem; font-weight: 500; }
  .call:hover { color: #123f4a; text-decoration: underline; text-underline-offset: 4px; }
  .hero .inner a:focus-visible { outline: 2px solid #146b63; outline-offset: 4px; }
