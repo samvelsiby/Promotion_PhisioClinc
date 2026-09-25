@@ -39,14 +39,5 @@ export const teamMembers: TeamMember[] = [
     imageSrc: "/team/himani-studio.png",
     socials: { instagram: "#", linkedin: "#" }
   },
-  {
-    id: 4,
-    name: "MANVEER",
-    slug: "manveer",
-    role: "Physiotherapist (Exam Candidate)",
-    bio: "Manveer completed her Bachelor of Physiotherapy (BPT) from Guru Nanak Dev University, India, where she developed a solid foundation in evidence-based physiotherapy practice. Following her graduation, she gained valuable voluntary clinical experience in India, working with diverse patient populations and conditions, which further strengthened her hands-on skills and patient-centered approach.\n\nAfter relocating to Canada, she successfully cleared her physiotherapy examination and is working as an exam candidate, continuing to grow professionally within the Canadian healthcare system. She believes in providing compassionate, individualized care, focusing on functional recovery, patient education, and long-term wellness. She is committed to continuous learning, effective communication, and building trust with her patients to help them achieve their rehabilitation goals.\n\nOutside of work, she enjoys traveling to different places, trying a variety of foods, and getting to know people from diverse backgrounds. She is a strong advocate for an active and healthy lifestyle and enjoys staying fit, which aligns closely with her professional philosophy of promoting movement and well-being.",
-    imageSrc: "/team/manveer-studio.png",
-    socials: { instagram: "#", linkedin: "#" }
-  },
   ]
 
