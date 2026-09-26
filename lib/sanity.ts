@@ -24,6 +24,7 @@ export interface BlogPost {
   relatedLinks?: { label: string; href: string }[]
   body?: any[]
   publishedAt?: string
+  updatedAt?: string
   mainImageUrl?: string
   mainImageAlt?: string
 }
@@ -59,6 +60,7 @@ export async function fetchBlogPosts(limit?: number): Promise<BlogPost[]> {
     tag,
     readTime,
     publishedAt,
+    "updatedAt": _updatedAt,
     relatedLinks[]{label, href},
     "mainImageUrl": mainImage.asset->url,
     "mainImageAlt": mainImage.alt
@@ -78,6 +80,7 @@ export async function fetchBlogPostBySlug(slug: string): Promise<BlogPost | null
     readTime,
     body,
     publishedAt,
+    "updatedAt": _updatedAt,
     relatedLinks[]{label, href},
     "mainImageUrl": mainImage.asset->url,
     "mainImageAlt": mainImage.alt
@@ -89,4 +92,9 @@ export async function fetchBlogPostBySlug(slug: string): Promise<BlogPost | null
 export async function fetchBlogSlugs(): Promise<{ slug: string }[]> {
   const query = `*[${publishedPosts}]{ "slug": slug.current }`
   return sanityFetch<{ slug: string }[]>(query)
+}
+
+/** Published article routes and real CMS revision dates for search discovery. */
+export async function fetchBlogSitemapEntries(): Promise<{ slug: string; updatedAt?: string }[]> {
+  return sanityFetch(`*[${publishedPosts}] | order(slug.current asc){ "slug": slug.current, "updatedAt": _updatedAt }`)
 }

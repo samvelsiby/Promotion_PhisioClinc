@@ -2,6 +2,14 @@
 const nextConfig = {
   async redirects() {
     return [{
+      source: "/what-we-treat/shoulder-pain-relief",
+      destination: "/services/shoulder-pain-relief",
+      permanent: true,
+    }, {
+      source: "/what-we-treat/foot-ankle-pain-relief",
+      destination: "/services/foot-ankle-pain-relief",
+      permanent: true,
+    }, {
       source: '/blogs/1-5-signs-its-time-to-see-a-physiotherapist',
       destination: '/blogs/1-5-signs-it-s-time-to-see-a-physiotherapist',
       permanent: true,

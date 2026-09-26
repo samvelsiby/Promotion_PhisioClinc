@@ -159,14 +159,18 @@ export function getArticleSchema(args: {
   description: string
   path: string
   datePublished?: string
+  dateModified?: string
   image?: string
 }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
+    '@id': `${SITE_URL}${args.path}#article`,
     headline: args.title,
     description: args.description,
     datePublished: args.datePublished,
+    dateModified: args.dateModified,
+    url: `${SITE_URL}${args.path}`,
     ...(args.image ? { image: new URL(args.image, SITE_URL).href } : {}),
     author: {
       '@type': 'Organization',
