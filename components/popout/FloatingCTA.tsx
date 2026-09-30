@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import { X, Calendar } from 'lucide-react'
+import { recordClinicEvent } from '@/lib/analyticsEvents'
 
 export default function FloatingCTA() {
   const pathname = usePathname()
@@ -39,6 +40,7 @@ export default function FloatingCTA() {
   const handleScheduleAppointment = () => {
     // Open juvonno booking portal
     if (typeof window !== 'undefined') {
+      recordClinicEvent('booking_click')
       window.open('https://pmphysio.juvonno.com/portal/publicbook.php', '_blank', 'noopener,noreferrer')
     }
   }

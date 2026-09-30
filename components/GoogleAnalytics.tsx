@@ -1,8 +1,8 @@
 'use client';
 
 import Script from 'next/script';
-import { useEffect } from 'react';
-import { clinicLinkEvent, recordClinicEvent } from '@/lib/analyticsEvents';
+import { useEffect, useState } from 'react';
+import { clinicLinkEvent, isProductionAnalyticsHost, recordClinicEvent } from '@/lib/analyticsEvents';
 
 declare global {
   interface Window {
@@ -16,9 +16,12 @@ export default function GoogleAnalytics({
 }: {
   measurementId: string;
 }) {
+  const [enabled, setEnabled] = useState(false);
   // GA4 enhanced measurement already records history-based page changes.
   // Count intentional clinic-link clicks separately from completed enquiries.
   useEffect(() => {
+    if (!measurementId || !isProductionAnalyticsHost(window.location.hostname)) return;
+    setEnabled(true);
     const trackClick = (event: MouseEvent) => {
       if (!(event.target instanceof Element)) return;
       const link = event.target.closest('a');
@@ -28,7 +31,10 @@ export default function GoogleAnalytics({
     };
     document.addEventListener('click', trackClick);
     return () => document.removeEventListener('click', trackClick);
-  }, []);
+  }, [measurementId]);
+
+  // Do not even load Google's scripts on localhost or preview deployments.
+  if (!enabled) return null;
 
   return (
     <>
