@@ -58,6 +58,21 @@ export default async function Home() {
       <Highlights />
       <BlogPreview posts={posts} />
       <FAQ />
+      <section aria-labelledby="website-assistant-heading">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <h2 id="website-assistant-heading" className="mb-3 font-semibold text-gray-900">Ask our assistant</h2>
+          <p className="mb-6 text-gray-600">Have a question about Pro Motion Physiotherapy? Chat with our website assistant.</p>
+          <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <iframe
+              title="Pro Motion Physiotherapy website assistant"
+              src="https://agent.rtstics.com/embed/c6f8978799bb9bdc41"
+              className="block h-[600px] w-full border-0"
+              allow="clipboard-write"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
     </main>
   )
 }
