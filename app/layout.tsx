@@ -104,6 +104,11 @@ export default function RootLayout({
           data-domain="www.promotionphysiotherapy.ca"
           strategy="afterInteractive"
         />
+        <Script
+          src="https://agent.rtstics.com/widget.js"
+          data-agent="c6f8978799bb9bdc41"
+          strategy="afterInteractive"
+        />
         <PerspectiveGrid />
         {/* White background for navbar area */}
         <div className="fixed top-0 left-0 right-0 h-32 bg-white z-0"></div>
