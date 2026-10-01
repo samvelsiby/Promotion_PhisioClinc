@@ -5,7 +5,6 @@ import { Great_Vibes, Outfit } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer/Footer'
-import FloatingCTA from '@/components/popout/FloatingCTA'
 import { SITE_URL } from '@/lib/constants'
 import JsonLd from '@/components/JsonLd'
 import { getLocalBusinessSchema, getWebsiteSchema } from '@/lib/schema'
@@ -115,7 +114,6 @@ export default function RootLayout({
           {children}
           <Footer />
         </div>
-        <FloatingCTA />
       </body>
     </html>
   )
