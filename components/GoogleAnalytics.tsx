@@ -48,7 +48,9 @@ export default function GoogleAnalytics({
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', '${measurementId}', {
-            anonymize_ip: true
+            anonymize_ip: true,
+            allow_google_signals: false,
+            allow_ad_personalization_signals: false
           });
         `}
       </Script>

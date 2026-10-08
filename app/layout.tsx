@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import GoogleAnalytics from '@/components/GoogleAnalytics'
+import CookieConsent from '@/components/CookieConsent'
 import Script from 'next/script'
 import { Great_Vibes, Outfit } from 'next/font/google'
 import './globals.css'
@@ -97,28 +97,23 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${greatVibes.variable} ${outfit.variable} font-sans`}>
       <body>
-        <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-ML36VHX4VF"} />
-        <Script
-          src="https://datafa.st/js/script.js"
-          data-website-id="dfid_QoyPW2C1pzniPcSl3pYpc"
-          data-domain="www.promotionphysiotherapy.ca"
-          strategy="afterInteractive"
-        />
-        <Script
-          src="https://agent.rtstics.com/widget.js"
-          data-agent="c6f8978799bb9bdc41"
-          strategy="afterInteractive"
-        />
-        <PerspectiveGrid />
-        {/* White background for navbar area */}
-        <div className="fixed top-0 left-0 right-0 h-32 bg-white z-0"></div>
-        <div className="relative z-10">
-          <Navbar />
-          <JsonLd data={getLocalBusinessSchema()} />
-          <JsonLd data={getWebsiteSchema()} />
-          {children}
-          <Footer />
-        </div>
+        <CookieConsent>
+          <Script
+            src="https://agent.rtstics.com/widget.js"
+            data-agent="c6f8978799bb9bdc41"
+            strategy="afterInteractive"
+          />
+          <PerspectiveGrid />
+          {/* White background for navbar area */}
+          <div className="fixed top-0 left-0 right-0 h-32 bg-white z-0"></div>
+          <div className="relative z-10">
+            <Navbar />
+            <JsonLd data={getLocalBusinessSchema()} />
+            <JsonLd data={getWebsiteSchema()} />
+            {children}
+            <Footer />
+          </div>
+        </CookieConsent>
       </body>
     </html>
   )

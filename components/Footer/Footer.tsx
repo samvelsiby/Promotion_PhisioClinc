@@ -1,6 +1,8 @@
 'use client'
 
 import Image from 'next/image'
+import { useState } from 'react'
+import { useCookieConsent } from '@/components/CookieConsent'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ArrowUpRight, Facebook, Phone, Instagram, MapPin } from 'lucide-react'
@@ -32,6 +34,8 @@ const linkStyle = 'inline-flex min-h-9 items-center py-1 text-sm leading-relaxed
 
 export default function Footer() {
   const pathname = usePathname()
+  const { openSettings } = useCookieConsent()
+  const [mapLoaded, setMapLoaded] = useState(false)
   if (pathname?.startsWith('/studio')) return null
 
   return (
@@ -91,7 +95,10 @@ export default function Footer() {
               <p>{COMPANY_CONTACT.HOURS.sunday}</p>
             </div>
             <div className="mt-5 overflow-hidden rounded-xl border border-gray-200 bg-gray-50">
-              <iframe src={`https://www.google.com/maps?q=${encodeURIComponent(NAP_LINE)}&output=embed`} width="100%" height="160" style={{ border: 0 }} loading="lazy" referrerPolicy="no-referrer-when-downgrade" title={`Map to Pro Motion Physiotherapy, ${NAP_LINE}`} className="block w-full" />
+              {mapLoaded ? <iframe src={`https://www.google.com/maps?q=${encodeURIComponent(NAP_LINE)}&output=embed`} width="100%" height="160" style={{ border: 0 }} loading="lazy" referrerPolicy="no-referrer-when-downgrade" title={`Map to Pro Motion Physiotherapy, ${NAP_LINE}`} className="block w-full" /> : <div className="flex min-h-40 flex-col items-start justify-center gap-2 p-4">
+                <p className="text-sm leading-relaxed text-gray-600">Loading the map connects to Google, which may use cookies and receive your IP address.</p>
+                <button onClick={() => setMapLoaded(true)} className="min-h-11 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 hover:border-[#c8101e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">Load Google map</button>
+              </div>}
             </div>
             <a href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(NAP_LINE)}`} target="_blank" rel="noopener noreferrer" className={`${linkStyle} mt-2 gap-2`}><MapPin className="h-4 w-4 shrink-0" aria-hidden="true" /> Get directions <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></a>
           </div>
@@ -99,6 +106,8 @@ export default function Footer() {
 
         <div className="flex flex-col gap-3 border-t border-gray-200 pb-32 pt-6 text-sm text-gray-600 sm:flex-row sm:flex-wrap sm:items-center sm:gap-8 lg:pb-6">
           <p>© {new Date().getFullYear()} {COMPANY_CONTACT.NAME}</p>
+          <Link href="/privacy" className={linkStyle}>Privacy &amp; cookies</Link>
+          <button onClick={openSettings} className={linkStyle}>Cookie settings</button>
           <p>Built by <a href="https://www.rtstics.com/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-6 items-center font-medium text-gray-900 underline decoration-gray-300 underline-offset-4 hover:text-[#c8101e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">RTSTICS</a></p>
         </div>
       </div>
