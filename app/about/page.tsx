@@ -6,7 +6,7 @@ import { ArrowRight, Phone, MapPin, Clock, Calendar, Activity, Heart, Shield, Pr
 import { FormEvent, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
-import { COMPANY_CONTACT } from '@/lib/constants'
+import { COMPANY_CONTACT, DIRECTIONS_URL } from '@/lib/constants'
 
 export default function AboutPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -223,7 +223,8 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <p className="font-bold text-gray-900">Location</p>
-                    <p className="text-gray-600 mt-1">Unit 4, 567 St. Anne&apos;s Rd<br />Winnipeg, MB R2M 5B2</p>
+                    <p className="text-gray-600 mt-1">Unit 4 - 567 St. Anne&apos;s Rd<br />Winnipeg, MB R2M 5B2</p>
+                    <a className="mt-2 inline-block font-semibold text-[#c8101e] underline underline-offset-4" href={DIRECTIONS_URL} target="_blank" rel="noopener noreferrer">Get directions to Unit 4</a>
                   </div>
                 </div>
 
@@ -377,5 +378,4 @@ export default function AboutPage() {
     </main>
   )
 }
-
 

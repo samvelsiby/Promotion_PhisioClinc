@@ -15,7 +15,7 @@ export default function ComingSoon() {
         <div className={styles.logoContainer}>
           <img
             src="/logo.jpeg"
-            alt="Pro Motion Physiotherapy Logo"
+            alt="Pro-Motion Physiotherapy Logo"
             className={styles.logo}
           />
         </div>
@@ -46,7 +46,7 @@ export default function ComingSoon() {
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
             <circle cx="12" cy="10" r="3" />
           </svg>
-          <span>Unit 4, 567 St. Anne's Rd, Winnipeg, MB R2M 5B2</span>
+          <span>Unit 4 - 567 St. Anne's Rd, Winnipeg, MB R2M 5B2</span>
         </div>
 
         {/* Tagline */}

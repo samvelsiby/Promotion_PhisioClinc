@@ -13,7 +13,7 @@ export default function PhysiotherapistIntro() {
           <div className="max-w-2xl">
             <span className="mb-4 inline-block rounded-full bg-red-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#e63939]">People behind your care</span>
             <h2 id="physiotherapists-heading" className="scroll-mt-32 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">Get to know your physiotherapists.</h2>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-gray-600">A local team that listens, explains, and works with you. Meet the owners of Pro Motion Physiotherapy in St. Vital, Winnipeg.</p>
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-gray-600">A local team that listens, explains, and works with you. Meet the owners of Pro-Motion Physiotherapy in St. Vital, Winnipeg.</p>
           </div>
           <Link href="/team" className="inline-flex min-h-11 shrink-0 items-center gap-2 font-semibold text-[#c8101e] hover:underline underline-offset-4">Meet the whole team <ArrowUpRight size={19} aria-hidden="true" /></Link>
         </div>

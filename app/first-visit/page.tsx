@@ -1,17 +1,17 @@
 import Link from 'next/link'
-import { COMPANY_CONTACT, NAP_LINE } from '@/lib/constants'
+import { COMPANY_CONTACT, DIRECTIONS_URL, NAP_LINE } from '@/lib/constants'
 import { pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/JsonLd'
 import { getBreadcrumbSchema } from '@/lib/schema'
 
-export const metadata = pageMetadata('Your First Physiotherapy Visit in Winnipeg | Pro Motion', 'Prepare for your first physiotherapy appointment in Meadowood, St. Vital: what to bring, insurance questions, location and online booking at Pro Motion.', '/first-visit')
+export const metadata = pageMetadata('Your First Physiotherapy Visit in Winnipeg | Pro-Motion', 'Prepare for your first physiotherapy appointment in Meadowood, St. Vital: what to bring, insurance questions, location and online booking at Pro-Motion.', '/first-visit')
 
 export default function FirstVisitPage() {
   return <main className="min-h-screen bg-white py-24 sm:py-28">
     <JsonLd data={getBreadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Your first visit', path: '/first-visit' }])} />
     <div className="mx-auto max-w-4xl px-4 sm:px-6">
       <nav aria-label="Breadcrumb" className="mb-8 text-sm"><Link href="/" className="underline">Home</Link> / Your first visit</nav>
-      <p className="text-sm font-semibold text-[#c8101e]">Pro Motion · St. Vital, Winnipeg</p>
+      <p className="text-sm font-semibold text-[#c8101e]">Pro-Motion · St. Vital, Winnipeg</p>
       <h1 className="mt-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">Your first physiotherapy visit.</h1>
       <p className="mt-6 text-lg leading-relaxed text-gray-600">Know what to bring, what to ask and how to find us. If you are unsure which appointment to select, call our team before booking.</p>
       <div className="my-8 flex flex-wrap gap-4">
@@ -44,9 +44,9 @@ export default function FirstVisitPage() {
         <p>Direct billing is available with many plans, subject to the insurer’s terms. You may need to pay a balance or pay directly if a claim cannot be processed. Confirm fees and payment arrangements before treatment.</p>
         <p><Link href="/insurance">View insurance information</Link>, or read the guides for <Link href="/blogs/mpi-physiotherapy-claims-winnipeg">MPI appointments</Link> and <Link href="/blogs/wcb-physiotherapy-winnipeg">WCB appointments</Link>.</p>
         <h2 id="location">Find our Meadowood clinic in St. Vital</h2>
-        <p>{NAP_LINE}, in the Meadowood neighbourhood of St. Vital. Free parking is available in front of the clinic. Call ahead if you need details about entry or accessibility.</p>
-        <p>We welcome patients from nearby Royalwood, Lavalee, Worthington and Niakwa Place, as well as across Winnipeg. Use the map to plan your route from home or work. Call reception if you need help finding the clinic entrance.</p>
-        <p><a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(NAP_LINE)}`} target="_blank" rel="noopener noreferrer">View the clinic on Google Maps</a></p>
+        <p><strong>Pro-Motion Physiotherapy</strong> is at {NAP_LINE}, in Meadowood, St. Vital. Look for <strong>Unit 4</strong> at 567 St. Anne&apos;s Road. Free parking is available in front of the clinic.</p>
+        <p>For turn-by-turn directions, open the Google Maps link below and enter your starting point. The destination is our Unit 4 clinic on St. Anne&apos;s Road. If the map brings you to the building but you cannot find the entrance, call {COMPANY_CONTACT.PHONE_DISPLAY} and reception can guide you.</p>
+        <p><a href={DIRECTIONS_URL} target="_blank" rel="noopener noreferrer">Get directions to Pro-Motion Physiotherapy on Google Maps</a></p>
         <ul><li>{COMPANY_CONTACT.HOURS.weekday}</li><li>{COMPANY_CONTACT.HOURS.saturday}</li><li>{COMPANY_CONTACT.HOURS.sunday}</li></ul>
         <h2>Meet your provider</h2>
         <p><Link href="/team">Read our team profiles</Link> and <Link href="/what-we-treat">explore the conditions we treat</Link>. If you have a specific service in mind, reception can help confirm the appropriate provider.</p>

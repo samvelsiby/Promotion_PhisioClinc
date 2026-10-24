@@ -192,8 +192,8 @@ function getCustomContent(title: string, description: string): Partial<ServiceDe
       ]
     },
     'Back Pain & Sciatica Relief': {
-      description: "Back pain and sciatica physiotherapy in St. Vital, Winnipeg. Book an assessment at Pro Motion on St. Anne’s Road and discuss a plan for your daily activities.",
-      overview: "At Pro Motion in St. Vital, your back-pain assessment starts with a discussion of your symptoms, daily activities and goals. Your physiotherapist assesses how you move and explains the findings before discussing a care plan. Bring any relevant reports and tell us what makes sitting, walking, work or sleep difficult. The treatment plan and follow-up schedule depend on your assessment.",
+      description: "Back pain and sciatica physiotherapy in St. Vital, Winnipeg. Book an assessment at Pro-Motion on St. Anne’s Road and discuss a plan for your daily activities.",
+      overview: "At Pro-Motion in St. Vital, your back-pain assessment starts with a discussion of your symptoms, daily activities and goals. Your physiotherapist assesses how you move and explains the findings before discussing a care plan. Bring any relevant reports and tell us what makes sitting, walking, work or sleep difficult. The treatment plan and follow-up schedule depend on your assessment.",
       whatWeTreat: [
         'Acute and chronic lower back pain',
         'Sciatica and nerve pain',
@@ -365,7 +365,7 @@ function getCustomContent(title: string, description: string): Partial<ServiceDe
       ]
     },
     'Sports Injuries': {
-      description: "Sports injury physiotherapy in St. Vital, Winnipeg. Discuss your sport, injury and return-to-activity goals with the team at Pro Motion. Book an assessment.",
+      description: "Sports injury physiotherapy in St. Vital, Winnipeg. Discuss your sport, injury and return-to-activity goals with the team at Pro-Motion. Book an assessment.",
       overview: "Whether you play recreationally or train regularly, tell your physiotherapist about your sport, training schedule and the activities you want to return to. At our St. Vital clinic, an assessment helps shape a rehabilitation plan around your current abilities and goals. Progress and return-to-sport decisions are individual; an appointment does not guarantee a particular recovery date.",
       whatWeTreat: [
         'Sprains and strains',
@@ -401,7 +401,7 @@ function getCustomContent(title: string, description: string): Partial<ServiceDe
     },
     'Work Injuries, WCB & Work Related Injury': {
       description: 'WCB and work-injury physiotherapy in St. Vital, Winnipeg. Bring your claim details and discuss your job demands, rehabilitation goals and billing arrangements.',
-      overview: 'At Pro Motion on St. Anne’s Road, your work-injury assessment considers the activities your job involves and what is difficult now. Bring any existing work restrictions, medical recommendations and WCB claim details. Your physiotherapist can discuss rehabilitation and progress with you; WCB determines claim eligibility and treatment authorization.',
+      overview: 'At Pro-Motion on St. Anne’s Road, your work-injury assessment considers the activities your job involves and what is difficult now. Bring any existing work restrictions, medical recommendations and WCB claim details. Your physiotherapist can discuss rehabilitation and progress with you; WCB determines claim eligibility and treatment authorization.',
       whatWeTreat: [
         'Workplace strains and sprains',
         'Repetitive strain injuries',
@@ -435,7 +435,7 @@ function getCustomContent(title: string, description: string): Partial<ServiceDe
       ]
     },
     'Motor Vehicle Accident Injuries (MPI)': {
-      description: "Physiotherapy after a car accident in St. Vital, Winnipeg. Contact Pro Motion about an assessment, MPI claim details and appointment arrangements.",
+      description: "Physiotherapy after a car accident in St. Vital, Winnipeg. Contact Pro-Motion about an assessment, MPI claim details and appointment arrangements.",
       overview: "If you are booking after a motor vehicle collision, tell reception and bring any available claim details, medical reports and insurer correspondence. Your physiotherapist will discuss your symptoms and daily activities as part of the assessment. Ask reception about billing arrangements before your visit. Booking an appointment does not confirm MPI coverage or approval of a claim.",
       whatWeTreat: [
         'Whiplash and neck injuries',

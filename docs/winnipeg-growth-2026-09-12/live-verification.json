@@ -1,0 +1,57 @@
+[
+  {
+    "path": "/first-visit",
+    "http_status": 200,
+    "checks": "passed"
+  },
+  {
+    "path": "/blogs",
+    "http_status": 200,
+    "checks": "passed"
+  },
+  {
+    "path": "/insurance",
+    "http_status": 200,
+    "checks": "passed"
+  },
+  {
+    "path": "/sitemap.xml",
+    "http_status": 200,
+    "checks": "passed"
+  },
+  {
+    "path": "/blogs?q=WCB",
+    "http_status": 200,
+    "checks": "passed"
+  },
+  {
+    "path": "/blogs/physiotherapy-referral-winnipeg",
+    "http_status": 200,
+    "checks": "passed"
+  },
+  {
+    "path": "/blogs/direct-billing-physiotherapy-winnipeg",
+    "http_status": 200,
+    "checks": "passed"
+  },
+  {
+    "path": "/blogs/mpi-physiotherapy-claims-winnipeg",
+    "http_status": 200,
+    "checks": "passed"
+  },
+  {
+    "path": "/blogs/wcb-physiotherapy-winnipeg",
+    "http_status": 200,
+    "checks": "passed"
+  },
+  {
+    "path": "/blogs/choosing-physiotherapy-st-vital",
+    "http_status": 200,
+    "checks": "passed"
+  },
+  {
+    "path": "/blogs/questions-first-physiotherapy-assessment",
+    "http_status": 200,
+    "checks": "passed"
+  }
+]

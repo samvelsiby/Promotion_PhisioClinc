@@ -1,6 +1,6 @@
 import {
   COMPANY_CONTACT,
-  NAP_LINE,
+  MAPS_URL,
   OPENING_HOURS_SPEC,
   SITE_URL,
 } from '@/lib/constants'
@@ -14,7 +14,7 @@ export function getLocalBusinessSchema() {
     '@type': 'MedicalClinic',
     '@id': `${SITE_URL}/#clinic`,
     name: COMPANY_CONTACT.NAME,
-    alternateName: ['Pro Motion', 'Pro Motion Physio', 'Pro Motion Physiotherapy Winnipeg'],
+    alternateName: 'Pro Motion Physiotherapy',
     image: logoUrl,
     logo: logoUrl,
     url: SITE_URL,
@@ -37,7 +37,7 @@ export function getLocalBusinessSchema() {
       latitude: COMPANY_CONTACT.GEO.latitude,
       longitude: COMPANY_CONTACT.GEO.longitude,
     },
-    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(NAP_LINE)}`,
+    hasMap: MAPS_URL,
     openingHoursSpecification: OPENING_HOURS_SPEC.map((spec) => ({
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: spec.days,
@@ -45,14 +45,6 @@ export function getLocalBusinessSchema() {
       closes: spec.closes,
     })),
     sameAs: [COMPANY_CONTACT.SOCIAL.facebook, COMPANY_CONTACT.SOCIAL.instagram],
-    areaServed: [
-      { '@type': 'City', name: 'Winnipeg' },
-      { '@type': 'AdministrativeArea', name: 'St. Vital' },
-      { '@type': 'AdministrativeArea', name: 'Fort Garry' },
-      { '@type': 'AdministrativeArea', name: 'Windsor Park' },
-      { '@type': 'AdministrativeArea', name: 'Sage Creek' },
-      { '@type': 'AdministrativeArea', name: 'Pembina' },
-    ],
     medicalSpecialty: 'Physiotherapy',
     isAcceptingNewPatients: true,
     hasOfferCatalog: {

@@ -6,7 +6,7 @@ import { useCookieConsent } from '@/components/CookieConsent'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ArrowUpRight, Facebook, Phone, Instagram, MapPin } from 'lucide-react'
-import { COMPANY_CONTACT, NAP_LINE } from '@/lib/constants'
+import { COMPANY_CONTACT, DIRECTIONS_URL, NAP_LINE } from '@/lib/constants'
 
 const serviceLinks = [
   { label: 'Back pain & sciatica', href: '/services/back-pain-sciatica-relief' },
@@ -55,8 +55,8 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 py-10 lg:grid-cols-[1.1fr_1fr_.85fr_1.2fr] lg:gap-x-8 lg:py-14">
           <div className="order-1 col-span-2 min-w-0 sm:col-span-1">
-            <Link href="/" aria-label="Pro Motion Physiotherapy home" className="inline-block rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">
-              <Image src="/navbar/Navbar.svg" alt="Pro Motion Physiotherapy" width={210} height={70} sizes="210px" className="h-auto w-[210px] max-w-full" />
+            <Link href="/" aria-label="Pro-Motion Physiotherapy home" className="inline-block rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">
+              <Image src="/navbar/Navbar.svg" alt="Pro-Motion Physiotherapy" width={210} height={70} sizes="210px" className="h-auto w-[210px] max-w-full" />
             </Link>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-gray-600">Founded by two dedicated physiotherapists. Driven by care. Powered by motion.</p>
             <a href={`tel:${COMPANY_CONTACT.PHONE}`} className="mt-5 inline-flex min-h-11 items-center gap-2 text-xl font-semibold tracking-tight hover:text-[#c8101e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">
@@ -65,8 +65,8 @@ export default function Footer() {
             <a href={`mailto:${COMPANY_CONTACT.EMAIL}`} className={`${linkStyle} break-all`}>{COMPANY_CONTACT.EMAIL}</a>
             <p className="mt-1 text-sm text-gray-600">Fax: {COMPANY_CONTACT.FAX}</p>
             <div className="mt-5 flex flex-wrap gap-2">
-              <a href={COMPANY_CONTACT.SOCIAL.instagram} target="_blank" rel="noopener noreferrer" aria-label="Pro Motion Physiotherapy on Instagram" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 text-gray-700 transition-colors hover:border-[#c8101e] hover:text-[#c8101e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4"><Instagram className="h-5 w-5" aria-hidden="true" /></a>
-              <a href={COMPANY_CONTACT.SOCIAL.facebook} target="_blank" rel="noopener noreferrer" aria-label="Pro Motion Physiotherapy on Facebook" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 text-gray-700 transition-colors hover:border-[#c8101e] hover:text-[#c8101e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4"><Facebook className="h-5 w-5" aria-hidden="true" /></a>
+              <a href={COMPANY_CONTACT.SOCIAL.instagram} target="_blank" rel="noopener noreferrer" aria-label="Pro-Motion Physiotherapy on Instagram" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 text-gray-700 transition-colors hover:border-[#c8101e] hover:text-[#c8101e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4"><Instagram className="h-5 w-5" aria-hidden="true" /></a>
+              <a href={COMPANY_CONTACT.SOCIAL.facebook} target="_blank" rel="noopener noreferrer" aria-label="Pro-Motion Physiotherapy on Facebook" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 text-gray-700 transition-colors hover:border-[#c8101e] hover:text-[#c8101e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4"><Facebook className="h-5 w-5" aria-hidden="true" /></a>
               <a href={COMPANY_CONTACT.REVIEWS_URL} target="_blank" rel="noopener noreferrer" className={`${linkStyle} ml-2`}>Google reviews <ArrowUpRight className="ml-1 h-4 w-4 shrink-0" aria-hidden="true" /></a>
             </div>
           </div>
@@ -95,12 +95,12 @@ export default function Footer() {
               <p>{COMPANY_CONTACT.HOURS.sunday}</p>
             </div>
             <div className="mt-5 overflow-hidden rounded-xl border border-gray-200 bg-gray-50">
-              {mapLoaded ? <iframe src={`https://www.google.com/maps?q=${encodeURIComponent(NAP_LINE)}&output=embed`} width="100%" height="160" style={{ border: 0 }} loading="lazy" referrerPolicy="no-referrer-when-downgrade" title={`Map to Pro Motion Physiotherapy, ${NAP_LINE}`} className="block w-full" /> : <div className="flex min-h-40 flex-col items-start justify-center gap-2 p-4">
+              {mapLoaded ? <iframe src={`https://www.google.com/maps?q=${encodeURIComponent(NAP_LINE)}&output=embed`} width="100%" height="160" style={{ border: 0 }} loading="lazy" referrerPolicy="no-referrer-when-downgrade" title={`Map to Pro-Motion Physiotherapy, ${NAP_LINE}`} className="block w-full" /> : <div className="flex min-h-40 flex-col items-start justify-center gap-2 p-4">
                 <p className="text-sm leading-relaxed text-gray-600">Loading the map connects to Google, which may use cookies and receive your IP address.</p>
                 <button onClick={() => setMapLoaded(true)} className="min-h-11 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 hover:border-[#c8101e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">Load Google map</button>
               </div>}
             </div>
-            <a href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(NAP_LINE)}`} target="_blank" rel="noopener noreferrer" className={`${linkStyle} mt-2 gap-2`}><MapPin className="h-4 w-4 shrink-0" aria-hidden="true" /> Get directions <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></a>
+            <a href={DIRECTIONS_URL} target="_blank" rel="noopener noreferrer" className={`${linkStyle} mt-2 gap-2`}><MapPin className="h-4 w-4 shrink-0" aria-hidden="true" /> Get directions to Unit 4 <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></a>
           </div>
         </div>
 

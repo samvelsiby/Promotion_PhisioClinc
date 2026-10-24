@@ -61,7 +61,7 @@ export default function Navbar() {
           <Link href="/" className={styles.logoContainer}>
             <Image
               src="/navbar/Navbar.svg"
-              alt="Pro Motion Physiotherapy Logo"
+              alt="Pro-Motion Physiotherapy Logo"
               width={180}
               height={60}
               priority
@@ -184,7 +184,7 @@ export default function Navbar() {
             <Link href="/" onClick={() => setIsMenuOpen(false)}>
               <Image
                 src="/navbar/Navbar.svg"
-                alt="Pro Motion Physiotherapy Logo"
+                alt="Pro-Motion Physiotherapy Logo"
                 width={180}
                 height={60}
                 priority

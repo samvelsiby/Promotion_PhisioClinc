@@ -32,7 +32,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: BlogPostPageProps) {
   const post = await fetchBlogPostBySlug(params.slug)
   if (!post) notFound()
-  const metadata = pageMetadata(`${post.title} | Pro Motion Physiotherapy`, post.excerpt || `Read ${post.title} from Pro Motion Physiotherapy in Winnipeg.`, `/blogs/${post.slug}`, post.mainImageUrl)
+  const metadata = pageMetadata(`${post.title} | Pro-Motion Physiotherapy`, post.excerpt || `Read ${post.title} from Pro-Motion Physiotherapy in Winnipeg.`, `/blogs/${post.slug}`, post.mainImageUrl)
   return { ...metadata, openGraph: { ...metadata.openGraph, type: 'article' as const, publishedTime: post.publishedAt || undefined } }
 }
 
@@ -117,7 +117,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {serviceLink && <section aria-labelledby="related-clinic-care">
                 <h2 id="related-clinic-care">Discuss your recovery with a physiotherapist</h2>
                 <p>This article provides general information. Your assessment, goals and any recommendations from your healthcare team determine your individual care plan.</p>
-                <p>Explore <Link href={serviceLink.href}>{serviceLink.label}</Link> at Pro Motion in Meadowood, St. Vital, or <Link href="/first-visit">prepare for your first appointment</Link>.</p>
+                <p>Explore <Link href={serviceLink.href}>{serviceLink.label}</Link> at Pro-Motion in Meadowood, St. Vital, or <Link href="/first-visit">prepare for your first appointment</Link>.</p>
               </section>}
             </article>
           </section>

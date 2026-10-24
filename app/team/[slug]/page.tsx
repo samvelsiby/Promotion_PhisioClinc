@@ -12,7 +12,7 @@ export function generateMetadata({ params }: TeamMemberPageProps) {
   const member = teamMembers.find((m) => m.slug === params.slug)
   if (!member) notFound()
   const name = member.name.toLowerCase().replace(/\b\w/g, (letter) => letter.toUpperCase())
-  return pageMetadata(`${name} | Pro Motion Physiotherapy, Winnipeg`, `Meet ${name}, ${member.role}, at Pro Motion Physiotherapy in St. Vital, Winnipeg. Learn about their background and approach to care.`, `/team/${member.slug}`, member.imageSrc)
+  return pageMetadata(`${name} | Pro-Motion Physiotherapy, Winnipeg`, `Meet ${name}, ${member.role}, at Pro-Motion Physiotherapy in St. Vital, Winnipeg. Learn about their background and approach to care.`, `/team/${member.slug}`, member.imageSrc)
 }
 
 export function generateStaticParams() {

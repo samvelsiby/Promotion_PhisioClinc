@@ -1,0 +1,182 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SEO Review & Next Actions — Sep 25, 2026</title><style>/* One light look, on screen and on paper. The report is read inside the app,
+   which has its own theme toggle, and a saved document has no way to hear about
+   it: a report that follows the OS scheme alone shows a black panel inside a
+   light app for anyone whose two settings disagree. */
+:root{--bg:#fff;--fg:#0a0a0a;--fg-2:#454545;--fg-3:#8f8f8f;--rule:#ebebeb;--rule-2:#dcdcdc;--sunk:#fafafa;
+  /* The one token a report template may change. Left as the text color, so a
+     report with no template looks exactly as it did before. */
+  --accent:var(--fg)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);margin:0;padding:0 24px 120px;font-size:18px;line-height:1.65;letter-spacing:-.003em;
+  font-family:Geist,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.shell{max-width:1100px;margin:0 auto}
+header{padding:40px 0 0;max-width:660px}
+h1{font-size:clamp(34px,6vw,56px);font-weight:700;line-height:1.03;letter-spacing:-.035em;margin:0;text-wrap:balance}
+.byline{margin:24px 0 0;font-size:16px;color:var(--fg-2)}
+.body{display:grid;grid-template-columns:minmax(0,660px) 1fr;gap:0 64px;margin:48px 0 0}
+/* Both explicitly in row 1: without it the rail auto-places into row 1 and
+   pushes the article down a whole row, opening an empty band above the text. */
+article{grid-column:1;grid-row:1;min-width:0}
+.rail{grid-column:2;grid-row:1;font-size:14px;color:var(--fg-3);padding-top:6px}
+.rail .sticky{position:sticky;top:40px}
+.toc-label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-3);margin:0 0 10px}
+.toc ol{list-style:none;margin:0;padding:0}
+.toc li{margin:0 0 7px}
+.toc a{color:var(--fg-2);text-decoration:none}
+.toc a:hover{color:var(--fg)}
+/* Below 900px the rail is dropped rather than stacked: a contents list above
+   the report is a wall to scroll past on a phone, not a shortcut. */
+@media (max-width:900px){.body{grid-template-columns:1fr}.rail{display:none}}
+article p{margin:0 0 26px;text-wrap:pretty}
+h2{font-size:30px;font-weight:600;letter-spacing:-.025em;line-height:1.2;margin:60px 0 22px;text-wrap:balance}
+h3{font-size:20px;font-weight:600;letter-spacing:-.015em;margin:38px 0 14px}
+.finding{list-style:none;padding:0;margin:0 0 26px}
+.finding li{margin:0 0 8px;color:var(--fg-2)}
+.finding b{color:var(--accent);font-weight:600}
+a{color:var(--fg);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--rule-2)}
+strong{font-weight:600}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;background:var(--sunk);border:1px solid var(--rule);padding:1px 5px;border-radius:4px}
+ul,ol{margin:0 0 26px;padding-left:22px}li{margin:0 0 11px}li::marker{color:var(--fg-3)}
+.note{border-left:2px solid var(--fg);padding:2px 0 2px 22px;margin:0 0 26px}
+.note p{margin:0;color:var(--fg-2)}
+.note p+p{margin-top:14px}
+.tw{overflow-x:auto;margin:0 0 30px}
+table{border-collapse:collapse;width:100%;font-size:15.5px;min-width:440px}
+th{text-align:left;font-weight:500;color:var(--fg-3);padding:0 20px 10px 0;border-bottom:1px solid var(--rule-2);white-space:nowrap}
+td{padding:13px 20px 13px 0;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--fg-2)}
+td:first-child{color:var(--fg)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td:last-child,th:last-child{padding-right:0}
+tr:last-child td{border-bottom:none}
+figure{margin:0 0 30px}
+figcaption{font-size:14px;color:var(--fg-3);margin-top:8px}
+.bars{display:grid;grid-template-columns:minmax(90px,170px) 1fr auto;gap:10px 12px;align-items:center;font-size:14px}
+.bars .label{color:var(--fg-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bars .track{display:block;height:20px;background:var(--sunk)}
+.bars .bar{display:block;height:100%;background:var(--accent);opacity:.16}
+.bars .value{font-variant-numeric:tabular-nums;min-width:3ch;text-align:right}
+svg{display:block;max-width:100%;height:auto}
+hr{border:none;border-top:1px solid var(--rule);margin:60px 0}
+footer{max-width:660px;margin:64px 0 0;padding:26px 0 0;border-top:1px solid var(--rule);font-size:15px;color:var(--fg-3)}
+@media print{
+  /* A zero top margin hides the browser's own print header (date, tab title);
+     the bottom margin holds a page counter instead of the browser's URL line.
+     The body padding supplies the visible page margins. */
+  @page{margin:0 0 12mm 0;@bottom-center{content:counter(page) " of " counter(pages);font:10px -apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;color:#8f8f8f}}
+  body{background:#fff;color:#111;padding:14mm 16mm 6mm;font-size:11pt}
+  .shell,.body{display:block;max-width:none}
+  header{padding:0;max-width:none}
+  h1{font-size:26pt}
+  h2{font-size:15pt;margin:22pt 0 10pt}
+  h3{font-size:12pt;margin:14pt 0 6pt}
+  article,footer{max-width:none}
+  .rail{display:none}
+  h1,h2,h3{break-after:avoid}
+  table,figure,.note,svg{break-inside:avoid}
+  tr,td,th{break-inside:avoid}
+  p,li{orphans:3;widows:3}
+  thead{display:table-header-group}
+  .tw{overflow:visible}
+  table{font-size:10pt;min-width:0}
+  .byline,footer,figcaption{font-size:9.5pt}
+  svg,.bars .bar,.bars .track{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  a{text-decoration:none}
+}
+</style></head><body><div class="shell"><header><h1>SEO Review & Next Actions — Sep 25, 2026</h1><p class="byline">Prepared for Pro Motion Physiotherapy · September 25, 2026</p></header><div class="body"><aside class="rail"><div class="sticky"><p class="toc-label">Contents</p><nav class="toc" aria-label="Contents"><ol><li><a href="#your-next-seo-move">Your next SEO move</a></li><li><a href="#compared-with-last-week">Compared with last week</a></li><li><a href="#recommendations">Recommendations</a></li><li><a href="#blog-plan">Blog ideas worth developing</a></li><li><a href="#what-else-we-checked">What else we checked</a></li><li><a href="#what-i-need-from-you">What I need from you</a></li><li><a href="#how-this-report-was-made">How this report was made</a></li></ol></nav></div></aside><article><h2 id="your-next-seo-move">Your next SEO move</h2>
+<ul><li>Correct the existing ACL article before adding more medical content.</li><li>Verify enquiry measurement, then improve the St. Vital and referral guides with real clinic answers.</li><li>Protect recent work: the homepage and new tennis-elbow article are indexed; TMJ indexing has been requested.</li></ul>
+<h2 id="compared-with-last-week">Compared with last week</h2>
+<p>Finalized Google Web Search data, all countries: September 17–22 versus September 10–15, 2026. These are matching six-day periods, Thursday through Tuesday.</p>
+<div class="tw"><table><thead><tr><th>Measure</th><th class="n">Sep 10–15</th><th class="n">Sep 17–22</th><th>Change</th></tr></thead><tbody>
+<tr><td>Search clicks</td><td class="n">26</td><td class="n">27</td><td>+1 (+3.8%)</td></tr>
+<tr><td>Search impressions</td><td class="n">1,068</td><td class="n">1,135</td><td>+67 (+6.3%)</td></tr>
+<tr><td>Click-through rate</td><td class="n">2.43%</td><td class="n">2.38%</td><td>−0.06 percentage points</td></tr>
+<tr><td>Average position</td><td class="n">21.39</td><td class="n">13.02</td><td>8.37 positions better</td></tr>
+</tbody></table></div>
+<div class="note"><p>Visibility improved, but clicks are almost flat. Average position combines different queries and locations; it is not a Winnipeg rank. The sample is too small to attribute changes to the September 20 release. September 23 was not returned as finalized, and the baseline starts September 10, so a complete finalized seven-day comparison is unavailable.</p></div>
+<p>GA4 recorded 37 organic sessions and 23 active users for September 17–23, with 22 engaged sessions (59.5%) and zero recorded key events (actions counted as business outcomes). Its previous-period result is unavailable, not zero. For September 17–22, landing-page rows total 30 sessions: homepage 20, ACL article 5, team 3, blog index 1 and referral guide 1. These are all-country sessions, not confirmed Winnipeg patients. GA4 uses America/Vancouver; do not align its daily counts directly with Winnipeg appointments.</p>
+<h2 id="recommendations">Recommendations</h2>
+<h3>1. Correct the ACL guide that already gets visitors</h3>
+<p><strong>Do this</strong></p><ul>
+<li>Keep the <a href="https://www.promotionphysiotherapy.ca/blogs/understanding-acl-injuries-recovery-timelines-and-the-path-to-ret1urn-to-play" target="_blank" rel="noopener">existing article URL</a> and replace the unsupported athlete narrative.</li>
+<li>Remove the absolute claim that surgery is mandatory; have Ben or Lijo review the replacement.</li>
+<li>Use a clear search description and keep links to rehabilitation and first-visit information.</li>
+</ul><p><strong>Why</strong></p><ul>
+<li>This article received five organic landing sessions in the six-day reporting window.</li>
+<li>AAOS describes circumstances where nonsurgical management is reasonable, including some complete tears.</li>
+<li>Real Madrid dated Rodrygo’s diagnosis March 3 and surgery March 10; the article reverses the sequence.</li>
+<li>Correcting inaccurate advice protects readers; a ranking or booking increase cannot be promised.</li>
+</ul>
+<div class="tw"><table><thead><tr><th>Verified September 25</th><th>Action</th></tr></thead><tbody>
+<tr><td>Medical treatment presented as universal</td><td>Use an individualized surgical decision paragraph</td></tr>
+<tr><td>Unsupported post-surgery reinjury narrative</td><td>Remove the story and the inferred cause</td></tr>
+<tr><td>Description: a 47-character World Cup teaser</td><td>Describe ACL care and the patient questions answered</td></tr>
+</tbody></table></div>
+<p>Sources: <a href="https://www.orthoinfo.org/treatment/acl-injury-does-it-require-surgery" target="_blank" rel="noopener">AAOS treatment guidance</a>; <a href="https://www.realmadrid.com/es-ES/noticias/futbol/primer-equipo/partes-medicos/parte-medico-de-rodrygo-03-03-2026" target="_blank" rel="noopener">March 3 diagnosis</a>; <a href="https://www.realmadrid.com/en-US/news/football/first-team/medical-reports/nuevo-parte-medico-rodrygo" target="_blank" rel="noopener">March 10 surgery</a>.</p>
+<h3>2. Make enquiries measurable before judging SEO by bookings</h3>
+<p><strong>Do this</strong></p><ul>
+<li>Coordinate one accepted test enquiry with reception and verify the event in GA4.</li>
+<li>Mark <code>generate_lead</code> as a key event once its meaning and successful delivery are verified.</li>
+<li>Ask Juvonno’s administrator about completed-booking measurement; report booking clicks separately.</li>
+</ul><p><strong>Why</strong></p><ul>
+<li><code>booking_click</code> appears in GA4’s Recent events, confirming that collection has begun.</li>
+<li><code>generate_lead</code> is absent from both Recent events and configured key events.</li>
+<li>Configured key events are purchase, qualify_lead and close_convert_lead; no activity is shown for those configured key events.</li>
+<li>Zero key events cannot establish zero enquiries. Correct measurement supports decisions across every service.</li>
+</ul>
+<p>GA4 configuration was checked on September 25. No GA4 settings were changed and no test message was sent. Read access works through Chrome and OpenSEO’s Default-project connection to the clinic property, 248255177. The named Pro Motion project has no GA4 connection.</p>
+<h3>3. Improve existing local booking guides with clinic-specific answers</h3>
+<p><strong>Do this</strong></p><ul>
+<li>Refresh the <a href="https://www.promotionphysiotherapy.ca/blogs/choosing-physiotherapy-st-vital" target="_blank" rel="noopener">St. Vital guide</a> with confirmed access, appointment and provider details.</li>
+<li>Improve the <a href="https://www.promotionphysiotherapy.ca/blogs/physiotherapy-referral-winnipeg" target="_blank" rel="noopener">referral guide</a> using actual reception questions about booking and coverage.</li>
+<li>Use real entrance and clinic photographs where they help people plan a visit.</li>
+</ul><p><strong>Why</strong></p><ul>
+<li>These topics already receive search visibility and answer questions close to a booking decision.</li>
+<li>The content exists; a second article on the same question would add little value.</li>
+<li>Likely benefit is modest, more relevant traffic; the current sample cannot support a numerical forecast.</li>
+</ul>
+<div class="tw"><table><thead><tr><th>Canada query</th><th class="n">Sep 10–15 impressions</th><th class="n">Sep 17–22 impressions</th><th>Average position, previous / current</th></tr></thead><tbody>
+<tr><td>physiotherapy st vital</td><td class="n">2</td><td class="n">13</td><td>11.5 / 11.1</td></tr>
+<tr><td>no referral physiotherapy</td><td class="n">5</td><td class="n">17</td><td>31.6 / 32.1</td></tr>
+<tr><td>physiotherapy winnipeg</td><td class="n">18</td><td class="n">17</td><td>34.5 / 30.9</td></tr>
+</tbody></table></div>
+<p>The first two queries produced zero clicks in both periods. These are Search Console averages, not live organic result positions; no local ranking claim is made. The separate query/page export assigns 12 of the 13 St. Vital-query impressions to the St. Vital guide and one to the homepage. The referral guide receives all 17 impressions for the no-referral query.</p>
+<h2 id="blog-plan">Blog ideas worth developing</h2>
+<div class="tw"><table><thead><tr><th>Order</th><th>Topic</th><th>Approach</th></tr></thead><tbody>
+<tr><td>1</td><td>ACL injury recovery: what to discuss with your care team</td><td>Correct existing article; draft prepared</td></tr>
+<tr><td>2</td><td>Booking physiotherapy in St. Vital</td><td>Refresh existing local guide with real clinic detail</td></tr>
+<tr><td>3</td><td>Do you need a physiotherapy referral?</td><td>Improve existing guide; practical booking questions</td></tr>
+<tr><td>4</td><td>Tennis elbow exercises: what to change when a movement hurts</td><td>New only with distinct clinician-approved examples</td></tr>
+<tr><td>5</td><td>Whiplash after a collision: your next appointment</td><td>Refresh clinical guide; keep MPI paperwork topic distinct</td></tr>
+<tr><td>6</td><td>Back at the gym after time off</td><td>Potential new guide based on real patient questions</td></tr>
+</tbody></table></div>
+<p>Write one useful piece at a time. No scheduled publication, invented case study, fabricated clinician quotation or automatic medical byline. The new topic ideas are hypotheses, not measured local demand. The September 21 research estimated 210 Canadian searches/month for “tennis elbow exercises to avoid”; the current symptoms guide already covers general activity changes, so a second guide needs substantially different detail.</p>
+<h2 id="what-else-we-checked">What else we checked</h2>
+<div class="tw"><table><thead><tr><th>Opportunity</th><th>Finding</th><th>Decision</th></tr></thead><tbody>
+<tr><td>New elbow exercise article</td><td>Prior Canadian demand signal; existing elbow guide indexed September 21</td><td>Runner-up: correct ACL first; local guides serve existing nearby intent, while measurement supports every service. National elbow demand does not establish local bookings.</td></tr>
+<tr><td>TMJ indexing</td><td>Historical May crawl excluded; live test September 25 passed</td><td>Indexing requested and accepted; not yet proof of inclusion</td></tr>
+<tr><td>Homepage indexing</td><td>Indexed; last crawl September 25</td><td>Improved from September 17 baseline; preserve current preferred URL</td></tr>
+<tr><td>Backlinks</td><td>Ahrefs: 333 backlinks, 159 domains; several sampled domains labelled SPAM</td><td>Google Manual actions: no issues detected; no automatic disavow or outreach</td></tr>
+<tr><td>Ahrefs ranking coverage</td><td>Nine keywords, eight classified branded; several observations from August</td><td>Use as context, not a current weekly ranking census</td></tr>
+<tr><td>Business Profile</td><td>Owner profile settings not reviewed</td><td>Use managing account for accurate categories, hours, booking and photographs</td></tr>
+<tr><td>Service rewrites</td><td>Recent service improvements; current TMJ content and canonical (preferred URL) are correct</td><td>Do not rewrite repeatedly without a demonstrated gap</td></tr>
+<tr><td>Maintenance</td><td>50 sampled pages: 200/indexable; 35 informational notices only</td><td>Improve meaningful snippets/headings during edits; avoid score-chasing</td></tr>
+<tr><td>Performance / AI visibility</td><td>GSC Core Web Vitals has no data; Ahrefs shows no recorded AI mentions</td><td>Neither establishes poor performance nor absence from every AI answer</td></tr>
+</tbody></table></div>
+<h2 id="what-i-need-from-you">What I need from you</h2>
+<ol><li>Ask Ben or Lijo to review the ACL corrections and answer five common first-appointment questions.</li><li>Arrange a brief reception check for one test enquiry, plus Juvonno administrator help with booking completion.</li><li>Make the Google Business Profile managing account available in Chrome for the next profile review.</li><li>Provide permission-cleared clinic, entrance and team photographs when available.</li></ol>
+<p>Ahrefs and Search Console access already work. No new subscription is needed for this review. Ahrefs Broken Backlinks is paywalled; OpenSEO research credits are zero. Prices remain outside the proposed content, as requested previously.</p>
+<h2 id="how-this-report-was-made">How this report was made</h2>
+<p>Generated by the <a href="https://openseo.so/docs/skills/seo-audit" target="_blank" rel="noopener">OpenSEO SEO Audit skill</a>, run by Codex on September 25, 2026.</p>
+<p>Combined Search Console MCP, GA4 read-only MCP and browser checks, signed-in Ahrefs, a fresh 50-page crawl, prior release evidence and direct public-page checks. This is a focused review, not a completed clinical review or a full local Maps rank study.</p>
+<details><summary>Evidence and methodology</summary>
+<p>The live sitemap contains 52 URLs, including 21 blog URLs, 18 service URLs, team profiles and practical visitor pages. The OpenSEO audit was capped at 50 pages; it reported no critical/warning issues, with 25 long-title, four heading-order, three long-description and three short-description notices. Those are tool thresholds, not Google penalties. Ahrefs was read in signed-in Chrome on September 25. It separately has a historical 80-URL crawl snapshot with one 404; this was not established as a current broken internal link.</p>
+<p>Property totals come from finalized date-only Search Console rows; CTR is total clicks divided by total impressions. Average position is impression-weighted from rounded daily rows and therefore approximate. Query comparisons use Canada-filtered query-only results, not query-page totals, to avoid counting multiple pages as extra searches. Anonymized queries are excluded from query exports. GSC covered September 10–22; September 23–24 preliminary rows were excluded.</p>
+<p>GA4 organic overview covers September 17–23; the landing-page comparison covers September 17–22. Both dates are printed rather than silently mixed. GA4 had no previous-period result. Data is not proof of new appointments or revenue. Do not compare Ahrefs estimated monthly traffic (9) directly with GA4 sessions or Search Console clicks.</p>
+<p>Inspected verified URLs: homepage, TMJ, back pain service, new elbow article, referral guide and St. Vital guide. One initial inspection used an incorrect back-pain path; it is excluded from conclusions. The correct /services/back-pain-sciatica-relief URL is indexed. TMJ declares itself as preferred URL in current HTML; the obsolete homepage canonical belongs to Google's May record. The live Google test reported available to Google and one valid breadcrumb item; the indexing request was accepted once.</p>
+<p>Read the live ACL, elbow and TMJ page bodies, homepage, existing visitor articles and their local content sources. Read the <a href="https://www.stvitalphysio.ca/" target="_blank" rel="noopener">St. Vital Physiotherapy homepage</a> and live web searches for St. Vital, TMJ and elbow-exercise intent; search results were not treated as a geo-controlled ranking study. No paid SERP refresh ran. Ahrefs organic ranking rows include dates August 10, 16, 18 and 22, and September 9 and 10, plus relative September dates. Retrieval date is not observation date.</p>
+<p>Ahrefs referring-domain sample includes seogrowthpipeline.shop, organicrankdirect.shop and backlinkmasters.shop labelled SPAM. That provider label alone is not a diagnosis of a Google penalty. The live Google Search Console Manual actions report showed “No issues detected” on September 25. User reports no known paid backlink campaign. Follow <a href="https://support.google.com/webmasters/answer/2648487" target="_blank" rel="noopener">Google's disavow guidance</a>; do not submit an automatic bulk disavow, which asks Google to disregard specified links.</p>
+<p>Supporting files contain the raw Google/crawl responses, current public HTML, a shortlisted opportunity table, the ACL correction draft and clinic questions. Account metrics remain local under the unresolved sharing restriction documented in the September 20 release notes. The public crawl is available in OpenSEO; private analytics have not been uploaded into a shared report.</p>
+</details>
+
+</article></div><footer>Prepared with OpenSEO, Search Console, Google Analytics and Ahrefs. Private account data kept local.</footer></div></body></html>

@@ -40,4 +40,3 @@ export const teamMembers: TeamMember[] = [
     socials: { instagram: "#", linkedin: "#" }
   },
   ]
-

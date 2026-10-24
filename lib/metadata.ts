@@ -9,7 +9,7 @@ export function pageMetadata(title: string, description: string, path: string, i
     title: { absolute: title },
     description,
     alternates: { canonical: url },
-    openGraph: { type: 'website', locale: 'en_CA', siteName: 'Pro Motion Physiotherapy', title, description, url, images: [{ url: imageUrl }] },
+    openGraph: { type: 'website', locale: 'en_CA', siteName: 'Pro-Motion Physiotherapy', title, description, url, images: [{ url: imageUrl }] },
     twitter: { card: 'summary_large_image', title, description, images: [imageUrl] },
   }
 }

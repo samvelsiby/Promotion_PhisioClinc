@@ -1,0 +1,569 @@
+{
+  "url": "https://www.promotionphysiotherapy.ca",
+  "timestamp": "2026-09-18T04:04:21.485876+00:00",
+  "score": 56,
+  "band": "foundation",
+  "error": null,
+  "checks": {
+    "robots_txt": {
+      "score": 15,
+      "max": 18,
+      "passed": true,
+      "details": {
+        "found": true,
+        "bots_allowed": [
+          "GPTBot",
+          "OAI-SearchBot",
+          "ChatGPT-User",
+          "ClaudeBot",
+          "Claude-SearchBot",
+          "Claude-User",
+          "PerplexityBot",
+          "Perplexity-User",
+          "Googlebot",
+          "Google-Extended",
+          "Google-CloudVertexBot",
+          "Bingbot",
+          "Applebot-Extended",
+          "cohere-ai",
+          "DuckAssistBot",
+          "Bytespider",
+          "meta-externalagent",
+          "Meta-ExternalFetcher",
+          "facebookexternalhit",
+          "Amazonbot",
+          "AI2Bot",
+          "AI2Bot-Dolma",
+          "xAI-Bot",
+          "Applebot",
+          "PetalBot",
+          "YouBot",
+          "CCBot"
+        ],
+        "bots_missing": [],
+        "bots_blocked": [],
+        "bots_partial": [],
+        "citation_bots_ok": true,
+        "crawl_delay": null,
+        "citation_bots_explicit": false
+      }
+    },
+    "llms_txt": {
+      "score": 0,
+      "max": 18,
+      "passed": false,
+      "details": {
+        "found": false,
+        "has_h1": false,
+        "has_description": false,
+        "has_sections": false,
+        "has_links": false,
+        "word_count": 0,
+        "has_full": false,
+        "sections_count": 0,
+        "links_count": 0,
+        "has_blockquote": false,
+        "has_optional_section": false,
+        "companion_files_hint": false,
+        "validation_warnings": []
+      }
+    },
+    "schema_jsonld": {
+      "score": 10,
+      "max": 16,
+      "passed": true,
+      "details": {
+        "has_website": true,
+        "has_webapp": false,
+        "has_faq": true,
+        "found_types": [
+          "MedicalClinic",
+          "WebSite",
+          "FAQPage"
+        ]
+      }
+    },
+    "meta_tags": {
+      "score": 14,
+      "max": 14,
+      "passed": true,
+      "details": {
+        "has_title": true,
+        "has_description": true,
+        "has_canonical": true,
+        "has_og_title": true,
+        "has_og_description": true,
+        "has_og_image": true,
+        "title_text": "Physiotherapy in St. Vital, Winnipeg | Pro Motion Physiotherapy",
+        "description_text": "Physiotherapy in Meadowood, St. Vital, Winnipeg. Visit Pro Motion on St. Anne\u2019s Road for an assessment. Direct billing available. Book online.",
+        "description_length": 142,
+        "title_length": 63,
+        "canonical_url": "https://www.promotionphysiotherapy.ca",
+        "x_robots_noindex": false,
+        "x_robots_tag": "",
+        "has_noai": false,
+        "noai_value": ""
+      }
+    },
+    "content": {
+      "score": 12,
+      "max": 12,
+      "passed": true,
+      "details": {
+        "has_h1": true,
+        "heading_count": 28,
+        "has_numbers": true,
+        "has_links": true,
+        "word_count": 1318,
+        "h1_text": "Physiotherapy in St. Vital, WinnipegDriven by care.Powered by motion.",
+        "numbers_count": 15,
+        "external_links_count": 12,
+        "has_heading_hierarchy": true,
+        "has_lists_or_tables": true,
+        "has_front_loading": true
+      }
+    },
+    "signals": {
+      "score": 3,
+      "max": 6,
+      "passed": true,
+      "details": {
+        "has_lang": true,
+        "lang_value": "en",
+        "has_rss": false,
+        "rss_url": "",
+        "has_freshness": false,
+        "freshness_date": ""
+      }
+    },
+    "ai_discovery": {
+      "score": 0,
+      "max": 6,
+      "passed": false,
+      "details": {
+        "has_well_known_ai": false,
+        "has_summary": false,
+        "has_faq": false,
+        "has_service": false,
+        "summary_valid": false,
+        "faq_count": 0,
+        "endpoints_found": 0,
+        "has_webmcp_declaration": false,
+        "webmcp_declared_tool_count": 0
+      }
+    },
+    "brand_entity": {
+      "score": 5,
+      "max": 10,
+      "passed": true,
+      "details": {
+        "brand_name_consistent": true,
+        "names_found": [
+          "Physiotherapy in St. Vital, WinnipegDriven by care.Powered by motion.",
+          "Physiotherapy in St. Vital, Winnipeg",
+          "Physiotherapy in St. Vital, Winnipeg",
+          "Pro Motion Physiotherapy"
+        ],
+        "primary_name": "Pro Motion Physiotherapy",
+        "schema_desc_matches_meta": false,
+        "kg_pillar_count": 0,
+        "kg_pillar_urls": [],
+        "has_wikipedia": false,
+        "has_wikidata": false,
+        "has_linkedin": false,
+        "has_crunchbase": false,
+        "has_about_link": true,
+        "has_contact_info": false,
+        "has_geo_schema": true,
+        "has_hreflang": false,
+        "hreflang_count": 0,
+        "faq_depth": 10,
+        "has_recent_articles": false
+      }
+    }
+  },
+  "score_breakdown": {
+    "robots": 15,
+    "llms": 0,
+    "schema": 10,
+    "meta": 14,
+    "content": 12,
+    "signals": 3,
+    "ai_discovery": 0,
+    "brand_entity": 5,
+    "negative_penalty": -3
+  },
+  "recommendations": [
+    "Hidden text detected (display:none/visibility:hidden with content) \u2014 AI crawlers can read it and may penalize this cloaking pattern",
+    "Create /llms.txt for AI indexing: geo llms --base-url https://www.promotionphysiotherapy.ca. Note: llms.txt is an organizational signal, not a proven ranking factor. It helps structure content for AI systems.",
+    "Add Organization JSON-LD schema with name, url, and logo",
+    "Add sameAs links in Organization schema to Wikipedia, Wikidata, LinkedIn, or Crunchbase for Knowledge Graph disambiguation",
+    "Add address, telephone or contactPoint to Organization schema for entity validation",
+    "Keyword stuffing detected: 'your' at 3.9% density \u2014 diversify vocabulary",
+    "Create /.well-known/ai.txt to define AI crawler permissions",
+    "Create /ai/summary.json with site name and description for AI engines",
+    "Create /ai/faq.json with structured FAQ for AI search visibility",
+    "Create /ai/service.json to describe service capabilities for AI",
+    "Add RSS/Atom feed and link it in <head> with <link rel=\"alternate\" type=\"application/rss+xml\"> for AI discovery",
+    "Add descriptive labels to forms (label, aria-label) to make them usable by AI agents",
+    "Consider adding WebMCP toolname/tooldescription attributes to interactive elements for Chrome AI agent support",
+    "7 of 21 images lack descriptive alt text \u2014 multimodal AI engines (Gemini, GPT-4o) read images through their alt text"
+  ],
+  "webmcp": {
+    "readiness_level": "basic",
+    "agent_ready": false,
+    "has_register_tool": false,
+    "has_tool_attributes": false,
+    "tool_count": 0,
+    "has_potential_action": true,
+    "potential_actions": [
+      "ReserveAction"
+    ],
+    "has_labeled_forms": false,
+    "labeled_forms_count": 0,
+    "has_openapi": false,
+    "has_webmcp_declaration": false,
+    "declared_tool_count": 0
+  },
+  "negative_signals": {
+    "severity": "medium",
+    "signals_found": 2,
+    "cta_density_high": false,
+    "cta_count": 0,
+    "has_popup_signals": false,
+    "is_thin_content": false,
+    "broken_links_count": 0,
+    "has_keyword_stuffing": true,
+    "has_author_signal": false,
+    "boilerplate_ratio": 0.17,
+    "has_mixed_signals": false
+  },
+  "cdn_check": {
+    "checked": true,
+    "browser_status": 200,
+    "browser_content_length": 161521,
+    "bot_results": [
+      {
+        "bot": "GPTBot",
+        "status": 200,
+        "content_length": 161521,
+        "blocked": false,
+        "challenge_detected": false
+      },
+      {
+        "bot": "OAI-SearchBot",
+        "status": 200,
+        "content_length": 161521,
+        "blocked": false,
+        "challenge_detected": false
+      },
+      {
+        "bot": "PerplexityBot",
+        "status": 200,
+        "content_length": 161521,
+        "blocked": false,
+        "challenge_detected": false
+      },
+      {
+        "bot": "Claude-SearchBot",
+        "status": 200,
+        "content_length": 161521,
+        "blocked": false,
+        "challenge_detected": false
+      },
+      {
+        "bot": "Googlebot",
+        "status": 200,
+        "content_length": 161521,
+        "blocked": false,
+        "challenge_detected": false
+      },
+      {
+        "bot": "Applebot",
+        "status": 200,
+        "content_length": 161521,
+        "blocked": false,
+        "challenge_detected": false
+      }
+    ],
+    "any_blocked": false,
+    "cdn_detected": "vercel",
+    "cdn_headers": {
+      "x-vercel-id": "yul1::iad1::xdt4z-1789704260483-3acde56f1755",
+      "server": "Vercel"
+    },
+    "error": ""
+  },
+  "js_rendering": {
+    "checked": true,
+    "raw_word_count": 1309,
+    "raw_heading_count": 28,
+    "has_empty_root": false,
+    "has_noscript_content": false,
+    "framework_detected": "next.js",
+    "js_dependent": false,
+    "details": "1309 words and 28 headings found in raw HTML. Content is accessible without JavaScript."
+  },
+  "multimodal": {
+    "checked": true,
+    "total_images": 21,
+    "images_with_alt": 14,
+    "alt_coverage": 0.67,
+    "caption_count": 4,
+    "has_video": false,
+    "video_count": 0,
+    "has_video_schema": false,
+    "has_video_captions": false,
+    "has_audio": false,
+    "has_audio_schema": false,
+    "has_transcript": false,
+    "readiness_level": "good"
+  },
+  "trust_stack": {
+    "checked": true,
+    "technical": {
+      "name": "technical",
+      "label": "Technical Trust",
+      "score": 3,
+      "max_score": 5,
+      "signals_found": [
+        "HTTPS",
+        "HSTS"
+      ],
+      "signals_missing": [
+        "Content-Security-Policy header missing",
+        "X-Frame-Options header missing"
+      ],
+      "details": {}
+    },
+    "identity": {
+      "name": "identity",
+      "label": "Identity Trust",
+      "score": 2,
+      "max_score": 5,
+      "signals_found": [
+        "Brand name consistent",
+        "About page"
+      ],
+      "signals_missing": [
+        "No contact information in schema",
+        "No Organization JSON-LD schema",
+        "No author attribution found"
+      ],
+      "details": {}
+    },
+    "social": {
+      "name": "social",
+      "label": "Social Trust",
+      "score": 3,
+      "max_score": 5,
+      "signals_found": [
+        "sameAs links (2)",
+        "Reviews/testimonials",
+        "Social profiles (instagram.com, facebook.com)"
+      ],
+      "signals_missing": [
+        "No Knowledge Graph pillar links"
+      ],
+      "details": {}
+    },
+    "academic": {
+      "name": "academic",
+      "label": "Academic Trust",
+      "score": 2,
+      "max_score": 5,
+      "signals_found": [
+        "Numbers cited (15)",
+        "External sources (10 non-social links)"
+      ],
+      "signals_missing": [
+        "No links to authoritative sources (DOI, PubMed, Scholar)",
+        "No References/Sources section",
+        "No original research data patterns"
+      ],
+      "details": {
+        "authoritative_domains": [],
+        "statistics_count": 0,
+        "numbers_count": 15
+      }
+    },
+    "consistency": {
+      "name": "consistency",
+      "label": "Consistency Trust",
+      "score": 3,
+      "max_score": 5,
+      "signals_found": [
+        "Brand name consistent across title/H1/schema",
+        "No mixed signals"
+      ],
+      "signals_missing": [
+        "Schema description differs from meta description",
+        "No dateModified in schema"
+      ],
+      "details": {}
+    },
+    "composite_score": 13,
+    "grade": "C",
+    "trust_level": "medium"
+  },
+  "prompt_injection": {
+    "checked": true,
+    "hidden_text_found": true,
+    "hidden_text_count": 8,
+    "hidden_text_samples": [
+      "Back Pain & Sciatica ReliefComprehensive relief for back pain and sciatica using proven therapy techniques.",
+      "Sports InjuriesSport-specific rehabilitation to get athletes back to peak performance safely.",
+      "Work Injuries, WCB & Work Related InjuryProfessional care for workplace injuries with full WCB claim support and documentation."
+    ],
+    "invisible_unicode_found": false,
+    "invisible_unicode_count": 0,
+    "llm_instruction_found": false,
+    "llm_instruction_count": 0,
+    "llm_instruction_samples": [],
+    "html_comment_injection_found": false,
+    "html_comment_injection_count": 0,
+    "html_comment_samples": [],
+    "monochrome_text_found": false,
+    "monochrome_text_count": 0,
+    "microfont_found": false,
+    "microfont_count": 0,
+    "data_attr_injection_found": false,
+    "data_attr_injection_count": 0,
+    "data_attr_samples": [],
+    "aria_hidden_injection_found": true,
+    "aria_hidden_injection_count": 3,
+    "aria_hidden_samples": [
+      "No, you do not need a doctor's or other healthcare provider's referral to see a physiotherapist. Anyone can book an appointment, just give us a call! \u2026",
+      "Please bring: (1) A referral (if you have one) from your doctor, dentist, nurse practitioner, or another healthcare provider, (2) Your claim number an\u2026",
+      "Free parking is available in front of the clinic. Please arrive 15\u201320 minutes early to complete a few forms (contact info, insurance details, and basi\u2026"
+    ],
+    "ugc_surface_found": false,
+    "ugc_surface_samples": [],
+    "ugc_injection_risk": false,
+    "patterns_found": 2,
+    "severity": "suspicious",
+    "risk_level": "medium"
+  },
+  "rag_chunk": {
+    "checked": true,
+    "total_sections": 27,
+    "sections_in_range": 0,
+    "avg_section_words": 15.3,
+    "has_definition_opening": false,
+    "heading_as_boundary_ratio": 1.04,
+    "anchor_sentences": 54,
+    "chunk_readiness_score": 45
+  },
+  "embedding_proximity": {
+    "checked": true,
+    "skipped_reason": "sentence-transformers not installed (pip install geo-optimizer-skill[embedding])",
+    "model_name": "",
+    "query_scores": [],
+    "avg_similarity": 0.0,
+    "top_similarity": 0.0,
+    "retrievable_chunks": 0,
+    "total_chunks": 0
+  },
+  "content_decay": {
+    "checked": true,
+    "signals": [
+      {
+        "decay_type": "temporal",
+        "text": "M to 4:00 PM Get directions \u00a9 2026 Pro Motion Physiotherapy Buil",
+        "estimated_stale_days": 365,
+        "suggestion": "Use relative time or add dateModified schema for freshness signals"
+      },
+      {
+        "decay_type": "event",
+        "text": "s Google Review \u201c I recently had a physiotherapy session w",
+        "estimated_stale_days": 180,
+        "suggestion": "Replace recency language with specific dates"
+      }
+    ],
+    "earliest_decay_days": 180,
+    "decay_risk": "medium",
+    "evergreen_score": 84
+  },
+  "platform_citation": {
+    "checked": true,
+    "platforms": [
+      {
+        "platform": "chatgpt",
+        "score": 48,
+        "strengths": [
+          "GPTBot allowed in robots.txt",
+          "FAQ schema present",
+          "Well-structured content"
+        ],
+        "recommendations": [
+          "Add /llms.txt for LLM-friendly site summary",
+          "Add Organization schema for entity clarity"
+        ]
+      },
+      {
+        "platform": "perplexity",
+        "score": 35,
+        "strengths": [
+          "PerplexityBot allowed",
+          "Substantial content depth",
+          "External links for source diversity"
+        ],
+        "recommendations": [
+          "Add /llms.txt with links to key resources",
+          "Add dateModified schema or freshness indicators"
+        ]
+      },
+      {
+        "platform": "google_ai",
+        "score": 79,
+        "strengths": [
+          "Google-Extended allowed",
+          "Complete meta tags",
+          "Open Graph tags present",
+          "Quality content structure",
+          "Content available without JS (SSR-safe)",
+          "Descriptive image alt text",
+          "sameAs links for authority signals"
+        ],
+        "recommendations": [
+          "Add more schema types for richer structured data",
+          "Add dateModified / lastmod freshness signals"
+        ]
+      }
+    ]
+  },
+  "context_window": {
+    "checked": true,
+    "total_words": 1309,
+    "total_tokens_estimate": 1701,
+    "front_loaded_ratio": 0.1,
+    "key_info_tokens": 409,
+    "filler_ratio": 0.0,
+    "optimal_for": [
+      "perplexity",
+      "chatgpt",
+      "claude"
+    ],
+    "truncation_risk": "low",
+    "context_efficiency_score": 62
+  },
+  "instruction_readiness": {
+    "checked": true,
+    "labeled_buttons": 17,
+    "unlabeled_buttons": 0,
+    "action_clarity_score": 100,
+    "total_inputs": 2,
+    "labeled_inputs": 2,
+    "typed_inputs": 2,
+    "form_readability_score": 100,
+    "nav_links": 86,
+    "stateful_urls": true,
+    "has_aria_live": false,
+    "has_error_roles": false,
+    "readiness_score": 75,
+    "readiness_level": "ready"
+  },
+  "http_status": 200,
+  "page_size": 161521,
+  "audit_duration_ms": 2029
+}

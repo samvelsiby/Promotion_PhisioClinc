@@ -25,14 +25,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default:
-      "Physiotherapy in St. Vital, Winnipeg | Pro Motion Physiotherapy",
-    template: "%s | Pro Motion Physiotherapy",
+      "Physiotherapy in St. Vital, Winnipeg | Pro-Motion Physiotherapy",
+    template: "%s | Pro-Motion Physiotherapy",
   },
   description:
     "Physiotherapy in St. Vital, Winnipeg for pain and injury recovery. Visit our St. Anne’s Road clinic. Direct billing, MPI and WCB support. Book online.",
-  authors: [{ name: "Pro Motion Physiotherapy" }],
-  creator: "Pro Motion Physiotherapy",
-  publisher: "Pro Motion Physiotherapy",
+  authors: [{ name: "Pro-Motion Physiotherapy" }],
+  creator: "Pro-Motion Physiotherapy",
+  publisher: "Pro-Motion Physiotherapy",
   formatDetection: {
     email: false,
     address: false,
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_CA",
     url: SITE_URL,
-    siteName: "Pro Motion Physiotherapy",
+    siteName: "Pro-Motion Physiotherapy",
     title:
-      "Physiotherapy in St. Vital, Winnipeg | Pro Motion",
+      "Physiotherapy in St. Vital, Winnipeg | Pro-Motion",
     description:
       "Personalized care for pain and injury recovery at our St. Anne’s Road clinic. Direct billing available. Book online.",
     images: [
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pro Motion Physiotherapy | South Winnipeg",
+    title: "Pro-Motion Physiotherapy | South Winnipeg",
     description:
       "Personalized care for pain and injury recovery at our St. Anne’s Road clinic. Direct billing available. Book online.",
     images: ["/Hero/hero-desktop.jpg"],

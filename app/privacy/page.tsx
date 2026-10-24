@@ -2,11 +2,11 @@ import Link from 'next/link'
 import { COMPANY_CONTACT } from '@/lib/constants'
 import { pageMetadata } from '@/lib/metadata'
 
-export const metadata = pageMetadata('Website Privacy & Cookies | Pro Motion', 'Learn about optional website analytics, cookie choices and external services on the Pro Motion Physiotherapy website.', '/privacy')
+export const metadata = pageMetadata('Website Privacy & Cookies | Pro-Motion', 'Learn about optional website analytics, cookie choices and external services on the Pro-Motion Physiotherapy website.', '/privacy')
 
 export default function PrivacyPage() {
   return <main className="mx-auto max-w-3xl px-5 pb-20 pt-40 text-gray-900">
-    <p className="text-sm font-semibold text-[#c8101e]">Pro Motion Physiotherapy</p>
+    <p className="text-sm font-semibold text-[#c8101e]">Pro-Motion Physiotherapy</p>
     <h1 className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">Website privacy &amp; cookies</h1>
     <div className="prose prose-gray mt-8 max-w-none prose-headings:font-semibold prose-a:text-[#c8101e]">
       <p>This notice explains the website’s analytics and cookie controls. It does not replace the information and consent provided when you arrange or receive clinical care.</p>

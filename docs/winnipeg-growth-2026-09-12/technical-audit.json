@@ -1,0 +1,68 @@
+[
+  {
+    "path": "/first-visit",
+    "h1": 1,
+    "canonical": "pass",
+    "jsonld": "pass"
+  },
+  {
+    "path": "/insurance",
+    "h1": 1,
+    "canonical": "pass",
+    "jsonld": "pass"
+  },
+  {
+    "path": "/blogs/physiotherapy-referral-winnipeg",
+    "h1": 1,
+    "canonical": "pass",
+    "jsonld": "pass"
+  },
+  {
+    "path": "/blogs/direct-billing-physiotherapy-winnipeg",
+    "h1": 1,
+    "canonical": "pass",
+    "jsonld": "pass"
+  },
+  {
+    "path": "/blogs/mpi-physiotherapy-claims-winnipeg",
+    "h1": 1,
+    "canonical": "pass",
+    "jsonld": "pass"
+  },
+  {
+    "path": "/blogs/wcb-physiotherapy-winnipeg",
+    "h1": 1,
+    "canonical": "pass",
+    "jsonld": "pass"
+  },
+  {
+    "path": "/blogs/choosing-physiotherapy-st-vital",
+    "h1": 1,
+    "canonical": "pass",
+    "jsonld": "pass"
+  },
+  {
+    "path": "/blogs/questions-first-physiotherapy-assessment",
+    "h1": 1,
+    "canonical": "pass",
+    "jsonld": "pass"
+  },
+  {
+    "path": "/services/motor-vehicle-accident-recovery",
+    "h1": 1,
+    "canonical": "pass",
+    "jsonld": "pass"
+  },
+  {
+    "path": "/services/work-injuries",
+    "h1": 1,
+    "canonical": "pass",
+    "jsonld": "pass"
+  },
+  {
+    "path": "/services/pre-post-surgical-conditions",
+    "h1": 1,
+    "canonical": "pass",
+    "jsonld": "pass"
+  }
+]

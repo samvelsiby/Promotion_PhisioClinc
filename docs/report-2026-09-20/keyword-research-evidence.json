@@ -1,0 +1,2243 @@
+{
+  "metrics": {
+    "keywords": [
+      {
+        "keyword": "back pain treatment winnipeg",
+        "search_volume": null,
+        "keyword_difficulty": null,
+        "main_intent": "commercial",
+        "cpc": null,
+        "competition": null,
+        "competition_level": null
+      },
+      {
+        "keyword": "physiotherapy cost winnipeg",
+        "search_volume": null,
+        "keyword_difficulty": 7,
+        "main_intent": "informational",
+        "cpc": null,
+        "competition": null,
+        "competition_level": null
+      },
+      {
+        "keyword": "physiotherapy st vital",
+        "search_volume": null,
+        "keyword_difficulty": 0,
+        "main_intent": "navigational",
+        "cpc": null,
+        "competition": null,
+        "competition_level": null
+      },
+      {
+        "keyword": "physiotherapy winnipeg",
+        "search_volume": null,
+        "keyword_difficulty": 27,
+        "main_intent": "commercial",
+        "cpc": null,
+        "competition": null,
+        "competition_level": null
+      },
+      {
+        "keyword": "sciatica treatment winnipeg",
+        "search_volume": null,
+        "keyword_difficulty": null,
+        "main_intent": "commercial",
+        "cpc": null,
+        "competition": null,
+        "competition_level": null
+      },
+      {
+        "keyword": "sports physiotherapy winnipeg",
+        "search_volume": null,
+        "keyword_difficulty": 40,
+        "main_intent": "commercial",
+        "cpc": null,
+        "competition": null,
+        "competition_level": null
+      },
+      {
+        "keyword": "tmj physiotherapy winnipeg",
+        "search_volume": null,
+        "keyword_difficulty": 2,
+        "main_intent": "navigational",
+        "cpc": null,
+        "competition": null,
+        "competition_level": null
+      }
+    ],
+    "meta": {
+      "projectId": "f0a4013c-5871-4d1a-9acb-637671839dd9",
+      "url": "https://app.openseo.so/p/f0a4013c-5871-4d1a-9acb-637671839dd9/keywords"
+    }
+  },
+  "research": {
+    "results": [
+      {
+        "seed": "physiotherapy winnipeg",
+        "ok": true,
+        "rowCount": 51,
+        "source": "related",
+        "usedFallback": false,
+        "rows": [
+          {
+            "keyword": "massage physiotherapy near me",
+            "searchVolume": 1300,
+            "keywordDifficulty": 33,
+            "cpc": 2.91,
+            "competition": 0.76,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "elite sports injury",
+            "searchVolume": 880,
+            "keywordDifficulty": 0,
+            "cpc": 0.87,
+            "competition": 0.43,
+            "intent": "informational"
+          },
+          {
+            "keyword": "elite sports medicine",
+            "searchVolume": 720,
+            "keywordDifficulty": 17,
+            "cpc": 1.01,
+            "competition": 0.06,
+            "intent": "informational"
+          },
+          {
+            "keyword": "elite sports injury assiniboine",
+            "searchVolume": 390,
+            "keywordDifficulty": 0,
+            "cpc": 0.95,
+            "competition": 0.05,
+            "intent": "informational"
+          },
+          {
+            "keyword": "government-funded physiotherapy near me",
+            "searchVolume": 320,
+            "keywordDifficulty": 5,
+            "cpc": 2.25,
+            "competition": 0.73,
+            "intent": "informational"
+          },
+          {
+            "keyword": "elite sports injury bridgwater",
+            "searchVolume": 320,
+            "keywordDifficulty": 0,
+            "cpc": 1.42,
+            "competition": 0.05,
+            "intent": "informational"
+          },
+          {
+            "keyword": "physiotherapy near me within 1.6 km",
+            "searchVolume": 140,
+            "keywordDifficulty": 19,
+            "cpc": 3.62,
+            "competition": 0.73,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "elite sports injury st james",
+            "searchVolume": 40,
+            "keywordDifficulty": 0,
+            "cpc": 1.73,
+            "competition": 0.48,
+            "intent": "informational"
+          },
+          {
+            "keyword": "elite sports injury plessis",
+            "searchVolume": 30,
+            "keywordDifficulty": null,
+            "cpc": 1.19,
+            "competition": 0.12,
+            "intent": "informational"
+          },
+          {
+            "keyword": "physiotherapy winnipeg salary",
+            "searchVolume": 10,
+            "keywordDifficulty": 0,
+            "cpc": null,
+            "competition": 0,
+            "intent": "informational"
+          },
+          {
+            "keyword": "physiotherapy winnipeg corydon",
+            "searchVolume": 10,
+            "keywordDifficulty": null,
+            "cpc": 1.27,
+            "competition": 0.83,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "physiotherapy courses winnipeg",
+            "searchVolume": 10,
+            "keywordDifficulty": null,
+            "cpc": null,
+            "competition": 0.06,
+            "intent": "informational"
+          },
+          {
+            "keyword": "physiotherapy winnipeg",
+            "searchVolume": null,
+            "keywordDifficulty": 27,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "physiotherapy winnipeg near me",
+            "searchVolume": null,
+            "keywordDifficulty": 27,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "best physiotherapist in winnipeg",
+            "searchVolume": null,
+            "keywordDifficulty": 12,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "physiotherapy winnipeg pembina",
+            "searchVolume": null,
+            "keywordDifficulty": 30,
+            "cpc": null,
+            "competition": null,
+            "intent": "navigational"
+          },
+          {
+            "keyword": "physiotherapy winnipeg downtown",
+            "searchVolume": null,
+            "keywordDifficulty": 17,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "elite physiotherapy winnipeg",
+            "searchVolume": null,
+            "keywordDifficulty": 0,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "physiotherapy near me",
+            "searchVolume": null,
+            "keywordDifficulty": 40,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "mobile physiotherapy winnipeg",
+            "searchVolume": null,
+            "keywordDifficulty": 0,
+            "cpc": null,
+            "competition": null,
+            "intent": "navigational"
+          },
+          {
+            "keyword": "physiotherapy downtown winnipeg",
+            "searchVolume": null,
+            "keywordDifficulty": 17,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "physiotherapy winnipeg st vital",
+            "searchVolume": null,
+            "keywordDifficulty": 35,
+            "cpc": null,
+            "competition": null,
+            "intent": "navigational"
+          },
+          {
+            "keyword": "physiotherapy st james winnipeg",
+            "searchVolume": null,
+            "keywordDifficulty": 43,
+            "cpc": null,
+            "competition": null,
+            "intent": "navigational"
+          },
+          {
+            "keyword": "elite physiotherapy transcona",
+            "searchVolume": null,
+            "keywordDifficulty": 0,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "elite physiotherapy st james",
+            "searchVolume": null,
+            "keywordDifficulty": 0,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "elite sports injury winnipeg",
+            "searchVolume": null,
+            "keywordDifficulty": 44,
+            "cpc": null,
+            "competition": null,
+            "intent": "informational"
+          },
+          {
+            "keyword": "physiotherapy near me covered by ohip",
+            "searchVolume": null,
+            "keywordDifficulty": 7,
+            "cpc": null,
+            "competition": null,
+            "intent": "informational"
+          },
+          {
+            "keyword": "physiotherapy near me at home",
+            "searchVolume": null,
+            "keywordDifficulty": 0,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "physiotherapy near me open now",
+            "searchVolume": null,
+            "keywordDifficulty": 17,
+            "cpc": null,
+            "competition": null,
+            "intent": "navigational"
+          },
+          {
+            "keyword": "best physiotherapy near me",
+            "searchVolume": null,
+            "keywordDifficulty": 21,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "physiotherapy near me surrey",
+            "searchVolume": null,
+            "keywordDifficulty": 28,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "physiotherapy for seniors winnipeg",
+            "searchVolume": null,
+            "keywordDifficulty": null,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "in-home physiotherapy near me",
+            "searchVolume": null,
+            "keywordDifficulty": 0,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "at home physiotherapy for seniors",
+            "searchVolume": null,
+            "keywordDifficulty": 7,
+            "cpc": null,
+            "competition": null,
+            "intent": "informational"
+          },
+          {
+            "keyword": "pediatric physiotherapy winnipeg",
+            "searchVolume": null,
+            "keywordDifficulty": 33,
+            "cpc": null,
+            "competition": null,
+            "intent": "informational"
+          },
+          {
+            "keyword": "neurological physiotherapy winnipeg",
+            "searchVolume": null,
+            "keywordDifficulty": null,
+            "cpc": null,
+            "competition": null,
+            "intent": "informational"
+          },
+          {
+            "keyword": "physiotherapy near me winnipeg",
+            "searchVolume": null,
+            "keywordDifficulty": 27,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "winnipeg physiotherapy",
+            "searchVolume": null,
+            "keywordDifficulty": 27,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "physiotherapy winnipeg cost",
+            "searchVolume": null,
+            "keywordDifficulty": 7,
+            "cpc": null,
+            "competition": null,
+            "intent": "informational"
+          },
+          {
+            "keyword": "physiotherapy st vital",
+            "searchVolume": null,
+            "keywordDifficulty": 0,
+            "cpc": null,
+            "competition": null,
+            "intent": "navigational"
+          },
+          {
+            "keyword": "physiotherapy pembina",
+            "searchVolume": null,
+            "keywordDifficulty": 0,
+            "cpc": null,
+            "competition": null,
+            "intent": "informational"
+          },
+          {
+            "keyword": "physiotherapy winnipeg st james",
+            "searchVolume": null,
+            "keywordDifficulty": 43,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "best physiotherapy winnipeg",
+            "searchVolume": null,
+            "keywordDifficulty": 27,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "pelvic floor physiotherapy winnipeg",
+            "searchVolume": null,
+            "keywordDifficulty": 0,
+            "cpc": null,
+            "competition": null,
+            "intent": "informational"
+          },
+          {
+            "keyword": "sports injury clinic winnipeg",
+            "searchVolume": null,
+            "keywordDifficulty": 20,
+            "cpc": null,
+            "competition": null,
+            "intent": "informational"
+          },
+          {
+            "keyword": "elite physiotherapy clinic",
+            "searchVolume": null,
+            "keywordDifficulty": 23,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "physiotherapy winnipeg mcphillips",
+            "searchVolume": null,
+            "keywordDifficulty": 43,
+            "cpc": null,
+            "competition": null,
+            "intent": "informational"
+          },
+          {
+            "keyword": "elite sports injury transcona",
+            "searchVolume": null,
+            "keywordDifficulty": 0,
+            "cpc": null,
+            "competition": null,
+            "intent": "informational"
+          },
+          {
+            "keyword": "elite sports injury st vital",
+            "searchVolume": null,
+            "keywordDifficulty": 0,
+            "cpc": null,
+            "competition": null,
+            "intent": "transactional"
+          },
+          {
+            "keyword": "elite sports injury transcona reviews",
+            "searchVolume": null,
+            "keywordDifficulty": null,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          },
+          {
+            "keyword": "elite physiotherapy meadowood",
+            "searchVolume": null,
+            "keywordDifficulty": 35,
+            "cpc": null,
+            "competition": null,
+            "intent": "commercial"
+          }
+        ]
+      }
+    ],
+    "meta": {
+      "projectId": "f0a4013c-5871-4d1a-9acb-637671839dd9",
+      "url": "https://app.openseo.so/p/f0a4013c-5871-4d1a-9acb-637671839dd9/keywords"
+    }
+  },
+  "maps": {
+    "results": [
+      {
+        "rank_group": 1,
+        "rank_absolute": 1,
+        "title": "Pro- Motion Physiotherapy",
+        "domain": "www.promotionphysiotherapy.ca",
+        "url": "https://www.promotionphysiotherapy.ca/",
+        "contact_url": "https://pmphysio.juvonno.com/portal/publicbook.php",
+        "address": "567 St Anne's Rd Unit4, Winnipeg, MB R2M 5B2",
+        "address_info": {
+          "borough": "Meadowood",
+          "address": "567 St Anne's Rd Unit4",
+          "city": "Winnipeg",
+          "zip": "R2M 5B2",
+          "region": "Manitoba",
+          "country_code": "CA"
+        },
+        "phone": null,
+        "category": "Physiotherapy Center",
+        "additional_categories": [
+          "Physiotherapist",
+          "Rehabilitation center"
+        ],
+        "rating": {
+          "rating_type": "Max5",
+          "value": 5,
+          "votes_count": 85,
+          "rating_max": null
+        },
+        "rating_distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 85
+        },
+        "price_level": null,
+        "is_claimed": true,
+        "cid": "14716235228266980101",
+        "place_id": "ChIJb8qUxhl36lIRBWPxW_iROsw",
+        "latitude": 49.835352099999994,
+        "longitude": -97.0908899,
+        "total_photos": 14,
+        "work_hours": {
+          "timetable": {
+            "sunday": [
+              {
+                "open": {
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 16,
+                  "minute": 0
+                }
+              }
+            ],
+            "monday": [
+              {
+                "open": {
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 20,
+                  "minute": 0
+                }
+              }
+            ],
+            "tuesday": [
+              {
+                "open": {
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 20,
+                  "minute": 0
+                }
+              }
+            ],
+            "wednesday": [
+              {
+                "open": {
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 20,
+                  "minute": 0
+                }
+              }
+            ],
+            "thursday": [
+              {
+                "open": {
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 20,
+                  "minute": 0
+                }
+              }
+            ],
+            "friday": [
+              {
+                "open": {
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 20,
+                  "minute": 0
+                }
+              }
+            ],
+            "saturday": [
+              {
+                "open": {
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 16,
+                  "minute": 0
+                }
+              }
+            ]
+          },
+          "current_status": "close"
+        },
+        "local_justifications": [
+          {
+            "type": "user_review",
+            "text": "\"Very helpful physiotherapist, gave very useful information and exercises.\""
+          }
+        ]
+      },
+      {
+        "rank_group": 2,
+        "rank_absolute": 2,
+        "title": "Seine River Physiotherapy",
+        "domain": "www.seineriverphysio.ca",
+        "url": "http://www.seineriverphysio.ca/",
+        "contact_url": null,
+        "address": "600 St Anne's Rd, Winnipeg, MB R2M 2S2",
+        "address_info": {
+          "borough": "Meadowood",
+          "address": "600 St Anne's Rd",
+          "city": "Winnipeg",
+          "zip": "R2M 2S2",
+          "region": "Manitoba",
+          "country_code": "CA"
+        },
+        "phone": "+1204-415-5006",
+        "category": "Physiotherapy Center",
+        "additional_categories": [
+          "Acupuncture clinic",
+          "Massage therapist",
+          "Pain control clinic",
+          "Physiotherapist"
+        ],
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 22,
+          "rating_max": null
+        },
+        "rating_distribution": {
+          "1": 0,
+          "2": 1,
+          "3": 0,
+          "4": 3,
+          "5": 18
+        },
+        "price_level": null,
+        "is_claimed": true,
+        "cid": "16662158015584199710",
+        "place_id": "ChIJez0MFE526lIRHuRSbm_gO-c",
+        "latitude": 49.832004399999995,
+        "longitude": -97.0892329,
+        "total_photos": 1,
+        "work_hours": {
+          "timetable": {
+            "sunday": null,
+            "monday": [
+              {
+                "open": {
+                  "hour": 7,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 17,
+                  "minute": 30
+                }
+              }
+            ],
+            "tuesday": [
+              {
+                "open": {
+                  "hour": 7,
+                  "minute": 30
+                },
+                "close": {
+                  "hour": 19,
+                  "minute": 30
+                }
+              }
+            ],
+            "wednesday": [
+              {
+                "open": {
+                  "hour": 7,
+                  "minute": 30
+                },
+                "close": {
+                  "hour": 19,
+                  "minute": 30
+                }
+              }
+            ],
+            "thursday": [
+              {
+                "open": {
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 19,
+                  "minute": 0
+                }
+              }
+            ],
+            "friday": [
+              {
+                "open": {
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 17,
+                  "minute": 0
+                }
+              }
+            ],
+            "saturday": [
+              {
+                "open": {
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 14,
+                  "minute": 0
+                }
+              }
+            ]
+          },
+          "current_status": "close"
+        },
+        "local_justifications": [
+          {
+            "type": "user_review",
+            "text": "\"She not only treats me but teaches me how to help myself.\""
+          }
+        ]
+      },
+      {
+        "rank_group": 3,
+        "rank_absolute": 3,
+        "title": "Creating Health",
+        "domain": "www.creatinghealth.net",
+        "url": "https://www.creatinghealth.net/",
+        "contact_url": null,
+        "address": "600 St Anne's Rd #100, Winnipeg, MB R2M 2S2",
+        "address_info": {
+          "borough": "Meadowood",
+          "address": "600 St Anne's Rd #100",
+          "city": "Winnipeg",
+          "zip": "R2M 2S2",
+          "region": "Manitoba",
+          "country_code": "CA"
+        },
+        "phone": "+1204-253-1900",
+        "category": "Physiotherapist",
+        "additional_categories": [
+          "Chiropractor",
+          "Psychologist"
+        ],
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 35,
+          "rating_max": null
+        },
+        "rating_distribution": {
+          "1": 0,
+          "2": 1,
+          "3": 0,
+          "4": 1,
+          "5": 33
+        },
+        "price_level": null,
+        "is_claimed": true,
+        "cid": "6603369519241034341",
+        "place_id": "ChIJXzKFFE526lIRZfoAc5fho1s",
+        "latitude": 49.8319416,
+        "longitude": -97.0891468,
+        "total_photos": 9,
+        "work_hours": {
+          "timetable": {
+            "sunday": null,
+            "monday": [
+              {
+                "open": {
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 18,
+                  "minute": 0
+                }
+              }
+            ],
+            "tuesday": [
+              {
+                "open": {
+                  "hour": 9,
+                  "minute": 30
+                },
+                "close": {
+                  "hour": 18,
+                  "minute": 30
+                }
+              }
+            ],
+            "wednesday": [
+              {
+                "open": {
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 18,
+                  "minute": 0
+                }
+              }
+            ],
+            "thursday": [
+              {
+                "open": {
+                  "hour": 9,
+                  "minute": 30
+                },
+                "close": {
+                  "hour": 18,
+                  "minute": 30
+                }
+              }
+            ],
+            "friday": [
+              {
+                "open": {
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 12,
+                  "minute": 30
+                }
+              }
+            ],
+            "saturday": null
+          },
+          "current_status": "close"
+        },
+        "local_justifications": [
+          {
+            "type": "user_review",
+            "text": "\"Dr. Tole's expert care helped me recover from a lower back injury.\""
+          }
+        ]
+      },
+      {
+        "rank_group": 4,
+        "rank_absolute": 4,
+        "title": "ProActive Massage Therapy",
+        "domain": "proactivetherapy.ca",
+        "url": "https://proactivetherapy.ca/",
+        "contact_url": "https://proactivemassage.juvonno.com/portal/publicbook.php?step=clinicPractService&branch_id=1",
+        "address": "567 St Anne's Rd #1, Winnipeg, MB R2M 3G5",
+        "address_info": {
+          "borough": "Meadowood",
+          "address": "567 St Anne's Rd #1",
+          "city": "Winnipeg",
+          "zip": "R2M 3G5",
+          "region": "Manitoba",
+          "country_code": "CA"
+        },
+        "phone": "+1204-253-8080",
+        "category": "Massage therapist",
+        "additional_categories": null,
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 40,
+          "rating_max": null
+        },
+        "rating_distribution": {
+          "1": 1,
+          "2": 1,
+          "3": 0,
+          "4": 1,
+          "5": 37
+        },
+        "price_level": null,
+        "is_claimed": true,
+        "cid": "9853804270884258637",
+        "place_id": "ChIJZ985hCd36lIRTYNI1Ma-v4g",
+        "latitude": 49.835352099999994,
+        "longitude": -97.0908899,
+        "total_photos": 20,
+        "work_hours": {
+          "timetable": {
+            "sunday": [
+              {
+                "open": {
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 16,
+                  "minute": 30
+                }
+              }
+            ],
+            "monday": [
+              {
+                "open": {
+                  "hour": 9,
+                  "minute": 30
+                },
+                "close": {
+                  "hour": 19,
+                  "minute": 30
+                }
+              }
+            ],
+            "tuesday": [
+              {
+                "open": {
+                  "hour": 9,
+                  "minute": 30
+                },
+                "close": {
+                  "hour": 19,
+                  "minute": 30
+                }
+              }
+            ],
+            "wednesday": [
+              {
+                "open": {
+                  "hour": 9,
+                  "minute": 30
+                },
+                "close": {
+                  "hour": 19,
+                  "minute": 30
+                }
+              }
+            ],
+            "thursday": [
+              {
+                "open": {
+                  "hour": 9,
+                  "minute": 30
+                },
+                "close": {
+                  "hour": 19,
+                  "minute": 30
+                }
+              }
+            ],
+            "friday": [
+              {
+                "open": {
+                  "hour": 9,
+                  "minute": 30
+                },
+                "close": {
+                  "hour": 19,
+                  "minute": 30
+                }
+              }
+            ],
+            "saturday": [
+              {
+                "open": {
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 16,
+                  "minute": 30
+                }
+              }
+            ]
+          },
+          "current_status": "close"
+        },
+        "local_justifications": [
+          {
+            "type": "user_review",
+            "text": "\"I leave feeling looser, taller and relaxed.\""
+          }
+        ]
+      },
+      {
+        "rank_group": 5,
+        "rank_absolute": 5,
+        "title": "D'Arcy Bain Physiotherapy St.Vital",
+        "domain": "winnipegphysio.com",
+        "url": "http://winnipegphysio.com/",
+        "contact_url": "https://winnipegphysio.com/contactouroffices/",
+        "address": "827 Dakota St #4, Winnipeg, MB R2M 5M2",
+        "address_info": {
+          "borough": "Meadowood",
+          "address": "827 Dakota St #4",
+          "city": "Winnipeg",
+          "zip": "R2M 5M2",
+          "region": "Manitoba",
+          "country_code": "CA"
+        },
+        "phone": "+1204-257-7678",
+        "category": "Physiotherapist",
+        "additional_categories": [
+          "Massage therapist"
+        ],
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 76,
+          "rating_max": null
+        },
+        "rating_distribution": {
+          "1": 4,
+          "2": 0,
+          "3": 0,
+          "4": 1,
+          "5": 71
+        },
+        "price_level": null,
+        "is_claimed": true,
+        "cid": "16309783060126445988",
+        "place_id": "ChIJBVi7okJ26lIRpDGFvkf9V-I",
+        "latitude": 49.8309085,
+        "longitude": -97.106045,
+        "total_photos": 3,
+        "work_hours": {
+          "timetable": {
+            "sunday": null,
+            "monday": [
+              {
+                "open": {
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 19,
+                  "minute": 0
+                }
+              }
+            ],
+            "tuesday": [
+              {
+                "open": {
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 19,
+                  "minute": 0
+                }
+              }
+            ],
+            "wednesday": [
+              {
+                "open": {
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 19,
+                  "minute": 0
+                }
+              }
+            ],
+            "thursday": [
+              {
+                "open": {
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 19,
+                  "minute": 0
+                }
+              }
+            ],
+            "friday": [
+              {
+                "open": {
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 19,
+                  "minute": 0
+                }
+              }
+            ],
+            "saturday": null
+          },
+          "current_status": "close"
+        },
+        "local_justifications": [
+          {
+            "type": "user_review",
+            "text": "\"Chelsea is an amazing therapist for physio so kind and knowledgeable\""
+          }
+        ]
+      },
+      {
+        "rank_group": 6,
+        "rank_absolute": 6,
+        "title": "South Winnipeg Physiotherapy",
+        "domain": "www.southwinnipegphysio.ca",
+        "url": "http://www.southwinnipegphysio.ca/",
+        "contact_url": null,
+        "address": "484 St Anne's Rd #9, Winnipeg, MB R2M 3E1",
+        "address_info": {
+          "borough": "Worthington",
+          "address": "484 St Anne's Rd #9",
+          "city": "Winnipeg",
+          "zip": "R2M 3E1",
+          "region": "Manitoba",
+          "country_code": "CA"
+        },
+        "phone": "+1204-272-6200",
+        "category": "Physiotherapist",
+        "additional_categories": [
+          "Massage therapist"
+        ],
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 24,
+          "rating_max": null
+        },
+        "rating_distribution": {
+          "1": 2,
+          "2": 0,
+          "3": 0,
+          "4": 3,
+          "5": 19
+        },
+        "price_level": null,
+        "is_claimed": true,
+        "cid": "6402194392172560052",
+        "place_id": "ChIJeWxlEvh26lIRtH5xIOEp2Vg",
+        "latitude": 49.8433393,
+        "longitude": -97.0960557,
+        "total_photos": 5,
+        "work_hours": {
+          "timetable": {
+            "sunday": null,
+            "monday": [
+              {
+                "open": {
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 16,
+                  "minute": 0
+                }
+              }
+            ],
+            "tuesday": [
+              {
+                "open": {
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 16,
+                  "minute": 0
+                }
+              }
+            ],
+            "wednesday": [
+              {
+                "open": {
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 16,
+                  "minute": 0
+                }
+              }
+            ],
+            "thursday": [
+              {
+                "open": {
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 16,
+                  "minute": 0
+                }
+              }
+            ],
+            "friday": [
+              {
+                "open": {
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 17,
+                  "minute": 0
+                }
+              }
+            ],
+            "saturday": null
+          },
+          "current_status": "close"
+        },
+        "local_justifications": [
+          {
+            "type": "user_review",
+            "text": "\"I truly appreciate her help and highly recommend her.”\""
+          }
+        ]
+      },
+      {
+        "rank_group": 7,
+        "rank_absolute": 7,
+        "title": "Family First Chiropractic & Wellness Centre",
+        "domain": "www.entertogetwell.ca",
+        "url": "https://www.entertogetwell.ca/",
+        "contact_url": "https://www.entertogetwell.ca/contact-us/?utm_source=GBP&utm_medium=organic",
+        "address": "589 St Anne's Rd, Winnipeg, MB R2M 5A9",
+        "address_info": {
+          "borough": "Meadowood",
+          "address": "589 St Anne's Rd",
+          "city": "Winnipeg",
+          "zip": "R2M 5A9",
+          "region": "Manitoba",
+          "country_code": "CA"
+        },
+        "phone": "+1204-254-1313",
+        "category": "Chiropractor",
+        "additional_categories": null,
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 195,
+          "rating_max": null
+        },
+        "rating_distribution": {
+          "1": 3,
+          "2": 0,
+          "3": 0,
+          "4": 1,
+          "5": 191
+        },
+        "price_level": null,
+        "is_claimed": true,
+        "cid": "2914095868388435379",
+        "place_id": "ChIJb5Hg4FF26lIRs-W5tMDycCg",
+        "latitude": 49.8330975,
+        "longitude": -97.08930989999999,
+        "total_photos": 50,
+        "work_hours": {
+          "timetable": {
+            "sunday": null,
+            "monday": [
+              {
+                "open": {
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 13,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "hour": 15,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 18,
+                  "minute": 0
+                }
+              }
+            ],
+            "tuesday": [
+              {
+                "open": {
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 13,
+                  "minute": 0
+                }
+              }
+            ],
+            "wednesday": [
+              {
+                "open": {
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 13,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "hour": 15,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 18,
+                  "minute": 0
+                }
+              }
+            ],
+            "thursday": [
+              {
+                "open": {
+                  "hour": 15,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 18,
+                  "minute": 0
+                }
+              }
+            ],
+            "friday": [
+              {
+                "open": {
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 13,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "hour": 15,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 18,
+                  "minute": 0
+                }
+              }
+            ],
+            "saturday": null
+          },
+          "current_status": "close"
+        },
+        "local_justifications": [
+          {
+            "type": "user_review",
+            "text": "\"Now the pain is gone and my back doesn't feel stiff anymore.\""
+          }
+        ]
+      },
+      {
+        "rank_group": 8,
+        "rank_absolute": 8,
+        "title": "Elite Sports Injury - St. Vital",
+        "domain": "physiowinnipeg.com",
+        "url": "http://physiowinnipeg.com/",
+        "contact_url": null,
+        "address": "160 Meadowood Dr, Winnipeg, MB R2M 5L6",
+        "address_info": {
+          "borough": "St. Vital Centre",
+          "address": "160 Meadowood Dr",
+          "city": "Winnipeg",
+          "zip": "R2M 5L6",
+          "region": "Manitoba",
+          "country_code": "CA"
+        },
+        "phone": "+1204-888-3548",
+        "category": "Physiotherapist",
+        "additional_categories": [
+          "Massage therapist",
+          "Sports medicine clinic"
+        ],
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 105,
+          "rating_max": null
+        },
+        "rating_distribution": {
+          "1": 7,
+          "2": 4,
+          "3": 4,
+          "4": 11,
+          "5": 79
+        },
+        "price_level": null,
+        "is_claimed": true,
+        "cid": "1944449143015461232",
+        "place_id": "ChIJmdM6-mt26lIRcNE_hTES_Bo",
+        "latitude": 49.8257268,
+        "longitude": -97.1105414,
+        "total_photos": 9,
+        "work_hours": {
+          "timetable": {
+            "sunday": null,
+            "monday": [
+              {
+                "open": {
+                  "hour": 7,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 19,
+                  "minute": 30
+                }
+              }
+            ],
+            "tuesday": [
+              {
+                "open": {
+                  "hour": 7,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 19,
+                  "minute": 30
+                }
+              }
+            ],
+            "wednesday": [
+              {
+                "open": {
+                  "hour": 7,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 19,
+                  "minute": 30
+                }
+              }
+            ],
+            "thursday": [
+              {
+                "open": {
+                  "hour": 7,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 19,
+                  "minute": 30
+                }
+              }
+            ],
+            "friday": [
+              {
+                "open": {
+                  "hour": 7,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 19,
+                  "minute": 30
+                }
+              }
+            ],
+            "saturday": [
+              {
+                "open": {
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 15,
+                  "minute": 0
+                }
+              }
+            ]
+          },
+          "current_status": "close"
+        },
+        "local_justifications": [
+          {
+            "type": "user_review",
+            "text": "\"Martin’s knowledge of her injury and his rehab plans are impressive.\""
+          }
+        ]
+      },
+      {
+        "rank_group": 9,
+        "rank_absolute": 9,
+        "title": "LOCAL Physiotherapy - Lakewood",
+        "domain": "www.localphysiotherapy.ca",
+        "url": "http://www.localphysiotherapy.ca/lakewood",
+        "contact_url": "https://localphysiotherapy.juvonno.com/portal/publicbook.php",
+        "address": "50 Lakewood Blvd #130, Winnipeg, MB R2J 2M6",
+        "address_info": {
+          "borough": "Saint Boniface",
+          "address": "50 Lakewood Blvd #130",
+          "city": "Winnipeg",
+          "zip": "R2J 2M6",
+          "region": "Manitoba",
+          "country_code": "CA"
+        },
+        "phone": "+1204-253-0588",
+        "category": "Physiotherapist",
+        "additional_categories": null,
+        "rating": {
+          "rating_type": "Max5",
+          "value": 5,
+          "votes_count": 355,
+          "rating_max": null
+        },
+        "rating_distribution": {
+          "1": 1,
+          "2": 1,
+          "3": 0,
+          "4": 9,
+          "5": 344
+        },
+        "price_level": null,
+        "is_claimed": true,
+        "cid": "15324026367566056394",
+        "place_id": "ChIJCQpAyQR36lIRyot-h8rgqdQ",
+        "latitude": 49.8539591,
+        "longitude": -97.07941749999999,
+        "total_photos": 9,
+        "work_hours": {
+          "timetable": {
+            "sunday": null,
+            "monday": [
+              {
+                "open": {
+                  "hour": 7,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 20,
+                  "minute": 0
+                }
+              }
+            ],
+            "tuesday": [
+              {
+                "open": {
+                  "hour": 7,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 20,
+                  "minute": 0
+                }
+              }
+            ],
+            "wednesday": [
+              {
+                "open": {
+                  "hour": 7,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 20,
+                  "minute": 0
+                }
+              }
+            ],
+            "thursday": [
+              {
+                "open": {
+                  "hour": 7,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 20,
+                  "minute": 0
+                }
+              }
+            ],
+            "friday": [
+              {
+                "open": {
+                  "hour": 7,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 17,
+                  "minute": 0
+                }
+              }
+            ],
+            "saturday": [
+              {
+                "open": {
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 14,
+                  "minute": 0
+                }
+              }
+            ]
+          },
+          "current_status": "close"
+        },
+        "local_justifications": [
+          {
+            "type": "user_review",
+            "text": "\"Physiotherapist Erin Blaine is knowledgeable and is very professional.\""
+          }
+        ]
+      },
+      {
+        "rank_group": 10,
+        "rank_absolute": 10,
+        "title": "Purohit Nurse Practitioner Clinic",
+        "domain": "lsbpurohit.square.site",
+        "url": "https://lsbpurohit.square.site/",
+        "contact_url": null,
+        "address": "600 St Anne's Rd #120, Winnipeg, MB R2M 2S2",
+        "address_info": {
+          "borough": "Meadowood",
+          "address": "600 St Anne's Rd #120",
+          "city": "Winnipeg",
+          "zip": "R2M 2S2",
+          "region": "Manitoba",
+          "country_code": "CA"
+        },
+        "phone": "+1204-254-4257",
+        "category": "Medical clinic",
+        "additional_categories": null,
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 24,
+          "rating_max": null
+        },
+        "rating_distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 2,
+          "4": 0,
+          "5": 22
+        },
+        "price_level": null,
+        "is_claimed": true,
+        "cid": "11495140682246393518",
+        "place_id": "ChIJR8ND8FZ36lIRrg5w8Ivxhp8",
+        "latitude": 49.8320699,
+        "longitude": -97.08926439999999,
+        "total_photos": 6,
+        "work_hours": {
+          "timetable": {
+            "sunday": null,
+            "monday": [
+              {
+                "open": {
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 0,
+                  "minute": 0
+                }
+              }
+            ],
+            "tuesday": null,
+            "wednesday": [
+              {
+                "open": {
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 0,
+                  "minute": 0
+                }
+              }
+            ],
+            "thursday": null,
+            "friday": [
+              {
+                "open": {
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "hour": 0,
+                  "minute": 0
+                }
+              }
+            ],
+            "saturday": null
+          },
+          "current_status": "close"
+        },
+        "local_justifications": [
+          {
+            "type": "user_review",
+            "text": "\"The time they take to take care of all of us is greatly appreciated!\""
+          }
+        ]
+      }
+    ],
+    "meta": {
+      "projectId": "f0a4013c-5871-4d1a-9acb-637671839dd9",
+      "url": "https://app.openseo.so/p/f0a4013c-5871-4d1a-9acb-637671839dd9"
+    }
+  },
+  "serps": {
+    "results": [
+      {
+        "keyword": "physiotherapy st vital",
+        "ok": true,
+        "items": [
+          {
+            "type": "local_pack",
+            "rank": 1,
+            "title": "St Vital Physiotherapy And Sports Injury Centre",
+            "url": "http://www.stvitalphysio.ca/",
+            "domain": "www.stvitalphysio.ca",
+            "description": "1555 St Mary's Rd · (431) 449-5282 \nClosed · Opens 9 a.m. Mon \n\"She is super nice and helped me a lot with my sore back.\" \n"
+          },
+          {
+            "type": "local_pack",
+            "rank": 2,
+            "title": "D'Arcy Bain Physiotherapy St.Vital",
+            "url": "http://winnipegphysio.com/",
+            "domain": "winnipegphysio.com",
+            "description": "827 Dakota St #4 · (204) 257-7678 \nClosed · Opens 8 a.m. Mon \n\"Chelsea is an amazing therapist for physio so kind and knowledgeable\" \n"
+          },
+          {
+            "type": "local_pack",
+            "rank": 3,
+            "title": "Elite Sports Injury - St. Vital",
+            "url": "http://physiowinnipeg.com/",
+            "domain": "physiowinnipeg.com",
+            "description": "160 Meadowood Dr · (204) 888-3548 \nClosed · Opens 7 a.m. Mon \n\"Martin’s knowledge of her injury and his rehab plans are impressive.\" \n"
+          },
+          {
+            "type": "organic",
+            "rank": 4,
+            "title": "Physio St. Vital",
+            "url": "https://www.stvitalphysio.ca/",
+            "domain": "www.stvitalphysio.ca",
+            "description": "Move Better. Feel Stronger. Live Pain-Free. ... since 1986. Book Appointment(431) 449-5282. Registered Physiotherapists. Same Week Appointments. Direct Insurance ..."
+          },
+          {
+            "type": "people_also_ask",
+            "rank": 5,
+            "title": null,
+            "url": null,
+            "domain": null,
+            "description": null
+          },
+          {
+            "type": "organic",
+            "rank": 6,
+            "title": "Physiotherapy in Winnipeg | Elite Sports Injury Clinics",
+            "url": "https://physiowinnipeg.com/",
+            "domain": "physiowinnipeg.com",
+            "description": "Elite Physiotherapists are committed to helping you improve your mobility, alleviating discomfort, fortifying strength, and cultivating resilience. Read more"
+          },
+          {
+            "type": "organic",
+            "rank": 7,
+            "title": "D'Arcy Bain Physiotherapy: Winnipeg Physiotherapy Clinic",
+            "url": "https://winnipegphysio.com/",
+            "domain": "winnipegphysio.com",
+            "description": "Our clinics service all of Winnipeg with four convenient locations: McPhillips, St James, North Main and St Vital. D'Arcy Bain is your Winnipeg Physiotherapy ..."
+          },
+          {
+            "type": "organic",
+            "rank": 8,
+            "title": "St. Vital Physiotherapy & Sports Injury Centre - Winnipeg ...",
+            "url": "https://mbphysio.org/clinic/st--vital-physiotherapy---sports-injury-centre",
+            "domain": "mbphysio.org",
+            "description": "St. Vital Physiotherapy & Sports Injury Centre. Address: L01 - 1555 ST Mary's Rd Winnipeg R2M5L9. Phone: (204) 255-0597. Fax: (204) ... Read more"
+          },
+          {
+            "type": "organic",
+            "rank": 9,
+            "title": "Elite Sports Injury - St. Vital - Winnipeg, Manitoba",
+            "url": "https://mbphysio.org/clinic/elite-sports-injury---st--vital",
+            "domain": "mbphysio.org",
+            "description": "St. Vital is a member of the Manitoba Physiotherapy Association. Address: 14, 160 Meadowood Drive Winnipeg R2M 5L6 Phone: (204) 888-3548 Fax: Email: admin@ ..."
+          },
+          {
+            "type": "organic",
+            "rank": 10,
+            "title": "D'Arcy Bain Physiotherapy | 827 Dakota Street",
+            "url": "https://winnipegphysio.com/st-vital/",
+            "domain": "winnipegphysio.com",
+            "description": "D'Arcy Bain Physiotherapy · Home · About Us · Why D'Arcy Bain · Meet D'Arcy Bain · Our Locations · North Main · St Vital · St James · North McPhillips · Our ... Read more"
+          }
+        ]
+      },
+      {
+        "keyword": "tmj physiotherapy winnipeg",
+        "ok": true,
+        "items": [
+          {
+            "type": "local_pack",
+            "rank": 1,
+            "title": "Prairie Trail Physiotherapy & Sports Injury Clinic Winnipeg",
+            "url": "https://www.prairietrailphysio.ca/",
+            "domain": "www.prairietrailphysio.ca",
+            "description": "1190 Taylor Ave #1 · (204) 452-7142 \nClosed · Opens 7 a.m. Mon \n\"Listened to my concerns and gave me exercises to help me work my pain out\" \n"
+          },
+          {
+            "type": "local_pack",
+            "rank": 2,
+            "title": "Precision Movement & Therapies",
+            "url": "https://precisionmovement.ca/",
+            "domain": "precisionmovement.ca",
+            "description": "164 Fort St · (204) 943-0751 \nClosed · Opens 8 a.m. Mon \n\"His treatment techniques are amazing and I felt better with every treatment.\" \n"
+          },
+          {
+            "type": "local_pack",
+            "rank": 3,
+            "title": "Total Rehabilitation and Sports Injuries Clinic (Provencher)",
+            "url": "https://www.totalrehabclinic.com/",
+            "domain": "www.totalrehabclinic.com",
+            "description": "390 Provencher Blvd M · (204) 415-6491 \nClosed · Opens 9 a.m. Mon \n\"Michaela has helped me resolve 10 years of back and hip pain.\" \n"
+          },
+          {
+            "type": "organic",
+            "rank": 4,
+            "title": "TMJ Physiotherapy Winnipeg",
+            "url": "https://physiowinnipeg.com/tmj-physiotherapy/",
+            "domain": "physiowinnipeg.com",
+            "description": "Specialized TMJ physiotherapy in Winnipeg at Elite Sports Injury. Effective treatment for jaw pain, clicking, headaches, and temporomandibular disorders."
+          },
+          {
+            "type": "organic",
+            "rank": 5,
+            "title": "Temporomandibular Joint Disorders",
+            "url": "https://www.riverheightsphysiotherapy.ca/Injuries-Conditions/Head/Temporomandibular-Joint-Disorders/a~7934/article.html",
+            "domain": "www.riverheightsphysiotherapy.ca",
+            "description": "Rehabilitation Physiotherapy treatment at River Heights Physiotherapy can be very useful to manage your TMJ symptoms or alleviate them completely.  ..."
+          },
+          {
+            "type": "people_also_ask",
+            "rank": 6,
+            "title": null,
+            "url": null,
+            "domain": null,
+            "description": null
+          },
+          {
+            "type": "organic",
+            "rank": 7,
+            "title": "Temporomandibular Disorder & TMJ Treatment Winnipeg",
+            "url": "https://www.zenphysiotherapy.com/tmd-tmj-jaw-pain/",
+            "domain": "www.zenphysiotherapy.com",
+            "description": "TMD Physiotherapy Initial Assessment (60 minutes): $118 … call us at 204-691-0097. Unit 5 -1700 Corydon Ave, Winnipeg, MB R3N 0K1 | Phone: 204.691.0097. Phone: ..."
+          },
+          {
+            "type": "organic",
+            "rank": 8,
+            "title": "Physiotherapy For TMJ Dysfunction",
+            "url": "https://localphysiotherapy.ca/what-we-treat/tmj-dysfunction/",
+            "domain": "localphysiotherapy.ca",
+            "description": "LOCAL Physiotherapy offers treatment for TMJ pain, book your assessment today! 130 – 50 Lakewood Boulevard Winnipeg, Manitoba … 204-253-2165"
+          },
+          {
+            "type": "organic",
+            "rank": 9,
+            "title": "Jaw Pain & Dysfunction",
+            "url": "https://www.rivereastphysiotherapy.ca/Physiotherapy/Jaw-Pain-Dysfunction",
+            "domain": "www.rivereastphysiotherapy.ca",
+            "description": "We have been treating jaw / TMJ syndromes for 40 years. We work with dentists to help manage jaw clicking, jaw locking, jaw clenching/grinding, facial pain, ..."
+          },
+          {
+            "type": "organic",
+            "rank": 10,
+            "title": "Temporomandibular Joint Disorder (TMJD) Therapy at ...",
+            "url": "https://www.fortwhytephysio.com/therapy-services/tmjd-temporomandibular-joint-disorder/",
+            "domain": "www.fortwhytephysio.com",
+            "description": "(TMJD) Therapy at Fort Whyte Physiotherapy Physiotherapy on Corydon Avenue, Winnipeg ・ 2090 Corydon Avenue. Hours Monday7:30 - 8:00 ・ 2090 Corydon Ave, Unit ..."
+          }
+        ]
+      }
+    ],
+    "meta": {
+      "projectId": "f0a4013c-5871-4d1a-9acb-637671839dd9",
+      "url": "https://app.openseo.so/p/f0a4013c-5871-4d1a-9acb-637671839dd9/keywords"
+    }
+  },
+  "ga": {
+    "status": "ok",
+    "source": {
+      "provider": "google_analytics",
+      "propertyId": "properties/248255177",
+      "propertyDisplayName": "Promotion physiothearpy"
+    },
+    "request": {
+      "requestedDateRange": {
+        "startDate": "2026-09-10",
+        "endDate": "2026-09-19"
+      },
+      "resolvedDateRange": {
+        "startDate": "2026-09-10",
+        "endDate": "2026-09-18"
+      },
+      "previousDateRange": {
+        "startDate": "2026-09-01",
+        "endDate": "2026-09-09"
+      },
+      "propertyTimeZone": "America/Vancouver",
+      "currencyCode": "CAD",
+      "channel": "organic_search",
+      "trend": "daily"
+    },
+    "current": {
+      "sessions": 2,
+      "activeUsers": 2,
+      "engagedSessions": 1,
+      "engagementRate": 0.5,
+      "keyEvents": 0,
+      "transactions": 0,
+      "purchaseRevenue": 0
+    },
+    "previous": null,
+    "comparison": {
+      "sessions": {
+        "current": 2,
+        "previous": null,
+        "absoluteChange": null,
+        "percentChange": null
+      },
+      "activeUsers": {
+        "current": 2,
+        "previous": null,
+        "absoluteChange": null,
+        "percentChange": null
+      },
+      "engagedSessions": {
+        "current": 1,
+        "previous": null,
+        "absoluteChange": null,
+        "percentChange": null
+      },
+      "engagementRate": {
+        "current": 0.5,
+        "previous": null,
+        "absoluteChange": null,
+        "percentChange": null
+      },
+      "keyEvents": {
+        "current": 0,
+        "previous": null,
+        "absoluteChange": null,
+        "percentChange": null
+      },
+      "transactions": {
+        "current": 0,
+        "previous": null,
+        "absoluteChange": null,
+        "percentChange": null
+      },
+      "purchaseRevenue": {
+        "current": 0,
+        "previous": null,
+        "absoluteChange": null,
+        "percentChange": null
+      }
+    },
+    "trend": [
+      {
+        "date": "20260918",
+        "sessions": 2,
+        "activeUsers": 2,
+        "engagedSessions": 1,
+        "engagementRate": 0.5,
+        "keyEvents": 0,
+        "transactions": 0,
+        "purchaseRevenue": 0
+      }
+    ],
+    "diagnostics": [],
+    "reportMetadata": {
+      "hasLimitedData": false,
+      "reports": [
+        {
+          "dataLossFromOtherRow": false,
+          "subjectToThresholding": false,
+          "sampling": [],
+          "restrictedMetrics": [],
+          "emptyReason": null,
+          "hasLimitedData": false
+        },
+        {
+          "dataLossFromOtherRow": false,
+          "subjectToThresholding": false,
+          "sampling": [],
+          "restrictedMetrics": [],
+          "emptyReason": null,
+          "hasLimitedData": false
+        },
+        {
+          "dataLossFromOtherRow": false,
+          "subjectToThresholding": false,
+          "sampling": [],
+          "restrictedMetrics": [],
+          "emptyReason": null,
+          "hasLimitedData": false
+        }
+      ]
+    },
+    "quota": {
+      "tokensPerDay": {
+        "consumed": 1,
+        "remaining": 199893
+      },
+      "tokensPerHour": {
+        "consumed": 1,
+        "remaining": 39893
+      },
+      "concurrentRequests": {
+        "consumed": 0,
+        "remaining": 10
+      },
+      "serverErrorsPerProjectPerHour": {
+        "consumed": 0,
+        "remaining": 10
+      },
+      "potentiallyThresholdedRequestsPerHour": {
+        "consumed": 0,
+        "remaining": 120
+      },
+      "tokensPerProjectPerHour": {
+        "consumed": 1,
+        "remaining": 13893
+      }
+    },
+    "warnings": [
+      "end_date_clamped"
+    ],
+    "meta": {
+      "projectId": "f0a4013c-5871-4d1a-9acb-637671839dd9"
+    }
+  },
+  "keyevents": {
+    "status": "ok",
+    "source": {
+      "provider": "google_analytics",
+      "propertyId": "properties/248255177",
+      "propertyDisplayName": "Promotion physiothearpy"
+    },
+    "request": {
+      "requestedDateRange": {
+        "startDate": "2026-08-21",
+        "endDate": "2026-09-17"
+      },
+      "resolvedDateRange": {
+        "startDate": "2026-08-21",
+        "endDate": "2026-09-17"
+      },
+      "propertyTimeZone": "America/Vancouver",
+      "currencyCode": "CAD",
+      "channel": "all",
+      "reportKind": "key_events",
+      "breakdown": "event",
+      "dimensions": [
+        "eventName"
+      ],
+      "metrics": [
+        "keyEvents",
+        "totalUsers"
+      ],
+      "flags": {
+        "includeDate": false,
+        "onlyWithTransactions": false
+      },
+      "limit": 100,
+      "offset": 0
+    },
+    "rowCount": 0,
+    "totalRowCount": 0,
+    "rows": [],
+    "pageInfo": {
+      "offset": 0,
+      "limit": 100,
+      "hasMore": false,
+      "nextOffset": null
+    },
+    "reportMetadata": {
+      "dataLossFromOtherRow": false,
+      "subjectToThresholding": false,
+      "sampling": [],
+      "restrictedMetrics": [],
+      "emptyReason": null,
+      "hasLimitedData": false
+    },
+    "quota": {
+      "tokensPerDay": {
+        "consumed": 1,
+        "remaining": 199899
+      },
+      "tokensPerHour": {
+        "consumed": 1,
+        "remaining": 39899
+      },
+      "concurrentRequests": {
+        "consumed": 0,
+        "remaining": 10
+      },
+      "serverErrorsPerProjectPerHour": {
+        "consumed": 0,
+        "remaining": 10
+      },
+      "potentiallyThresholdedRequestsPerHour": {
+        "consumed": 0,
+        "remaining": 120
+      },
+      "tokensPerProjectPerHour": {
+        "consumed": 1,
+        "remaining": 13899
+      }
+    },
+    "warnings": [],
+    "diagnostics": [],
+    "meta": {
+      "projectId": "f0a4013c-5871-4d1a-9acb-637671839dd9"
+    }
+  },
+  "recentEvents": {
+    "status": "ok",
+    "source": {
+      "provider": "google_analytics",
+      "propertyId": "properties/248255177",
+      "propertyDisplayName": "Promotion physiothearpy"
+    },
+    "request": {
+      "requestedDateRange": {
+        "startDate": "2026-09-18",
+        "endDate": "2026-09-19"
+      },
+      "resolvedDateRange": {
+        "startDate": "2026-09-18",
+        "endDate": "2026-09-18"
+      },
+      "propertyTimeZone": "America/Vancouver",
+      "currencyCode": "CAD",
+      "channel": "all",
+      "reportKind": "key_events",
+      "breakdown": "event",
+      "dimensions": [
+        "eventName"
+      ],
+      "metrics": [
+        "keyEvents",
+        "totalUsers"
+      ],
+      "flags": {
+        "includeDate": false,
+        "onlyWithTransactions": false
+      },
+      "limit": 100,
+      "offset": 0
+    },
+    "rowCount": 0,
+    "totalRowCount": 0,
+    "rows": [],
+    "pageInfo": {
+      "offset": 0,
+      "limit": 100,
+      "hasMore": false,
+      "nextOffset": null
+    },
+    "reportMetadata": {
+      "dataLossFromOtherRow": false,
+      "subjectToThresholding": false,
+      "sampling": [],
+      "restrictedMetrics": [],
+      "emptyReason": null,
+      "hasLimitedData": false
+    },
+    "quota": {
+      "tokensPerDay": {
+        "consumed": 1,
+        "remaining": 199896
+      },
+      "tokensPerHour": {
+        "consumed": 1,
+        "remaining": 39896
+      },
+      "concurrentRequests": {
+        "consumed": 0,
+        "remaining": 10
+      },
+      "serverErrorsPerProjectPerHour": {
+        "consumed": 0,
+        "remaining": 10
+      },
+      "potentiallyThresholdedRequestsPerHour": {
+        "consumed": 0,
+        "remaining": 120
+      },
+      "tokensPerProjectPerHour": {
+        "consumed": 1,
+        "remaining": 13896
+      }
+    },
+    "warnings": [
+      "end_date_clamped"
+    ],
+    "diagnostics": [],
+    "meta": {
+      "projectId": "f0a4013c-5871-4d1a-9acb-637671839dd9"
+    }
+  }
+}

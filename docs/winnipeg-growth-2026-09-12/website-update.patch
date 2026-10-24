@@ -1,0 +1,793 @@
+diff --git a/app/blogs/[slug]/page.tsx b/app/blogs/[slug]/page.tsx
+index 85dc39c..3428253 100644
+--- a/app/blogs/[slug]/page.tsx
++++ b/app/blogs/[slug]/page.tsx
+@@ -13,6 +13,7 @@ function formatDateLong(dateString?: string) {
+   if (!dateString) return ''
+   const date = new Date(dateString)
+   return date.toLocaleDateString('en-US', {
++    timeZone: 'UTC',
+     year: 'numeric',
+     month: 'long',
+     day: 'numeric',
+@@ -98,7 +99,28 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
+             )}
+ 
+             <article className="prose prose-sm max-w-none text-gray-800 sm:prose-base">
+-              {Array.isArray(post.body) && post.body.length > 0 ? (
++              {post.sections ? (
++                <>
++                  <p>By Pro Motion Physiotherapy · Patient information</p>
++                  <nav aria-label="Article contents">
++                    <h2>In this guide</h2>
++                    <ul>{post.sections.map((section, index) => <li key={section.heading}><a href={`#section-${index + 1}`}>{section.heading}</a></li>)}</ul>
++                  </nav>
++                  {post.sections.map((section, index) => <section key={section.heading} id={`section-${index + 1}`} className="scroll-mt-28">
++                    <h2>{section.heading}</h2>
++                    {section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
++                  </section>)}
++                  <section aria-labelledby="article-sources">
++                    <h2 id="article-sources">Sources and further information</h2>
++                    <ul>{post.sources?.map(source => <li key={source.url}><a href={source.url} rel="noopener noreferrer" target="_blank">{source.title}</a></li>)}</ul>
++                    <p>General appointment information, not an individual assessment or a guarantee of insurance coverage. Confirm current arrangements with the clinic and your insurer.</p>
++                  </section>
++                  <section aria-labelledby="article-next-steps">
++                    <h2 id="article-next-steps">Plan your next step</h2>
++                    <ul>{post.relatedLinks?.map(link => <li key={link.href}><Link href={link.href}>{link.label}</Link></li>)}</ul>
++                  </section>
++                </>
++              ) : Array.isArray(post.body) && post.body.length > 0 ? (
+                 <PortableText value={post.body} components={{ block: { h1: ({ children }) => <h2 className="!text-[2.1428571em] !font-extrabold !leading-[1.2] !mt-0 !mb-[0.8em] sm:!text-[2.25em] sm:!leading-[1.1111111] sm:!mb-[0.888889em]">{children}</h2> } }} />
+               ) : (
+                 <p>No content available for this post yet.</p>
+@@ -110,7 +132,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
+             {topPosts.length > 0 && (
+               <div className="rounded-xl border border-slate-100 bg-white p-4 shadow-sm sm:p-5">
+                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-400">
+-                  Top posts
++                  More patient guides
+                 </p>
+                 <ul className="mt-4 space-y-3">
+                   {topPosts.map((item) => (
+diff --git a/app/blogs/layout.tsx b/app/blogs/layout.tsx
+index a901b40..1973da7 100644
+--- a/app/blogs/layout.tsx
++++ b/app/blogs/layout.tsx
+@@ -1,6 +1,6 @@
+ import { pageMetadata } from '@/lib/metadata'
+ 
+-export const metadata = pageMetadata("Physiotherapy Articles & Recovery Advice | Pro Motion Winnipeg", "Read physiotherapy and recovery articles from Pro Motion Physiotherapy in Winnipeg, with information about movement, injuries and rehabilitation.", "/blogs")
++export const metadata = pageMetadata("Physiotherapy Blog: MPI, WCB & Insurance | Pro Motion Winnipeg", "Winnipeg patient guides to physiotherapy appointments, referrals, direct billing, MPI and WCB. Plan your next step with Pro Motion in St. Vital.", "/blogs")
+ 
+ export default function PageLayout({ children }: { children: React.ReactNode }) {
+   return children
+diff --git a/app/blogs/page.tsx b/app/blogs/page.tsx
+index 792cc53..88c02f6 100644
+--- a/app/blogs/page.tsx
++++ b/app/blogs/page.tsx
+@@ -1,7 +1,7 @@
+ import Image from 'next/image'
+ import Link from 'next/link'
+ import { fetchBlogPosts } from '@/lib/sanity'
+-import { ArrowUpRight, Search, Clock, Calendar, Tag } from 'lucide-react'
++import { ArrowUpRight, Clock, Calendar, Tag } from 'lucide-react'
+ import { Button } from '@/components/ui/button'
+ 
+ export const revalidate = 60
+@@ -10,14 +10,17 @@ function formatDate(dateString?: string) {
+   if (!dateString) return ''
+   const date = new Date(dateString)
+   return date.toLocaleDateString('en-US', {
++    timeZone: 'UTC',
+     day: '2-digit',
+     month: 'long',
+     year: 'numeric',
+   })
+ }
+ 
+-export default async function BlogsPage() {
+-  const posts = await fetchBlogPosts()
++export default async function BlogsPage({ searchParams }: { searchParams: { q?: string } }) {
++  const allPosts = await fetchBlogPosts()
++  const query = typeof searchParams.q === 'string' ? searchParams.q.trim().slice(0, 150) : ''
++  const posts = allPosts.filter(post => `${post.title} ${post.excerpt || ''} ${post.tag || ''}`.toLowerCase().includes(query.toLowerCase()))
+   const [featured, ...restPosts] = posts
+ 
+   return (
+@@ -45,10 +48,10 @@ export default async function BlogsPage() {
+               </span>
+             </div>
+             <h1 className="text-4xl font-light leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl text-balance">
+-              Insights for a <br /><span className="font-bold text-white">Healthier Life.</span>
++              Physiotherapy guides <br /><span className="font-bold text-white">for Winnipeg.</span>
+             </h1>
+             <p className="mt-6 text-lg text-white/90 max-w-xl leading-relaxed">
+-              Expert advice, recovery stories, and wellness tips from our dedicated team of physiotherapists.
++              Practical information about appointments, insurance, MPI, WCB and choosing care in St. Vital.
+             </p>
+           </div>
+         </div>
+@@ -56,9 +59,15 @@ export default async function BlogsPage() {
+ 
+       <section className="relative z-10 -mt-12 pb-24">
+         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
++          <form action="/blogs" method="get" role="search" className="mb-8 flex flex-wrap gap-3 rounded-2xl border border-gray-200 bg-white p-5">
++            <label htmlFor="blog-query" className="w-full font-semibold text-gray-900">Find a patient guide</label>
++            <input id="blog-query" name="q" type="search" defaultValue={query} maxLength={150} placeholder="Try MPI, WCB or insurance" className="min-w-0 flex-1 rounded-lg border border-gray-300 px-4 py-3 text-gray-900" />
++            <button type="submit" className="rounded-lg bg-[#c8101e] px-5 py-3 font-semibold text-white">Search</button>
++            {query && <Link href="/blogs" className="w-full py-2 underline">Clear search</Link>}
++          </form>
+           {posts.length === 0 ? (
+             <div className="rounded-3xl bg-white border border-gray-100 p-12 text-center shadow-xl shadow-gray-200/50">
+-              <p className="text-gray-500 text-lg">No blog posts have been published yet. Check back soon.</p>
++              <p className="text-gray-500 text-lg">No articles match this search. Try “insurance,” “MPI,” or “first,” or clear your search.</p>
+             </div>
+           ) : (
+             <div className="grid lg:grid-cols-[1fr_360px] gap-10 items-start">
+@@ -138,23 +147,10 @@ export default async function BlogsPage() {
+ 
+               {/* Sidebar */}
+               <aside className="space-y-8 lg:sticky lg:top-28">
+-                {/* Search Widget - Visual only for now */}
+-                <div className="rounded-3xl bg-white p-6 shadow-lg shadow-gray-200/40 border border-gray-100">
+-                  <div className="relative">
+-                    <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+-                    <input
+-                      type="text"
+-                      placeholder="Search articles..."
+-                      className="w-full bg-gray-50 border border-gray-200 rounded-xl py-3 pl-12 pr-4 text-sm outline-none focus:border-[#e63939] focus:ring-2 focus:ring-[#e63939]/10 transition-all"
+-                      disabled
+-                    />
+-                  </div>
+-                </div>
+-
+                 {/* Top Posts */}
+                 {posts.length > 1 && (
+                   <div className="rounded-3xl bg-white p-8 shadow-lg shadow-gray-200/40 border border-gray-100">
+-                    <h3 className="text-lg font-bold text-gray-900 mb-6">Popular Reads</h3>
++                    <h3 className="text-lg font-bold text-gray-900 mb-6">More patient guides</h3>
+                     <div className="space-y-6">
+                       {posts.slice(0, 4).map((post, i) => (
+                         <Link key={post._id} href={`/blogs/${post.slug}`} className="group flex gap-4 items-start">
+diff --git a/app/insurance/page.tsx b/app/insurance/page.tsx
+index 195bd90..cf2a682 100644
+--- a/app/insurance/page.tsx
++++ b/app/insurance/page.tsx
+@@ -1,3 +1,4 @@
++import Link from 'next/link'
+ import Image from 'next/image'
+ import { Marquee } from '@/components/ui/marquee'
+ 
+@@ -40,6 +41,13 @@ export default function InsurancePage() {
+           </p>
+         </header>
+ 
++        <section className="prose max-w-none mb-10">
++          <h2>Check your coverage before your appointment</h2>
++          <p>Direct billing does not guarantee full payment. Confirm your physiotherapy allowance, any per-visit limit, referral requirements and remaining benefits with your insurer. Ask reception about current fees and payment if a claim cannot be processed.</p>
++          <p>Bring your benefit information and, for MPI or WCB, your claim number if available. <Link href="/first-visit">Prepare for your first visit</Link> or read our <Link href="/blogs/direct-billing-physiotherapy-winnipeg">direct billing guide</Link>.</p>
++          <h2>Public funding and post-operative rehabilitation</h2>
++          <p>Routine private-clinic visits are generally paid privately or through benefits. Manitoba publishes an <a href="https://www.gov.mb.ca/health/dsrecovery/docs/post-op-surgery-faq.pdf" target="_blank" rel="noopener noreferrer">eligible elective hip and knee replacement physiotherapy program</a>. Confirm current eligibility and clinic participation before arranging care.</p>
++        </section>
+         {/* Providers list */}
+         <section className="rounded-3xl bg-gray-50/80 p-6 shadow-sm sm:p-8 lg:p-9">
+           <div className="mb-4 flex flex-col gap-2 sm:mb-6">
+diff --git a/app/services/[slug]/page.tsx b/app/services/[slug]/page.tsx
+index f5d1855..f654bf1 100644
+--- a/app/services/[slug]/page.tsx
++++ b/app/services/[slug]/page.tsx
+@@ -1,3 +1,5 @@
++import { clinicArticles } from '@/lib/clinicArticles'
++import { COMPANY_CONTACT, NAP_LINE } from '@/lib/constants'
+ import Image from 'next/image'
+ import Link from 'next/link'
+ import { notFound } from 'next/navigation'
+@@ -30,6 +32,8 @@ export default function ServicePage({ params }: ServicePageProps) {
+     notFound()
+   }
+ 
++  const patientGuides = clinicArticles.filter(article => article.relatedLinks.some(link => link.href === `/services/${params.slug}`))
++
+   // Get related services from the same category
+   const relatedServices = allBentoItems
+     .filter(item => item.category === service.category && item.href !== `/services/${params.slug}`)
+@@ -84,6 +88,13 @@ export default function ServicePage({ params }: ServicePageProps) {
+               />
+             </div>
+ 
++            {patientGuides.length > 0 && <section className="rounded-2xl bg-white p-6 sm:p-8">
++              <h2 className="text-2xl font-bold text-gray-900">Arrange care in St. Vital</h2>
++              <p className="mt-4 leading-relaxed text-gray-600">Visit Pro Motion at {NAP_LINE}. Call {COMPANY_CONTACT.PHONE_DISPLAY} to discuss appointment arrangements, or check available appointments online. Tell reception if your visit involves an insurer, MPI, WCB or surgery.</p>
++              <p className="mt-4"><Link href="/first-visit" className="font-semibold text-[#c8101e] underline">Prepare for your first visit</Link></p>
++              <h3 className="mt-6 text-lg font-semibold">Related patient guides</h3>
++              <ul className="mt-3 space-y-3">{patientGuides.map(article => <li key={article.slug}><Link href={`/blogs/${article.slug}`} className="text-[#c8101e] underline underline-offset-4">{article.title}</Link></li>)}</ul>
++            </section>}
+             {/* Overview */}
+             {service.overview && (
+               <section>
+diff --git a/app/sitemap.ts b/app/sitemap.ts
+index 80f5b6b..0da2a8d 100644
+--- a/app/sitemap.ts
++++ b/app/sitemap.ts
+@@ -7,7 +7,7 @@ import { teamMembers } from '@/app/team/teamData'
+ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+   const posts = await fetchBlogSlugs()
+   const paths = [
+-    '', '/about', '/what-we-treat', '/what-we-treat/all', '/how-we-treat', '/team', '/insurance', '/blogs',
++    '', '/first-visit', '/about', '/what-we-treat', '/what-we-treat/all', '/how-we-treat', '/team', '/insurance', '/blogs',
+     ...getAllServiceSlugs().map((slug) => `/services/${slug}`),
+     ...teamMembers.map((member) => `/team/${member.slug}`),
+     ...posts.map((post) => `/blogs/${post.slug}`),
+diff --git a/components/FAQ/FAQ.tsx b/components/FAQ/FAQ.tsx
+index accc8dd..0575fdc 100644
+--- a/components/FAQ/FAQ.tsx
++++ b/components/FAQ/FAQ.tsx
+@@ -18,7 +18,7 @@ export default function FAQ() {
+   const displayedFaqs = showAll ? faqs : faqs.slice(0, 4)
+ 
+   return (
+-    <section className="w-full relative py-16 sm:py-20 lg:py-24">
++    <section id="faq" className="scroll-mt-28 w-full relative py-16 sm:py-20 lg:py-24">
+       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+         <RevealOnScroll>
+           <div className="home-heading mx-auto mb-16 max-w-2xl text-center sm:mb-20">
+diff --git a/components/Footer/Footer.tsx b/components/Footer/Footer.tsx
+index 0cab4df..29953c3 100644
+--- a/components/Footer/Footer.tsx
++++ b/components/Footer/Footer.tsx
+@@ -19,6 +19,7 @@ const serviceLinks = [
+ ]
+ 
+ const patientLinks = [
++  { label: 'Your first visit', href: '/first-visit' },
+   { label: 'About the clinic', href: '/about' },
+   { label: 'Meet our team', href: '/team' },
+   { label: 'How we treat', href: '/how-we-treat' },
+diff --git a/lib/faqs.ts b/lib/faqs.ts
+index ee35365..0565cd3 100644
+--- a/lib/faqs.ts
++++ b/lib/faqs.ts
+@@ -7,7 +7,7 @@ export const faqs: FAQItem[] = [
+   {
+     question: 'Do I need a referral to see a physiotherapist?',
+     answer:
+-      'No, you do not need a doctor\'s or other healthcare provider\'s referral to see a physiotherapist. Anyone can book an appointment,sjust give us a call! Physiotherapy can help people of all ages with a wide variety of conditions, including orthopedic and sports injuries, neurological disorders, cardiorespiratory issues, hand and workplace injuries, motor vehicle accidents, ergonomic and posture concerns, and geriatric care. Note: Some insurance plans may require a doctor\'s referral for coverage. Please check with your provider before your appointment.',
++      'No, you do not need a doctor\'s or other healthcare provider\'s referral to see a physiotherapist. Anyone can book an appointment, just give us a call! Physiotherapy can help people of all ages with a wide variety of conditions, including orthopedic and sports injuries, neurological disorders, cardiorespiratory issues, hand and workplace injuries, motor vehicle accidents, ergonomic and posture concerns, and geriatric care. Note: Some insurance plans may require a doctor\'s referral for coverage. Please check with your provider before your appointment.',
+   },
+   {
+     question: 'What do physiotherapists do?',
+@@ -42,7 +42,7 @@ export const faqs: FAQItem[] = [
+   {
+     question: 'Does Manitoba Health cover physiotherapy at private clinics?',
+     answer:
+-      'Unfortunately, Manitoba Health does not cover physiotherapy services provided in private clinics. However, many extended health insurance plans cover a portion of physiotherapy costs. Please check with your insurance provider for details.',
++      'Routine private-clinic physiotherapy is generally paid through extended health benefits or directly by the patient. Manitoba publishes a program for eligible elective hip and knee replacement rehabilitation; confirm current eligibility and clinic participation before booking. Other public programs may have their own eligibility requirements.',
+   },
+   {
+     question: 'What are your hours of operation?',
+diff --git a/lib/sanity.ts b/lib/sanity.ts
+index baada8e..a8ed4bd 100644
+--- a/lib/sanity.ts
++++ b/lib/sanity.ts
+@@ -1,3 +1,4 @@
++import { clinicArticles } from './clinicArticles'
+ const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
+ const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET
+ const apiVersion = '2023-10-01'
+@@ -19,6 +20,9 @@ export interface BlogPost {
+   excerpt?: string
+   tag?: string
+   readTime?: string
++  sections?: { heading: string; paragraphs: string[] }[]
++  sources?: { title: string; url: string }[]
++  relatedLinks?: { label: string; href: string }[]
+   body?: any[]
+   publishedAt?: string
+   mainImageUrl?: string
+@@ -60,15 +64,22 @@ export async function fetchBlogPosts(limit?: number): Promise<BlogPost[]> {
+     "mainImageAlt": mainImage.alt
+   }`
+ 
++  let remote: BlogPost[] = []
+   try {
+-    return await sanityFetch<BlogPost[]>(query)
++    remote = await sanityFetch<BlogPost[]>(query)
+   } catch (error) {
+     console.error('Error loading blog posts from Sanity', error)
+-    return []
+   }
++  // Local editorial articles own their slugs consistently in lists and detail pages.
++  const merged = new Map(remote.map(post => [post.slug, post]))
++  clinicArticles.forEach(post => merged.set(post.slug, post))
++  const posts = Array.from(merged.values()).sort((a, b) => (b.publishedAt || '').localeCompare(a.publishedAt || '') || a.slug.localeCompare(b.slug))
++  return typeof limit === 'number' ? posts.slice(0, limit) : posts
+ }
+ 
+ export async function fetchBlogPostBySlug(slug: string): Promise<BlogPost | null> {
++  const local = clinicArticles.find(post => post.slug === slug)
++  if (local) return local
+   const query = `*[_type == "post" && slug.current == ${JSON.stringify(slug)}][0]{
+     _id,
+     title,
+@@ -94,10 +105,11 @@ export async function fetchBlogPostBySlug(slug: string): Promise<BlogPost | null
+ export async function fetchBlogSlugs(): Promise<{ slug: string }[]> {
+   const query = `*[_type == "post" && defined(slug.current)]{ "slug": slug.current }`
+ 
++  let remote: { slug: string }[] = []
+   try {
+-    return await sanityFetch<{ slug: string }[]>(query)
++    remote = await sanityFetch<{ slug: string }[]>(query)
+   } catch (error) {
+     console.error('Error loading blog slugs from Sanity', error)
+-    return []
+   }
++  return Array.from(new Set([...remote.map(post => post.slug), ...clinicArticles.map(post => post.slug)])).map(slug => ({ slug }))
+ }
+diff --git a/app/first-visit/page.tsx b/app/first-visit/page.tsx
+new file mode 100644
+index 0000000..e16e1fd
+--- /dev/null
++++ b/app/first-visit/page.tsx
+@@ -0,0 +1,51 @@
++import Link from 'next/link'
++import { COMPANY_CONTACT, NAP_LINE } from '@/lib/constants'
++import { pageMetadata } from '@/lib/metadata'
++import JsonLd from '@/components/JsonLd'
++import { getBreadcrumbSchema } from '@/lib/schema'
++
++export const metadata = pageMetadata('Your First Physiotherapy Visit in Winnipeg | Pro Motion', 'Prepare for your first physiotherapy appointment in St. Vital: what to bring, insurance questions, location and online booking at Pro Motion.', '/first-visit')
++
++export default function FirstVisitPage() {
++  return <main className="min-h-screen bg-white py-24 sm:py-28">
++    <JsonLd data={getBreadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Your first visit', path: '/first-visit' }])} />
++    <div className="mx-auto max-w-4xl px-4 sm:px-6">
++      <nav aria-label="Breadcrumb" className="mb-8 text-sm"><Link href="/" className="underline">Home</Link> / Your first visit</nav>
++      <p className="text-sm font-semibold text-[#c8101e]">Pro Motion · St. Vital, Winnipeg</p>
++      <h1 className="mt-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">Your first physiotherapy visit.</h1>
++      <p className="mt-6 text-lg leading-relaxed text-gray-600">Know what to bring, what to ask and how to find us. If you are unsure which appointment to select, call our team before booking.</p>
++      <div className="my-8 flex flex-wrap gap-4">
++        <a href={COMPANY_CONTACT.BOOKING_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center rounded-full bg-[#c8101e] px-6 py-3 font-semibold text-white">Book an assessment</a>
++        <a href={`tel:${COMPANY_CONTACT.PHONE}`} className="inline-flex min-h-12 items-center px-3 py-3 font-semibold underline">Call {COMPANY_CONTACT.PHONE_DISPLAY}</a>
++      </div>
++      <div className="prose prose-lg max-w-none">
++        <h2>Before you book</h2>
++        <p>You can contact us without a doctor’s referral. Some insurance plans require a referral for reimbursement, so confirm your own plan’s terms. Tell reception if your visit involves a workplace injury, motor vehicle collision or rehabilitation after surgery.</p>
++        <p>Ask about the current assessment fee, appointment length and any accessibility or communication needs. Check available appointments in the booking portal; opening hours do not guarantee a particular time slot.</p>
++        <h2>What to bring</h2>
++        <ul>
++          <li>Your insurance information if you plan to use extended health benefits.</li>
++          <li>Your MPI or WCB claim number and injury date, if applicable and available.</li>
++          <li>Any referral, discharge instructions or relevant clinical documents you already have.</li>
++          <li>Comfortable clothing that allows the area being assessed to move; ask reception if unsure.</li>
++          <li>A short list of your questions and the activities you want help returning to.</li>
++        </ul>
++        <h2>What the assessment involves</h2>
++        <p>Your physiotherapist will discuss your concerns, health information and goals, then assess the relevant movement and function. Ask questions about the findings, proposed options and next steps. Your plan depends on the assessment; there is no single visit count that suits everyone.</p>
++        <p>Our appointment information advises arriving 15–20 minutes early for forms. Initial appointments are generally 60–75 minutes; confirm the duration of your booked appointment with reception.</p>
++        <p>Use our <Link href="/blogs/questions-first-physiotherapy-assessment">seven questions for your first assessment</Link> to prepare for that conversation.</p>
++        <h2>Payment and insurance</h2>
++        <p>Direct billing is available with many plans, subject to the insurer’s terms. You may need to pay a balance or pay directly if a claim cannot be processed. Confirm fees and payment arrangements before treatment.</p>
++        <p><Link href="/insurance">View insurance information</Link>, or read the guides for <Link href="/blogs/mpi-physiotherapy-claims-winnipeg">MPI appointments</Link> and <Link href="/blogs/wcb-physiotherapy-winnipeg">WCB appointments</Link>.</p>
++        <h2>Find the clinic</h2>
++        <p>{NAP_LINE}. Free parking is available in front of the clinic. Call ahead if you need details about entry or accessibility.</p>
++        <p><a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(NAP_LINE)}`} target="_blank" rel="noopener noreferrer">View the clinic on Google Maps</a></p>
++        <ul><li>{COMPANY_CONTACT.HOURS.weekday}</li><li>{COMPANY_CONTACT.HOURS.saturday}</li><li>{COMPANY_CONTACT.HOURS.sunday}</li></ul>
++        <h2>Meet your provider</h2>
++        <p><Link href="/team">Read our team profiles</Link> and <Link href="/what-we-treat">explore the conditions we treat</Link>. If you have a specific service in mind, reception can help confirm the appropriate provider.</p>
++        <h2>If your plans change</h2>
++        <p>Contact reception to cancel or reschedule. Our published policy asks for at least 24 hours’ notice and lists a $25 late-cancellation fee. Confirm the policy when you book.</p>
++      </div>
++    </div>
++  </main>
++}
+diff --git a/lib/clinicArticles.ts b/lib/clinicArticles.ts
+new file mode 100644
+index 0000000..2e0c521
+--- /dev/null
++++ b/lib/clinicArticles.ts
+@@ -0,0 +1,405 @@
++import type { BlogPost } from './sanity'
++export interface ClinicArticle extends BlogPost {
++  sections: { heading: string; paragraphs: string[] }[]
++  sources: { title: string; url: string }[]
++  relatedLinks: { label: string; href: string }[]
++}
++// Organizational editorial content; no clinician authorship or medical review is asserted.
++export const clinicArticles: ClinicArticle[] = [
++  {
++    "_id": "clinic-physiotherapy-referral-winnipeg",
++    "slug": "physiotherapy-referral-winnipeg",
++    "title": "Do you need a referral for physiotherapy in Winnipeg?",
++    "excerpt": "Understand the difference between booking a physiotherapy assessment and meeting your insurer’s reimbursement requirements.",
++    "tag": "Getting started",
++    "publishedAt": "2026-09-12",
++    "readTime": "3 min read",
++    "sections": [
++      {
++        "heading": "Booking and insurance are different questions",
++        "paragraphs": [
++          "You can contact Pro Motion Physiotherapy to book an assessment without a doctor’s referral. If you are using extended health benefits, check whether your particular plan requires a referral before it will reimburse treatment. Being able to book and being eligible for payment are separate questions.",
++          "This distinction is useful when you are arranging an appointment around work, school or family commitments. Ask about the appointment first, then confirm your payment arrangements before the visit. You do not need to guess which treatment to select: describe what you want help with when you call."
++        ]
++      },
++      {
++        "heading": "What to ask your insurer",
++        "paragraphs": [
++          "Ask whether physiotherapy is included, whether a referral is needed, and whether there is a limit per visit or per benefit year. Confirm whether the plan allows payment directly to the clinic. If you have already attended another clinic this year, ask about your remaining balance.",
++          "A useful question is: “Does my physiotherapy benefit require a physician referral, and what information does the referral need to include?” Keep the answer and any reference number with your benefit documents. An insurer’s website may describe several plans, so confirm the terms of your own plan."
++        ]
++      },
++      {
++        "heading": "If the appointment involves MPI, WCB or surgery",
++        "paragraphs": [
++          "Tell reception if your concern follows a motor vehicle collision or a workplace injury. These visits may involve a claim number, insurer authorization and different billing arrangements. An appointment booking does not confirm that an insurer has accepted your claim.",
++          "If you have recently had surgery, bring your discharge instructions and any rehabilitation guidance from your surgical team. A referral is useful clinical information even when it is not required simply to contact the clinic."
++        ]
++      },
++      {
++        "heading": "Book a first assessment in St. Vital",
++        "paragraphs": [
++          "Pro Motion is at Unit 4, 567 St. Anne’s Road, Winnipeg. Bring your insurance information, any referral you already have, and relevant claim details. Our first-visit page explains what to prepare.",
++          "If you are unsure whether the clinic provides the care you need, call (204) 560-2999 before booking. Explain the service you are looking for and any accessibility or communication needs. This helps reception arrange a suitable next step."
++        ]
++      }
++    ],
++    "sources": [
++      {
++        "title": "Pro Motion: appointment and referral information",
++        "url": "https://www.promotionphysiotherapy.ca/#faq"
++      }
++    ],
++    "relatedLinks": [
++      {
++        "label": "Prepare for your first visit",
++        "href": "/first-visit"
++      },
++      {
++        "label": "Insurance and direct billing",
++        "href": "/insurance"
++      }
++    ]
++  },
++  {
++    "_id": "clinic-direct-billing-physiotherapy-winnipeg",
++    "slug": "direct-billing-physiotherapy-winnipeg",
++    "title": "Direct billing physiotherapy in Winnipeg: questions to ask before you book",
++    "excerpt": "What direct billing means, what to bring, and how to check your plan without assuming every visit is fully covered.",
++    "tag": "Insurance",
++    "publishedAt": "2026-09-12",
++    "readTime": "3 min read",
++    "sections": [
++      {
++        "heading": "What direct billing means",
++        "paragraphs": [
++          "Direct billing lets a clinic submit an eligible claim to your insurer. It does not establish that you have coverage, that the insurer will approve the claim, or that the full appointment fee will be paid. Ask about the clinic fee and the amount you may need to pay yourself.",
++          "Pro Motion lists the providers it works with on its insurance page. If your insurer is listed, your specific plan still determines eligibility. If your insurer is not listed, reception can discuss the available payment arrangements."
++        ]
++      },
++      {
++        "heading": "A checklist for your benefits call",
++        "paragraphs": [
++          "Check your annual physiotherapy allowance, any per-visit maximum, referral requirements and whether direct payment is allowed. Ask when the benefit year resets; it may not match the calendar year.",
++          "If you are covered under more than one plan, ask each insurer how claims should be coordinated. Do not assume that a second plan will automatically pay every amount left by the first. Confirm the process before relying on combined benefits."
++        ]
++      },
++      {
++        "heading": "Bring the information needed for the claim",
++        "paragraphs": [
++          "Bring your benefit card or the plan information requested by reception, including the policy and member identifiers. Tell the clinic if the policy is held by a spouse or another family member. Avoid sending benefit identifiers through social media or public comments.",
++          "Ask how payment will work if the insurer cannot process the claim at the time of your appointment. Keep receipts and benefit statements so you can check what was paid and what remains available."
++        ]
++      },
++      {
++        "heading": "Manitoba funding is a separate issue",
++        "paragraphs": [
++          "Routine private-clinic physiotherapy is generally paid through private benefits or directly by the patient. Manitoba also publishes a program for eligible elective hip and knee replacement rehabilitation. Ask about current eligibility and the clinic’s participation; do not assume every private appointment is publicly funded or that no exceptions exist."
++        ]
++      },
++      {
++        "heading": "Decide based on your care needs",
++        "paragraphs": [
++          "A benefit balance is information for planning, not a reason to book treatment you do not need. Ask your physiotherapist how progress will be assessed and when the plan should be reviewed.",
++          "For an appointment at our St. Vital clinic, review the provider list and call (204) 560-2999 with billing questions. For MPI or WCB, identify the claim type when you book because those arrangements are separate from ordinary extended health benefits."
++        ]
++      }
++    ],
++    "sources": [
++      {
++        "title": "Pro Motion: insurance providers",
++        "url": "https://www.promotionphysiotherapy.ca/insurance"
++      },
++      {
++        "title": "Manitoba: post-operative physiotherapy program FAQ",
++        "url": "https://www.gov.mb.ca/health/dsrecovery/docs/post-op-surgery-faq.pdf"
++      }
++    ],
++    "relatedLinks": [
++      {
++        "label": "View insurance providers",
++        "href": "/insurance"
++      },
++      {
++        "label": "First-visit checklist",
++        "href": "/first-visit"
++      },
++      {
++        "label": "Post-surgical rehabilitation",
++        "href": "/services/pre-post-surgical-conditions"
++      }
++    ]
++  },
++  {
++    "_id": "clinic-mpi-physiotherapy-claims-winnipeg",
++    "slug": "mpi-physiotherapy-claims-winnipeg",
++    "title": "MPI physiotherapy in Winnipeg: preparing for your first appointment",
++    "excerpt": "A practical checklist for claim details, appointment preparation and questions about MPI billing after a collision.",
++    "tag": "MPI",
++    "publishedAt": "2026-09-12",
++    "readTime": "3 min read",
++    "sections": [
++      {
++        "heading": "Start with your claim information",
++        "paragraphs": [
++          "If you are arranging physiotherapy after a collision, tell reception that the appointment may involve Manitoba Public Insurance. Keep your claim number, collision date and case manager’s contact information available. If a claim is still being opened, explain that rather than assuming treatment has already been approved.",
++          "MPI’s physiotherapy information describes a process for providers to confirm PIPP coverage. Booking an appointment is not the same as receiving confirmation of payment. Ask the clinic which details it needs to check your file."
++        ]
++      },
++      {
++        "heading": "Prepare a short account of what has changed",
++        "paragraphs": [
++          "Before the visit, make a note of the activities you are finding difficult and the questions you want answered. Useful examples include turning your head while driving, sitting through a work shift or getting dressed. You do not need to diagnose the injury yourself.",
++          "Bring relevant discharge instructions or existing medical notes if you have them. Tell your physiotherapist about other treatment you are receiving so that care can be discussed in context. A blog cannot determine whether your symptoms are safe to manage in a routine appointment; if you need urgent medical help, seek it instead of waiting for a booking."
++        ]
++      },
++      {
++        "heading": "Clarify billing before treatment begins",
++        "paragraphs": [
++          "Ask whether coverage has been confirmed, whether anything needs authorization and whether you could owe any amount yourself. Keep your own record of appointment dates and any correspondence about payment.",
++          "If your circumstances change, tell reception and your case manager. Do not rely on another person’s approved visits as a guide to your own entitlement. The relevant information is the decision for your file."
++        ]
++      },
++      {
++        "heading": "Questions for your physiotherapist",
++        "paragraphs": [
++          "Ask what the assessment found, which activities to discuss further, and how your plan will be reviewed. If you need documentation for work, describe your actual duties and ask what information can appropriately be shared.",
++          "A useful follow-up question is: “What would make you change the plan or recommend another assessment?” This keeps the conversation focused on your recovery rather than on an assumed number of visits."
++        ]
++      },
++      {
++        "heading": "Arranging a visit at Pro Motion",
++        "paragraphs": [
++          "Our clinic is at Unit 4, 567 St. Anne’s Road in Winnipeg. Tell reception that the visit concerns a collision and bring the claim details you have. Call (204) 560-2999 if you are unsure which appointment to select.",
++          "Read our motor vehicle accident recovery page for the service information and our first-visit page for a practical preparation checklist. MPI’s own resources remain the source for coverage decisions and claim requirements."
++        ]
++      }
++    ],
++    "sources": [
++      {
++        "title": "MPI: physiotherapy provider information",
++        "url": "https://apps.mpi.mb.ca/HealthCare/Physiotherapy.html"
++      },
++      {
++        "title": "MPI: injury rehabilitation",
++        "url": "https://www.mpi.mb.ca/injury-rehabilitation/"
++      }
++    ],
++    "relatedLinks": [
++      {
++        "label": "Motor vehicle accident recovery",
++        "href": "/services/motor-vehicle-accident-recovery"
++      },
++      {
++        "label": "Prepare for your visit",
++        "href": "/first-visit"
++      }
++    ]
++  },
++  {
++    "_id": "clinic-wcb-physiotherapy-winnipeg",
++    "slug": "wcb-physiotherapy-winnipeg",
++    "title": "WCB physiotherapy in Winnipeg: preparing for a work-injury assessment",
++    "excerpt": "What to bring, how to describe your work demands, and which questions to ask about claim approval and return to work.",
++    "tag": "WCB",
++    "publishedAt": "2026-09-12",
++    "readTime": "3 min read",
++    "sections": [
++      {
++        "heading": "Tell the clinic this is a work-related concern",
++        "paragraphs": [
++          "When arranging an appointment, explain that your concern is connected to work and whether you already have a Workers Compensation Board of Manitoba claim. Bring the claim number if available, the date of injury and the contact details you have been given.",
++          "If your claim is pending, ask how the appointment and payment would be handled. The clinic cannot promise that a claim will be accepted simply because you have booked a physiotherapy visit."
++        ]
++      },
++      {
++        "heading": "Describe the job in practical terms",
++        "paragraphs": [
++          "A job title alone may not explain what your day requires. Write down tasks such as lifting, carrying, working overhead, driving, using tools or staying at a desk. Include the frequency and approximate duration of tasks when you know them.",
++          "Bring any existing work restrictions or modified-duty information. Note the tasks that concern you and questions you would like to discuss. You can describe a task as difficult without deciding what diagnosis explains it."
++        ]
++      },
++      {
++        "heading": "Ask about a suitable return-to-work plan",
++        "paragraphs": [
++          "WCB describes return to work as a plan that takes account of a worker’s abilities after injury. Its case manager or adjudicator monitors the plan and authorizes ongoing treatment as needed. Ask who is coordinating your file and how changes should be communicated.",
++          "Discuss what information the clinic needs from you and what information may be shared with WCB or other parties. If you are uncertain about a form or consent request, ask for an explanation before signing."
++        ]
++      },
++      {
++        "heading": "Keep the administrative questions together",
++        "paragraphs": [
++          "Useful questions include: Has treatment been authorized? What do I need to bring next time? Who should I contact if duties change? How will I be told if the payment arrangements change?",
++          "Keep copies of the documents you are given. If you have a disagreement about a claim decision, ask WCB about the appropriate review process. This article explains appointment preparation; it does not determine claim entitlement or employment rights."
++        ]
++      },
++      {
++        "heading": "Book in St. Vital",
++        "paragraphs": [
++          "Pro Motion Physiotherapy is on St. Anne’s Road in Winnipeg. Reception can help you identify the appointment type and the claim information to prepare. Call (204) 560-2999 with questions before booking.",
++          "Our work-injury page explains the service, and our first-visit checklist covers clothing and general preparation. Bring existing clinical instructions and explain your goals so your assessment can focus on the demands that matter to you."
++        ]
++      }
++    ],
++    "sources": [
++      {
++        "title": "WCB Manitoba: return to work for workers",
++        "url": "https://www.wcb.mb.ca/workers/return-to-work/"
++      }
++    ],
++    "relatedLinks": [
++      {
++        "label": "Work-injury physiotherapy",
++        "href": "/services/work-injuries"
++      },
++      {
++        "label": "First-visit checklist",
++        "href": "/first-visit"
++      }
++    ]
++  },
++  {
++    "_id": "clinic-choosing-physiotherapy-st-vital",
++    "slug": "choosing-physiotherapy-st-vital",
++    "title": "Choosing a physiotherapy clinic in St. Vital: a practical checklist",
++    "excerpt": "Compare services, registration, appointment arrangements and access when choosing a Winnipeg physiotherapy clinic.",
++    "tag": "St. Vital",
++    "publishedAt": "2026-09-12",
++    "readTime": "3 min read",
++    "sections": [
++      {
++        "heading": "Start with the care you are looking for",
++        "paragraphs": [
++          "Write down the main reason you are seeking an appointment and the activities you want help with. Then ask whether the clinic offers the appropriate service and which provider would be suitable. A long list of treatments on a website is less useful than a clear answer about your needs.",
++          "If you are looking for a specific type of care, such as rehabilitation after surgery, ask what information the clinician needs before your appointment. Do not assume every physiotherapist offers every service listed elsewhere online."
++        ]
++      },
++      {
++        "heading": "Check registration and provider information",
++        "paragraphs": [
++          "The College of Physiotherapists of Manitoba provides public resources for finding physiotherapists and clinics. Use those resources alongside a clinic’s own team information. A directory entry is a way to check details; it is not a guarantee of an individual result.",
++          "Read the clinician’s profile for relevant training and experience, then ask about anything that is unclear. Look for specific information rather than relying on words such as “best” or on a promised recovery time."
++        ]
++      },
++      {
++        "heading": "Consider how the appointment fits your day",
++        "paragraphs": [
++          "Check the actual clinic address, appointment hours and the travel arrangements that work for you. For a clinic in St. Vital, consider where you will be coming from rather than assuming that every south Winnipeg neighbourhood has the same journey.",
++          "If you need step-free access, assistance with entry, a particular communication arrangement or space for a support person, call before the visit. A parking statement alone does not answer every accessibility question."
++        ]
++      },
++      {
++        "heading": "Compare the payment arrangements",
++        "paragraphs": [
++          "Ask about the initial assessment fee, the expected appointment length, follow-up fees and cancellation terms. If using benefits, confirm referral requirements and reimbursement limits with your insurer.",
++          "Direct billing can be convenient, but it should not be interpreted as full coverage. For a workplace injury or collision, ask what claim details and authorization are needed before deciding how to proceed."
++        ]
++      },
++      {
++        "heading": "Questions to bring to your first assessment",
++        "paragraphs": [
++          "Ask what the assessment is intended to clarify, how treatment decisions will be discussed and how progress will be reviewed. You should be able to ask about the options and explain your preferences.",
++          "Pro Motion Physiotherapy is at Unit 4, 567 St. Anne’s Road, Winnipeg. Our team, service and first-visit pages provide a starting point. Call (204) 560-2999 if you would like to check whether we offer the care you are looking for."
++        ]
++      }
++    ],
++    "sources": [
++      {
++        "title": "College of Physiotherapists of Manitoba: public resources",
++        "url": "https://manitobaphysio.com/for-the-public/"
++      },
++      {
++        "title": "College: find a clinic",
++        "url": "https://manitobaphysio.com/for-the-public/find-a-clinic/"
++      }
++    ],
++    "relatedLinks": [
++      {
++        "label": "Meet the team",
++        "href": "/team"
++      },
++      {
++        "label": "Explore treatment services",
++        "href": "/what-we-treat"
++      },
++      {
++        "label": "Plan your first visit",
++        "href": "/first-visit"
++      }
++    ]
++  },
++  {
++    "_id": "clinic-questions-first-physiotherapy-assessment",
++    "slug": "questions-first-physiotherapy-assessment",
++    "title": "Seven questions to ask at your first physiotherapy assessment",
++    "excerpt": "Use these questions to discuss your goals, treatment options, follow-up plan and costs at your first physiotherapy visit.",
++    "tag": "Getting started",
++    "publishedAt": "2026-09-12",
++    "readTime": "3 min read",
++    "sections": [
++      {
++        "heading": "1. What are we trying to understand today?",
++        "paragraphs": [
++          "Explain what brought you in and ask what the assessment will explore. Describe the tasks or activities you want to return to. Bring any existing clinical instructions so the physiotherapist can consider them."
++        ]
++      },
++      {
++        "heading": "2. What are my options?",
++        "paragraphs": [
++          "Ask which options are appropriate, what each involves and what alternatives you can discuss. Tell the physiotherapist about preferences, concerns and practical limits. You can ask for an explanation in plain language."
++        ]
++      },
++      {
++        "heading": "3. What should I do between visits?",
++        "paragraphs": [
++          "Ask for instructions you can follow and clarify anything that is uncertain before you leave. If an activity or exercise is discussed, ask how it should be adapted to your circumstances and how to raise questions later. A general online exercise list cannot replace that conversation."
++        ]
++      },
++      {
++        "heading": "4. How will we check progress?",
++        "paragraphs": [
++          "Talk about a goal that matters in daily life. Ask how it will be reviewed and when you should discuss a change to the plan. This gives follow-up appointments a purpose beyond simply repeating the last visit."
++        ]
++      },
++      {
++        "heading": "5. When should I contact you or another provider?",
++        "paragraphs": [
++          "Ask what changes should prompt contact with the clinic and what would require another type of assessment. If you are unsure about advice you have received elsewhere, mention it so the information can be considered together."
++        ]
++      },
++      {
++        "heading": "6. What are the costs and billing arrangements?",
++        "paragraphs": [
++          "Ask about assessment and follow-up fees, direct billing and any amount you may need to pay yourself. If your appointment involves insurance, MPI or WCB, bring the relevant details and confirm how payment will be handled."
++        ]
++      },
++      {
++        "heading": "7. What is the next step?",
++        "paragraphs": [
++          "Before leaving, check that you understand the agreed plan and how to get clarification. Ask whether another visit is recommended and what that visit would review. The number and timing of appointments should reflect your individual situation.",
++          "At Pro Motion, you can prepare by reading our first-visit checklist and bringing your questions to the assessment. Our clinic is at Unit 4, 567 St. Anne’s Road in Winnipeg; call (204) 560-2999 for appointment arrangements."
++        ]
++      }
++    ],
++    "sources": [
++      {
++        "title": "Pro Motion: first-appointment information",
++        "url": "https://www.promotionphysiotherapy.ca/#faq"
++      }
++    ],
++    "relatedLinks": [
++      {
++        "label": "First-visit checklist",
++        "href": "/first-visit"
++      },
++      {
++        "label": "How we treat",
++        "href": "/how-we-treat"
++      },
++      {
++        "label": "Insurance questions",
++        "href": "/insurance"
++      }
++    ]
++  }
++]

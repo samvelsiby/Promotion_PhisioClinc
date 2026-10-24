@@ -45,12 +45,12 @@ Preferred Day/Time: ${preferredTime || 'Not specified'}
 Message: ${message || 'No message provided'}
 
 ---
-This email was sent from the Pro Motion Physiotherapy website contact form.
+This email was sent from the Pro-Motion Physiotherapy website contact form.
     `.trim()
 
     // Send email using Resend
     // Note: Update 'from' address after verifying your domain in Resend
-    const fromEmail = process.env.RESEND_FROM_EMAIL || 'Pro Motion Physiotherapy <onboarding@resend.dev>'
+    const fromEmail = process.env.RESEND_FROM_EMAIL || 'Pro-Motion Physiotherapy <onboarding@resend.dev>'
 
     const { data, error } = await resend.emails.send({
       from: fromEmail,

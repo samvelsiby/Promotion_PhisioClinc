@@ -1,0 +1,4742 @@
+{
+  "start": "2026-08-21",
+  "end": "2026-09-17",
+  "property": "sc-domain:promotionphysiotherapy.ca",
+  "dataState": "final",
+  "type": "web",
+  "totals": {
+    "rows": [
+      {
+        "clicks": 35,
+        "impressions": 1482,
+        "ctr": 0.023616734143049933,
+        "position": 18.748313090418353
+      }
+    ],
+    "responseAggregationType": "byProperty"
+  },
+  "Chart": {
+    "rows": [
+      {
+        "keys": [
+          "2026-09-10"
+        ],
+        "clicks": 4,
+        "impressions": 148,
+        "ctr": 0.02702702702702703,
+        "position": 26.074324324324323
+      },
+      {
+        "keys": [
+          "2026-09-11"
+        ],
+        "clicks": 4,
+        "impressions": 119,
+        "ctr": 0.03361344537815126,
+        "position": 17.81512605042017
+      },
+      {
+        "keys": [
+          "2026-09-12"
+        ],
+        "clicks": 5,
+        "impressions": 181,
+        "ctr": 0.027624309392265192,
+        "position": 29.07734806629834
+      },
+      {
+        "keys": [
+          "2026-09-13"
+        ],
+        "clicks": 1,
+        "impressions": 180,
+        "ctr": 0.005555555555555556,
+        "position": 22.716666666666665
+      },
+      {
+        "keys": [
+          "2026-09-14"
+        ],
+        "clicks": 4,
+        "impressions": 223,
+        "ctr": 0.017937219730941704,
+        "position": 18.19730941704036
+      },
+      {
+        "keys": [
+          "2026-09-15"
+        ],
+        "clicks": 8,
+        "impressions": 217,
+        "ctr": 0.03686635944700461,
+        "position": 15.926267281105991
+      },
+      {
+        "keys": [
+          "2026-09-16"
+        ],
+        "clicks": 4,
+        "impressions": 245,
+        "ctr": 0.0163265306122449,
+        "position": 12.620408163265306
+      },
+      {
+        "keys": [
+          "2026-09-17"
+        ],
+        "clicks": 5,
+        "impressions": 169,
+        "ctr": 0.029585798816568046,
+        "position": 10.934911242603551
+      }
+    ],
+    "responseAggregationType": "byProperty"
+  },
+  "Queries": {
+    "rows": [
+      {
+        "keys": [
+          "promotion physiotherapy"
+        ],
+        "clicks": 11,
+        "impressions": 35,
+        "ctr": 0.3142857142857143,
+        "position": 5.0285714285714285
+      },
+      {
+        "keys": [
+          "physiotherapy winnipeg"
+        ],
+        "clicks": 2,
+        "impressions": 28,
+        "ctr": 0.07142857142857142,
+        "position": 35.535714285714285
+      },
+      {
+        "keys": [
+          "pro- motion physiotherapy"
+        ],
+        "clicks": 2,
+        "impressions": 17,
+        "ctr": 0.11764705882352941,
+        "position": 1.4117647058823528
+      },
+      {
+        "keys": [
+          "physiotherapy"
+        ],
+        "clicks": 1,
+        "impressions": 63,
+        "ctr": 0.015873015873015872,
+        "position": 2.4761904761904763
+      },
+      {
+        "keys": [
+          "pro motion physical therapy"
+        ],
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 1
+      },
+      {
+        "keys": [
+          "pro motion physiotherapy"
+        ],
+        "clicks": 1,
+        "impressions": 14,
+        "ctr": 0.07142857142857142,
+        "position": 8.5
+      },
+      {
+        "keys": [
+          "pro-motion physical therapy"
+        ],
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 1
+      },
+      {
+        "keys": [
+          "promotion physio"
+        ],
+        "clicks": 1,
+        "impressions": 5,
+        "ctr": 0.2,
+        "position": 8.2
+      },
+      {
+        "keys": [
+          "567 st annes road"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "600 st annes road"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "keys": [
+          "accidente deportivo"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "acl return to play criteria"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "act physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 69
+      },
+      {
+        "keys": [
+          "advanced motion physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 38
+      },
+      {
+        "keys": [
+          "arthritis pain relief winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 31
+      },
+      {
+        "keys": [
+          "assessment for physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 20.5
+      },
+      {
+        "keys": [
+          "auto accident care winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 56
+      },
+      {
+        "keys": [
+          "back in motion winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 26
+      },
+      {
+        "keys": [
+          "back pain physiotherapy near me"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 93.5
+      },
+      {
+        "keys": [
+          "back pain treatment winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 38.857142857142854
+      },
+      {
+        "keys": [
+          "back pain winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 40.65
+      },
+      {
+        "keys": [
+          "best physical therapy winnipeg mb"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 38.5
+      },
+      {
+        "keys": [
+          "best physio winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 23.4
+      },
+      {
+        "keys": [
+          "best physiotherapist in winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 22.666666666666668
+      },
+      {
+        "keys": [
+          "best physiotherapist winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 26.1
+      },
+      {
+        "keys": [
+          "best physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "best physiotherapy clinic winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 32.83333333333333
+      },
+      {
+        "keys": [
+          "best physiotherapy near me"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 19
+      },
+      {
+        "keys": [
+          "best physiotherapy winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 25.666666666666668
+      },
+      {
+        "keys": [
+          "best rated physiotherapy near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "car accident physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 91
+      },
+      {
+        "keys": [
+          "car accident treatment winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 60.333333333333336
+      },
+      {
+        "keys": [
+          "do you need a referral for physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 28
+      },
+      {
+        "keys": [
+          "east st paul physio"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 47.25
+      },
+      {
+        "keys": [
+          "east st paul physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 45.888888888888886
+      },
+      {
+        "keys": [
+          "fall prevention physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 63
+      },
+      {
+        "keys": [
+          "fall risk assessment physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 53
+      },
+      {
+        "keys": [
+          "falls clinic"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "falls prevention clinic"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "football acl recovery time"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "freedom physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 84
+      },
+      {
+        "keys": [
+          "freedom physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 90
+      },
+      {
+        "keys": [
+          "grade 4 acl tear recovery time"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "grosbeak physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 56
+      },
+      {
+        "keys": [
+          "hip tendonitis"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "how long does it take an athlete to recover from a torn acl"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "how long is he out"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "how long will it take to recover"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "in motion physical therapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 28
+      },
+      {
+        "keys": [
+          "in motion physio"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 42.5
+      },
+      {
+        "keys": [
+          "in motion physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 15.333333333333334
+      },
+      {
+        "keys": [
+          "in soccer"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "is my appointment for physiotherapy covered by extended health benefits?"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 36.333333333333336
+      },
+      {
+        "keys": [
+          "job related injury physiotherapy near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 64
+      },
+      {
+        "keys": [
+          "joint pain relief winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 34.285714285714285
+      },
+      {
+        "keys": [
+          "keep in motion physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "knee pain relief winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "keys": [
+          "last minute physio"
+        ],
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 5.0625
+      },
+      {
+        "keys": [
+          "last minute physio appointment"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "local physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 60.666666666666664
+      },
+      {
+        "keys": [
+          "motion"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "motion near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 39
+      },
+      {
+        "keys": [
+          "motion physio"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 35.8
+      },
+      {
+        "keys": [
+          "motion physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 8.916666666666668
+      },
+      {
+        "keys": [
+          "motion physiotherapy - pt health"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 43
+      },
+      {
+        "keys": [
+          "motion pro health"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 28
+      },
+      {
+        "keys": [
+          "motion science physiotherapy clinic"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 25
+      },
+      {
+        "keys": [
+          "motion therapy physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "motor vehicle accident treatment winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 47
+      },
+      {
+        "keys": [
+          "movement physio"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 55.8
+      },
+      {
+        "keys": [
+          "movement physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 74
+      },
+      {
+        "keys": [
+          "moze"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "mpi injury categories physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "mpi secondary to fall"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8.666666666666668
+      },
+      {
+        "keys": [
+          "mpi st annes"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "neck pain relief royal west"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 52
+      },
+      {
+        "keys": [
+          "neck pain relief winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 48
+      },
+      {
+        "keys": [
+          "neck pain treatment winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 53.5
+      },
+      {
+        "keys": [
+          "neck pain winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 50.714285714285715
+      },
+      {
+        "keys": [
+          "new motion physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 70
+      },
+      {
+        "keys": [
+          "no referral physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 33.7
+      },
+      {
+        "keys": [
+          "paragon physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 65
+      },
+      {
+        "keys": [
+          "paramount physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 74
+      },
+      {
+        "keys": [
+          "phsio therapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "phsycotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "physio appointment meaning"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "physio assessment"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 35
+      },
+      {
+        "keys": [
+          "physio east st paul"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "physio extension"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 77.5
+      },
+      {
+        "keys": [
+          "physio for car accident"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 95
+      },
+      {
+        "keys": [
+          "physio in motion"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 46
+      },
+      {
+        "keys": [
+          "physio near me"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 21.666666666666668
+      },
+      {
+        "keys": [
+          "physio pro"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 20
+      },
+      {
+        "keys": [
+          "physio therapy"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 4.5
+      },
+      {
+        "keys": [
+          "physio to reduce fall risk"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 66.5
+      },
+      {
+        "keys": [
+          "physio winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 43.714285714285715
+      },
+      {
+        "keys": [
+          "physioterapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "physiotherapist for sciatica near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "physiotherapist meaning"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "physiotherapist st vital"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "physiotherapist walker assessment"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 97
+      },
+      {
+        "keys": [
+          "physiotherapist winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 44.5
+      },
+      {
+        "keys": [
+          "physiotherapists for arthritis"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 81
+      },
+      {
+        "keys": [
+          "physiotherapists winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 46.666666666666664
+      },
+      {
+        "keys": [
+          "physiotherapy assessment"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 24
+      },
+      {
+        "keys": [
+          "physiotherapy clinic near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 29
+      },
+      {
+        "keys": [
+          "physiotherapy clinic winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 44.642857142857146
+      },
+      {
+        "keys": [
+          "physiotherapy east st paul"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 37.111111111111114
+      },
+      {
+        "keys": [
+          "physiotherapy for sciatica near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 60
+      },
+      {
+        "keys": [
+          "physiotherapy in near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 28
+      },
+      {
+        "keys": [
+          "physiotherapy in winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 40.57142857142857
+      },
+      {
+        "keys": [
+          "physiotherapy mobility"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 94
+      },
+      {
+        "keys": [
+          "physiotherapy near me"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "keys": [
+          "physiotherapy near me winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 49.166666666666664
+      },
+      {
+        "keys": [
+          "physiotherapy recovery timelines: what to expect in winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "physiotherapy rotator cuff injury"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "physiotherapy sage creek"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 42.333333333333336
+      },
+      {
+        "keys": [
+          "physiotherapy spinal"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 70.5
+      },
+      {
+        "keys": [
+          "physiotherapy st vital"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 11.777777777777779
+      },
+      {
+        "keys": [
+          "physiotherapy winnipeg mb"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 46.75
+      },
+      {
+        "keys": [
+          "physiotherapy winnipeg near me"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 40.8
+      },
+      {
+        "keys": [
+          "physiotherapy.ca"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "portage physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 76
+      },
+      {
+        "keys": [
+          "portage physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 70
+      },
+      {
+        "keys": [
+          "post op physio winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 43
+      },
+      {
+        "keys": [
+          "post op rehab winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "keys": [
+          "post surgical rehabilitation"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "posture physiotherapy near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "pre and post surgical physiotherapist"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 73
+      },
+      {
+        "keys": [
+          "pre op physiotherapy winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "pro motion"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 39.5
+      },
+      {
+        "keys": [
+          "pro motion calgary"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "pro motion clinic"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 39.666666666666664
+      },
+      {
+        "keys": [
+          "pro motion healthcare"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "pro motion healthcare - physiotherapy & orthotics"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 54
+      },
+      {
+        "keys": [
+          "pro motion kelowna"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 39
+      },
+      {
+        "keys": [
+          "pro motion physiotherapy reviews"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "pro motion therapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 21
+      },
+      {
+        "keys": [
+          "pro physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "keys": [
+          "pro physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 26.5
+      },
+      {
+        "keys": [
+          "pro-motion"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 63
+      },
+      {
+        "keys": [
+          "proaction physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 56
+      },
+      {
+        "keys": [
+          "professional physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "keys": [
+          "professional physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 53
+      },
+      {
+        "keys": [
+          "professional physiotherapy and sports clinic"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "keys": [
+          "professional physiotherapy centre"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 22.5
+      },
+      {
+        "keys": [
+          "professional physiotherapy centres"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 28.5
+      },
+      {
+        "keys": [
+          "prohealth physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "promed physiotherapy & rehabilitation centre"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "promotion claremont"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "promotion kelowna"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 68
+      },
+      {
+        "keys": [
+          "promotion physiotherapy abbotsford"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 44
+      },
+      {
+        "keys": [
+          "prophysio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 85
+      },
+      {
+        "keys": [
+          "prophysiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 52
+      },
+      {
+        "keys": [
+          "quad therapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "questions to ask a physiotherapist"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "questions to ask physiotherapist"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "range of motion physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 86
+      },
+      {
+        "keys": [
+          "resolve physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 65
+      },
+      {
+        "keys": [
+          "resolve physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 76
+      },
+      {
+        "keys": [
+          "return date"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "revolution physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 28
+      },
+      {
+        "keys": [
+          "robin bone"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 64
+      },
+      {
+        "keys": [
+          "robin bone physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10.666666666666666
+      },
+      {
+        "keys": [
+          "seven oaks physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 90
+      },
+      {
+        "keys": [
+          "seven oaks physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 79
+      },
+      {
+        "keys": [
+          "shoulder pain relief gloucester"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 51
+      },
+      {
+        "keys": [
+          "shoulder pain relief winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "keys": [
+          "soccer acl injury"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "south winnipeg physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 16.333333333333336
+      },
+      {
+        "keys": [
+          "southside physiotherapy clinic"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "spinal physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 89
+      },
+      {
+        "keys": [
+          "spine physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 83
+      },
+      {
+        "keys": [
+          "sports injury treatment winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 74
+      },
+      {
+        "keys": [
+          "st anne physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8.333333333333332
+      },
+      {
+        "keys": [
+          "stand up rehab"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 60
+      },
+      {
+        "keys": [
+          "ste anne physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "ste anne physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 18
+      },
+      {
+        "keys": [
+          "sure"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "surgical prehabilitation and rehabilitation winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 70.83333333333333
+      },
+      {
+        "keys": [
+          "tendonitis physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "time to recover"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "timeline"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "trend physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 90
+      },
+      {
+        "keys": [
+          "wcb physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 67.8
+      },
+      {
+        "keys": [
+          "wcb physiotherapy near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 84
+      },
+      {
+        "keys": [
+          "wcb work injury clinic winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 23.5
+      },
+      {
+        "keys": [
+          "what is physiotherapist"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "when to get physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "whiplash treatment winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 31.75
+      },
+      {
+        "keys": [
+          "who are physiotherapist"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "who's a physiotherapist"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "winnipeg back pain treatment"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 38
+      },
+      {
+        "keys": [
+          "winnipeg joint pain relief"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 31.166666666666668
+      },
+      {
+        "keys": [
+          "winnipeg mb neck pain treatment"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 44.4
+      },
+      {
+        "keys": [
+          "winnipeg mb physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "winnipeg mb physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "keys": [
+          "winnipeg neck pain treatment"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 50.2
+      },
+      {
+        "keys": [
+          "winnipeg physical therapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 56
+      },
+      {
+        "keys": [
+          "winnipeg physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 47
+      },
+      {
+        "keys": [
+          "winnipeg physiotherapist"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 35
+      },
+      {
+        "keys": [
+          "winnipeg physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 21,
+        "ctr": 0,
+        "position": 42
+      },
+      {
+        "keys": [
+          "winnipeg physiotherapy clinic"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 43
+      },
+      {
+        "keys": [
+          "work injury physiotherapist"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 78
+      },
+      {
+        "keys": [
+          "work injury physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 89
+      },
+      {
+        "keys": [
+          "work injury physiotherapy near me"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 71
+      },
+      {
+        "keys": [
+          "work related injury treatment winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 51.166666666666664
+      },
+      {
+        "keys": [
+          "workplace injury physio clinic"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 75.2
+      },
+      {
+        "keys": [
+          "yes"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "\u0434\u0430"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "\u0641\u0648\u062a\u0628\u0627\u0644"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      }
+    ],
+    "responseAggregationType": "byProperty"
+  },
+  "Pages": {
+    "rows": [
+      {
+        "keys": [
+          "https://promotionphysiotherapy.ca/"
+        ],
+        "clicks": 18,
+        "impressions": 514,
+        "ctr": 0.03501945525291829,
+        "position": 25.394941634241246
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/"
+        ],
+        "clicks": 14,
+        "impressions": 134,
+        "ctr": 0.1044776119402985,
+        "position": 5.186567164179104
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/blogs/questions-first-physiotherapy-assessment"
+        ],
+        "clicks": 1,
+        "impressions": 67,
+        "ctr": 0.014925373134328358,
+        "position": 6.462686567164179
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/blogs/understanding-acl-injuries-recovery-timelines-and-the-path-to-ret1urn-to-play"
+        ],
+        "clicks": 1,
+        "impressions": 383,
+        "ctr": 0.0026109660574412533,
+        "position": 6.660574412532637
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/team"
+        ],
+        "clicks": 1,
+        "impressions": 80,
+        "ctr": 0.0125,
+        "position": 8.1125
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/blogs"
+        ],
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 26.652173913043477
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/blogs/1-5-signs-it-s-time-to-see-a-physiotherapist"
+        ],
+        "clicks": 0,
+        "impressions": 22,
+        "ctr": 0,
+        "position": 6.7727272727272725
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/blogs/1-5-signs-its-time-to-see-a-physiotherapist"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/blogs/choosing-physiotherapy-st-vital"
+        ],
+        "clicks": 0,
+        "impressions": 18,
+        "ctr": 0,
+        "position": 11.277777777777779
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/blogs/mpi-physiotherapy-claims-winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 31,
+        "ctr": 0,
+        "position": 5.709677419354839
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/blogs/physiotherapy-referral-winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 49,
+        "ctr": 0,
+        "position": 13.877551020408163
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/blogs/wcb-physiotherapy-winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 37,
+        "ctr": 0,
+        "position": 17.864864864864863
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/blogs/what-is-physiotherapy-and-when-should-you-see-a-physiotherapist"
+        ],
+        "clicks": 0,
+        "impressions": 124,
+        "ctr": 0,
+        "position": 4.685483870967742
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/blogs/whiplash-after-a-car-accident-mpi-why-your-recovery-deserves-more-than-a-referral"
+        ],
+        "clicks": 0,
+        "impressions": 35,
+        "ctr": 0,
+        "position": 22.057142857142857
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/first-visit"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 8.4
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/insurance"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/services/arthritis-pain-relief"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 81
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/services/back-pain-sciatica-relief"
+        ],
+        "clicks": 0,
+        "impressions": 77,
+        "ctr": 0,
+        "position": 35.077922077922075
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/services/fall-prevention"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 30.214285714285715
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/services/hip-knee-pain-relief"
+        ],
+        "clicks": 0,
+        "impressions": 18,
+        "ctr": 0,
+        "position": 62.94444444444444
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/services/motor-vehicle-accident-recovery"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 49.4
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/services/neck-pain-relief"
+        ],
+        "clicks": 0,
+        "impressions": 33,
+        "ctr": 0,
+        "position": 58.18181818181818
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/services/pre-post-surgical-conditions"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 68
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/services/shoulder-pain-relief"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 25.77777777777778
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/services/sports-injuries"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 74
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/services/work-injuries"
+        ],
+        "clicks": 0,
+        "impressions": 26,
+        "ctr": 0,
+        "position": 72
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/what-we-treat"
+        ],
+        "clicks": 0,
+        "impressions": 22,
+        "ctr": 0,
+        "position": 13.772727272727273
+      },
+      {
+        "keys": [
+          "https://www.promotionphysiotherapy.ca/what-we-treat/all"
+        ],
+        "clicks": 0,
+        "impressions": 73,
+        "ctr": 0,
+        "position": 24.36986301369863
+      }
+    ],
+    "responseAggregationType": "byPage"
+  },
+  "Countries": {
+    "rows": [
+      {
+        "keys": [
+          "can"
+        ],
+        "clicks": 33,
+        "impressions": 1083,
+        "ctr": 0.030470914127423823,
+        "position": 22.97229916897507
+      },
+      {
+        "keys": [
+          "gbr"
+        ],
+        "clicks": 1,
+        "impressions": 23,
+        "ctr": 0.043478260869565216,
+        "position": 6.434782608695652
+      },
+      {
+        "keys": [
+          "tha"
+        ],
+        "clicks": 1,
+        "impressions": 4,
+        "ctr": 0.25,
+        "position": 6.75
+      },
+      {
+        "keys": [
+          "are"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 4.333333333333334
+      },
+      {
+        "keys": [
+          "arg"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 5.75
+      },
+      {
+        "keys": [
+          "aus"
+        ],
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 16.307692307692307
+      },
+      {
+        "keys": [
+          "aut"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "aze"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "bel"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 2.5
+      },
+      {
+        "keys": [
+          "bgd"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 24
+      },
+      {
+        "keys": [
+          "bhr"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "bih"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "blr"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "bra"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "che"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 14.666666666666666
+      },
+      {
+        "keys": [
+          "cmr"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "col"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "cze"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "deu"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 5.333333333333333
+      },
+      {
+        "keys": [
+          "dom"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "egy"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 3.7
+      },
+      {
+        "keys": [
+          "esp"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 3.6666666666666665
+      },
+      {
+        "keys": [
+          "est"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "fin"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "fra"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "keys": [
+          "gha"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "grc"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "hkg"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 6.333333333333333
+      },
+      {
+        "keys": [
+          "hnd"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "hrv"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "idn"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 5.8
+      },
+      {
+        "keys": [
+          "ind"
+        ],
+        "clicks": 0,
+        "impressions": 22,
+        "ctr": 0,
+        "position": 7.7272727272727275
+      },
+      {
+        "keys": [
+          "irl"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 6.25
+      },
+      {
+        "keys": [
+          "irn"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "irq"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "isr"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "keys": [
+          "ita"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "keys": [
+          "jor"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8.333333333333332
+      },
+      {
+        "keys": [
+          "jpn"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 4.75
+      },
+      {
+        "keys": [
+          "ken"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 4.333333333333334
+      },
+      {
+        "keys": [
+          "kor"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "lbn"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "ltu"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "mar"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 5.666666666666667
+      },
+      {
+        "keys": [
+          "mex"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 7.75
+      },
+      {
+        "keys": [
+          "mlt"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "mmr"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "mys"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "nga"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 4.666666666666666
+      },
+      {
+        "keys": [
+          "nld"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 3.5
+      },
+      {
+        "keys": [
+          "nor"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "nzl"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 6.666666666666667
+      },
+      {
+        "keys": [
+          "omn"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "pak"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 6.2
+      },
+      {
+        "keys": [
+          "per"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "phl"
+        ],
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 9.26086956521739
+      },
+      {
+        "keys": [
+          "pol"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 5.666666666666667
+      },
+      {
+        "keys": [
+          "prt"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 4.666666666666666
+      },
+      {
+        "keys": [
+          "qat"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "rou"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "rus"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "sau"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 4.6
+      },
+      {
+        "keys": [
+          "sgp"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 10.166666666666666
+      },
+      {
+        "keys": [
+          "ssd"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "svk"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "swe"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 3.75
+      },
+      {
+        "keys": [
+          "tun"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "tza"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "uga"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 7.428571428571429
+      },
+      {
+        "keys": [
+          "ukr"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "ury"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "usa"
+        ],
+        "clicks": 0,
+        "impressions": 106,
+        "ctr": 0,
+        "position": 8.066037735849058
+      },
+      {
+        "keys": [
+          "ven"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "vnm"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "zaf"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 6.533333333333333
+      },
+      {
+        "keys": [
+          "zwe"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 2
+      }
+    ],
+    "responseAggregationType": "byProperty"
+  },
+  "Devices": {
+    "rows": [
+      {
+        "keys": [
+          "MOBILE"
+        ],
+        "clicks": 23,
+        "impressions": 609,
+        "ctr": 0.03776683087027915,
+        "position": 11.720853858784894
+      },
+      {
+        "keys": [
+          "DESKTOP"
+        ],
+        "clicks": 10,
+        "impressions": 860,
+        "ctr": 0.011627906976744186,
+        "position": 23.906976744186046
+      },
+      {
+        "keys": [
+          "TABLET"
+        ],
+        "clicks": 2,
+        "impressions": 13,
+        "ctr": 0.15384615384615385,
+        "position": 6.6923076923076925
+      }
+    ],
+    "responseAggregationType": "byProperty"
+  },
+  "Search appearance": {
+    "rows": [
+      {
+        "keys": [
+          "TRANSLATED_RESULT"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 9.333333333333334
+      }
+    ],
+    "responseAggregationType": "byPage"
+  },
+  "Canada queries": {
+    "rows": [
+      {
+        "keys": [
+          "promotion physiotherapy"
+        ],
+        "clicks": 11,
+        "impressions": 34,
+        "ctr": 0.3235294117647059,
+        "position": 2.5882352941176467
+      },
+      {
+        "keys": [
+          "physiotherapy winnipeg"
+        ],
+        "clicks": 2,
+        "impressions": 26,
+        "ctr": 0.07692307692307693,
+        "position": 35.57692307692308
+      },
+      {
+        "keys": [
+          "pro- motion physiotherapy"
+        ],
+        "clicks": 2,
+        "impressions": 17,
+        "ctr": 0.11764705882352941,
+        "position": 1.4117647058823528
+      },
+      {
+        "keys": [
+          "physiotherapy"
+        ],
+        "clicks": 1,
+        "impressions": 63,
+        "ctr": 0.015873015873015872,
+        "position": 2.4761904761904763
+      },
+      {
+        "keys": [
+          "pro motion physical therapy"
+        ],
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 1
+      },
+      {
+        "keys": [
+          "pro motion physiotherapy"
+        ],
+        "clicks": 1,
+        "impressions": 13,
+        "ctr": 0.07692307692307693,
+        "position": 6.3076923076923075
+      },
+      {
+        "keys": [
+          "pro-motion physical therapy"
+        ],
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 1
+      },
+      {
+        "keys": [
+          "promotion physio"
+        ],
+        "clicks": 1,
+        "impressions": 5,
+        "ctr": 0.2,
+        "position": 8.2
+      },
+      {
+        "keys": [
+          "567 st annes road"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "600 st annes road"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "keys": [
+          "act physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 69
+      },
+      {
+        "keys": [
+          "advanced motion physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 38
+      },
+      {
+        "keys": [
+          "arthritis pain relief winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 31
+      },
+      {
+        "keys": [
+          "assessment for physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 20.5
+      },
+      {
+        "keys": [
+          "auto accident care winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 56
+      },
+      {
+        "keys": [
+          "back in motion winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 26
+      },
+      {
+        "keys": [
+          "back pain physiotherapy near me"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 93.5
+      },
+      {
+        "keys": [
+          "back pain treatment winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 38.857142857142854
+      },
+      {
+        "keys": [
+          "back pain winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 40.65
+      },
+      {
+        "keys": [
+          "best physical therapy winnipeg mb"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 38.5
+      },
+      {
+        "keys": [
+          "best physio winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 23.4
+      },
+      {
+        "keys": [
+          "best physiotherapist in winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 22.666666666666668
+      },
+      {
+        "keys": [
+          "best physiotherapist winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 26.1
+      },
+      {
+        "keys": [
+          "best physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "best physiotherapy clinic winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 32.83333333333333
+      },
+      {
+        "keys": [
+          "best physiotherapy near me"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 19
+      },
+      {
+        "keys": [
+          "best physiotherapy winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 25.666666666666668
+      },
+      {
+        "keys": [
+          "best rated physiotherapy near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "car accident physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 91
+      },
+      {
+        "keys": [
+          "car accident treatment winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 60.333333333333336
+      },
+      {
+        "keys": [
+          "do you need a referral for physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 28
+      },
+      {
+        "keys": [
+          "east st paul physio"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 47.25
+      },
+      {
+        "keys": [
+          "east st paul physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 45.888888888888886
+      },
+      {
+        "keys": [
+          "fall prevention physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 63
+      },
+      {
+        "keys": [
+          "fall risk assessment physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 53
+      },
+      {
+        "keys": [
+          "falls clinic"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "falls prevention clinic"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "freedom physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 84
+      },
+      {
+        "keys": [
+          "freedom physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 90
+      },
+      {
+        "keys": [
+          "grade 4 acl tear recovery time"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "grosbeak physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 56
+      },
+      {
+        "keys": [
+          "hip tendonitis"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "in motion physical therapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 28
+      },
+      {
+        "keys": [
+          "in motion physio"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 42.5
+      },
+      {
+        "keys": [
+          "in motion physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 15.333333333333334
+      },
+      {
+        "keys": [
+          "is my appointment for physiotherapy covered by extended health benefits?"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 36.333333333333336
+      },
+      {
+        "keys": [
+          "job related injury physiotherapy near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 64
+      },
+      {
+        "keys": [
+          "joint pain relief winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 34.285714285714285
+      },
+      {
+        "keys": [
+          "keep in motion physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "knee pain relief winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "keys": [
+          "last minute physio"
+        ],
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 5.0625
+      },
+      {
+        "keys": [
+          "last minute physio appointment"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "local physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 60.666666666666664
+      },
+      {
+        "keys": [
+          "motion"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "motion near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 39
+      },
+      {
+        "keys": [
+          "motion physio"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 35.8
+      },
+      {
+        "keys": [
+          "motion physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "motion physiotherapy - pt health"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 43
+      },
+      {
+        "keys": [
+          "motion pro health"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 28
+      },
+      {
+        "keys": [
+          "motion science physiotherapy clinic"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 25
+      },
+      {
+        "keys": [
+          "motion therapy physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "motor vehicle accident treatment winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 47
+      },
+      {
+        "keys": [
+          "movement physio"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 55.8
+      },
+      {
+        "keys": [
+          "movement physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 74
+      },
+      {
+        "keys": [
+          "mpi injury categories physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "mpi st annes"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "neck pain relief royal west"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 52
+      },
+      {
+        "keys": [
+          "neck pain relief winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 48
+      },
+      {
+        "keys": [
+          "neck pain treatment winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 53.5
+      },
+      {
+        "keys": [
+          "neck pain winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 50.714285714285715
+      },
+      {
+        "keys": [
+          "new motion physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 70
+      },
+      {
+        "keys": [
+          "no referral physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 33.7
+      },
+      {
+        "keys": [
+          "paragon physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 65
+      },
+      {
+        "keys": [
+          "paramount physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 74
+      },
+      {
+        "keys": [
+          "phsio therapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "phsycotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "physio appointment meaning"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "physio assessment"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 35
+      },
+      {
+        "keys": [
+          "physio east st paul"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "physio extension"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 77.5
+      },
+      {
+        "keys": [
+          "physio for car accident"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 95
+      },
+      {
+        "keys": [
+          "physio in motion"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 46
+      },
+      {
+        "keys": [
+          "physio near me"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 21.666666666666668
+      },
+      {
+        "keys": [
+          "physio pro"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 20
+      },
+      {
+        "keys": [
+          "physio therapy"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 4.5
+      },
+      {
+        "keys": [
+          "physio to reduce fall risk"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 66.5
+      },
+      {
+        "keys": [
+          "physio winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 43.714285714285715
+      },
+      {
+        "keys": [
+          "physioterapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "keys": [
+          "physiotherapist for sciatica near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "physiotherapist meaning"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "physiotherapist st vital"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "physiotherapist walker assessment"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 97
+      },
+      {
+        "keys": [
+          "physiotherapist winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 44.5
+      },
+      {
+        "keys": [
+          "physiotherapists for arthritis"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 81
+      },
+      {
+        "keys": [
+          "physiotherapists winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 46.666666666666664
+      },
+      {
+        "keys": [
+          "physiotherapy assessment"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 24
+      },
+      {
+        "keys": [
+          "physiotherapy clinic near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 29
+      },
+      {
+        "keys": [
+          "physiotherapy clinic winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 44.642857142857146
+      },
+      {
+        "keys": [
+          "physiotherapy east st paul"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 37.111111111111114
+      },
+      {
+        "keys": [
+          "physiotherapy for sciatica near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 60
+      },
+      {
+        "keys": [
+          "physiotherapy in near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 28
+      },
+      {
+        "keys": [
+          "physiotherapy in winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 40.57142857142857
+      },
+      {
+        "keys": [
+          "physiotherapy mobility"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 94
+      },
+      {
+        "keys": [
+          "physiotherapy near me"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "keys": [
+          "physiotherapy near me winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 49.166666666666664
+      },
+      {
+        "keys": [
+          "physiotherapy recovery timelines: what to expect in winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "physiotherapy rotator cuff injury"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "physiotherapy sage creek"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 42.333333333333336
+      },
+      {
+        "keys": [
+          "physiotherapy spinal"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 70.5
+      },
+      {
+        "keys": [
+          "physiotherapy st vital"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 11.777777777777779
+      },
+      {
+        "keys": [
+          "physiotherapy winnipeg mb"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 46.75
+      },
+      {
+        "keys": [
+          "physiotherapy winnipeg near me"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 40.8
+      },
+      {
+        "keys": [
+          "portage physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 76
+      },
+      {
+        "keys": [
+          "portage physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 70
+      },
+      {
+        "keys": [
+          "post op physio winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 43
+      },
+      {
+        "keys": [
+          "post op rehab winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "keys": [
+          "post surgical rehabilitation"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "posture physiotherapy near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "pre and post surgical physiotherapist"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 73
+      },
+      {
+        "keys": [
+          "pre op physiotherapy winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "pro motion"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "pro motion calgary"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "pro motion clinic"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 39.666666666666664
+      },
+      {
+        "keys": [
+          "pro motion healthcare"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "pro motion healthcare - physiotherapy & orthotics"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 54
+      },
+      {
+        "keys": [
+          "pro motion kelowna"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 39
+      },
+      {
+        "keys": [
+          "pro motion physiotherapy reviews"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "pro motion therapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 21
+      },
+      {
+        "keys": [
+          "pro physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "keys": [
+          "pro physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 41
+      },
+      {
+        "keys": [
+          "pro-motion"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 63
+      },
+      {
+        "keys": [
+          "proaction physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 56
+      },
+      {
+        "keys": [
+          "professional physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "keys": [
+          "professional physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 53
+      },
+      {
+        "keys": [
+          "professional physiotherapy and sports clinic"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "keys": [
+          "professional physiotherapy centre"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 22.5
+      },
+      {
+        "keys": [
+          "professional physiotherapy centres"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 28.5
+      },
+      {
+        "keys": [
+          "prohealth physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "promed physiotherapy & rehabilitation centre"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "promotion kelowna"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 68
+      },
+      {
+        "keys": [
+          "prophysio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 85
+      },
+      {
+        "keys": [
+          "prophysiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 52
+      },
+      {
+        "keys": [
+          "quad therapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "questions to ask a physiotherapist"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "range of motion physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 86
+      },
+      {
+        "keys": [
+          "resolve physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 65
+      },
+      {
+        "keys": [
+          "resolve physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 76
+      },
+      {
+        "keys": [
+          "revolution physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 28
+      },
+      {
+        "keys": [
+          "robin bone"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 64
+      },
+      {
+        "keys": [
+          "robin bone physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10.666666666666666
+      },
+      {
+        "keys": [
+          "seven oaks physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 90
+      },
+      {
+        "keys": [
+          "seven oaks physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 79
+      },
+      {
+        "keys": [
+          "shoulder pain relief gloucester"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 51
+      },
+      {
+        "keys": [
+          "shoulder pain relief winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "keys": [
+          "south winnipeg physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 16.333333333333336
+      },
+      {
+        "keys": [
+          "southside physiotherapy clinic"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "spinal physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 89
+      },
+      {
+        "keys": [
+          "spine physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 83
+      },
+      {
+        "keys": [
+          "sports injury treatment winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 74
+      },
+      {
+        "keys": [
+          "st anne physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8.333333333333332
+      },
+      {
+        "keys": [
+          "stand up rehab"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 60
+      },
+      {
+        "keys": [
+          "ste anne physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "ste anne physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 18
+      },
+      {
+        "keys": [
+          "sure"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "surgical prehabilitation and rehabilitation winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 70.83333333333333
+      },
+      {
+        "keys": [
+          "tendonitis physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "timeline"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "trend physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 90
+      },
+      {
+        "keys": [
+          "wcb physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 67.8
+      },
+      {
+        "keys": [
+          "wcb physiotherapy near me"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 84
+      },
+      {
+        "keys": [
+          "wcb work injury clinic winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 23.5
+      },
+      {
+        "keys": [
+          "what is physiotherapist"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "when to get physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "whiplash treatment winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 31.75
+      },
+      {
+        "keys": [
+          "who are physiotherapist"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "winnipeg back pain treatment"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 38
+      },
+      {
+        "keys": [
+          "winnipeg joint pain relief"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 31.166666666666668
+      },
+      {
+        "keys": [
+          "winnipeg mb neck pain treatment"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 44.4
+      },
+      {
+        "keys": [
+          "winnipeg mb physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "winnipeg mb physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "keys": [
+          "winnipeg neck pain treatment"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 50.2
+      },
+      {
+        "keys": [
+          "winnipeg physical therapy"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 56
+      },
+      {
+        "keys": [
+          "winnipeg physio"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 47
+      },
+      {
+        "keys": [
+          "winnipeg physiotherapist"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 35
+      },
+      {
+        "keys": [
+          "winnipeg physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 21,
+        "ctr": 0,
+        "position": 42
+      },
+      {
+        "keys": [
+          "winnipeg physiotherapy clinic"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 43
+      },
+      {
+        "keys": [
+          "work injury physiotherapist"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 78
+      },
+      {
+        "keys": [
+          "work injury physiotherapy"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 89
+      },
+      {
+        "keys": [
+          "work injury physiotherapy near me"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 71
+      },
+      {
+        "keys": [
+          "work related injury treatment winnipeg"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 51.166666666666664
+      },
+      {
+        "keys": [
+          "workplace injury physio clinic"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 75.2
+      },
+      {
+        "keys": [
+          "yes"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 3
+      }
+    ],
+    "responseAggregationType": "byProperty"
+  }
+}

@@ -6,8 +6,8 @@
 export const SITE_URL = 'https://www.promotionphysiotherapy.ca'
 
 export const COMPANY_CONTACT = {
-  NAME: 'Pro Motion Physiotherapy',
-  LEGAL_NAME: 'Pro Motion Physiotherapy',
+  NAME: 'Pro-Motion Physiotherapy',
+  LEGAL_NAME: 'Pro-Motion Physiotherapy',
   PHONE: '+12045602999',
   PHONE_DISPLAY: '(204) 560-2999',
   FAX: '204-594-4987',
@@ -17,7 +17,7 @@ export const COMPANY_CONTACT = {
   REVIEW_WRITE_URL:
     'https://search.google.com/local/writereview?placeid=ChIJb8qUxhl36lIRBWPxW_iROsw',
   ADDRESS: {
-    street: "Unit 4, 567 St. Anne's Rd",
+    street: "Unit 4 - 567 St. Anne's Rd",
     city: 'Winnipeg',
     province: 'MB',
     postalCode: 'R2M 5B2',
@@ -39,6 +39,10 @@ export const COMPANY_CONTACT = {
 } as const
 
 export const NAP_LINE = `${COMPANY_CONTACT.ADDRESS.street}, ${COMPANY_CONTACT.ADDRESS.city}, ${COMPANY_CONTACT.ADDRESS.province} ${COMPANY_CONTACT.ADDRESS.postalCode}`
+
+export const GOOGLE_PLACE_ID = 'ChIJb8qUxhl36lIRBWPxW_iROsw'
+export const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${COMPANY_CONTACT.NAME}, ${NAP_LINE}`)}&query_place_id=${GOOGLE_PLACE_ID}`
+export const DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${COMPANY_CONTACT.NAME}, ${NAP_LINE}`)}&destination_place_id=${GOOGLE_PLACE_ID}`
 
 export const OPENING_HOURS_SPEC = [
   {
