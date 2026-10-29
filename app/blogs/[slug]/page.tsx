@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { PortableText } from '@portabletext/react'
 import { fetchBlogPostBySlug, fetchBlogSlugs, fetchBlogPosts } from '@/lib/sanity'
-import { pageMetadata } from '@/lib/metadata'
+import { blogSeoTitle, pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/JsonLd'
 import { getArticleSchema, getBreadcrumbSchema } from '@/lib/schema'
 
@@ -32,7 +32,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: BlogPostPageProps) {
   const post = await fetchBlogPostBySlug(params.slug)
   if (!post) notFound()
-  const metadata = pageMetadata(`${post.title} | Pro-Motion Physiotherapy`, post.excerpt || `Read ${post.title} from Pro-Motion Physiotherapy in Winnipeg.`, `/blogs/${post.slug}`, post.mainImageUrl)
+  const metadata = pageMetadata(blogSeoTitle(post.title),post.excerpt || `Read ${post.title} from Pro-Motion Physiotherapy in Winnipeg.`, `/blogs/${post.slug}`, post.mainImageUrl)
   return { ...metadata, openGraph: { ...metadata.openGraph, type: 'article' as const, publishedTime: post.publishedAt || undefined } }
 }
 
