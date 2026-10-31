@@ -1,4 +1,4 @@
-import { HeroArch } from '@/components/Hero'
+import { HeroVariantTwo } from '@/components/Hero'
 import Highlights from '@/components/Highlights'
 import InsuranceMarquee from '@/components/InsuranceMarquee'
 import Testimonials from '@/components/Testimonials'
@@ -50,7 +50,7 @@ export default async function Home() {
     <main className={styles.homepage}>
       <Preloader />
       <JsonLd data={getFaqSchema()} />
-      <HeroArch />
+      <HeroVariantTwo />
       <BentoGrid />
       <PhysiotherapistIntro />
       <Testimonials />
