@@ -61,3 +61,13 @@ export const OPENING_HOURS_SPEC = [
     closes: '16:00',
   },
 ] as const
+
+/**
+ * First-party booking link. Every "Book now" goes through /book so the click is
+ * counted on our server before redirecting to Juvonno. `src` names the placement
+ * (hero, footer, service-cta…) so clicks can be compared per button.
+ */
+export const BOOKING_PATH = '/book'
+export function bookingHref(src: string) {
+  return `${BOOKING_PATH}?src=${encodeURIComponent(src)}`
+}

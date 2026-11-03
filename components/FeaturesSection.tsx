@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import styles from './FeaturesSection.module.css'
+import { bookingHref } from '@/lib/constants'
 
 // Icon Component
 const Icon = ({ name }: { name: string }) => {
@@ -122,7 +123,7 @@ export default function FeaturesSection() {
               </div>
               <h3 className={styles.title}>{feature.title}</h3>
               <p className={styles.description}>{feature.description}</p>
-              <a href="https://pmphysio.juvonno.com/portal/publicbook.php" target="_blank" rel="noopener noreferrer" className={styles.seeMore}>
+              <a href={bookingHref('features')} target="_blank" rel="noopener noreferrer" className={styles.seeMore}>
                 Book Appointment
               </a>
             </div>

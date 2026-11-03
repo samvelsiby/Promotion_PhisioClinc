@@ -6,7 +6,7 @@ import { useCookieConsent } from '@/components/CookieConsent'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ArrowUpRight, Facebook, Phone, Instagram, MapPin } from 'lucide-react'
-import { COMPANY_CONTACT, DIRECTIONS_URL, NAP_LINE } from '@/lib/constants'
+import { COMPANY_CONTACT, DIRECTIONS_URL, NAP_LINE, bookingHref } from '@/lib/constants'
 
 const serviceLinks = [
   { label: 'Back pain & sciatica', href: '/services/back-pain-sciatica-relief' },
@@ -46,7 +46,7 @@ export default function Footer() {
             <h2 className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">Your next step starts here.</h2>
             <p className="mt-3 max-w-lg text-base leading-relaxed text-gray-600">Personalized physiotherapy in St. Vital, Winnipeg. Let’s find a time that works for you.</p>
           </div>
-          <a href={COMPANY_CONTACT.BOOKING_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 shrink-0 items-center justify-center gap-6 self-stretch rounded-lg bg-[#c8101e] px-7 py-4 text-base font-semibold text-white transition-colors hover:bg-[#a50d19] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c8101e] sm:self-start lg:self-center">
+          <a href={bookingHref('footer')} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 shrink-0 items-center justify-center gap-6 self-stretch rounded-lg bg-[#c8101e] px-7 py-4 text-base font-semibold text-white transition-colors hover:bg-[#a50d19] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c8101e] sm:self-start lg:self-center">
             Book an appointment <ArrowUpRight className="h-5 w-5" aria-hidden="true" />
           </a>
         </div>

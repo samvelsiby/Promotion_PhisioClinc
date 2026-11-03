@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { fetchBlogPosts } from '@/lib/sanity'
 import { ArrowUpRight, Clock, Calendar, Tag } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { bookingHref } from '@/lib/constants'
 
 export const revalidate = 60
 
@@ -186,7 +187,7 @@ export default async function BlogsPage({ searchParams }: { searchParams: { q?: 
                     asChild
                     className="relative z-10 w-full bg-white text-black hover:bg-gray-100 font-bold rounded-xl h-12"
                   >
-                    <a href="https://pmphysio.juvonno.com/portal/publicbook.php" target="_blank" rel="noopener noreferrer">
+                    <a href={bookingHref('blog-index')} target="_blank" rel="noopener noreferrer">
                       Book Assessment
                     </a>
                   </Button>

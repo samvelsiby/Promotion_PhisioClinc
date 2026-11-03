@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /studio/
 Disallow: /api/
+Disallow: /book
 
 Sitemap: https://www.promotionphysiotherapy.ca/sitemap.xml
 

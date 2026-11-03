@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import RevealOnScroll from '@/components/RevealOnScroll'
 import Image from 'next/image'
 import { ArrowRight, Users, Star } from 'lucide-react'
+import { bookingHref } from '@/lib/constants'
 
 export default function Hero() {
   return (
@@ -32,7 +33,7 @@ export default function Hero() {
                   size="lg"
                   className="h-12 rounded-lg bg-[#4fd1c5] px-8 text-base font-semibold text-gray-900 transition-all hover:bg-[#38b2ac] sm:h-14 sm:px-10 sm:text-lg"
                 >
-                  <a href="https://pmphysio.juvonno.com/portal/publicbook.php" target="_blank" rel="noopener noreferrer">
+                  <a href={bookingHref('hero')} target="_blank" rel="noopener noreferrer">
                     Contact Us
                   </a>
                 </Button>

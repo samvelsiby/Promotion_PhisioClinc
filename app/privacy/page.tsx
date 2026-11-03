@@ -11,7 +11,7 @@ export default function PrivacyPage() {
     <div className="prose prose-gray mt-8 max-w-none prose-headings:font-semibold prose-a:text-[#c8101e]">
       <p>This notice explains the website’s analytics and cookie controls. It does not replace the information and consent provided when you arrange or receive clinical care.</p>
       <h2>Your cookie choice</h2>
-      <p>Optional analytics are off until you select “Accept analytics”. Selecting “Reject optional” lets you continue browsing and access booking links without loading these analytics tools. Use “Cookie settings” in the footer to change your choice.</p>
+      <p>Analytics cookies stay off until you select “Accept analytics”. Until then, Google Analytics runs in a cookieless mode (Google Consent Mode) that sets no cookies and sends no identifiers, so we only see modelled, anonymous totals. Your IP address still reaches Google as part of the network request and is used only to estimate an approximate location before being discarded. Datafast does not load at all until you accept. Selecting “Reject optional” keeps it that way and never affects booking links. Use “Cookie settings” in the footer to change your choice.</p>
       <p>We store your choice in your browser’s local storage for up to 180 days. This storage remembers your preference; it is not used for analytics. If browser storage is blocked, your choice may need to be made again on your next visit.</p>
       <h2>Optional analytics</h2>
       <p>When you accept, Google Analytics and Datafast receive information about visits and interactions, such as pages viewed, browser and device information, referral information, and network information including your IP address. They may use cookies or similar identifiers to measure website use. Provider processing may occur outside Canada.</p>
@@ -19,7 +19,9 @@ export default function PrivacyPage() {
       <p>Withdrawing analytics consent reloads this page to stop the loaded analytics tools and removes accessible analytics cookies set at the website root. Withdrawal stops future collection through these tools; it does not erase information already received by a provider.</p>
       <h2>Maps and external booking</h2>
       <p>The footer map connects to Google only after you select “Load Google map”. Loading it may share your IP address and browser information with Google and allow Google cookies. You can also use the directions link to open Google Maps separately.</p>
-      <p>Online booking opens the Juvonno portal. External booking, map and social websites have their own privacy practices and cookie controls. Your analytics choice here does not control those websites.</p>
+      <p>Online booking links pass through a short redirect on this website before opening the Juvonno portal. The redirect counts the click on our own server (which button, which page, country and any campaign tags already in the link) without setting cookies or storing identifiers, then forwards you to Juvonno. External booking, map and social websites have their own privacy practices and cookie controls. Your analytics choice here does not control those websites.</p>
+      <h2>Visit counting</h2>
+      <p>The website also runs a cookieless visit counter operated for the clinic by RTSTICS. It records pages viewed and clicks on booking, phone and contact links. It sets no cookies and stores no identifiers: visits are grouped with a code that changes every day and cannot be traced back to you. Because it uses no cookies, it is not controlled by the analytics buttons.</p>
       <h2>Clinic chat</h2>
       <p>The website also provides a clinic chat service supplied through RTSTICS. The analytics buttons control Google Analytics and Datafast; they do not control information you send through chat. Avoid sharing sensitive medical details in chat and contact the clinic for an appropriate way to discuss your care.</p>
       <h2>Contacting the clinic</h2>

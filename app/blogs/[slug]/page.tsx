@@ -6,6 +6,7 @@ import { fetchBlogPostBySlug, fetchBlogSlugs, fetchBlogPosts } from '@/lib/sanit
 import { blogSeoTitle, pageMetadata } from '@/lib/metadata'
 import JsonLd from '@/components/JsonLd'
 import { getArticleSchema, getBreadcrumbSchema } from '@/lib/schema'
+import { bookingHref } from '@/lib/constants'
 
 export const revalidate = 60
 
@@ -160,7 +161,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 again.
               </p>
               <Link
-                href="https://pmphysio.juvonno.com/portal/publicbook.php"
+                href={bookingHref('blog-post')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-5 inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-medium text-[#111827] shadow-sm transition-colors duration-200 hover:bg-slate-100"

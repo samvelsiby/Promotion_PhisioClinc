@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { COMPANY_CONTACT } from '@/lib/constants'
+import { COMPANY_CONTACT, bookingHref } from '@/lib/constants'
 
 const steps = [
   { title: 'Start with your story', description: 'Your physiotherapist asks about your symptoms, daily activities, and goals, then assesses how you move.' },
@@ -20,7 +20,7 @@ export default function Highlights() {
         <p className="mt-3 text-base leading-relaxed text-gray-600">{step.description}</p>
       </li>)}</ol>
       <div className="mt-7 flex flex-wrap items-center gap-5">
-        <a href={COMPANY_CONTACT.BOOKING_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-xl bg-[#c8101e] px-6 py-3 font-semibold text-white hover:bg-[#a50d19]">Book your first appointment</a>
+        <a href={bookingHref('highlights')} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-xl bg-[#c8101e] px-6 py-3 font-semibold text-white hover:bg-[#a50d19]">Book your first appointment</a>
         <Link href="/how-we-treat" className="inline-flex min-h-12 items-center font-semibold text-[#c8101e] underline underline-offset-4">Explore our approach to treatment</Link>
       </div>
     </div>
