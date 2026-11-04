@@ -15,7 +15,7 @@ export default function FirstVisitPage() {
       <h1 className="mt-4 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">Your first physiotherapy visit.</h1>
       <p className="mt-6 text-lg leading-relaxed text-gray-600">Know what to bring, what to ask and how to find us. If you are unsure which appointment to select, call our team before booking.</p>
       <div className="my-8 flex flex-wrap gap-4">
-        <a href={bookingHref('first-visit')} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center rounded-full bg-[#c8101e] px-6 py-3 font-semibold text-white">Book an assessment</a>
+        <a href={bookingHref('first-visit')} data-rt-goal="book-first-visit" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center rounded-full bg-[#c8101e] px-6 py-3 font-semibold text-white">Book an assessment</a>
         <a href={`tel:${COMPANY_CONTACT.PHONE}`} className="inline-flex min-h-12 items-center px-3 py-3 font-semibold underline">Call {COMPANY_CONTACT.PHONE_DISPLAY}</a>
       </div>
       <div className="prose prose-lg max-w-none">

@@ -178,7 +178,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
               <section>
                 <h2 className="mb-4 text-2xl font-bold text-gray-900">Your physiotherapy team in Meadowood, St. Vital</h2>
                 <p className="leading-relaxed text-gray-700">Our team includes <Link className="underline" href="/team/ben-bastin-jose">Ben Bastin Jose, Registered Physiotherapist, BPT</Link>, and <Link className="underline" href="/team/lijo-paul">Lijo Paul, Registered Physiotherapist, MPT, BPT</Link>. Read their profiles and ask reception to confirm the appropriate provider for your concerns and preferred appointment time.</p>
-                <p className="mt-4 text-gray-700">Visit us at {NAP_LINE}. <Link className="underline" href="/first-visit#location">Plan your visit</Link>, review <Link className="underline" href="/first-visit#cost-and-coverage">cost and coverage questions</Link>, or <a className="underline" href={bookingHref('service-text')}>book an assessment online</a>.</p>
+                <p className="mt-4 text-gray-700">Visit us at {NAP_LINE}. <Link className="underline" href="/first-visit#location">Plan your visit</Link>, review <Link className="underline" href="/first-visit#cost-and-coverage">cost and coverage questions</Link>, or <a className="underline" href={bookingHref('service-text')} data-rt-goal="book-service-text">book an assessment online</a>.</p>
                 <p className="mt-4 text-sm text-gray-600">Further information: <a className="underline" href={patientInfo.source.url}>{patientInfo.source.label}</a>.</p>
               </section>
             </>}
@@ -194,7 +194,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
-                    href={bookingHref('service-cta')}
+                    href={bookingHref('service-cta')} data-rt-goal="book-service-cta"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 rounded-full bg-[#EC1C24] px-8 py-4 text-base font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#C41A20] hover:shadow-lg"

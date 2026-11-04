@@ -60,7 +60,7 @@ export default async function BlogsPage({ searchParams }: { searchParams: { q?: 
 
       <section className="relative z-10 -mt-12 pb-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <form action="/blogs" method="get" role="search" className="mb-8 flex flex-wrap gap-3 rounded-2xl border border-gray-200 bg-white p-5">
+          <form action="/blogs" method="get" role="search" data-rt-label="blog-search" className="mb-8 flex flex-wrap gap-3 rounded-2xl border border-gray-200 bg-white p-5">
             <label htmlFor="blog-query" className="w-full font-semibold text-gray-900">Search articles and patient guides</label>
             <input id="blog-query" name="q" type="search" defaultValue={query} maxLength={150} placeholder="Try back pain, exercise or insurance" className="min-w-0 flex-1 rounded-lg border border-gray-300 px-4 py-3 text-gray-900" />
             <button type="submit" className="rounded-lg bg-[#c8101e] px-5 py-3 font-semibold text-white">Search</button>
@@ -187,7 +187,7 @@ export default async function BlogsPage({ searchParams }: { searchParams: { q?: 
                     asChild
                     className="relative z-10 w-full bg-white text-black hover:bg-gray-100 font-bold rounded-xl h-12"
                   >
-                    <a href={bookingHref('blog-index')} target="_blank" rel="noopener noreferrer">
+                    <a href={bookingHref('blog-index')} data-rt-goal="book-blog-index" target="_blank" rel="noopener noreferrer">
                       Book Assessment
                     </a>
                   </Button>

@@ -110,3 +110,9 @@ A dedicated Google Ads MCP exists but needs a Google Ads developer token and man
 
 ### Not verified yet
 Consent Mode behaviour can only be observed on the production host (the tag refuses to load elsewhere by design). After deploy: open the site in a fresh private window, do not accept, and check in GA4 DebugView or the Network tab that `/g/collect` requests carry `gcs=G100` (denied) and switch to `gcs=G111` after Accept.
+
+### Rtstics tracker (added 2026-11-03)
+- `components/ConversionTracker.tsx` loads `https://click-to-client-compass.lovable.app/api/public/t.js` on every page (not consent-gated: no cookies, sessionStorage only, honours `window.__rtConsent === false`).
+- It counts `booking_click` only on links that carry `data-rt-goal` or point at a known booking host, and Juvonno is not on its list. All 11 Book Now links therefore carry `data-rt-goal="book-<placement>"`, so each placement shows up as its own goal label in the Rtstics dashboard.
+- The contact form carries `data-rt-label="contact"` so its `form_submit` event is named.
+- It stores `utm_source`, `utm_medium`, `utm_campaign`, `gclid`, `fbclid`, landing path and referrer host in `sessionStorage['rt_attr']` and sends them with every event, so campaign attribution survives navigation within the session.

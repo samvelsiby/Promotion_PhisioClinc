@@ -24,7 +24,7 @@ export default function WhatWeTreatPage() {
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
-                  href={bookingHref('what-we-treat')}
+                  href={bookingHref('what-we-treat')} data-rt-goal="book-what-we-treat"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-[#e63939] px-8 py-4 text-base font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#c62828] hover:shadow-lg sm:px-10 sm:py-4 sm:text-lg"

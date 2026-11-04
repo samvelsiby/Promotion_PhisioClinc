@@ -284,7 +284,7 @@ export default function AboutPage() {
                 <p className="text-gray-600 mt-2">Fill out the form below and we'll get back to you shortly.</p>
               </div>
 
-              <form className="space-y-5" onSubmit={handleSubmit}>
+              <form className="space-y-5" data-rt-label="contact" onSubmit={handleSubmit}>
                 {submitStatus.type && (
                   <div
                     className={`rounded-xl p-4 text-sm font-medium ${submitStatus.type === 'success'
