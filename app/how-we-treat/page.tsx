@@ -19,11 +19,9 @@ import {
   Gauge
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import Link from "next/link";
 import { allBentoItems } from "@/components/BentoGrid/bentoItems";
-import { getTreatmentPage, isTreatmentPageVisible } from "./treatmentPages";
 
-type ServiceCategory = "Physiotherapy" | "Manual Techniques" | "Modalities";
+type ServiceCategory = "Physiotherapy" | "Manual Techniques" | "Modalities" | "Occupational Therapy";
 
 const services: Array<{
   id: number;
@@ -32,8 +30,6 @@ const services: Array<{
   category: ServiceCategory;
   description: string;
   benefits: string[];
-  /** Slug of the full guide under /how-we-treat/[slug], when one exists. */
-  guide?: string;
 }> = [
   {
     id: 1,
@@ -47,7 +43,7 @@ const services: Array<{
     id: 2,
     title: "Ergonomic Training",
     icon: Briefcase,
-    category: "Physiotherapy" as ServiceCategory,
+    category: "Occupational Therapy" as ServiceCategory,
     description: "Workplace ergonomic assessments and training to prevent work-related injuries and improve posture. We help you set up your workspace for optimal health and productivity.",
     benefits: ["Injury Prevention", "Posture Improvement", "Productivity"]
   },
@@ -56,7 +52,7 @@ const services: Array<{
     title: "Instrument-Assisted Soft Tissue Mobilization (IASTM)",
     icon: Wrench,
     category: "Manual Techniques" as ServiceCategory,
-    description: "A technique using handheld tools to break down scar tissue, reduce fascial restrictions, and improve tissue mobility. Effective for chronic pain and restricted movement.",
+    description: "Advanced technique using specialized tools to break down scar tissue, reduce fascial restrictions, and improve tissue mobility. Effective for chronic pain and restricted movement.",
     benefits: ["Scar Tissue Reduction", "Improved Flexibility", "Pain Relief"]
   },
   {
@@ -80,7 +76,7 @@ const services: Array<{
     title: "Myofascial Release",
     icon: Waves,
     category: "Manual Techniques" as ServiceCategory,
-    description: "A hands-on technique to release tension in the fascia (connective tissue) that surrounds muscles. Effective for chronic pain, restricted movement, and postural issues.",
+    description: "Specialized technique to release tension in the fascia (connective tissue) that surrounds muscles. Effective for chronic pain, restricted movement, and postural issues.",
     benefits: ["Pain Relief", "Improved Flexibility", "Postural Correction"]
   },
   {
@@ -88,27 +84,24 @@ const services: Array<{
     title: "Cupping",
     icon: Circle,
     category: "Manual Techniques" as ServiceCategory,
-    description: "Suction cups placed on the skin over a muscle. Research on cupping is limited, so it is used only as a small part of a plan built around movement and exercise. It commonly leaves temporary round marks.",
-    benefits: ["Muscle tightness", "Used with exercise", "Always optional"],
-    guide: "cupping-therapy"
+    description: "Traditional therapy using suction cups to improve blood flow, reduce muscle tension, and promote healing. Effective for pain relief and muscle recovery.",
+    benefits: ["Improved Circulation", "Muscle Relaxation", "Pain Relief"]
   },
   {
     id: 9,
     title: "Dry Needling",
     icon: Crosshair,
     category: "Manual Techniques" as ServiceCategory,
-    description: "Thin, solid needles placed into trigger points in tight muscle, used for muscle-related pain alongside exercise. In Manitoba it is provided only by physiotherapists who hold the College roster notation, with your written consent.",
-    benefits: ["Muscle-related pain", "Written consent first", "Always optional"],
-    guide: "dry-needling"
+    description: "Technique using fine needles to target trigger points and tight muscle bands. Helps relieve pain, improve range of motion, and reduce muscle tension.",
+    benefits: ["Trigger Point Release", "Pain Relief", "Improved Mobility"]
   },
   {
     id: 10,
     title: "Acupuncture",
     icon: Dot,
     category: "Modalities" as ServiceCategory,
-    description: "Thin, solid needles inserted at specific body points, used within physiotherapy to help manage pain. In Manitoba it is provided only by physiotherapists on the College acupuncture roster, with your written consent.",
-    benefits: ["Pain management", "Written consent first", "Always optional"],
-    guide: "acupuncture"
+    description: "Traditional Chinese medicine technique using fine needles at specific points to balance energy flow, reduce pain, and promote healing and wellness.",
+    benefits: ["Pain Management", "Stress Reduction", "Improved Energy Flow"]
   },
   {
     id: 11,
@@ -123,7 +116,7 @@ const services: Array<{
     title: "Balance Training",
     icon: Gauge,
     category: "Physiotherapy" as ServiceCategory,
-    description: "Exercises and training to improve balance, coordination, and proprioception. Essential for fall prevention, rehabilitation, and athletic performance.",
+    description: "Specialized exercises and training to improve balance, coordination, and proprioception. Essential for fall prevention, rehabilitation, and athletic performance.",
     benefits: ["Fall Prevention", "Improved Coordination", "Enhanced Stability"]
   },
   {
@@ -131,9 +124,8 @@ const services: Array<{
     title: "Orthotics",
     icon: Footprints,
     category: "Modalities" as ServiceCategory,
-    description: "A foot and walking assessment, followed by advice on footwear, exercises, ready-made insoles or custom orthotics where appropriate. Supports and braces may also be discussed. Insurance plans set their own rules for orthotics, so check your coverage before ordering.",
-    benefits: ["Foot assessment", "Custom or ready-made", "Check your coverage"],
-    guide: "orthotics"
+    description: "Custom orthotic devices, supports, braces, and corrective devices to improve alignment, reduce pain, and enhance function. We provide comprehensive assessment and fitting.",
+    benefits: ["Improved Alignment", "Pain Reduction", "Enhanced Function"]
   },
   {
     id: 14,
@@ -157,6 +149,7 @@ const categoryColors: Record<ServiceCategory, { bg: string; hover: string; text:
   "Physiotherapy": { bg: "#EC1C24", hover: "#C41A20", text: "#FFFFFF" },
   "Manual Techniques": { bg: "#231F20", hover: "#1A1617", text: "#FFFFFF" },
   "Modalities": { bg: "#EC1C24", hover: "#C41A20", text: "#FFFFFF" },
+  "Occupational Therapy": { bg: "#58595B", hover: "#4A4B4D", text: "#FFFFFF" },
 };
 
 const brandColors = {
@@ -171,10 +164,6 @@ const brandColors = {
 
 const ServiceModal = ({ service, onClose }: { service: typeof services[0] | null; onClose: () => void }) => {
   if (!service) return null;
-
-  // Link to the full guide only once the clinic has approved it (drafts show in local development).
-  const guide = service.guide ? getTreatmentPage(service.guide) : undefined;
-  const guidePage = guide && isTreatmentPageVisible(guide) ? guide : undefined;
 
   return (
     <motion.div
@@ -272,7 +261,7 @@ const ServiceModal = ({ service, onClose }: { service: typeof services[0] | null
                 marginBottom: "14px",
               }}
             >
-              At a glance
+              Key Benefits
             </h4>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
               {service.benefits.map((benefit, idx) => (
@@ -297,24 +286,6 @@ const ServiceModal = ({ service, onClose }: { service: typeof services[0] | null
               ))}
             </div>
           </div>
-
-          {guidePage && (
-            <Link
-              href={`/how-we-treat/${guidePage.slug}`}
-              style={{
-                display: "block",
-                marginTop: "24px",
-                color: brandColors.primaryDark,
-                fontSize: "15px",
-                fontFamily: "'Open Sans', -apple-system, sans-serif",
-                fontWeight: 600,
-                textDecoration: "underline",
-                textUnderlineOffset: "4px",
-              }}
-            >
-              Read the full {guidePage.name.toLowerCase()} guide
-            </Link>
-          )}
 
           <motion.button
             whileHover={{ scale: 1.02, boxShadow: "0 8px 25px rgba(196, 30, 58, 0.4)" }}

@@ -40,17 +40,6 @@ export const COMPANY_CONTACT = {
 
 export const NAP_LINE = `${COMPANY_CONTACT.ADDRESS.street}, ${COMPANY_CONTACT.ADDRESS.city}, ${COMPANY_CONTACT.ADDRESS.province} ${COMPANY_CONTACT.ADDRESS.postalCode}`
 
-/**
- * Google Business Profile rating shown in the hero. Read by hand from the
- * Google Maps listing, so re-check it and update `checked` whenever it changes.
- * CPM advertising rules require this to match what Google shows.
- */
-export const GOOGLE_RATING = {
-  value: '5.0',
-  count: 105,
-  checked: '2026-11-21',
-} as const
-
 export const GOOGLE_PLACE_ID = 'ChIJb8qUxhl36lIRBWPxW_iROsw'
 export const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${COMPANY_CONTACT.NAME}, ${NAP_LINE}`)}&query_place_id=${GOOGLE_PLACE_ID}`
 export const DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${COMPANY_CONTACT.NAME}, ${NAP_LINE}`)}&destination_place_id=${GOOGLE_PLACE_ID}`

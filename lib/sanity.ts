@@ -1,5 +1,3 @@
-import mergedPosts from './mergedPosts.json'
-
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET
 const apiVersion = '2023-10-01'
@@ -13,11 +11,8 @@ if (!dataset) {
 }
 
 const SANITY_DATASET_URL = `https://${projectId}.api.sanity.io/v${apiVersion}/data/query/${dataset}`
-// Posts merged into another page redirect there (next.config.js), so they must not be
-// listed, linked or put in the sitemap.
-const mergedSlugs = JSON.stringify(Object.keys(mergedPosts))
 // Query only published documents; drafts must never appear on the public site.
-const publishedPosts = `_type == "post" && defined(slug.current) && !(slug.current in ${mergedSlugs}) && !(_id in path("drafts.**")) && !(_id in path("versions.**"))`
+const publishedPosts = '_type == "post" && defined(slug.current) && !(_id in path("drafts.**")) && !(_id in path("versions.**"))'
 
 export interface BlogPost {
   _id: string

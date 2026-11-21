@@ -122,7 +122,7 @@ function getCustomContent(title: string, description: string): Partial<ServiceDe
       ]
     },
     'Shoulder Pain Relief': {
-      overview: 'Shoulder pain can significantly impact your ability to perform daily activities and work. Our treatment addresses rotator cuff injuries, frozen shoulder, impingement, and other shoulder conditions through evidence-based techniques.',
+      overview: 'Shoulder pain can significantly impact your ability to perform daily activities and work. Our specialized treatment addresses rotator cuff injuries, frozen shoulder, impingement, and other shoulder conditions through evidence-based techniques.',
       whatWeTreat: [
         'Rotator cuff injuries and tears',
         'Frozen shoulder (adhesive capsulitis)',
@@ -157,7 +157,7 @@ function getCustomContent(title: string, description: string): Partial<ServiceDe
       ]
     },
     'Elbow, Wrist & Hand Pain Relief': {
-      overview: 'Upper extremity pain can interfere with work, hobbies, and daily tasks. We provide treatment for conditions affecting the elbow, wrist, and hand, focusing on restoring function and reducing pain.',
+      overview: 'Upper extremity pain can interfere with work, hobbies, and daily tasks. We provide specialized treatment for conditions affecting the elbow, wrist, and hand, focusing on restoring function and reducing pain.',
       whatWeTreat: [
         'Tennis elbow (lateral epicondylitis)',
         'Golfer\'s elbow (medial epicondylitis)',
@@ -421,10 +421,10 @@ function getCustomContent(title: string, description: string): Partial<ServiceDe
       ],
       benefits: [
         'Rehabilitation goals linked to your work tasks',
-        'Reports prepared for your WCB claim when required',
-        'A plan for returning to work that you can discuss with your employer',
-        'Advice on setting up your workstation or tasks',
-        'Time to ask questions about managing your injury'
+        'Proper WCB claim documentation',
+        'Reduced risk of re-injury',
+        'Improved workplace ergonomics',
+        'Better understanding of injury management'
       ],
       whenToSeekHelp: [
         'Workplace injury requiring treatment',
@@ -455,11 +455,11 @@ function getCustomContent(title: string, description: string): Partial<ServiceDe
         'Return to activity planning'
       ],
       benefits: [
-        'An assessment of your symptoms and daily activities after the collision',
-        'Reports prepared for your MPI claim when required',
-        'A treatment plan agreed with you and reviewed as you progress',
+        'Comprehensive injury recovery',
+        'Proper MPI claim documentation',
+        'Reduced pain and improved function',
         'Support with a gradual return to daily activities',
-        'Time to ask questions about what to expect'
+        'Better understanding of recovery process'
       ],
       whenToSeekHelp: [
         'Injuries from a motor vehicle accident',
@@ -500,6 +500,171 @@ function getCustomContent(title: string, description: string): Partial<ServiceDe
         'Post-surgical pain or stiffness',
         'Difficulty with post-surgical exercises',
         'Wanting to optimize recovery'
+      ]
+    },
+    'Home Accessibility Assessments': {
+      overview: 'Home accessibility assessments identify barriers and recommend modifications to improve safety, independence, and accessibility in your living environment.',
+      whatWeTreat: [
+        'Home safety evaluations',
+        'Accessibility barriers',
+        'Fall risk in the home',
+        'Mobility challenges at home',
+        'Bathroom and kitchen modifications',
+        'Aging in place planning'
+      ],
+      treatmentApproach: [
+        'Comprehensive home evaluation',
+        'Barrier identification',
+        'Modification recommendations',
+        'Equipment recommendations',
+        'Safety education',
+        'Follow-up assessments'
+      ],
+      benefits: [
+        'Improved home safety',
+        'Enhanced independence',
+        'Reduced fall risk',
+        'Better accessibility',
+        'Peace of mind for families'
+      ],
+      whenToSeekHelp: [
+        'Concerns about home safety',
+        'Recent fall or near-fall',
+        'Difficulty navigating home',
+        'Planning for aging in place',
+        'Need for home modifications'
+      ]
+    },
+    'Mobility & Adaptive Equipment': {
+      overview: 'Mobility and adaptive equipment can significantly enhance independence and safety. We provide assessment, prescription, and training for various aids and devices.',
+      whatWeTreat: [
+        'Mobility aid assessment',
+        'Wheelchair evaluation',
+        'Walking aid prescription',
+        'Adaptive equipment needs',
+        'Equipment training',
+        'Home equipment setup'
+      ],
+      treatmentApproach: [
+        'Comprehensive equipment assessment',
+        'Equipment prescription',
+        'Training on equipment use',
+        'Home setup and modifications',
+        'Follow-up and adjustments',
+        'Education on maintenance'
+      ],
+      benefits: [
+        'Enhanced independence',
+        'Improved safety',
+        'Better mobility',
+        'Increased confidence',
+        'Better quality of life'
+      ],
+      whenToSeekHelp: [
+        'Difficulty with mobility',
+        'Need for walking aids',
+        'Wheelchair assessment needed',
+        'Requiring adaptive equipment',
+        'Wanting to improve independence'
+      ]
+    },
+    'Wheelchair Seating & Positioning': {
+      overview: 'Proper wheelchair seating and positioning is essential for comfort, function, and preventing complications. We provide specialized assessments and recommendations.',
+      whatWeTreat: [
+        'Wheelchair seating assessments',
+        'Postural issues in wheelchair',
+        'Pressure sore prevention',
+        'Comfort and positioning',
+        'Functional positioning',
+        'Custom seating needs'
+      ],
+      treatmentApproach: [
+        'Comprehensive seating assessment',
+        'Postural analysis',
+        'Cushion and support recommendations',
+        'Positioning strategies',
+        'Education on pressure relief',
+        'Follow-up adjustments'
+      ],
+      benefits: [
+        'Optimal comfort',
+        'Better posture and function',
+        'Pressure sore prevention',
+        'Improved independence',
+        'Enhanced quality of life'
+      ],
+      whenToSeekHelp: [
+        'Discomfort in wheelchair',
+        'Postural problems',
+        'Pressure sore concerns',
+        'Need for seating assessment',
+        'Wanting to optimize positioning'
+      ]
+    },
+    'Pressure Management': {
+      overview: 'Pressure injury prevention and management is crucial for individuals with limited mobility. We provide assessment and intervention to protect skin and prevent complications.',
+      whatWeTreat: [
+        'Pressure injury prevention',
+        'Existing pressure sores',
+        'Skin integrity concerns',
+        'Positioning for pressure relief',
+        'Cushioning needs',
+        'Wound care coordination'
+      ],
+      treatmentApproach: [
+        'Pressure risk assessment',
+        'Cushion and support recommendations',
+        'Positioning strategies',
+        'Education on pressure relief',
+        'Skin care education',
+        'Multidisciplinary coordination'
+      ],
+      benefits: [
+        'Prevention of pressure injuries',
+        'Improved skin integrity',
+        'Better comfort',
+        'Reduced complications',
+        'Enhanced quality of life'
+      ],
+      whenToSeekHelp: [
+        'At risk for pressure injuries',
+        'Existing pressure sores',
+        'Limited mobility',
+        'Skin integrity concerns',
+        'Need for pressure management'
+      ]
+    },
+    'Fall Prevention': {
+      overview: 'Falls are a leading cause of injury, especially in older adults. Our comprehensive fall prevention programs include assessment, training, and home modifications.',
+      whatWeTreat: [
+        'Fall risk assessment',
+        'Balance problems',
+        'Fear of falling',
+        'Previous falls',
+        'Gait and mobility issues',
+        'Home safety concerns'
+      ],
+      treatmentApproach: [
+        'Comprehensive fall risk assessment',
+        'Balance training programs',
+        'Strength and conditioning',
+        'Home safety evaluation',
+        'Education on fall prevention',
+        'Assistive device recommendations'
+      ],
+      benefits: [
+        'Reduced fall risk',
+        'Improved balance and confidence',
+        'Better strength and mobility',
+        'Safer home environment',
+        'Enhanced independence'
+      ],
+      whenToSeekHelp: [
+        'Recent fall or near-fall',
+        'Fear of falling',
+        'Balance problems',
+        'Wanting to prevent falls',
+        'Concerns about home safety'
       ]
     }
   }

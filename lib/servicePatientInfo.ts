@@ -2,14 +2,6 @@ export const servicePatientInfo: Record<string, { sections: { heading: string; t
   "tmj-dysfunction": {
     "sections": [
       {
-        "heading": "Does a clicking jaw always need treatment?",
-        "text": "No. The US National Institute of Dental and Craniofacial Research explains that jaw sounds without pain are common and generally do not need treatment. Pain, difficulty opening your mouth or locking deserves a different conversation. TMJ names the temporomandibular joint; TMD describes disorders affecting the joint or chewing muscles. You do not need to know the medical term before asking for help."
-      },
-      {
-        "heading": "Physiotherapist, dentist or doctor?",
-        "text": "Jaw and facial pain can have causes other than TMD, and a dentist or doctor may need to assess those possibilities. Physiotherapy can be part of care for jaw movement and function, but it does not replace dental assessment or treatment. When arranging a visit, say whether you have already seen a dentist or doctor and bring any recommendations. Do not assume every headache, toothache or ear symptom comes from the jaw."
-      },
-      {
         "heading": "What to discuss at a jaw pain assessment",
         "text": "Tell your physiotherapist when your jaw symptoms began and whether eating, talking or opening your mouth is difficult. Mention dental treatment, injuries and any advice you have already received. An assessment helps determine whether physiotherapy is appropriate or whether you should also see a dentist or doctor. Jaw pain has more than one possible cause; a clicking sound alone does not establish a diagnosis."
       },
@@ -58,10 +50,6 @@ export const servicePatientInfo: Record<string, { sections: { heading: string; t
         "text": "Tell reception that your appointment relates to a motor vehicle collision. Have your injury date and MPI injury claim details available if you already have them. Bring relevant medical recommendations and describe changes in everyday activities since the collision. If you have not opened an injury claim, consult MPI’s injury claim information; booking with the clinic does not itself open a claim."
       },
       {
-        "heading": "Opening an MPI injury claim",
-        "text": "Manitoba Public Insurance covers injuries from automobile collisions through its Personal Injury Protection Plan, which applies to vehicle owners and people who do not own a vehicle. To open a bodily injury claim, call the MPI Contact Centre at 204-985-7000, or toll-free at 1-800-665-2410, or use MPI’s online claim form. Open the claim with MPI yourself; the clinic cannot open it for you."
-      },
-      {
         "heading": "Assessment and follow-up care",
         "text": "Your assessment is an opportunity to discuss symptoms, movement difficulties and goals such as returning to work or usual activities. The physiotherapist can explain the findings, proposed care and any need for additional medical assessment. Follow-up appointments allow the plan to be reviewed as your function changes. Ask how progress will be assessed and what to do between visits; neither a recovery date nor a fixed visit count can be promised before assessment."
       },
@@ -92,10 +80,6 @@ export const servicePatientInfo: Record<string, { sections: { heading: string; t
       {
         "heading": "How your rehabilitation plan is reviewed",
         "text": "Ask your physiotherapist what the assessment means for your daily activities, what the goals of treatment are and when progress will be reviewed. A plan may include exercises, education and other appropriate care, with adjustments based on your response. Return-to-work arrangements should be coordinated with the relevant people involved in your claim; a website cannot determine your fitness for a particular job or guarantee a return date."
-      },
-      {
-        "heading": "Work-related pain without a WCB claim",
-        "text": "Not every work-related problem is a WCB claim. Pain that builds up from desk work, repetitive tasks or lifting can also be assessed and paid for privately or through an extended health plan. Tell reception which applies to you so the right billing arrangement is set up, and check your plan for any referral requirement or visit limit."
       },
       {
         "heading": "WCB coverage and appointment costs",

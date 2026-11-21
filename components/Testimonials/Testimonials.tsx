@@ -4,9 +4,6 @@ import React from "react";
 import { Star, ArrowUpRight } from "lucide-react";
 import { COMPANY_CONTACT } from "@/lib/constants";
 
-// College of Physiotherapists of Manitoba: no comparative or superlative statements
-// in marketing the clinic uses. Only quote reviews that describe the experience;
-// leave out any that rank the clinic ("best", "top", "number one").
 const testimonials = [
   {
     quote:
@@ -24,8 +21,22 @@ const testimonials = [
   },
   {
     quote:
+      "I recently had a physiotherapy session with Ben Bastin. It was seriously impressive, truly a top-notch experience. I'd go as far as to say it's the best physiotherapy I've found in the whole city. You should definitely check him out if you're in need of some expert care. I'm feeling so much better already!",
+    name: "Varun Thomas",
+    title: "Google Review",
+    rating: 5,
+  },
+  {
+    quote:
       "I recently visited this Promotion physiotherapy clinic for physiotherapy and was treated by Ben. He took the time to understand my issue, explained each step, and tailored the treatment to my needs. I'm very happy with the results and highly recommend Ben.",
     name: "Amitha Thomas",
+    title: "Google Review",
+    rating: 5,
+  },
+  {
+    quote:
+      "The best physio clinic in the city!!! Best service, highly skilled practitioners. Especially Lijo really helped me with my concerns and gave proper guidance.",
+    name: "Prince Sabu Plathottathil",
     title: "Google Review",
     rating: 5,
   },

@@ -5,7 +5,6 @@ import Testimonials from '@/components/Testimonials'
 import BentoGrid from '@/components/BentoGrid'
 import BlogPreview from '@/components/BlogPreview'
 import FAQ from '@/components/FAQ'
-import FindUs from '@/components/FindUs'
 import { fetchBlogPosts } from '@/lib/sanity'
 import type { Metadata } from 'next'
 import { SITE_URL } from '@/lib/constants'
@@ -17,10 +16,10 @@ import Preloader from '@/components/Preloader'
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Physiotherapy in St. Vital, Winnipeg | Open 7 Days | Pro-Motion",
+    absolute: "Physiotherapy in St. Vital, Winnipeg | Pro-Motion Physiotherapy",
   },
   description:
-    "Physiotherapy on St. Anne’s Road in St. Vital, Winnipeg. Open 7 days, weekdays until 8 PM. Direct billing available. Book an assessment online.",
+    "Physiotherapy in Meadowood, St. Vital, Winnipeg. Visit Pro-Motion on St. Anne’s Road for an assessment. Direct billing available. Book online.",
   openGraph: {
     title:
       "Physiotherapy in St. Vital, Winnipeg | Pro-Motion",
@@ -57,7 +56,6 @@ export default async function Home() {
       <Testimonials />
       <InsuranceMarquee />
       <Highlights />
-      <FindUs />
       <BlogPreview posts={posts} />
       <FAQ />
     </main>

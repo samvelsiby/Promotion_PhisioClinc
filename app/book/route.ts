@@ -1,7 +1,7 @@
+import { createHash } from 'crypto'
 import { NextRequest, NextResponse } from 'next/server'
 import { COMPANY_CONTACT } from '@/lib/constants'
 import { isProductionAnalyticsHost } from '@/lib/analyticsEvents'
-import { dailyClientId, deviceClass, sendGa4Event } from '@/lib/serverAnalytics'
 
 // First-party booking redirect.
 //
@@ -71,6 +71,12 @@ function refererPath(request: NextRequest): string {
   }
 }
 
+function deviceClass(userAgent: string): 'mobile' | 'tablet' | 'desktop' {
+  if (/iPad|Tablet/i.test(userAgent)) return 'tablet'
+  if (/Mobi|Android|iPhone/i.test(userAgent)) return 'mobile'
+  return 'desktop'
+}
+
 // Reuse the visitor's GA client id when they accepted analytics so GA4 can stitch
 // this event to their session. Otherwise derive a pseudonymous id that rotates
 // daily and is never stored.
@@ -80,13 +86,22 @@ function clientId(request: NextRequest): string {
     const parts = ga.split('.')
     if (parts.length >= 4) return `${parts[2]}.${parts[3]}`
   }
-  return dailyClientId(request)
+  const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || request.ip || ''
+  const salt = process.env.BOOKING_HASH_SALT || process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''
+  const day = new Date().toISOString().slice(0, 10)
+  const digest = createHash('sha256').update(`${ip}|${request.headers.get('user-agent') || ''}|${salt}|${day}`).digest('hex')
+  return `${parseInt(digest.slice(0, 8), 16)}.${parseInt(digest.slice(8, 16), 16)}`
 }
 
 async function sendToGa4(request: NextRequest, event: Record<string, string>) {
+  const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+  const apiSecret = process.env.GA4_API_SECRET
+  if (!measurementId || !apiSecret) return
+
   const params: Record<string, string | number> = {
     link_location: event.src,
     page_path: event.page,
+    engagement_time_msec: 1,
   }
   if (event.country) params.country_code = event.country
   if (event.device) params.device_class = event.device
@@ -97,5 +112,15 @@ async function sendToGa4(request: NextRequest, event: Record<string, string>) {
   if (event.gclid || event.gbraid || event.wbraid) params.has_google_click_id = 1
   if (event.fbclid) params.has_meta_click_id = 1
 
-  await sendGa4Event(clientId(request), 'booking_redirect', params)
+  const url = `https://www.google-analytics.com/mp/collect?measurement_id=${encodeURIComponent(measurementId)}&api_secret=${encodeURIComponent(apiSecret)}`
+  await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      client_id: clientId(request),
+      non_personalized_ads: true,
+      events: [{ name: 'booking_redirect', params }],
+    }),
+    signal: AbortSignal.timeout(1500),
+  })
 }

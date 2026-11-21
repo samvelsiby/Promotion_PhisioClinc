@@ -3,7 +3,6 @@ import { SITE_URL } from '@/lib/constants'
 import { fetchBlogSitemapEntries } from '@/lib/sanity'
 import { getAllServiceSlugs } from '@/app/services/serviceData'
 import { teamMembers } from '@/app/team/teamData'
-import { getApprovedTreatmentSlugs } from '@/app/how-we-treat/treatmentPages'
 
 // Keep newly published CMS articles discoverable without a new deployment.
 export const revalidate = 60
@@ -14,8 +13,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '', '/first-visit', '/about', '/what-we-treat', '/what-we-treat/all', '/how-we-treat', '/team', '/insurance', '/blogs',
     ...getAllServiceSlugs().map((slug) => `/services/${slug}`),
     ...teamMembers.map((member) => `/team/${member.slug}`),
-    // Treatment guides appear only after the clinic has approved them.
-    ...getApprovedTreatmentSlugs().map((slug) => `/how-we-treat/${slug}`),
   ]
   // Static pages have no authoritative edit dates; do not invent lastModified.
   const entries: MetadataRoute.Sitemap = Array.from(new Set(paths)).map((path) => ({ url: `${SITE_URL}${path}` }))

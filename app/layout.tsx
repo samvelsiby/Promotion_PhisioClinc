@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import CookieConsent from '@/components/CookieConsent'
-import MobileActionBar from '@/components/MobileActionBar'
+import ConversionTracker from '@/components/ConversionTracker'
+import Script from 'next/script'
 import { Great_Vibes, Outfit } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
@@ -98,6 +99,12 @@ export default function RootLayout({
     <html lang="en" className={`${greatVibes.variable} ${outfit.variable} font-sans`}>
       <body>
         <CookieConsent>
+          <Script
+            src="https://agent.rtstics.com/widget.js"
+            data-agent="c6f8978799bb9bdc41"
+            strategy="afterInteractive"
+          />
+          <ConversionTracker />
           <PerspectiveGrid />
           {/* White background for navbar area */}
           <div className="fixed top-0 left-0 right-0 h-32 bg-white z-0"></div>
@@ -108,7 +115,6 @@ export default function RootLayout({
             {children}
             <Footer />
           </div>
-          <MobileActionBar />
         </CookieConsent>
       </body>
     </html>

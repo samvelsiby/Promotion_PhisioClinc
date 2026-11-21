@@ -6,6 +6,7 @@ export type BodyPartCategory =
   | 'Chronic Conditions'
   | 'Injury Types'
   | 'Surgical'
+  | 'Occupational Therapy'
 
 export interface BentoItem {
   title: string
@@ -113,7 +114,7 @@ export const allBentoItems: BentoItem[] = [
     title: 'Motor Vehicle Accident Injuries (MPI)',
     imageSrc: '/bento/Motorvehicel.png',
     href: '/services/motor-vehicle-accident-recovery',
-    description: 'Treatment for whiplash and collision injuries with MPI claim support.',
+    description: 'Specialized treatment for whiplash and collision injuries with MPI claim support.',
     category: 'Injury Types',
   },
   {
@@ -122,6 +123,42 @@ export const allBentoItems: BentoItem[] = [
     href: '/services/pre-post-surgical-conditions',
     description: 'Optimize surgical outcomes with pre and post-operative rehabilitation programs.',
     category: 'Surgical',
+  },
+  // Occupational Therapy Services
+  {
+    title: 'Home Accessibility Assessments',
+    imageSrc: '/bento/home acceslity assement.jpg',
+    href: '/services/home-accessibility-assessments',
+    description: 'Home evaluations and modifications to improve safety and accessibility.',
+    category: 'Occupational Therapy',
+  },
+  {
+    title: 'Mobility & Adaptive Equipment',
+    imageSrc: '/bento/mobiltu and adaptie equiment.jpg',
+    href: '/services/mobility-adaptive-equipment',
+    description: 'Assessment and training for mobility aids to enhance independence.',
+    category: 'Occupational Therapy',
+  },
+  {
+    title: 'Wheelchair Seating & Positioning',
+    imageSrc: '/bento/new/wheel chair psoitons .jpg',
+    href: '/services/wheelchair-seating-positioning',
+    description: 'Specialized wheelchair seating to optimize comfort and prevent complications.',
+    category: 'Occupational Therapy',
+  },
+  {
+    title: 'Pressure Management',
+    imageSrc: '/bento/new/pressue managenet.jpg',
+    href: '/services/pressure-management',
+    description: 'Pressure injury prevention through specialized cushioning and positioning.',
+    category: 'Occupational Therapy',
+  },
+  {
+    title: 'Fall Prevention',
+    imageSrc: '/bento/Fallsprevention.jpg',
+    href: '/services/fall-prevention',
+    description: 'Fall risk assessment and prevention through balance training and safety modifications.',
+    category: 'Occupational Therapy',
   },
 ]
 

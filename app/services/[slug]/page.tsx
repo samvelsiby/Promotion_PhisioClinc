@@ -79,24 +79,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
               <p className="text-lg text-gray-600 leading-relaxed">
                 {service.description}
               </p>
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href={bookingHref('service-hero')} data-rt-goal="book-service-hero"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#EC1C24] px-7 py-3 text-base font-semibold text-white shadow-md transition-colors duration-200 hover:bg-[#C41A20]"
-                >
-                  <Calendar className="h-5 w-5" aria-hidden="true" />
-                  Book an assessment
-                </a>
-                <a
-                  href={`tel:${COMPANY_CONTACT.PHONE}`}
-                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border-2 border-gray-300 bg-white px-7 py-3 text-base font-semibold text-gray-900 transition-colors duration-200 hover:border-[#EC1C24]"
-                >
-                  Call {COMPANY_CONTACT.PHONE_DISPLAY}
-                </a>
-              </div>
-              <p className="mt-3 text-sm text-gray-500">Online bookings are confirmed by our front desk. Need an appointment within 24 hours? Please call.</p>
             </header>
 
             {/* Image */}

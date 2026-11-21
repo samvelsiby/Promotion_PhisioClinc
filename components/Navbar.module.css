@@ -160,38 +160,91 @@
   color: #e63939;
 }
 
-/* Contact button: same red, radius and weight as the hero's Book button. */
+/* Contact Button (Green style from image) */
 .contactButton {
   display: none;
-  align-items: center;
-  gap: 0.5rem;
-  min-height: 44px;
-  margin-left: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  border-radius: 0.75rem;
-  background-color: #c8101e;
+  position: relative;
+  background: none;
+  /* Background handled by pseudo-element */
   color: white;
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  padding: 0.6rem 1.8rem;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
   text-decoration: none;
-  white-space: nowrap;
-  transition: background-color 0.2s ease;
+  margin-left: 0.5rem;
+  z-index: 1;
+  /* Ensure text is above pseudo */
+}
+
+/* Review Button (Blue style from image) */
+.reviewButton {
+  display: none;
+  position: relative;
+  background: none;
+  /* Background handled by pseudo-element */
+  color: #333333;
+  padding: 0.6rem 1.8rem;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-right: 0.5rem;
+  z-index: 1;
+  /* Ensure text is above pseudo */
+}
+
+/* Background skew shape for both */
+.contactButton::before,
+.reviewButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: skewX(-20deg);
+  z-index: -1;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.contactButton::before {
+  background-color: #e63939;
+  /* Brand Red */
+}
+
+.reviewButton::before {
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  /* White background for Google logo visibility */
 }
 
 @media (min-width: 1280px) {
-  .contactButton {
-    display: inline-flex;
+
+  .contactButton,
+  .reviewButton {
+    display: flex;
   }
 }
 
-.contactButton:hover {
-  background-color: #a50d19;
+.contactButton:hover::before {
+  background-color: #c62828;
+  transform: skewX(-20deg) scale(1.05);
 }
 
-.contactButton:focus-visible {
-  outline: 2px solid #146b63;
-  outline-offset: 3px;
+.reviewButton:hover::before {
+  background-color: #f8f8f8;
+  border-color: #cccccc;
+  transform: skewX(-20deg) scale(1.05);
 }
 
 /* Mobile Menu Button */
@@ -442,24 +495,15 @@
   width: 100%;
 }
 
-/* Matches the hero's "Book an appointment" button: same red, radius and height. */
 .mobileContactButton {
-  min-height: 56px;
-  border: 0;
-  border-radius: 0.5rem;
-  background-color: #c8101e;
+  background-color: #e63939;
   color: white;
-  font-size: 1rem;
-  letter-spacing: 0.01em;
+  border: 1px solid #e63939;
 }
 
 .mobileContactButton:hover {
-  background-color: #a50d19;
-}
-
-.mobileContactButton:focus-visible {
-  outline: 2px solid #146b63;
-  outline-offset: 3px;
+  background-color: #c62828;
+  border-color: #c62828;
 }
 
 .mobileReviewButton {
