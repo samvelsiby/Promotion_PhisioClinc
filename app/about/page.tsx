@@ -26,6 +26,7 @@ export default function AboutPage() {
       email: formData.get('email') as string,
       preferredTime: formData.get('preferredTime') as string,
       message: formData.get('message') as string,
+      company: formData.get('company') as string,
     }
 
     try {
@@ -344,11 +345,18 @@ export default function AboutPage() {
                 <div className="space-y-1">
                   <label className="text-xs font-bold uppercase tracking-wider text-gray-500 ml-1">How can we help?</label>
                   <textarea
+                    maxLength={2000}
                     name="message"
                     rows={3}
                     className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 outline-none transition-all placeholder:text-gray-400 focus:border-[#e63939] focus:bg-white focus:ring-4 focus:ring-[#e63939]/10"
-                    placeholder="Tell us about your injury or pain..."
+                    placeholder="What would you like help with?"
                   />
+                  <p className="ml-1 text-xs text-gray-500">Please keep medical details for your appointment.</p>
+                </div>
+
+                {/* Honeypot: hidden from people, filled by form bots. */}
+                <div className="hidden" aria-hidden="true">
+                  <label>Company<input type="text" name="company" tabIndex={-1} autoComplete="off" /></label>
                 </div>
 
                 <Button
@@ -370,6 +378,7 @@ export default function AboutPage() {
                     </span>
                   )}
                 </Button>
+                <p className="text-center text-xs text-gray-500">We use these details only to reply to your request. See our <a href="/privacy" className="underline underline-offset-2">privacy notice</a>.</p>
               </form>
             </motion.div>
           </div>

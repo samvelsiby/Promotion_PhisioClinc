@@ -10,14 +10,10 @@ export function getConditionName(title: string): string {
     'Chronic Pain Relief': 'Chronic Pain',
     'Arthritis Pain Relief': 'Arthritis',
     'Sports Injuries': 'Sports Injury',
-    'Work Injuries, WCB & Work Related Injury': 'WCB & Work Injury',
-    'Motor Vehicle Accident Injuries (MPI)': 'MPI & Motor Vehicle Accident',
+    // Word order follows what people type: "work injury physiotherapy", "car accident physiotherapy".
+    'Work Injuries, WCB & Work Related Injury': 'Work Injury & WCB',
+    'Motor Vehicle Accident Injuries (MPI)': 'Car Accident & MPI',
     'Pre & Post-Surgical Rehabilitation': 'Pre & Post-Surgical',
-    'Home Accessibility Assessments': 'Home Accessibility',
-    'Mobility & Adaptive Equipment': 'Mobility & Adaptive Equipment',
-    'Wheelchair Seating & Positioning': 'Wheelchair Seating',
-    'Pressure Management': 'Pressure Management',
-    'Fall Prevention': 'Fall Prevention',
   }
 
   return map[title] ?? title.replace(/ Relief$/, '')
@@ -36,10 +32,9 @@ export function getServiceSeoDescription(slug: string, fallback: string): string
   const descriptions: Record<string, string> = {
     'tmj-dysfunction': 'TMJ and jaw pain physiotherapy in St. Vital, Winnipeg. Discuss chewing discomfort, jaw movement and assessment options at Pro-Motion. Book an appointment.',
     'back-pain-sciatica-relief': 'Back pain and sciatica physiotherapy in St. Vital, Winnipeg. Discuss symptoms, movement and a care plan at Pro-Motion on St. Anne’s Road. Book an assessment.',
-    'motor-vehicle-accident-recovery': 'Physiotherapy after a motor vehicle accident in Winnipeg. Arrange an assessment at Pro-Motion in St. Vital and ask about MPI claim and billing requirements.',
-    'work-injuries': 'Work-injury physiotherapy in St. Vital, Winnipeg. Discuss your job demands, rehabilitation goals and WCB billing arrangements with Pro-Motion. Book an assessment.',
+    'motor-vehicle-accident-recovery': 'Car accident physiotherapy in St. Vital, Winnipeg. Arrange an assessment at Pro-Motion after a collision and ask about MPI claim and billing requirements.',
+    'work-injuries': 'Work injury physiotherapy in St. Vital, Winnipeg. Discuss your job demands, rehabilitation goals and WCB billing arrangements with Pro-Motion. Book an assessment.',
     'elbow-wrist-hand-pain-relief': 'Elbow, wrist and hand pain physiotherapy in St. Vital, Winnipeg. Discuss tennis elbow, carpal tunnel or wrist strain with Pro-Motion. Book an assessment.',
-    'fall-prevention': 'Fall prevention physiotherapy in St. Vital, Winnipeg. Discuss balance, strength and home safety with Pro-Motion before booking a fall-risk assessment.',
   }
   return descriptions[slug] ?? fallback
 }

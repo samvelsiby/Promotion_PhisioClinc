@@ -21,7 +21,6 @@ const categories: Array<{ label: string; value: BodyPartCategory | 'All' }> = [
   { label: 'Chronic Conditions', value: 'Chronic Conditions' },
   { label: 'Injury Types', value: 'Injury Types' },
   { label: 'Surgical', value: 'Surgical' },
-  { label: 'Occupational Therapy', value: 'Occupational Therapy' },
 ]
 
 export default function BentoGrid({ showAll = false }: BentoGridProps) {
