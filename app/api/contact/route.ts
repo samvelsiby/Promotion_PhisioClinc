@@ -6,10 +6,15 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { name, phone, email, preferredTime, message } = body
+    const { name, phone, email, preferredTime, message, visitType, company } = body
+
+    // Honeypot: real visitors never see this field. Accept quietly so bots learn nothing.
+    if (typeof company === 'string' && company.trim()) {
+      return NextResponse.json({ success: true, message: 'Your appointment request has been submitted successfully. We will contact you soon.' }, { status: 200 })
+    }
 
     // Validate required fields
-    if (!name || !phone || !email) {
+    if (!name || !phone) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -19,7 +24,8 @@ export async function POST(request: NextRequest) {
     const trimmedEmail = typeof email === 'string' ? email.trim() : ''
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-    if (!emailRegex.test(trimmedEmail)) {
+    // Email is optional; when given it must be valid so reception can reply to it.
+    if (trimmedEmail && !emailRegex.test(trimmedEmail)) {
       return NextResponse.json(
         { error: 'Please provide a valid email address.' },
         { status: 400 }
@@ -27,7 +33,7 @@ export async function POST(request: NextRequest) {
     }
 
     const trimmedName = typeof name === 'string' ? name.trim() : ''
-    const replyTo = trimmedName ? `${trimmedName} <${trimmedEmail}>` : trimmedEmail
+    const replyTo = !trimmedEmail ? undefined : trimmedName ? `${trimmedName} <${trimmedEmail}>` : trimmedEmail
 
     // Email configuration
     const clinicEmail = process.env.RESEND_CLINIC_EMAIL || 'info@promotionphysiotherapy.ca'
@@ -40,7 +46,8 @@ New Appointment Request
 
 Name: ${name}
 Phone: ${phone}
-Email: ${email}
+Email: ${trimmedEmail || 'Not provided (call back by phone)'}
+Coverage: ${visitType || 'Not specified'}
 Preferred Day/Time: ${preferredTime || 'Not specified'}
 Message: ${message || 'No message provided'}
 
@@ -55,7 +62,7 @@ This email was sent from the Pro-Motion Physiotherapy website contact form.
     const { data, error } = await resend.emails.send({
       from: fromEmail,
       to: toEmails,
-      replyTo,
+      ...(replyTo ? { replyTo } : {}),
       subject: emailSubject,
       text: emailBody,
     })

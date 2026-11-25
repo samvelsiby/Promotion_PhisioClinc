@@ -82,13 +82,13 @@ export default function CookieConsent({ children }: { children: React.ReactNode 
           <ShieldCheck className="mt-1 h-6 w-6 shrink-0 text-[#c8101e]" aria-hidden="true" />
           <div>
             <h2 id="cookie-heading" ref={heading} tabIndex={-1} className="text-xl font-semibold tracking-tight focus:outline-none">Your privacy. Your choice.</h2>
-            <p id="cookie-description" className="mt-2 max-w-2xl text-sm leading-relaxed text-gray-600">With your permission, we use Google Analytics and Datafast cookies to understand how our website is used. Until you accept, analytics run without cookies or identifiers and only produce anonymous totals. You can change your choice anytime.</p>
+            <p id="cookie-description" className="mt-2 max-w-2xl text-sm leading-relaxed text-gray-600">With your permission, we use Google Analytics, Google Ads conversion measurement and Datafast cookies to understand how our website and our advertising are used. Until you accept, these run without cookies or identifiers and only produce anonymous totals. We never use your visit for personalised advertising. You can change your choice anytime.</p>
             <Link href="/privacy" className="mt-2 inline-flex min-h-8 items-center text-sm font-medium text-[#c8101e] underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">Privacy &amp; cookies</Link>
           </div>
         </div>
         <div className="grid shrink-0 grid-cols-1 gap-2 sm:grid-cols-2 lg:min-w-[340px]">
           <button onClick={() => save(false)} className="min-h-12 rounded-lg border border-[#c8101e] px-4 py-3 text-sm font-semibold text-[#c8101e] hover:bg-red-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c8101e]">Reject optional</button>
-          <button onClick={() => save(true)} className="min-h-12 rounded-lg border border-[#c8101e] bg-[#c8101e] px-4 py-3 text-sm font-semibold text-white hover:bg-[#a50d19] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c8101e]">Accept analytics</button>
+          <button onClick={() => save(true)} className="min-h-12 rounded-lg border border-[#c8101e] bg-[#c8101e] px-4 py-3 text-sm font-semibold text-white hover:bg-[#a50d19] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c8101e]">Accept optional</button>
         </div>
       </div>
     </section>}

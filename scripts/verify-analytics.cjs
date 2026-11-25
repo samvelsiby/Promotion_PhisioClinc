@@ -32,13 +32,16 @@ const local = process.env.TEST_BASE_URL || 'http://127.0.0.1:3107';
       const production = host === 'www.promotionphysiotherapy.ca';
       assert.equal(googleLoads, production ? 1 : 0, host + ' script loading');
       await page.getByRole('button', { name: 'Schedule Appointment', exact: true }).click();
-      const events = () => page.evaluate(() => (window.dataLayer || []).map(x => Array.from(x)).filter(x => x[0] === 'event'));
+      // Google Ads 'conversion' events ride along with booking_click and generate_lead; they are checked separately below.
+      const allEvents = () => page.evaluate(() => (window.dataLayer || []).map(x => Array.from(x)).filter(x => x[0] === 'event'));
+      const events = async () => (await allEvents()).filter(x => x[1] !== 'conversion');
       if (!production) {
         assert.deepEqual(await events(), [], host + ' must not send events');
         await context.close();
         continue;
       }
       assert.deepEqual(await events(), [['event', 'booking_click', { method: 'website_link' }]]);
+      assert.deepEqual((await allEvents()).filter(x => x[1] === 'conversion').map(x => Object.keys(x[2])), [['send_to']], 'one Ads conversion per booking click, label only');
       // Exercise delegated link handling without opening the phone app or booking portal.
       await page.evaluate(() => {
         for (const href of ['tel:2045550100', 'https://pmphysio.juvonno.com/portal/publicbook.php']) {
@@ -60,7 +63,8 @@ const local = process.env.TEST_BASE_URL || 'http://127.0.0.1:3107';
       ]) {
         formResult = result;
         await submit.click();
-        await page.waitForFunction(() => !document.querySelector('form button[type="submit"]').disabled);
+        // After a successful request the form is replaced by a confirmation, so the button may be gone.
+        await page.waitForFunction(() => { const button = document.querySelector('form button[type="submit"]'); return !button || !button.disabled; });
         assert.equal((await events()).filter(e => e[1] === 'generate_lead').length, result.body.success === true ? 1 : 0);
       }
       assert.equal(posts, 3);

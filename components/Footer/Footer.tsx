@@ -27,7 +27,7 @@ const patientLinks = [
   { label: 'How we treat', href: '/how-we-treat' },
   { label: 'Insurance & direct billing', href: '/insurance' },
   { label: 'Recovery resources', href: '/blogs' },
-  { label: 'Contact us', href: '/about#appointment-form' },
+  { label: 'Contact us', href: '/request-appointment' },
 ]
 
 const linkStyle = 'inline-flex min-h-9 items-center py-1 text-sm leading-relaxed text-gray-600 transition-colors hover:text-[#c8101e] hover:underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c8101e]'

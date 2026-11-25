@@ -2,7 +2,7 @@
 
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
-import { clinicLinkEvent, consentState, isProductionAnalyticsHost, recordClinicEvent } from '@/lib/analyticsEvents';
+import { GOOGLE_ADS_ID, clinicLinkEvent, consentState, isProductionAnalyticsHost, recordClinicEvent } from '@/lib/analyticsEvents';
 
 declare global {
   interface Window {
@@ -17,7 +17,8 @@ declare global {
 // consent signal is "denied": no cookies are set or read, and GA4 receives only
 // cookieless pings that it uses to model aggregate totals. On accept, consent is
 // updated to "granted" and normal measurement starts. Ad personalization is never
-// granted.
+// granted. The same tag also carries Google Ads conversion measurement (booking
+// clicks and enquiry form submissions), under the same consent signals.
 export default function GoogleAnalytics({
   measurementId,
   consent,
@@ -74,6 +75,9 @@ export default function GoogleAnalytics({
           gtag('config', '${measurementId}', {
             anonymize_ip: true,
             allow_google_signals: false,
+            allow_ad_personalization_signals: false
+          });
+          gtag('config', '${GOOGLE_ADS_ID}', {
             allow_ad_personalization_signals: false
           });
         `}

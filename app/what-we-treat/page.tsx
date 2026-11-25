@@ -33,7 +33,7 @@ export default function WhatWeTreatPage() {
                   Book Now
                 </a>
                 <a
-                  href="/about#appointment-form"
+                  href="/request-appointment"
                   className="inline-flex items-center justify-center rounded-full border-2 border-gray-300 bg-white px-8 py-4 text-base font-semibold text-gray-900 transition-all duration-300 hover:border-[#e63939] hover:bg-gray-50 sm:px-10 sm:py-4 sm:text-lg"
                 >
                   Request Appointment

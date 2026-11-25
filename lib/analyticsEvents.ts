@@ -5,6 +5,20 @@ export function isProductionAnalyticsHost(hostname: string): boolean {
 
 export type ClinicEvent = 'booking_click' | 'phone_click' | 'generate_lead'
 
+// Google Ads account 472-874-3127. The Google tag must be configured for this
+// id (see GoogleAnalytics.tsx) or the conversion events below go nowhere.
+export const GOOGLE_ADS_ID = 'AW-18511812804'
+
+// Website actions that count as Google Ads conversions. Labels come from
+// Google Ads > Goals > Conversions > (action) > See event snippet.
+// Only the fixed label is sent: no form values, no patient details, and never
+// enhanced-conversion data (email or phone hashes).
+const ADS_CONVERSIONS: Partial<Record<ClinicEvent, string>> = {
+  booking_click: `${GOOGLE_ADS_ID}/ZwnQCM3V_L4dEMSxj_tE`, // "Book appointment"
+  generate_lead: `${GOOGLE_ADS_ID}/IRTUCPKL_L4dEMSxj_tE`, // "Submit lead form"
+  phone_click: `${GOOGLE_ADS_ID}/BEo_CJ_6hb8dEMSxj_tE`, // "Website phone click"
+}
+
 // Google Consent Mode v2 state. Ad personalization stays denied in every state:
 // the site never opts visitors into personalised ads, only into measurement.
 export function consentState(granted: boolean) {
@@ -38,5 +52,7 @@ export function recordClinicEvent(event: ClinicEvent, location?: string) {
       method: event === 'generate_lead' ? 'website_form' : 'website_link',
       ...(location ? { link_location: location } : {}),
     })
+    const adsConversion = ADS_CONVERSIONS[event]
+    if (adsConversion) window.gtag('event', 'conversion', { send_to: adsConversion })
   } catch { /* Measurement must never prevent an enquiry or navigation. */ }
 }

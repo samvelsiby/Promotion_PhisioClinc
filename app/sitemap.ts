@@ -10,7 +10,7 @@ export const revalidate = 60
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await fetchBlogSitemapEntries()
   const paths = [
-    '', '/first-visit', '/about', '/what-we-treat', '/what-we-treat/all', '/how-we-treat', '/team', '/insurance', '/blogs',
+    '', '/first-visit', '/request-appointment', '/about', '/what-we-treat', '/what-we-treat/all', '/how-we-treat', '/team', '/insurance', '/blogs',
     ...getAllServiceSlugs().map((slug) => `/services/${slug}`),
     ...teamMembers.map((member) => `/team/${member.slug}`),
   ]

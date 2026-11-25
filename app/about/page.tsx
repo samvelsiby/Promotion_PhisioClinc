@@ -1,66 +1,12 @@
 'use client';
 
-import { recordClinicEvent } from '@/lib/analyticsEvents'
+import AppointmentRequestForm from '@/components/AppointmentRequestForm'
 import Motto from '@/components/Motto/Motto'
-import { ArrowRight, Phone, MapPin, Clock, Calendar, Activity, Heart, Shield, Printer } from 'lucide-react'
-import { FormEvent, useState } from 'react'
+import { Phone, MapPin, Clock, Activity, Heart, Shield, Printer } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { Button } from '@/components/ui/button'
 import { COMPANY_CONTACT, DIRECTIONS_URL } from '@/lib/constants'
 
 export default function AboutPage() {
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({ type: null, message: '' })
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitStatus({ type: null, message: '' })
-
-    const form = e.currentTarget
-    const formData = new FormData(form)
-
-    const data = {
-      name: formData.get('name') as string,
-      phone: formData.get('phone') as string,
-      email: formData.get('email') as string,
-      preferredTime: formData.get('preferredTime') as string,
-      message: formData.get('message') as string,
-    }
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      })
-
-      if (!response.ok) {
-        throw new Error('Failed to submit form')
-      }
-
-      const result = await response.json()
-      if (result.success !== true) throw new Error('The enquiry was not accepted')
-      recordClinicEvent('generate_lead')
-
-      setSubmitStatus({
-        type: 'success',
-        message: result.message || 'Your appointment request has been submitted successfully!'
-      })
-      form.reset()
-    } catch (error) {
-      console.error('Form submission error:', error)
-      setSubmitStatus({
-        type: 'error',
-        message: `An error occurred. Please call us directly at ${COMPANY_CONTACT.PHONE_DISPLAY} to book your appointment.`
-      })
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -281,96 +227,10 @@ export default function AboutPage() {
             >
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-gray-900">Request Appointment</h3>
-                <p className="text-gray-600 mt-2">Fill out the form below and we'll get back to you shortly.</p>
+                <p className="text-gray-600 mt-2">Leave your name and number and reception will call to confirm a time.</p>
               </div>
 
-              <form className="space-y-5" data-rt-label="contact" onSubmit={handleSubmit}>
-                {submitStatus.type && (
-                  <div
-                    className={`rounded-xl p-4 text-sm font-medium ${submitStatus.type === 'success'
-                      ? 'bg-green-50 text-green-700 border border-green-200'
-                      : 'bg-red-50 text-red-700 border border-red-200'
-                      }`}
-                  >
-                    {submitStatus.message}
-                  </div>
-                )}
-
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <div className="space-y-1">
-                    <label className="text-xs font-bold uppercase tracking-wider text-gray-500 ml-1">Full Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      required
-                      className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 outline-none transition-all placeholder:text-gray-400 focus:border-[#e63939] focus:bg-white focus:ring-4 focus:ring-[#e63939]/10"
-                      placeholder="John Doe"
-                    />
-                  </div>
-                  <div className="space-y-1">
-                    <label className="text-xs font-bold uppercase tracking-wider text-gray-500 ml-1">Phone</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      required
-                      className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 outline-none transition-all placeholder:text-gray-400 focus:border-[#e63939] focus:bg-white focus:ring-4 focus:ring-[#e63939]/10"
-                      placeholder="(204) 555-0123"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <div className="space-y-1">
-                    <label className="text-xs font-bold uppercase tracking-wider text-gray-500 ml-1">Email</label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 outline-none transition-all placeholder:text-gray-400 focus:border-[#e63939] focus:bg-white focus:ring-4 focus:ring-[#e63939]/10"
-                      placeholder="john@example.com"
-                    />
-                  </div>
-                  <div className="space-y-1">
-                    <label className="text-xs font-bold uppercase tracking-wider text-gray-500 ml-1">Preferred Time</label>
-                    <input
-                      type="text"
-                      name="preferredTime"
-                      className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 outline-none transition-all placeholder:text-gray-400 focus:border-[#e63939] focus:bg-white focus:ring-4 focus:ring-[#e63939]/10"
-                      placeholder="e.g. Weekday evenings"
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-1">
-                  <label className="text-xs font-bold uppercase tracking-wider text-gray-500 ml-1">How can we help?</label>
-                  <textarea
-                    name="message"
-                    rows={3}
-                    className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 outline-none transition-all placeholder:text-gray-400 focus:border-[#e63939] focus:bg-white focus:ring-4 focus:ring-[#e63939]/10"
-                    placeholder="Tell us about your injury or pain..."
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full h-14 rounded-xl bg-[#e63939] text-base font-bold text-white shadow-lg shadow-[#e63939]/25 transition-all hover:bg-[#c62828] hover:scale-[1.02] hover:shadow-xl hover:shadow-[#e63939]/30 disabled:opacity-70"
-                >
-                  {isSubmitting ? (
-                    <span className="flex items-center gap-2">
-                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Sending...
-                    </span>
-                  ) : (
-                    <span className="flex items-center gap-2">
-                      Submit Request <ArrowRight size={18} />
-                    </span>
-                  )}
-                </Button>
-              </form>
+              <AppointmentRequestForm source="about" />
             </motion.div>
           </div>
         </div>

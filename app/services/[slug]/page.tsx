@@ -203,7 +203,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     Book Now
                   </Link>
                   <Link
-                    href="/about#appointment-form"
+                    href="/request-appointment"
                     className="inline-flex items-center justify-center rounded-full border-2 border-gray-300 bg-white px-8 py-4 text-base font-semibold text-gray-900 transition-all duration-300 hover:border-[#EC1C24] hover:bg-gray-50"
                   >
                     Request Appointment
