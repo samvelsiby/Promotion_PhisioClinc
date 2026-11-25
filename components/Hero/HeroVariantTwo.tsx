@@ -7,35 +7,20 @@ import styles from './HeroVariantTwo.module.css'
 export default function HeroVariantTwo() {
   return (
     <section aria-labelledby="hero-heading" className={styles.hero}>
-      <div id="home-hero" className={styles.inner}>
-        <div className={styles.headingRow}>
-          <h1 id="hero-heading" className={styles.heading}>
-            <span className={styles.location}>Physiotherapy in St. Vital, Winnipeg</span>
-            <span className={styles.headline}>Driven by care.<br /><span className={styles.motionLine}>Powered by motion.</span></span>
-          </h1>
-          <p className={styles.mobileIntro}>Hands-on care for pain and injury.<br />A recovery plan built around you.</p>
-          <a href="#physiotherapists" className={styles.teamLink}>
-            <span className={styles.portraits} aria-hidden="true">
-              <Image src="/team/ben-studio.png" alt="" width={48} height={64} className={styles.portrait} />
-              <Image src="/team/lijo-studio.png" alt="" width={48} height={64} className={styles.portrait} />
-            </span>
-            <span>Meet the people<br /><strong>behind your care</strong></span>
-            <ArrowUpRight size={20} aria-hidden="true" />
-          </a>
+      <div id="home-hero" className={styles.stage}>
+        {/* The photo sits behind the copy on wide screens and becomes a slim banner on phones. */}
+        <div className={styles.bg}>
+          <Image src="/Hero/hero2.jpg" alt="Physiotherapist assessing a patient's shoulder movement during treatment" fill priority sizes="100vw" quality={72} className={styles.bgImage} />
         </div>
 
-        <div className={styles.storyRow}>
-          <figure className={styles.figure}>
-            <div className={styles.photo}>
-              <Image src="/Hero/hero2.jpg" alt="Physiotherapist assessing a patient's shoulder movement during treatment" width={6720} height={4480} priority sizes="(min-width: 1024px) 520px, (min-width: 640px) 50vw, 100vw" quality={80} className={styles.image} />
-            </div>
-            <figcaption className={styles.caption}><MapPin size={16} aria-hidden="true" />{COMPANY_CONTACT.ADDRESS.street}, Winnipeg</figcaption>
-          </figure>
+        <div className={styles.inner}>
+          <div className={styles.content}>
+            <h1 id="hero-heading" className={styles.heading}>
+              <span className={styles.location}>Physiotherapy in St. Vital, Winnipeg</span>
+              <span className={styles.headline}>Driven by care.<br /><span className={styles.motionLine}>Powered by motion.</span></span>
+            </h1>
+            <p className={styles.intro}>Hands-on care for pain and injury.<br />A recovery plan built around you.</p>
 
-          <div className={styles.story}>
-            <div className={styles.brandMark} aria-hidden="true"><span /><span /><span /></div>
-            <p className={styles.description}>Founded by two dedicated physiotherapists with a shared dream and vision to help and serve our community with compassionate, personalized care. We provide evidence-based treatments tailored to your unique needs.</p>
-            <p className={`${styles.description} ${styles.serviceDescription} mt-4 [&_a]:underline [&_a]:underline-offset-4`}>Visit our Meadowood clinic on St. Anne’s Road for <Link href="/services/back-pain-sciatica-relief">back pain and sciatica care</Link>, <Link href="/services/motor-vehicle-accident-recovery">rehabilitation after a collision</Link> or <Link href="/services/work-injuries">work-injury physiotherapy</Link>. Check <Link href="/first-visit">first-visit information</Link> before booking.</p>
             <a
               href={COMPANY_CONTACT.REVIEWS_URL}
               target="_blank"
@@ -55,27 +40,41 @@ export default function HeroVariantTwo() {
               </span>
               <span className={styles.ratingCount}>{GOOGLE_RATING.count} Google reviews</span>
             </a>
+
             <div className={styles.actions}>
-              <Link href="/request-appointment" data-rt-goal="request-hero" className={styles.book}>
-                <span>Request an appointment<small>No account needed. We call you back.</small></span>
-                <ArrowUpRight size={22} aria-hidden="true" />
-              </Link>
-              <a href={bookingHref('hero')} data-rt-goal="book-hero" target="_blank" rel="noopener noreferrer" className={styles.request}>
-                <span>Book online<small>Pick your own time in our booking portal.</small></span>
-                <ArrowUpRight size={20} aria-hidden="true" />
-              </a>
+              <Link href="/request-appointment" data-rt-goal="request-hero" className={styles.book}>Request an appointment <ArrowUpRight size={22} aria-hidden="true" /></Link>
+              <a href={bookingHref('hero')} data-rt-goal="book-hero" target="_blank" rel="noopener noreferrer" className={styles.request}>Book online <ArrowUpRight size={20} aria-hidden="true" /></a>
               <a href={`tel:${COMPANY_CONTACT.PHONE}`} className={styles.call}><Phone size={16} aria-hidden="true" />{COMPANY_CONTACT.PHONE_DISPLAY}</a>
             </div>
+
+            <a href="#physiotherapists" className={styles.teamLink}>
+              <span className={styles.portraits} aria-hidden="true">
+                <Image src="/team/ben-studio.png" alt="" width={48} height={64} className={styles.portrait} />
+                <Image src="/team/lijo-studio.png" alt="" width={48} height={64} className={styles.portrait} />
+              </span>
+              <span>Meet the people<br /><strong>behind your care</strong></span>
+              <ArrowUpRight size={20} aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.band}>
+        <div className={styles.details}>
+          <span><MapPin size={17} aria-hidden="true" />{COMPANY_CONTACT.ADDRESS.street}, Winnipeg</span>
+          <span><CalendarDays size={17} aria-hidden="true" />Open 7 days a week</span>
+          <a href="/insurance"><BadgeCheck size={17} aria-hidden="true" />Direct billing available</a>
+          <a href="/what-we-treat">Find care for your condition <ArrowUpRight size={17} aria-hidden="true" /></a>
+        </div>
+        <div className={styles.about}>
+          <p className={styles.description}>Founded by two dedicated physiotherapists with a shared dream and vision to help and serve our community with compassionate, personalized care. We provide evidence-based treatments tailored to your unique needs.</p>
+          <div>
+            <p className={`${styles.description} [&_a]:underline [&_a]:underline-offset-4`}>Visit our Meadowood clinic on St. Anne’s Road for <Link href="/services/back-pain-sciatica-relief">back pain and sciatica care</Link>, <Link href="/services/motor-vehicle-accident-recovery">rehabilitation after a collision</Link> or <Link href="/services/work-injuries">work-injury physiotherapy</Link>. Check <Link href="/first-visit">first-visit information</Link> before booking.</p>
             <p className={styles.lastMinute}>
               Looking for an earlier appointment?{' '}
               <a href="https://www.lastminutephysio.com/" target="_blank" rel="noopener noreferrer">Check Last Minute Physio <ArrowUpRight size={15} aria-hidden="true" /></a>
             </p>
           </div>
-        </div>
-        <div className={styles.details}>
-          <span><CalendarDays size={17} aria-hidden="true" />Open 7 days a week</span>
-          <a href="/insurance"><BadgeCheck size={17} aria-hidden="true" />Direct billing available</a>
-          <a href="/what-we-treat">Find care for your condition <ArrowUpRight size={17} aria-hidden="true" /></a>
         </div>
       </div>
     </section>
