@@ -56,11 +56,14 @@ export default function HeroVariantTwo() {
               <span className={styles.ratingCount}>{GOOGLE_RATING.count} Google reviews</span>
             </a>
             <div className={styles.actions}>
-              <a href={bookingHref('hero')} data-rt-goal="book-hero" target="_blank" rel="noopener noreferrer" className={styles.book}>Book an appointment <ArrowUpRight size={22} aria-hidden="true" /></a>
-              <Link href="/request-appointment" data-rt-goal="request-hero" className={styles.request}>
+              <Link href="/request-appointment" data-rt-goal="request-hero" className={styles.book}>
                 <span>Request an appointment<small>No account needed. We call you back.</small></span>
-                <ArrowUpRight size={20} aria-hidden="true" />
+                <ArrowUpRight size={22} aria-hidden="true" />
               </Link>
+              <a href={bookingHref('hero')} data-rt-goal="book-hero" target="_blank" rel="noopener noreferrer" className={styles.request}>
+                <span>Book online<small>Pick your own time in our booking portal.</small></span>
+                <ArrowUpRight size={20} aria-hidden="true" />
+              </a>
               <a href={`tel:${COMPANY_CONTACT.PHONE}`} className={styles.call}><Phone size={16} aria-hidden="true" />{COMPANY_CONTACT.PHONE_DISPLAY}</a>
             </div>
             <p className={styles.lastMinute}>

@@ -1,8 +1,9 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { CalendarCheck, Clock, MapPin, Phone, PhoneCall, Star } from 'lucide-react'
 import AppointmentRequestForm from '@/components/AppointmentRequestForm'
 import JsonLd from '@/components/JsonLd'
-import { COMPANY_CONTACT, GOOGLE_RATING, NAP_LINE, bookingHref } from '@/lib/constants'
+import { COMPANY_CONTACT, DIRECTIONS_URL, GOOGLE_RATING, NAP_LINE, bookingHref } from '@/lib/constants'
 import { pageMetadata } from '@/lib/metadata'
 import { getBreadcrumbSchema } from '@/lib/schema'
 
@@ -41,7 +42,34 @@ export default function RequestAppointmentPage() {
 
         <aside className="lg:order-1 lg:pt-4">
           <p className="text-sm font-semibold text-[#c8101e]">Pro-Motion Physiotherapy · St. Vital, Winnipeg</p>
-          <h2 className="mt-3 text-2xl font-bold leading-tight text-gray-900 sm:text-3xl">What happens next</h2>
+          <figure className="mt-4 overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-gray-200">
+            <Image
+              src="/Hero/hero2.jpg"
+              alt="Physiotherapist assessing a patient's shoulder movement during treatment"
+              width={6720}
+              height={4480}
+              sizes="(min-width: 1024px) 480px, 100vw"
+              quality={75}
+              className="aspect-[16/10] w-full object-cover"
+            />
+            <figcaption className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 px-5 py-4 text-sm text-gray-700">
+              <span className="flex items-center gap-2"><MapPin className="h-4 w-4 shrink-0 text-[#c8101e]" aria-hidden="true" />{COMPANY_CONTACT.ADDRESS.street}, Meadowood</span>
+              <a href={DIRECTIONS_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-[#c8101e] underline underline-offset-4">Get directions</a>
+            </figcaption>
+          </figure>
+
+          <div className="mt-5 flex items-center gap-4 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-gray-200">
+            <span className="flex shrink-0" aria-hidden="true">
+              <Image src="/team/ben-studio.png" alt="" width={56} height={72} className="h-[72px] w-14 rounded-xl border-2 border-white bg-gray-100 object-cover" />
+              <Image src="/team/lijo-studio.png" alt="" width={56} height={72} className="-ml-3 h-[72px] w-14 rounded-xl border-2 border-white bg-gray-100 object-cover" />
+            </span>
+            <p className="text-sm leading-relaxed text-gray-700">
+              <strong className="block text-gray-900">Owner-run clinic</strong>
+              Ben Bastin Jose and Lijo Paul are the registered physiotherapists who founded and run Pro-Motion. <Link href="/team" className="font-semibold underline">Meet the team</Link>
+            </p>
+          </div>
+
+          <h2 className="mt-8 text-2xl font-bold leading-tight text-gray-900 sm:text-3xl">What happens next</h2>
           <ol className="mt-6 space-y-6">
             {STEPS.map((step, index) => (
               <li key={step.title} className="flex gap-4">

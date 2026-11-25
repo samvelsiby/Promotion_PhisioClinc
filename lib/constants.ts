@@ -47,8 +47,8 @@ export const NAP_LINE = `${COMPANY_CONTACT.ADDRESS.street}, ${COMPANY_CONTACT.AD
  */
 export const GOOGLE_RATING = {
   value: '5.0',
-  count: 105,
-  checked: '2026-11-21',
+  count: 107,
+  checked: '2026-11-25',
 } as const
 
 export const GOOGLE_PLACE_ID = 'ChIJb8qUxhl36lIRBWPxW_iROsw'
