@@ -34,6 +34,9 @@
 .rating + .actions .book { margin-top: .5rem; }
 .book { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1.4rem; min-height: 56px; padding: .9rem 1.2rem; border-radius: .75rem; background: #c8101e; color: #fff; font-size: 1rem; font-weight: 600; transition: background-color .2s; }
 .book:hover { background: #a50d19; }
+.request { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: .5rem; min-height: 56px; padding: .65rem 1.2rem; border: 1.5px solid #111827; border-radius: .75rem; background: #fff; color: #111827; font-size: 1rem; font-weight: 600; line-height: 1.25; transition: border-color .2s, color .2s; }
+.request small { display: block; margin-top: .15rem; color: #4b5563; font-size: .8125rem; font-weight: 400; }
+.request:hover { border-color: #c8101e; color: #c8101e; }
 .call { display: inline-flex; align-items: center; gap: .6rem; min-height: 44px; margin-top: .3rem; font-size: .9375rem; font-weight: 600; color: #111827; }
 .call:hover { color: #c8101e; }
 .details { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1.5rem; margin-top: 1.5rem; border-top: 1px solid #e5e7eb; padding: 1rem 0 1.4rem; color: #4b5563; font-size: .875rem; }
@@ -69,6 +72,8 @@
  .rating + .actions .book { margin-top: 0; }
  .book { margin: 0; min-height: 56px; border-radius: .5rem; background: #c8101e; color: #fff; box-shadow: none; }
  .book:hover { background: #a50d19; color: #fff; }
+ .request { margin: .25rem 0 0; border-radius: .5rem; border-color: #123f4a; color: #123f4a; }
+ .request:hover { border-color: #146b63; color: #146b63; }
  .call { align-self: center; justify-content: center; margin: 0; min-height: 44px; color: #146b63; font-size: .875rem; font-weight: 500; }
  .call:hover { color: #123f4a; text-decoration: underline; text-underline-offset: 4px; }
  .hero .inner a:focus-visible { outline: 2px solid #146b63; outline-offset: 4px; }
