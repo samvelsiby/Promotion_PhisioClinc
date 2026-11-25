@@ -1,8 +1,8 @@
 .hero { overflow: hidden; background: #fff; }
 
 /* Photo behind the copy: it fades to white on the left so the text stays readable. */
-.stage { position: relative; isolation: isolate; }
-.bg { position: absolute; top: 0; right: 0; bottom: 0; left: 36%; z-index: -1; background: #f3f4f6; }
+.stage { position: relative; isolation: isolate; max-width: 80rem; margin: 0 auto; }
+.bg { position: absolute; top: 1rem; right: 2rem; bottom: 1rem; left: 36%; z-index: -1; overflow: hidden; border-radius: 1rem; background: #f3f4f6; }
 .bgImage { object-fit: cover; object-position: 50% 30%; }
 .bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, .8) 12%, rgba(255, 255, 255, .2) 32%, rgba(255, 255, 255, 0) 48%); }
 
@@ -50,7 +50,7 @@
 @media (max-width: 1023px) {
  .inner { padding: 2.5rem 1.5rem 2.5rem; }
  .content { max-width: 28rem; }
- .bg { left: 30%; }
+ .bg { right: 1.5rem; left: 30%; }
  .bg::after { background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, .9) 20%, rgba(255, 255, 255, .45) 46%, rgba(255, 255, 255, .1) 72%, rgba(255, 255, 255, 0) 100%); }
  .band { padding: 0 1.5rem 1.5rem; }
  .about { gap: 1rem 2rem; }
