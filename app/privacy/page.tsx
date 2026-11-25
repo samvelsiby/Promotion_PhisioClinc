@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { COMPANY_CONTACT } from '@/lib/constants'
 import { pageMetadata } from '@/lib/metadata'
 
-export const metadata = pageMetadata('Website Privacy & Cookies | Pro-Motion', 'Learn about optional website analytics, advertising measurement, cookie choices and external services on the Pro-Motion Physiotherapy website.', '/privacy')
+export const metadata = pageMetadata('Website Privacy & Cookies | Pro-Motion', 'What the Pro-Motion Physiotherapy website collects, why, how long it is kept, your cookie choices and your privacy rights in Manitoba.', '/privacy')
 
 export default function PrivacyPage() {
   return <main className="mx-auto max-w-3xl px-5 pb-20 pt-40 text-gray-900">
@@ -28,9 +28,26 @@ export default function PrivacyPage() {
       <p>The website also provides a clinic chat service supplied through RTSTICS. The cookie buttons control Google Analytics, Google Ads measurement and Datafast; they do not control information you send through chat. Avoid sharing sensitive medical details in chat and contact the clinic for an appropriate way to discuss your care.</p>
       <h2>Service providers</h2>
       <p>We use service providers to run the website: Vercel (hosting), Google (analytics and advertising measurement), Datafast (analytics), Resend (email delivery for appointment requests), RTSTICS (visit counter and chat) and Juvonno (online booking). Some of them process information outside Canada, including in the United States, where it may be accessible to courts and authorities under local law.</p>
+      <h2>Appointment requests</h2>
+      <p>The appointment request form asks for your name and phone number, and optionally your email address, how the visit will be covered (for example MPI, WCB or extended health benefits), a preferred day or time, and a short message. We collect this only to contact you and arrange your appointment. It is sent to the clinic by email through our email delivery provider; the website itself does not keep a copy in a database. Please do not include details about your condition or medical history in the form. Those are collected by the clinic directly when you book or attend.</p>
+      <p>Sending the form is your consent to our using those details to respond to you. We do not use them for marketing, we do not add you to a mailing list, and we never pass them to Google or any advertising service.</p>
+      <h2>How long information is kept</h2>
+      <ul>
+        <li><strong>Google Analytics:</strong> visit and event information linked to a cookie or identifier is deleted by Google after 14 months. Aggregated, non-identifying totals are kept longer for year-over-year reporting.</li>
+        <li><strong>Google Ads measurement:</strong> if you accept optional cookies after arriving from an advertisement, the advertising cookie expires after 90 days.</li>
+        <li><strong>Your cookie choice:</strong> remembered in your browser for up to 180 days, or until you clear it.</li>
+        <li><strong>Booking-step counts and the visit counter:</strong> these hold no identifying information. They are kept as totals for reporting.</li>
+        <li><strong>Appointment requests:</strong> kept in the clinic’s email only as long as needed to respond and arrange your visit. Information that becomes part of your clinical record is kept by the clinic under the rules that apply to health records in Manitoba, not under this website notice.</li>
+      </ul>
+      <h2>How information is protected</h2>
+      <p>The website is served over an encrypted connection. Access to the website’s analytics, advertising and hosting accounts is limited to the clinic and the people who maintain the website for it, and each service provider is used only for the purpose described in this notice.</p>
+      <h2>Your rights</h2>
+      <p>You can ask the clinic what personal information it holds about you, ask for a copy, ask for a correction, or withdraw your consent to optional analytics at any time using “Cookie settings” in the footer. Personal health information held by the clinic is protected by Manitoba’s Personal Health Information Act (PHIA). Other personal information collected through this website is handled in line with Canada’s Personal Information Protection and Electronic Documents Act (PIPEDA).</p>
+      <p>If you are not satisfied with how the clinic responds, you can complain to <a href="https://www.ombudsman.mb.ca/" target="_blank" rel="noopener noreferrer">Manitoba Ombudsman</a> about personal health information, or to the <a href="https://www.priv.gc.ca/" target="_blank" rel="noopener noreferrer">Office of the Privacy Commissioner of Canada</a> about other personal information.</p>
       <h2>Contacting the clinic</h2>
-      <p>If you send an appointment request, the details you submit are used to respond to your request. Avoid including sensitive medical details in general website messages. Contact the clinic for questions about personal information, clinical records, or appropriate ways to share health information, or to ask what information we hold about you, request a correction, or raise a privacy concern.</p>
+      <p>Contact the clinic for questions about personal information, clinical records, or appropriate ways to share health information, or to ask what information we hold about you, request a correction, or raise a privacy concern.</p>
       <p>Email <a href={`mailto:${COMPANY_CONTACT.EMAIL}`}>{COMPANY_CONTACT.EMAIL}</a> or call <a href={`tel:${COMPANY_CONTACT.PHONE}`}>{COMPANY_CONTACT.PHONE_DISPLAY}</a>.</p>
+      <p className="text-sm text-gray-500">Last updated: November 25, 2026.</p>
       <p><Link href="/">Return to the website</Link></p>
     </div>
   </main>
