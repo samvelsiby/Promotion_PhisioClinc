@@ -2,15 +2,15 @@
 
 /* Photo behind the copy: it fades to white on the left so the text stays readable. */
 .stage { position: relative; isolation: isolate; }
-.bg { position: absolute; inset: 0; z-index: -1; background: #f3f4f6; }
-.bgImage { object-fit: cover; object-position: 78% 32%; }
-.bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, .97) 34%, rgba(255, 255, 255, .78) 50%, rgba(255, 255, 255, .18) 70%, rgba(255, 255, 255, 0) 100%); }
+.bg { position: absolute; top: 0; right: 0; bottom: 0; left: 36%; z-index: -1; background: #f3f4f6; }
+.bgImage { object-fit: cover; object-position: 50% 30%; }
+.bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, .8) 12%, rgba(255, 255, 255, .2) 32%, rgba(255, 255, 255, 0) 48%); }
 
-.inner { max-width: 80rem; margin: 0 auto; padding: 3.25rem 2rem 3rem; }
-.content { max-width: 34rem; }
+.inner { max-width: 80rem; margin: 0 auto; padding: 2.75rem 2rem 2.5rem; }
+.content { max-width: 40rem; }
 .heading { margin: 0; color: #111827; }
 .location { display: block; margin-bottom: 1rem; font-size: .875rem; font-weight: 500; letter-spacing: .015em; line-height: 1.5; color: #4b5563; }
-.headline { display: block; font-size: clamp(2.75rem, 4.8vw, 4.25rem); font-weight: 650; letter-spacing: -.045em; line-height: 1.03; }
+.headline { display: block; font-size: clamp(2.75rem, 4.4vw, 4rem); font-weight: 650; letter-spacing: -.045em; line-height: 1.03; }
 .intro { margin: 1.1rem 0 0; color: #374151; font-size: 1.125rem; line-height: 1.6; }
 
 .rating { display: inline-flex; align-items: center; gap: .55rem; min-height: 36px; margin-top: 1rem; color: #4b5563; font-size: .875rem; line-height: 1.5; text-decoration: none; }
@@ -50,8 +50,8 @@
 @media (max-width: 1023px) {
  .inner { padding: 2.5rem 1.5rem 2.5rem; }
  .content { max-width: 28rem; }
- .bgImage { object-position: 70% 32%; }
- .bg::after { background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, .97) 42%, rgba(255, 255, 255, .8) 60%, rgba(255, 255, 255, .25) 82%, rgba(255, 255, 255, .1) 100%); }
+ .bg { left: 30%; }
+ .bg::after { background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, .9) 20%, rgba(255, 255, 255, .45) 46%, rgba(255, 255, 255, .1) 72%, rgba(255, 255, 255, 0) 100%); }
  .band { padding: 0 1.5rem 1.5rem; }
  .about { gap: 1rem 2rem; }
 }
@@ -61,7 +61,7 @@
  .stage { display: flex; flex-direction: column; }
  .inner { order: 1; width: 100%; padding: 1.5rem 1.25rem .75rem; }
  .content { max-width: none; }
- .bg { position: relative; inset: auto; z-index: 0; order: 2; height: 190px; margin: 0 1.25rem; overflow: hidden; border-radius: .75rem; }
+ .bg { position: relative; inset: auto; left: auto; z-index: 0; order: 2; height: 190px; margin: 0 1.25rem; overflow: hidden; border-radius: .75rem; }
  .bg::after { display: none; }
  .bgImage { object-position: 62% 30%; }
  .heading { color: #123f4a; }

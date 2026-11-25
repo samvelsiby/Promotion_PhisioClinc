@@ -7,13 +7,13 @@ import styles from './HeroVariantTwo.module.css'
 export default function HeroVariantTwo() {
   return (
     <section aria-labelledby="hero-heading" className={styles.hero}>
-      <div id="home-hero" className={styles.stage}>
+      <div className={styles.stage}>
         {/* The photo sits behind the copy on wide screens and becomes a slim banner on phones. */}
         <div className={styles.bg}>
           <Image src="/Hero/hero2.jpg" alt="Physiotherapist assessing a patient's shoulder movement during treatment" fill priority sizes="100vw" quality={72} className={styles.bgImage} />
         </div>
 
-        <div className={styles.inner}>
+        <div id="home-hero" className={styles.inner}>
           <div className={styles.content}>
             <h1 id="hero-heading" className={styles.heading}>
               <span className={styles.location}>Physiotherapy in St. Vital, Winnipeg</span>
